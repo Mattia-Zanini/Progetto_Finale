@@ -206,6 +206,7 @@
             this.Name = "Schermata_Iniziale";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hyper Battleship";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Schermata_Iniziale_FormClosed);
             this.Load += new System.EventHandler(this.Schermata_Iniziale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.schermataPreLobby)).EndInit();
             this.ResumeLayout(false);
