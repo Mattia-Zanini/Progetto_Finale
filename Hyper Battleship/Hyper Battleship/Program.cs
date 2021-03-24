@@ -16,7 +16,9 @@ namespace Hyper_Battleship
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Schermata_Iniziale());
+            Schermata_Iniziale f1 = new Schermata_Iniziale();
+            f1.Show();
+            Application.Run();//per avviarlo in modo "distaccato" dagli altri form
         }
     }
 }
