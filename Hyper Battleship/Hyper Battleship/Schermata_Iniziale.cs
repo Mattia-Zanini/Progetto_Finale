@@ -16,11 +16,18 @@ namespace Hyper_Battleship
         {
             InitializeComponent();
         }
-
+        
+        public bool chiusuraApplicazioneInavveritaF1 = true;
         private void Schermata_Iniziale_Load(object sender, EventArgs e)
         {
-            Gioco game = new Gioco();
-            game.chiusuraGiocoInnavvertita = true;//per ripristinare l'allert
+            chiusuraApplicazioneInavveritaF1 = true;//resetta l'allert
+        }
+        private void Schermata_Iniziale_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(chiusuraApplicazioneInavveritaF1 == true)
+            {
+                Application.Exit();
+            }
         }
 
         private void quitText_MouseClick(object sender, MouseEventArgs e)
@@ -100,24 +107,30 @@ namespace Hyper_Battleship
             //traduce la posizione della finestra in coordinate dello schermo
             Point schInizialeLocationScreen_pt = this.PointToScreen(schermataIniziale_pt);//converte il valore della posizione della finestra, in coordinate nello schermo del computer
 
-            Gioco game = new Gioco();//creo l'oggetto
-            game.Location = schInizialeLocationScreen_pt;//assegna la posizione dell'attuale form a quello "Gioco"
-            game.Show();//mostra l'altro form
-            this.Hide();//nasconde l'attuale form
+            Gioco f2 = new Gioco();
+            f2.Location = schInizialeLocationScreen_pt;//assegna la posizione dell'attuale form a quello "Gioco"
+            f2.Show();//mostra l'altro form
+            chiusuraApplicazioneInavveritaF1 = false;//per impedire di chiudere il programma
+            this.Close();//chiude l'attuale form
         }
 
         private void multiplayerButton_Click(object sender, EventArgs e)
         {
-            multigiocatore = true;
+            multigiocatoreValore();
             Schermata_Iniziale schInizialeLocationPoint_pt = new Schermata_Iniziale();
             Point schermataIniziale_pt = new Point(schInizialeLocationPoint_pt.Left - 10, schInizialeLocationPoint_pt.Top - 30);
 
             Point schInizialeLocationScreen_pt = this.PointToScreen(schermataIniziale_pt);
 
-            Gioco game = new Gioco();
-            game.Location = schInizialeLocationScreen_pt;
-            game.Show();
-            this.Hide();
+            Gioco f2 = new Gioco();
+            f2.Location = schInizialeLocationScreen_pt;
+            f2.Show();
+            chiusuraApplicazioneInavveritaF1 = false;
+            this.Close();
+        }
+        public bool multigiocatoreValore()//per passarlo nell'altro form
+        {
+            return multigiocatore = true;
         }
     }
 }
