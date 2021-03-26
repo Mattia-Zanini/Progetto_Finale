@@ -46,12 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Gioco.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gioco.Designer.cs">
-      <DependentUpon>Gioco.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Battglia_Navale_Struttura_Gioco.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schermata_Iniziale.cs">
@@ -60,9 +55,6 @@
     <Compile Include="Schermata_Iniziale.Designer.cs">
       <DependentUpon>Schermata_Iniziale.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Gioco.resx">
-      <DependentUpon>Gioco.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -71,6 +63,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Schermata_Iniziale.resx">
       <DependentUpon>Schermata_Iniziale.cs</DependentUpon>
@@ -87,6 +80,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\Sprites\Sfondo_Gioco.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hyper_Battleship_Schermata_Iniziale.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hyper_Battleship_Schermata_Gioco_Piccola.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\P2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
