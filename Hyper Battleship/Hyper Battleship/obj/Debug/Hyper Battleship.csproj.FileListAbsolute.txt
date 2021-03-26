@@ -8,4 +8,3 @@ C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Bat
 C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship (WINDOWS FORM)\Hyper Battleship\obj\Debug\Hyper Battleship.exe
 C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship (WINDOWS FORM)\Hyper Battleship\obj\Debug\Hyper Battleship.pdb
 C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship (WINDOWS FORM)\Hyper Battleship\obj\Debug\Hyper_Battleship.Schermata_Iniziale.resources
-C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship (WINDOWS FORM)\Hyper Battleship\obj\Debug\Hyper_Battleship.Gioco.resources
