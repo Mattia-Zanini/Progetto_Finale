@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Battglia_Navale_Struttura_Gioco.cs" />
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Schermata_Iniziale.cs">
@@ -55,6 +61,9 @@
     <Compile Include="Schermata_Iniziale.Designer.cs">
       <DependentUpon>Schermata_Iniziale.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -95,6 +104,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\P2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\battle ship.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\carrier.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cruiser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\destroyer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\submarine.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
