@@ -46,7 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Battglia_Navale_Struttura_Gioco.cs" />
+    <Compile Include="Gameplay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gameplay.Designer.cs">
+      <DependentUpon>Gameplay.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +66,9 @@
     <Compile Include="Schermata_Iniziale.Designer.cs">
       <DependentUpon>Schermata_Iniziale.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Gameplay.resx">
+      <DependentUpon>Gameplay.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
