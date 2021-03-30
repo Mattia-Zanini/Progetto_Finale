@@ -30,3 +30,4 @@ C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Bat
 C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship login\Hyper Battleship\obj\Debug\Hyper Battleship.csproj.CoreCompileInputs.cache
 C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship login\Hyper Battleship\obj\Debug\Hyper Battleship.exe
 C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship login\Hyper Battleship\obj\Debug\Hyper Battleship.pdb
+C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship login\Hyper Battleship\obj\Debug\Hyper_Battleship.Gameplay.resources
