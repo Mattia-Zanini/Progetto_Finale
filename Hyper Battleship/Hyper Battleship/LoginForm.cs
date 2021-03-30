@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Diagnostics;
 
 namespace Hyper_Battleship
 {
@@ -45,13 +46,11 @@ namespace Hyper_Battleship
         }
         private void playerLabel_MouseEnter(object sender, EventArgs e)
         {
-            playerLabel2.Visible = true;
-            playerLabel3.Visible = true;
+            playerLabel2.Visible = true; playerLabel3.Visible = true;           
         }
         private void playerLabel_MouseLeave(object sender, EventArgs e)
         {
-            playerLabel2.Visible = false;
-            playerLabel3.Visible = false;
+            playerLabel2.Visible = false; playerLabel3.Visible = false;           
         }
 
         private void newPlayerLabel_Click(object sender, EventArgs e)
@@ -67,24 +66,82 @@ namespace Hyper_Battleship
             newPlayerLabel2.Visible = false;
         }
 
+        public bool pWOS = false; //playerWithOutScore
+        private void playerWithOutScore_Click(object sender, EventArgs e)
+        {
+            pWOS = true;
+            showLoginLayout();
+            passwordLabel.Visible = false; passwordTextBox.Visible = false; showPassword.Visible = false;           
+        }
+        private void playerWithOutScore_MouseEnter(object sender, EventArgs e)
+        {
+            playerWithOutScoreLabel.Visible = true;
+        }
+        private void playerWithOutScore_MouseLeave(object sender, EventArgs e)
+        {
+            playerWithOutScoreLabel.Visible = false;
+        }
+
         private void backLabel_Click(object sender, EventArgs e)
         {
-            player1.Visible = false;
-            usernameLabel.Visible = false;
-            usernameTextBox.Visible = false;
-            passwordLabel.Visible = false;
-            passwordTextBox.Visible = false;
+            pWOS = false;
+            player1.Visible = false; player2.Visible = false;           
+            usernameLabel.Visible = false; usernameTextBox.Visible = false;           
+            passwordLabel.Visible = false; passwordTextBox.Visible = false;
             showPassword.Visible = false;
-            playerWithNoScore.Visible = false;
-            loginButton.Visible = false;
-            backLabel.Visible = false;
-            loginAccountLabel.Visible = false;
-            playerLabel.Visible = true;
-            newPlayerLabel.Visible = true;
+            loginButton.Visible = false; loginAccountLabel.Visible = false;
+            backLabel.Visible = false;           
+            playerLabel.Visible = true; newPlayerLabel.Visible = true; playerWithOutScore.Visible = true; exitLoginButton.Visible = true;            
+            if(giocatore >= 1)
+            {
+                giocatore--;
+            }
         }
+        private void exitLoginButton_Click(object sender, EventArgs e)
+        {
+            Schermata_Iniziale f1 = new Schermata_Iniziale();
+            f1.Show();
+            this.Close();
+        }
+
         private void loginButton_Click(object sender, EventArgs e)
         {
-            accountChecker();
+            if (!pWOS)
+            {
+                accountChecker();
+            }
+            else if(pWOS && giocatore == 0)
+            {
+                giocatore++;
+                Giocatore1 = usernameTextBox.Text;
+                usernameTextBox.Clear();
+                player1.Visible = false; player2.Visible = true;               
+            }
+            else if(pWOS && giocatore == 1)
+            {
+                Giocatore2 = usernameTextBox.Text;
+                prePartita();
+            }
+        }
+
+        private void yesStartMatch_Click(object sender, EventArgs e)
+        {
+            //comincia la partita
+            Gameplay f3 = new Gameplay();
+            f3.Show();
+            this.Close();
+        }
+
+        private void noStartMatch_Click(object sender, EventArgs e)
+        {
+            startMatchLabel.Visible = false;
+            yesStartMatch.Visible = false;
+            noStartMatch.Visible = false;
+            startMatchLabel.Visible = false;
+            MessageBox.Show("Dovrai riaccedere agli account");
+            this.Height = 400; this.CenterToScreen(); giocatore = 0; Giocatore1 = ""; Giocatore2 = "";
+            exitLoginButton.Visible = true; playerLabel.Visible = true; newPlayerLabel.Visible = true;
+            playerWithOutScore.Visible = true;
         }
 
         /// <summary>
@@ -93,19 +150,15 @@ namespace Hyper_Battleship
         public void showLoginLayout()
         {
             player1.Visible = true;
-            usernameLabel.Visible = true;
-            usernameTextBox.Visible = true;
-            passwordLabel.Visible = true;
-            passwordTextBox.Visible = true;
-            showPassword.Visible = true;
-            playerWithNoScore.Visible = true;
-            loginButton.Visible = true;
-            backLabel.Visible = true;
+            usernameLabel.Visible = true; usernameTextBox.Visible = true;
+            passwordLabel.Visible = true; passwordTextBox.Visible = true;
+            showPassword.Visible = true; loginButton.Visible = true; backLabel.Visible = true;
             loginAccountLabel.Visible = true;
             playerLabel.Visible = false;
-            newPlayerLabel.Visible = false;
+            newPlayerLabel.Visible = false; playerWithOutScore.Visible = false; exitLoginButton.Visible = false;
         }
 
+        public string Giocatore1, Giocatore2;
         public byte giocatore = 0;
         public void accountChecker()
         {
@@ -143,16 +196,14 @@ namespace Hyper_Battleship
                     alertLoginAccount.Visible = true;
                     alertLoginAccount.ForeColor = Color.Lime;
                     alertLoginAccount.Text = "Utente trovato";
-                    giocatore++;
-                    if (giocatore == 1)
+                    if (giocatore == 0)
                     {
                         nomePlayerGiausato = usernameTextBox.Text;
-                        usernameTextBox.Clear();
-                        passwordTextBox.Clear();
-                        player1.Visible = false;
-                        player2.Visible = true;
+                        usernameTextBox.Clear(); passwordTextBox.Clear();
+                        player1.Visible = false; player2.Visible = true;                       
+                        giocatore++;
                     }
-                    else if (giocatore == 2)//nel caso tutti e due i giocatori sono pronti
+                    else if (giocatore == 1)//nel caso tutti e due i giocatori sono pronti
                     {
                     }
                 }
@@ -160,8 +211,7 @@ namespace Hyper_Battleship
                 {
                     alertLoginAccount.Visible = true;
                     alertLoginAccount.Text = "Utente inesistente";
-                    usernameTextBox.Clear();
-                    passwordTextBox.Clear();
+                    usernameTextBox.Clear(); passwordTextBox.Clear();                   
                 }
             }
         }
@@ -188,8 +238,7 @@ namespace Hyper_Battleship
                 alertLoginAccount.Visible = true;
                 alertLoginAccount.ForeColor = Color.Red;
                 alertLoginAccount.Text = "Utente già esistente";
-                usernameTextBox.Clear();
-                passwordTextBox.Clear();
+                usernameTextBox.Clear(); passwordTextBox.Clear();               
             }
             else if (usernameTextBox.Text == "" && playeresistente == false)
             {
@@ -210,21 +259,30 @@ namespace Hyper_Battleship
                 alertLoginAccount.Visible = true;
                 alertLoginAccount.ForeColor = Color.Green;
                 alertLoginAccount.Text = "Nuovo utente registrato";
-                usernameTextBox.Clear();
-                passwordTextBox.Clear();
-                giocatore++;
-                if (giocatore == 1)
+                usernameTextBox.Clear(); passwordTextBox.Clear();               
+                if (giocatore == 0)
                 {
                     nomePlayerGiausato = usernameTextBox.Text;
-                    usernameTextBox.Clear();
-                    passwordTextBox.Clear();
-                    player1.Visible = false;
-                    player2.Visible = true;
+                    usernameTextBox.Clear(); passwordTextBox.Clear();                   
+                    player1.Visible = false; player2.Visible = true;                   
+                    giocatore++;
                 }
-                else if (giocatore == 2)//nel caso tutti e due i giocatori sono pronti
+                else if (giocatore == 1)//nel caso tutti e due i giocatori sono pronti
                 {
                 }
             }
+        }
+
+        public void prePartita()
+        {
+            this.Height = 250; this.CenterToScreen();           
+            startMatchLabel.Visible = true; yesStartMatch.Visible = true; noStartMatch.Visible = true;           
+            backLabel.Visible = false;
+            player2.Visible = false;
+            usernameLabel.Visible = false; usernameTextBox.Visible = false;           
+            passwordLabel.Visible = false; passwordTextBox.Visible = false;
+            loginAccountLabel.Visible = false; loginButton.Visible = false;           
+            showPassword.Visible = false;
         }
     }
 }
