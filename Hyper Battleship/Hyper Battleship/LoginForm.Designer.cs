@@ -44,6 +44,12 @@
             this.playerLabel2 = new System.Windows.Forms.Label();
             this.playerLabel3 = new System.Windows.Forms.Label();
             this.newPlayerLabel2 = new System.Windows.Forms.Label();
+            this.playerWithOutScore = new System.Windows.Forms.Label();
+            this.playerWithOutScoreLabel = new System.Windows.Forms.Label();
+            this.exitLoginButton = new System.Windows.Forms.Label();
+            this.startMatchLabel = new System.Windows.Forms.Label();
+            this.yesStartMatch = new System.Windows.Forms.Label();
+            this.noStartMatch = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.player1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2)).BeginInit();
             this.SuspendLayout();
@@ -120,6 +126,7 @@
             // loginButton
             // 
             this.loginButton.BackColor = System.Drawing.Color.Lime;
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.White;
             this.loginButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -157,7 +164,7 @@
             this.playerLabel.AutoSize = true;
             this.playerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerLabel.ForeColor = System.Drawing.Color.Gray;
-            this.playerLabel.Location = new System.Drawing.Point(9, 53);
+            this.playerLabel.Location = new System.Drawing.Point(6, 79);
             this.playerLabel.Name = "playerLabel";
             this.playerLabel.Size = new System.Drawing.Size(249, 31);
             this.playerLabel.TabIndex = 10;
@@ -171,7 +178,7 @@
             this.newPlayerLabel.AutoSize = true;
             this.newPlayerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newPlayerLabel.ForeColor = System.Drawing.Color.Gray;
-            this.newPlayerLabel.Location = new System.Drawing.Point(12, 154);
+            this.newPlayerLabel.Location = new System.Drawing.Point(9, 180);
             this.newPlayerLabel.Name = "newPlayerLabel";
             this.newPlayerLabel.Size = new System.Drawing.Size(212, 31);
             this.newPlayerLabel.TabIndex = 11;
@@ -209,11 +216,11 @@
             this.playerLabel2.AutoSize = true;
             this.playerLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerLabel2.ForeColor = System.Drawing.Color.Gray;
-            this.playerLabel2.Location = new System.Drawing.Point(56, 85);
+            this.playerLabel2.Location = new System.Drawing.Point(53, 111);
             this.playerLabel2.Name = "playerLabel2";
-            this.playerLabel2.Size = new System.Drawing.Size(154, 13);
+            this.playerLabel2.Size = new System.Drawing.Size(158, 13);
             this.playerLabel2.TabIndex = 13;
-            this.playerLabel2.Text = "ti permette di collegarti al profilo";
+            this.playerLabel2.Text = "Ti permette di collegarti al profilo";
             this.playerLabel2.Visible = false;
             // 
             // playerLabel3
@@ -221,7 +228,7 @@
             this.playerLabel3.AutoSize = true;
             this.playerLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerLabel3.ForeColor = System.Drawing.Color.Gray;
-            this.playerLabel3.Location = new System.Drawing.Point(56, 98);
+            this.playerLabel3.Location = new System.Drawing.Point(53, 124);
             this.playerLabel3.Name = "playerLabel3";
             this.playerLabel3.Size = new System.Drawing.Size(126, 13);
             this.playerLabel3.TabIndex = 14;
@@ -233,18 +240,100 @@
             this.newPlayerLabel2.AutoSize = true;
             this.newPlayerLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.newPlayerLabel2.ForeColor = System.Drawing.Color.Gray;
-            this.newPlayerLabel2.Location = new System.Drawing.Point(56, 194);
+            this.newPlayerLabel2.Location = new System.Drawing.Point(53, 220);
             this.newPlayerLabel2.Name = "newPlayerLabel2";
-            this.newPlayerLabel2.Size = new System.Drawing.Size(212, 13);
+            this.newPlayerLabel2.Size = new System.Drawing.Size(216, 13);
             this.newPlayerLabel2.TabIndex = 15;
-            this.newPlayerLabel2.Text = "ti permette di creare un nuovo profilo utente";
+            this.newPlayerLabel2.Text = "Ti permette di creare un nuovo profilo utente";
             this.newPlayerLabel2.Visible = false;
+            // 
+            // playerWithOutScore
+            // 
+            this.playerWithOutScore.AutoSize = true;
+            this.playerWithOutScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerWithOutScore.ForeColor = System.Drawing.Color.Gray;
+            this.playerWithOutScore.Location = new System.Drawing.Point(9, 270);
+            this.playerWithOutScore.Name = "playerWithOutScore";
+            this.playerWithOutScore.Size = new System.Drawing.Size(225, 31);
+            this.playerWithOutScore.TabIndex = 16;
+            this.playerWithOutScore.Text = "Senza Salvataggi";
+            this.playerWithOutScore.Click += new System.EventHandler(this.playerWithOutScore_Click);
+            this.playerWithOutScore.MouseEnter += new System.EventHandler(this.playerWithOutScore_MouseEnter);
+            this.playerWithOutScore.MouseLeave += new System.EventHandler(this.playerWithOutScore_MouseLeave);
+            // 
+            // playerWithOutScoreLabel
+            // 
+            this.playerWithOutScoreLabel.AutoSize = true;
+            this.playerWithOutScoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.playerWithOutScoreLabel.ForeColor = System.Drawing.Color.Gray;
+            this.playerWithOutScoreLabel.Location = new System.Drawing.Point(53, 304);
+            this.playerWithOutScoreLabel.Name = "playerWithOutScoreLabel";
+            this.playerWithOutScoreLabel.Size = new System.Drawing.Size(217, 13);
+            this.playerWithOutScoreLabel.TabIndex = 17;
+            this.playerWithOutScoreLabel.Text = "Ti permette di giocare senza creare un profio";
+            this.playerWithOutScoreLabel.Visible = false;
+            // 
+            // exitLoginButton
+            // 
+            this.exitLoginButton.AutoSize = true;
+            this.exitLoginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitLoginButton.ForeColor = System.Drawing.Color.Gray;
+            this.exitLoginButton.Location = new System.Drawing.Point(12, 9);
+            this.exitLoginButton.Name = "exitLoginButton";
+            this.exitLoginButton.Size = new System.Drawing.Size(34, 17);
+            this.exitLoginButton.TabIndex = 18;
+            this.exitLoginButton.Text = "Esci";
+            this.exitLoginButton.Click += new System.EventHandler(this.exitLoginButton_Click);
+            // 
+            // startMatchLabel
+            // 
+            this.startMatchLabel.AutoSize = true;
+            this.startMatchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startMatchLabel.ForeColor = System.Drawing.Color.Gray;
+            this.startMatchLabel.Location = new System.Drawing.Point(43, 26);
+            this.startMatchLabel.Name = "startMatchLabel";
+            this.startMatchLabel.Size = new System.Drawing.Size(287, 31);
+            this.startMatchLabel.TabIndex = 19;
+            this.startMatchLabel.Text = "Vuoi iniziare la partita?";
+            this.startMatchLabel.Visible = false;
+            // 
+            // yesStartMatch
+            // 
+            this.yesStartMatch.AutoSize = true;
+            this.yesStartMatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.yesStartMatch.ForeColor = System.Drawing.Color.Gray;
+            this.yesStartMatch.Location = new System.Drawing.Point(25, 141);
+            this.yesStartMatch.Name = "yesStartMatch";
+            this.yesStartMatch.Size = new System.Drawing.Size(38, 31);
+            this.yesStartMatch.TabIndex = 20;
+            this.yesStartMatch.Text = "Si";
+            this.yesStartMatch.Visible = false;
+            this.yesStartMatch.Click += new System.EventHandler(this.yesStartMatch_Click);
+            // 
+            // noStartMatch
+            // 
+            this.noStartMatch.AutoSize = true;
+            this.noStartMatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.noStartMatch.ForeColor = System.Drawing.Color.Gray;
+            this.noStartMatch.Location = new System.Drawing.Point(284, 141);
+            this.noStartMatch.Name = "noStartMatch";
+            this.noStartMatch.Size = new System.Drawing.Size(49, 31);
+            this.noStartMatch.TabIndex = 21;
+            this.noStartMatch.Text = "No";
+            this.noStartMatch.Visible = false;
+            this.noStartMatch.Click += new System.EventHandler(this.noStartMatch_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 369);
+            this.ClientSize = new System.Drawing.Size(354, 361);
+            this.Controls.Add(this.noStartMatch);
+            this.Controls.Add(this.yesStartMatch);
+            this.Controls.Add(this.startMatchLabel);
+            this.Controls.Add(this.exitLoginButton);
+            this.Controls.Add(this.playerWithOutScoreLabel);
+            this.Controls.Add(this.playerWithOutScore);
             this.Controls.Add(this.newPlayerLabel2);
             this.Controls.Add(this.playerLabel3);
             this.Controls.Add(this.playerLabel2);
@@ -261,7 +350,7 @@
             this.Controls.Add(this.usernameLabel);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.loginAccountLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.Opacity = 0.85D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -291,5 +380,11 @@
         private System.Windows.Forms.Label playerLabel2;
         private System.Windows.Forms.Label playerLabel3;
         private System.Windows.Forms.Label newPlayerLabel2;
+        private System.Windows.Forms.Label playerWithOutScore;
+        private System.Windows.Forms.Label playerWithOutScoreLabel;
+        private System.Windows.Forms.Label exitLoginButton;
+        private System.Windows.Forms.Label startMatchLabel;
+        private System.Windows.Forms.Label yesStartMatch;
+        private System.Windows.Forms.Label noStartMatch;
     }
 }
