@@ -29,17 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gameplay));
-            this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
-            this.grigliaDiGiocoPiccola = new System.Windows.Forms.PictureBox();
-            this.radarPcitureBox = new System.Windows.Forms.PictureBox();
-            this.doppioAssaltoPictureBox = new System.Windows.Forms.PictureBox();
             this.confirmButton = new System.Windows.Forms.Button();
             this.passaTurnoButton = new System.Windows.Forms.Button();
-            this.portaereiPictureBox = new System.Windows.Forms.PictureBox();
-            this.corazzataPcitureBox = new System.Windows.Forms.PictureBox();
-            this.sottomarinoPictureBox = new System.Windows.Forms.PictureBox();
-            this.cacciatorpedinierePictureBox = new System.Windows.Forms.PictureBox();
-            this.naveDassaltoPictureBox = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -60,52 +51,25 @@
             this.label18 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corazzataPcitureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sottomarinoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpedinierePictureBox)).BeginInit();
+            this.naveDassaltoPictureBox = new System.Windows.Forms.PictureBox();
+            this.cacciatorpedinierePictureBox = new System.Windows.Forms.PictureBox();
+            this.sottomarinoPictureBox = new System.Windows.Forms.PictureBox();
+            this.corazzataPcitureBox = new System.Windows.Forms.PictureBox();
+            this.portaereiPictureBox = new System.Windows.Forms.PictureBox();
+            this.doppioAssaltoPictureBox = new System.Windows.Forms.PictureBox();
+            this.radarPcitureBox = new System.Windows.Forms.PictureBox();
+            this.grigliaDiGiocoPiccola = new System.Windows.Forms.PictureBox();
+            this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassaltoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpedinierePictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sottomarinoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazzataPcitureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
             this.SuspendLayout();
-            // 
-            // grigliaDiGiocoGrande
-            // 
-            this.grigliaDiGiocoGrande.BackColor = System.Drawing.Color.DodgerBlue;
-            this.grigliaDiGiocoGrande.Location = new System.Drawing.Point(45, 40);
-            this.grigliaDiGiocoGrande.Name = "grigliaDiGiocoGrande";
-            this.grigliaDiGiocoGrande.Size = new System.Drawing.Size(630, 630);
-            this.grigliaDiGiocoGrande.TabIndex = 1;
-            this.grigliaDiGiocoGrande.TabStop = false;
-            // 
-            // grigliaDiGiocoPiccola
-            // 
-            this.grigliaDiGiocoPiccola.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.grigliaDiGiocoPiccola.Location = new System.Drawing.Point(718, 40);
-            this.grigliaDiGiocoPiccola.Name = "grigliaDiGiocoPiccola";
-            this.grigliaDiGiocoPiccola.Size = new System.Drawing.Size(252, 252);
-            this.grigliaDiGiocoPiccola.TabIndex = 2;
-            this.grigliaDiGiocoPiccola.TabStop = false;
-            // 
-            // radarPcitureBox
-            // 
-            this.radarPcitureBox.BackColor = System.Drawing.Color.White;
-            this.radarPcitureBox.Location = new System.Drawing.Point(718, 373);
-            this.radarPcitureBox.Name = "radarPcitureBox";
-            this.radarPcitureBox.Size = new System.Drawing.Size(100, 100);
-            this.radarPcitureBox.TabIndex = 3;
-            this.radarPcitureBox.TabStop = false;
-            // 
-            // doppioAssaltoPictureBox
-            // 
-            this.doppioAssaltoPictureBox.BackColor = System.Drawing.Color.White;
-            this.doppioAssaltoPictureBox.Location = new System.Drawing.Point(851, 373);
-            this.doppioAssaltoPictureBox.Name = "doppioAssaltoPictureBox";
-            this.doppioAssaltoPictureBox.Size = new System.Drawing.Size(100, 100);
-            this.doppioAssaltoPictureBox.TabIndex = 4;
-            this.doppioAssaltoPictureBox.TabStop = false;
             // 
             // confirmButton
             // 
@@ -131,56 +95,6 @@
             this.passaTurnoButton.TabIndex = 7;
             this.passaTurnoButton.Text = "PASSA TURNO";
             this.passaTurnoButton.UseVisualStyleBackColor = false;
-            // 
-            // portaereiPictureBox
-            // 
-            this.portaereiPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.portaereiPictureBox.ImageLocation = "";
-            this.portaereiPictureBox.Location = new System.Drawing.Point(985, 40);
-            this.portaereiPictureBox.Name = "portaereiPictureBox";
-            this.portaereiPictureBox.Size = new System.Drawing.Size(245, 60);
-            this.portaereiPictureBox.TabIndex = 8;
-            this.portaereiPictureBox.TabStop = false;
-            // 
-            // corazzataPcitureBox
-            // 
-            this.corazzataPcitureBox.BackColor = System.Drawing.Color.Transparent;
-            this.corazzataPcitureBox.ImageLocation = "";
-            this.corazzataPcitureBox.Location = new System.Drawing.Point(985, 130);
-            this.corazzataPcitureBox.Name = "corazzataPcitureBox";
-            this.corazzataPcitureBox.Size = new System.Drawing.Size(196, 60);
-            this.corazzataPcitureBox.TabIndex = 9;
-            this.corazzataPcitureBox.TabStop = false;
-            // 
-            // sottomarinoPictureBox
-            // 
-            this.sottomarinoPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.sottomarinoPictureBox.ImageLocation = "";
-            this.sottomarinoPictureBox.Location = new System.Drawing.Point(985, 220);
-            this.sottomarinoPictureBox.Name = "sottomarinoPictureBox";
-            this.sottomarinoPictureBox.Size = new System.Drawing.Size(147, 60);
-            this.sottomarinoPictureBox.TabIndex = 10;
-            this.sottomarinoPictureBox.TabStop = false;
-            // 
-            // cacciatorpedinierePictureBox
-            // 
-            this.cacciatorpedinierePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.cacciatorpedinierePictureBox.ImageLocation = "";
-            this.cacciatorpedinierePictureBox.Location = new System.Drawing.Point(985, 310);
-            this.cacciatorpedinierePictureBox.Name = "cacciatorpedinierePictureBox";
-            this.cacciatorpedinierePictureBox.Size = new System.Drawing.Size(98, 60);
-            this.cacciatorpedinierePictureBox.TabIndex = 11;
-            this.cacciatorpedinierePictureBox.TabStop = false;
-            // 
-            // naveDassaltoPictureBox
-            // 
-            this.naveDassaltoPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.naveDassaltoPictureBox.ImageLocation = "";
-            this.naveDassaltoPictureBox.Location = new System.Drawing.Point(985, 400);
-            this.naveDassaltoPictureBox.Name = "naveDassaltoPictureBox";
-            this.naveDassaltoPictureBox.Size = new System.Drawing.Size(49, 60);
-            this.naveDassaltoPictureBox.TabIndex = 12;
-            this.naveDassaltoPictureBox.TabStop = false;
             // 
             // label1
             // 
@@ -402,6 +316,94 @@
             this.label20.TabIndex = 33;
             this.label20.Text = "10";
             // 
+            // naveDassaltoPictureBox
+            // 
+            this.naveDassaltoPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.naveDassaltoPictureBox.ImageLocation = "";
+            this.naveDassaltoPictureBox.Location = new System.Drawing.Point(985, 400);
+            this.naveDassaltoPictureBox.Name = "naveDassaltoPictureBox";
+            this.naveDassaltoPictureBox.Size = new System.Drawing.Size(49, 60);
+            this.naveDassaltoPictureBox.TabIndex = 12;
+            this.naveDassaltoPictureBox.TabStop = false;
+            // 
+            // cacciatorpedinierePictureBox
+            // 
+            this.cacciatorpedinierePictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.cacciatorpedinierePictureBox.ImageLocation = "";
+            this.cacciatorpedinierePictureBox.Location = new System.Drawing.Point(985, 310);
+            this.cacciatorpedinierePictureBox.Name = "cacciatorpedinierePictureBox";
+            this.cacciatorpedinierePictureBox.Size = new System.Drawing.Size(98, 60);
+            this.cacciatorpedinierePictureBox.TabIndex = 11;
+            this.cacciatorpedinierePictureBox.TabStop = false;
+            // 
+            // sottomarinoPictureBox
+            // 
+            this.sottomarinoPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.sottomarinoPictureBox.ImageLocation = "";
+            this.sottomarinoPictureBox.Location = new System.Drawing.Point(985, 220);
+            this.sottomarinoPictureBox.Name = "sottomarinoPictureBox";
+            this.sottomarinoPictureBox.Size = new System.Drawing.Size(147, 60);
+            this.sottomarinoPictureBox.TabIndex = 10;
+            this.sottomarinoPictureBox.TabStop = false;
+            // 
+            // corazzataPcitureBox
+            // 
+            this.corazzataPcitureBox.BackColor = System.Drawing.Color.Transparent;
+            this.corazzataPcitureBox.ImageLocation = "";
+            this.corazzataPcitureBox.Location = new System.Drawing.Point(985, 130);
+            this.corazzataPcitureBox.Name = "corazzataPcitureBox";
+            this.corazzataPcitureBox.Size = new System.Drawing.Size(196, 60);
+            this.corazzataPcitureBox.TabIndex = 9;
+            this.corazzataPcitureBox.TabStop = false;
+            // 
+            // portaereiPictureBox
+            // 
+            this.portaereiPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.portaereiPictureBox.ImageLocation = "";
+            this.portaereiPictureBox.Location = new System.Drawing.Point(985, 40);
+            this.portaereiPictureBox.Name = "portaereiPictureBox";
+            this.portaereiPictureBox.Size = new System.Drawing.Size(245, 60);
+            this.portaereiPictureBox.TabIndex = 8;
+            this.portaereiPictureBox.TabStop = false;
+            // 
+            // doppioAssaltoPictureBox
+            // 
+            this.doppioAssaltoPictureBox.BackColor = System.Drawing.Color.White;
+            this.doppioAssaltoPictureBox.Image = global::Hyper_Battleship.Properties.Resources.doppioAssalto;
+            this.doppioAssaltoPictureBox.Location = new System.Drawing.Point(851, 373);
+            this.doppioAssaltoPictureBox.Name = "doppioAssaltoPictureBox";
+            this.doppioAssaltoPictureBox.Size = new System.Drawing.Size(100, 100);
+            this.doppioAssaltoPictureBox.TabIndex = 4;
+            this.doppioAssaltoPictureBox.TabStop = false;
+            // 
+            // radarPcitureBox
+            // 
+            this.radarPcitureBox.BackColor = System.Drawing.Color.White;
+            this.radarPcitureBox.Image = global::Hyper_Battleship.Properties.Resources.Radar;
+            this.radarPcitureBox.Location = new System.Drawing.Point(718, 373);
+            this.radarPcitureBox.Name = "radarPcitureBox";
+            this.radarPcitureBox.Size = new System.Drawing.Size(100, 100);
+            this.radarPcitureBox.TabIndex = 3;
+            this.radarPcitureBox.TabStop = false;
+            // 
+            // grigliaDiGiocoPiccola
+            // 
+            this.grigliaDiGiocoPiccola.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.grigliaDiGiocoPiccola.Location = new System.Drawing.Point(718, 40);
+            this.grigliaDiGiocoPiccola.Name = "grigliaDiGiocoPiccola";
+            this.grigliaDiGiocoPiccola.Size = new System.Drawing.Size(252, 252);
+            this.grigliaDiGiocoPiccola.TabIndex = 2;
+            this.grigliaDiGiocoPiccola.TabStop = false;
+            // 
+            // grigliaDiGiocoGrande
+            // 
+            this.grigliaDiGiocoGrande.BackColor = System.Drawing.Color.DodgerBlue;
+            this.grigliaDiGiocoGrande.Location = new System.Drawing.Point(45, 40);
+            this.grigliaDiGiocoGrande.Name = "grigliaDiGiocoGrande";
+            this.grigliaDiGiocoGrande.Size = new System.Drawing.Size(630, 630);
+            this.grigliaDiGiocoGrande.TabIndex = 1;
+            this.grigliaDiGiocoGrande.TabStop = false;
+            // 
             // Gameplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -443,15 +445,15 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Gameplay";
             this.Text = "Hyper Battleship";
-            ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corazzataPcitureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sottomarinoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpedinierePictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassaltoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpedinierePictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sottomarinoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazzataPcitureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
