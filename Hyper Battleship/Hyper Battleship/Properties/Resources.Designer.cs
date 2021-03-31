@@ -63,6 +63,16 @@ namespace Hyper_Battleship.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap doppioAssalto {
+            get {
+                object obj = ResourceManager.GetObject("doppioAssalto", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Hyper_Battleship_Schermata_Gioco_Piccola {
             get {
                 object obj = ResourceManager.GetObject("Hyper_Battleship_Schermata_Gioco_Piccola", resourceCulture);
@@ -96,6 +106,16 @@ namespace Hyper_Battleship.Properties {
         internal static System.Drawing.Bitmap P2 {
             get {
                 object obj = ResourceManager.GetObject("P2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Radar {
+            get {
+                object obj = ResourceManager.GetObject("Radar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
