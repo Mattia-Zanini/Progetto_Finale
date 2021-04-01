@@ -134,5 +134,14 @@
   <ItemGroup>
     <None Include="Resources\doppioAssalto.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RadarScalaGrigio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\doppioAssaltoScalaGrigio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RadarLucchetto.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
