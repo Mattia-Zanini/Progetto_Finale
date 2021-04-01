@@ -90,7 +90,8 @@ namespace Hyper_Battleship
             passwordLabel.Visible = false; passwordTextBox.Visible = false;
             showPassword.Visible = false;
             loginButton.Visible = false; loginAccountLabel.Visible = false;
-            backLabel.Visible = false;           
+            backLabel.Visible = false;
+            alertLoginAccount.Visible = false;
             playerLabel.Visible = true; newPlayerLabel.Visible = true; playerWithOutScore.Visible = true; exitLoginButton.Visible = true;            
             if(giocatore >= 1)
             {
@@ -120,7 +121,19 @@ namespace Hyper_Battleship
             else if(pWOS && giocatore == 1)
             {
                 Giocatore2 = usernameTextBox.Text;
-                prePartita();
+                if(Giocatore1 != Giocatore2)
+                {
+                    prePartita();
+                }
+                else
+                {
+                    alertLoginAccount.Visible = true;
+                    alertLoginAccount.Text = "Non è possibile giocare con 2 player";
+                    alertLoginAccount.Text += Environment.NewLine;
+                    alertLoginAccount.Text += "con lo stesso nome";
+                    alertLoginAccount.Text += Environment.NewLine;
+                    alertLoginAccount.Text += "Cambia username";
+                }
             }
         }
 
