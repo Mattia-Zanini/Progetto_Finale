@@ -143,5 +143,65 @@
   <ItemGroup>
     <None Include="Resources\RadarLucchetto.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Griglia6x6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Griglia10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\Griglia6x6_piccola.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\Griglia10x10_piccola.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\cacciatorpediniere_Box6x6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\cacciatorpediniere_Box10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\cacciatorpediniere_Griglia6x6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\cacciatorpediniere_Griglia10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\corazzata_Box10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\corazzata_Griglia10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\Nave D%27Assalto_Box6x6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\Nave D%27Assalto_Box10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\Nave D%27Assalto_Griglia6x6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\Nave D%27Assalto_Griglia10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\portaerei_Box10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\portaerei_Griglia10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\sottomarino_Box6x6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\sottomarino_Box10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\sottomarino_Griglia6x6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\sottomarino_Griglia10x10.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
