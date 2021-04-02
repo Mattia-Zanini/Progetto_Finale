@@ -121,9 +121,6 @@
   <data name="doppioAssalto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\doppioAssalto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Hyper_Battleship_Schermata_Gioco_Piccola" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Hyper_Battleship_Schermata_Gioco_Piccola.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Hyper_Battleship_Schermata_Iniziale" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hyper_Battleship_Schermata_Iniziale.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -144,5 +141,65 @@
   </data>
   <data name="RadarScalaGrigio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\RadarScalaGrigio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Griglia10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Griglia10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Griglia6x6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Griglia6x6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Griglia10x10_piccola" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\Griglia10x10_piccola.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Griglia6x6_piccola" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\Griglia6x6_piccola.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cacciatorpediniere_Box10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\cacciatorpediniere_Box10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cacciatorpediniere_Box6x6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\cacciatorpediniere_Box6x6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cacciatorpediniere_Griglia10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\cacciatorpediniere_Griglia10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cacciatorpediniere_Griglia6x6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\cacciatorpediniere_Griglia6x6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="corazzata_Box10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\corazzata_Box10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="corazzata_Griglia10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\corazzata_Griglia10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nave_D_Assalto_Box10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\Nave D'Assalto_Box10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nave_D_Assalto_Box6x6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\Nave D'Assalto_Box6x6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nave_D_Assalto_Griglia10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\Nave D'Assalto_Griglia10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Nave_D_Assalto_Griglia6x6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\Nave D'Assalto_Griglia6x6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="portaerei_Box10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\portaerei_Box10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="portaerei_Griglia10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\portaerei_Griglia10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sottomarino_Box10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\sottomarino_Box10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sottomarino_Box6x6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\sottomarino_Box6x6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sottomarino_Griglia10x10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\sottomarino_Griglia10x10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="sottomarino_Griglia6x6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Sprites\sottomarino_Griglia6x6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
