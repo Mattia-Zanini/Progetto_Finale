@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Gameplay));
             this.confermaButton = new System.Windows.Forms.Button();
             this.passaTurnoButton = new System.Windows.Forms.Button();
@@ -71,26 +72,58 @@
             this.GrigliaPiccola10_3 = new System.Windows.Forms.Label();
             this.GrigliaPiccola10_2 = new System.Windows.Forms.Label();
             this.GrigliaPiccola10_1 = new System.Windows.Forms.Label();
-            this.naveDassaltoPictureBox = new System.Windows.Forms.PictureBox();
-            this.cacciatorpedinierePictureBox = new System.Windows.Forms.PictureBox();
-            this.sottomarinoPictureBox = new System.Windows.Forms.PictureBox();
-            this.corazzataPcitureBox = new System.Windows.Forms.PictureBox();
-            this.portaereiPictureBox = new System.Windows.Forms.PictureBox();
+            this.countdownRadar = new System.Windows.Forms.Label();
+            this.quantità = new System.Windows.Forms.Label();
+            this.quantitàPortaerei = new System.Windows.Forms.Label();
+            this.quantitàCorazzata = new System.Windows.Forms.Label();
+            this.quantitàSottomarini = new System.Windows.Forms.Label();
+            this.quantitàCacciatorpediniere = new System.Windows.Forms.Label();
+            this.quantitàNaveDassalto = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.naveDassalto3Griglia10x10 = new System.Windows.Forms.PictureBox();
+            this.naveDassalto2Griglia10x10 = new System.Windows.Forms.PictureBox();
+            this.cacciatorpediniere2Griglia10x10 = new System.Windows.Forms.PictureBox();
+            this.sottomarino2Griglia10x10 = new System.Windows.Forms.PictureBox();
+            this.naveDassalto1Griglia10x10 = new System.Windows.Forms.PictureBox();
+            this.cacciatorpediniere1Griglia10x10 = new System.Windows.Forms.PictureBox();
+            this.sottomarino1Griglia10x10 = new System.Windows.Forms.PictureBox();
+            this.corazzataGriglia10x10 = new System.Windows.Forms.PictureBox();
+            this.portaereiGriglia10x10 = new System.Windows.Forms.PictureBox();
+            this.player2PictureBox = new System.Windows.Forms.PictureBox();
+            this.player1PictureBox = new System.Windows.Forms.PictureBox();
+            this.naveDassaltoPictureBox10x10 = new System.Windows.Forms.PictureBox();
+            this.cacciatorpedinierePictureBox10x10 = new System.Windows.Forms.PictureBox();
+            this.sottomarinoPictureBox10x10 = new System.Windows.Forms.PictureBox();
+            this.corazzataPcitureBox10x10 = new System.Windows.Forms.PictureBox();
+            this.portaereiPictureBox10x10 = new System.Windows.Forms.PictureBox();
             this.doppioAssaltoPictureBox = new System.Windows.Forms.PictureBox();
             this.radarPcitureBox = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoPiccola = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
-            this.countdownRadar = new System.Windows.Forms.Label();
-            this.quantità = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.naveDassaltoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpedinierePictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sottomarinoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corazzataPcitureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox)).BeginInit();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.movimentoDisposizioneNavi = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveDassalto3Griglia10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveDassalto2Griglia10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpediniere2Griglia10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sottomarino2Griglia10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveDassalto1Griglia10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpediniere1Griglia10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sottomarino1Griglia10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazzataGriglia10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.portaereiGriglia10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player2PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1PictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveDassaltoPictureBox10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpedinierePictureBox10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sottomarinoPictureBox10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazzataPcitureBox10x10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // confermaButton
@@ -104,6 +137,7 @@
             this.confermaButton.TabIndex = 6;
             this.confermaButton.Text = "CONFERMA";
             this.confermaButton.UseVisualStyleBackColor = false;
+            this.confermaButton.Click += new System.EventHandler(this.confermaButton_Click);
             // 
             // passaTurnoButton
             // 
@@ -111,7 +145,7 @@
             this.passaTurnoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.passaTurnoButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.passaTurnoButton.ForeColor = System.Drawing.Color.White;
-            this.passaTurnoButton.Location = new System.Drawing.Point(1088, 619);
+            this.passaTurnoButton.Location = new System.Drawing.Point(1182, 619);
             this.passaTurnoButton.Name = "passaTurnoButton";
             this.passaTurnoButton.Size = new System.Drawing.Size(164, 50);
             this.passaTurnoButton.TabIndex = 7;
@@ -558,102 +592,13 @@
             this.GrigliaPiccola10_1.TabIndex = 45;
             this.GrigliaPiccola10_1.Text = "1";
             // 
-            // naveDassaltoPictureBox
-            // 
-            this.naveDassaltoPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.naveDassaltoPictureBox.ImageLocation = "";
-            this.naveDassaltoPictureBox.Location = new System.Drawing.Point(985, 400);
-            this.naveDassaltoPictureBox.Name = "naveDassaltoPictureBox";
-            this.naveDassaltoPictureBox.Size = new System.Drawing.Size(49, 60);
-            this.naveDassaltoPictureBox.TabIndex = 12;
-            this.naveDassaltoPictureBox.TabStop = false;
-            // 
-            // cacciatorpedinierePictureBox
-            // 
-            this.cacciatorpedinierePictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.cacciatorpedinierePictureBox.ImageLocation = "";
-            this.cacciatorpedinierePictureBox.Location = new System.Drawing.Point(985, 310);
-            this.cacciatorpedinierePictureBox.Name = "cacciatorpedinierePictureBox";
-            this.cacciatorpedinierePictureBox.Size = new System.Drawing.Size(98, 60);
-            this.cacciatorpedinierePictureBox.TabIndex = 11;
-            this.cacciatorpedinierePictureBox.TabStop = false;
-            // 
-            // sottomarinoPictureBox
-            // 
-            this.sottomarinoPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.sottomarinoPictureBox.ImageLocation = "";
-            this.sottomarinoPictureBox.Location = new System.Drawing.Point(985, 220);
-            this.sottomarinoPictureBox.Name = "sottomarinoPictureBox";
-            this.sottomarinoPictureBox.Size = new System.Drawing.Size(147, 60);
-            this.sottomarinoPictureBox.TabIndex = 10;
-            this.sottomarinoPictureBox.TabStop = false;
-            // 
-            // corazzataPcitureBox
-            // 
-            this.corazzataPcitureBox.BackColor = System.Drawing.Color.Transparent;
-            this.corazzataPcitureBox.ImageLocation = "";
-            this.corazzataPcitureBox.Location = new System.Drawing.Point(985, 130);
-            this.corazzataPcitureBox.Name = "corazzataPcitureBox";
-            this.corazzataPcitureBox.Size = new System.Drawing.Size(196, 60);
-            this.corazzataPcitureBox.TabIndex = 9;
-            this.corazzataPcitureBox.TabStop = false;
-            // 
-            // portaereiPictureBox
-            // 
-            this.portaereiPictureBox.BackColor = System.Drawing.Color.Transparent;
-            this.portaereiPictureBox.ImageLocation = "";
-            this.portaereiPictureBox.Location = new System.Drawing.Point(985, 40);
-            this.portaereiPictureBox.Name = "portaereiPictureBox";
-            this.portaereiPictureBox.Size = new System.Drawing.Size(245, 60);
-            this.portaereiPictureBox.TabIndex = 8;
-            this.portaereiPictureBox.TabStop = false;
-            // 
-            // doppioAssaltoPictureBox
-            // 
-            this.doppioAssaltoPictureBox.BackColor = System.Drawing.Color.White;
-            this.doppioAssaltoPictureBox.Image = global::Hyper_Battleship.Properties.Resources.doppioAssalto;
-            this.doppioAssaltoPictureBox.Location = new System.Drawing.Point(851, 373);
-            this.doppioAssaltoPictureBox.Name = "doppioAssaltoPictureBox";
-            this.doppioAssaltoPictureBox.Size = new System.Drawing.Size(100, 100);
-            this.doppioAssaltoPictureBox.TabIndex = 4;
-            this.doppioAssaltoPictureBox.TabStop = false;
-            // 
-            // radarPcitureBox
-            // 
-            this.radarPcitureBox.BackColor = System.Drawing.Color.White;
-            this.radarPcitureBox.Image = global::Hyper_Battleship.Properties.Resources.RadarLucchetto;
-            this.radarPcitureBox.Location = new System.Drawing.Point(718, 373);
-            this.radarPcitureBox.Name = "radarPcitureBox";
-            this.radarPcitureBox.Size = new System.Drawing.Size(100, 100);
-            this.radarPcitureBox.TabIndex = 3;
-            this.radarPcitureBox.TabStop = false;
-            // 
-            // grigliaDiGiocoPiccola
-            // 
-            this.grigliaDiGiocoPiccola.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(40)))), ((int)(((byte)(0)))));
-            this.grigliaDiGiocoPiccola.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.grigliaDiGiocoPiccola.Location = new System.Drawing.Point(718, 40);
-            this.grigliaDiGiocoPiccola.Name = "grigliaDiGiocoPiccola";
-            this.grigliaDiGiocoPiccola.Size = new System.Drawing.Size(252, 252);
-            this.grigliaDiGiocoPiccola.TabIndex = 2;
-            this.grigliaDiGiocoPiccola.TabStop = false;
-            // 
-            // grigliaDiGiocoGrande
-            // 
-            this.grigliaDiGiocoGrande.BackColor = System.Drawing.Color.DodgerBlue;
-            this.grigliaDiGiocoGrande.Location = new System.Drawing.Point(45, 40);
-            this.grigliaDiGiocoGrande.Name = "grigliaDiGiocoGrande";
-            this.grigliaDiGiocoGrande.Size = new System.Drawing.Size(630, 630);
-            this.grigliaDiGiocoGrande.TabIndex = 1;
-            this.grigliaDiGiocoGrande.TabStop = false;
-            // 
             // countdownRadar
             // 
             this.countdownRadar.AutoSize = true;
             this.countdownRadar.BackColor = System.Drawing.Color.Transparent;
             this.countdownRadar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countdownRadar.ForeColor = System.Drawing.Color.White;
-            this.countdownRadar.Location = new System.Drawing.Point(750, 415);
+            this.countdownRadar.Location = new System.Drawing.Point(750, 431);
             this.countdownRadar.Name = "countdownRadar";
             this.countdownRadar.Size = new System.Drawing.Size(39, 29);
             this.countdownRadar.TabIndex = 55;
@@ -665,18 +610,349 @@
             this.quantità.BackColor = System.Drawing.Color.Transparent;
             this.quantità.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantità.ForeColor = System.Drawing.Color.White;
-            this.quantità.Location = new System.Drawing.Point(890, 415);
+            this.quantità.Location = new System.Drawing.Point(890, 431);
             this.quantità.Name = "quantità";
             this.quantità.Size = new System.Drawing.Size(26, 29);
             this.quantità.TabIndex = 56;
             this.quantità.Text = "2";
+            // 
+            // quantitàPortaerei
+            // 
+            this.quantitàPortaerei.AutoSize = true;
+            this.quantitàPortaerei.BackColor = System.Drawing.Color.Transparent;
+            this.quantitàPortaerei.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantitàPortaerei.ForeColor = System.Drawing.Color.White;
+            this.quantitàPortaerei.Location = new System.Drawing.Point(1306, 54);
+            this.quantitàPortaerei.Name = "quantitàPortaerei";
+            this.quantitàPortaerei.Size = new System.Drawing.Size(26, 29);
+            this.quantitàPortaerei.TabIndex = 68;
+            this.quantitàPortaerei.Text = "1";
+            // 
+            // quantitàCorazzata
+            // 
+            this.quantitàCorazzata.AutoSize = true;
+            this.quantitàCorazzata.BackColor = System.Drawing.Color.Transparent;
+            this.quantitàCorazzata.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantitàCorazzata.ForeColor = System.Drawing.Color.White;
+            this.quantitàCorazzata.Location = new System.Drawing.Point(1306, 147);
+            this.quantitàCorazzata.Name = "quantitàCorazzata";
+            this.quantitàCorazzata.Size = new System.Drawing.Size(26, 29);
+            this.quantitàCorazzata.TabIndex = 69;
+            this.quantitàCorazzata.Text = "1";
+            // 
+            // quantitàSottomarini
+            // 
+            this.quantitàSottomarini.AutoSize = true;
+            this.quantitàSottomarini.BackColor = System.Drawing.Color.Transparent;
+            this.quantitàSottomarini.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantitàSottomarini.ForeColor = System.Drawing.Color.White;
+            this.quantitàSottomarini.Location = new System.Drawing.Point(1306, 231);
+            this.quantitàSottomarini.Name = "quantitàSottomarini";
+            this.quantitàSottomarini.Size = new System.Drawing.Size(26, 29);
+            this.quantitàSottomarini.TabIndex = 70;
+            this.quantitàSottomarini.Text = "2";
+            // 
+            // quantitàCacciatorpediniere
+            // 
+            this.quantitàCacciatorpediniere.AutoSize = true;
+            this.quantitàCacciatorpediniere.BackColor = System.Drawing.Color.Transparent;
+            this.quantitàCacciatorpediniere.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantitàCacciatorpediniere.ForeColor = System.Drawing.Color.White;
+            this.quantitàCacciatorpediniere.Location = new System.Drawing.Point(1306, 323);
+            this.quantitàCacciatorpediniere.Name = "quantitàCacciatorpediniere";
+            this.quantitàCacciatorpediniere.Size = new System.Drawing.Size(26, 29);
+            this.quantitàCacciatorpediniere.TabIndex = 71;
+            this.quantitàCacciatorpediniere.Text = "2";
+            // 
+            // quantitàNaveDassalto
+            // 
+            this.quantitàNaveDassalto.AutoSize = true;
+            this.quantitàNaveDassalto.BackColor = System.Drawing.Color.Transparent;
+            this.quantitàNaveDassalto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantitàNaveDassalto.ForeColor = System.Drawing.Color.White;
+            this.quantitàNaveDassalto.Location = new System.Drawing.Point(1306, 420);
+            this.quantitàNaveDassalto.Name = "quantitàNaveDassalto";
+            this.quantitàNaveDassalto.Size = new System.Drawing.Size(26, 29);
+            this.quantitàNaveDassalto.TabIndex = 72;
+            this.quantitàNaveDassalto.Text = "3";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Box10x10;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(297, 292);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.TabIndex = 73;
+            this.pictureBox1.TabStop = false;
+            // 
+            // naveDassalto3Griglia10x10
+            // 
+            this.naveDassalto3Griglia10x10.BackColor = System.Drawing.Color.Transparent;
+            this.naveDassalto3Griglia10x10.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Griglia10x10;
+            this.naveDassalto3Griglia10x10.ImageLocation = "";
+            this.naveDassalto3Griglia10x10.Location = new System.Drawing.Point(853, 619);
+            this.naveDassalto3Griglia10x10.Name = "naveDassalto3Griglia10x10";
+            this.naveDassalto3Griglia10x10.Size = new System.Drawing.Size(63, 63);
+            this.naveDassalto3Griglia10x10.TabIndex = 67;
+            this.naveDassalto3Griglia10x10.TabStop = false;
+            this.naveDassalto3Griglia10x10.Visible = false;
+            // 
+            // naveDassalto2Griglia10x10
+            // 
+            this.naveDassalto2Griglia10x10.BackColor = System.Drawing.Color.Transparent;
+            this.naveDassalto2Griglia10x10.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Griglia10x10;
+            this.naveDassalto2Griglia10x10.ImageLocation = "";
+            this.naveDassalto2Griglia10x10.Location = new System.Drawing.Point(852, 592);
+            this.naveDassalto2Griglia10x10.Name = "naveDassalto2Griglia10x10";
+            this.naveDassalto2Griglia10x10.Size = new System.Drawing.Size(63, 63);
+            this.naveDassalto2Griglia10x10.TabIndex = 66;
+            this.naveDassalto2Griglia10x10.TabStop = false;
+            this.naveDassalto2Griglia10x10.Visible = false;
+            // 
+            // cacciatorpediniere2Griglia10x10
+            // 
+            this.cacciatorpediniere2Griglia10x10.BackColor = System.Drawing.Color.Transparent;
+            this.cacciatorpediniere2Griglia10x10.Image = global::Hyper_Battleship.Properties.Resources.cacciatorpediniere_Griglia10x10;
+            this.cacciatorpediniere2Griglia10x10.ImageLocation = "";
+            this.cacciatorpediniere2Griglia10x10.Location = new System.Drawing.Point(852, 619);
+            this.cacciatorpediniere2Griglia10x10.Name = "cacciatorpediniere2Griglia10x10";
+            this.cacciatorpediniere2Griglia10x10.Size = new System.Drawing.Size(126, 63);
+            this.cacciatorpediniere2Griglia10x10.TabIndex = 65;
+            this.cacciatorpediniere2Griglia10x10.TabStop = false;
+            this.cacciatorpediniere2Griglia10x10.Visible = false;
+            // 
+            // sottomarino2Griglia10x10
+            // 
+            this.sottomarino2Griglia10x10.BackColor = System.Drawing.Color.Transparent;
+            this.sottomarino2Griglia10x10.Image = global::Hyper_Battleship.Properties.Resources.sottomarino_Griglia10x10;
+            this.sottomarino2Griglia10x10.ImageLocation = "";
+            this.sottomarino2Griglia10x10.Location = new System.Drawing.Point(852, 619);
+            this.sottomarino2Griglia10x10.Name = "sottomarino2Griglia10x10";
+            this.sottomarino2Griglia10x10.Size = new System.Drawing.Size(189, 63);
+            this.sottomarino2Griglia10x10.TabIndex = 64;
+            this.sottomarino2Griglia10x10.TabStop = false;
+            this.sottomarino2Griglia10x10.Visible = false;
+            // 
+            // naveDassalto1Griglia10x10
+            // 
+            this.naveDassalto1Griglia10x10.BackColor = System.Drawing.Color.Transparent;
+            this.naveDassalto1Griglia10x10.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Griglia10x10;
+            this.naveDassalto1Griglia10x10.ImageLocation = "";
+            this.naveDassalto1Griglia10x10.Location = new System.Drawing.Point(853, 570);
+            this.naveDassalto1Griglia10x10.Name = "naveDassalto1Griglia10x10";
+            this.naveDassalto1Griglia10x10.Size = new System.Drawing.Size(63, 63);
+            this.naveDassalto1Griglia10x10.TabIndex = 63;
+            this.naveDassalto1Griglia10x10.TabStop = false;
+            this.naveDassalto1Griglia10x10.Visible = false;
+            // 
+            // cacciatorpediniere1Griglia10x10
+            // 
+            this.cacciatorpediniere1Griglia10x10.BackColor = System.Drawing.Color.Transparent;
+            this.cacciatorpediniere1Griglia10x10.Image = global::Hyper_Battleship.Properties.Resources.cacciatorpediniere_Griglia10x10;
+            this.cacciatorpediniere1Griglia10x10.ImageLocation = "";
+            this.cacciatorpediniere1Griglia10x10.Location = new System.Drawing.Point(852, 594);
+            this.cacciatorpediniere1Griglia10x10.Name = "cacciatorpediniere1Griglia10x10";
+            this.cacciatorpediniere1Griglia10x10.Size = new System.Drawing.Size(126, 63);
+            this.cacciatorpediniere1Griglia10x10.TabIndex = 62;
+            this.cacciatorpediniere1Griglia10x10.TabStop = false;
+            this.cacciatorpediniere1Griglia10x10.Visible = false;
+            // 
+            // sottomarino1Griglia10x10
+            // 
+            this.sottomarino1Griglia10x10.BackColor = System.Drawing.Color.Transparent;
+            this.sottomarino1Griglia10x10.Image = global::Hyper_Battleship.Properties.Resources.sottomarino_Griglia10x10;
+            this.sottomarino1Griglia10x10.ImageLocation = "";
+            this.sottomarino1Griglia10x10.Location = new System.Drawing.Point(852, 594);
+            this.sottomarino1Griglia10x10.Name = "sottomarino1Griglia10x10";
+            this.sottomarino1Griglia10x10.Size = new System.Drawing.Size(189, 63);
+            this.sottomarino1Griglia10x10.TabIndex = 61;
+            this.sottomarino1Griglia10x10.TabStop = false;
+            this.sottomarino1Griglia10x10.Visible = false;
+            // 
+            // corazzataGriglia10x10
+            // 
+            this.corazzataGriglia10x10.BackColor = System.Drawing.Color.Transparent;
+            this.corazzataGriglia10x10.Image = global::Hyper_Battleship.Properties.Resources.corazzata_Griglia10x10;
+            this.corazzataGriglia10x10.ImageLocation = "";
+            this.corazzataGriglia10x10.Location = new System.Drawing.Point(852, 594);
+            this.corazzataGriglia10x10.Name = "corazzataGriglia10x10";
+            this.corazzataGriglia10x10.Size = new System.Drawing.Size(252, 63);
+            this.corazzataGriglia10x10.TabIndex = 60;
+            this.corazzataGriglia10x10.TabStop = false;
+            this.corazzataGriglia10x10.Visible = false;
+            // 
+            // portaereiGriglia10x10
+            // 
+            this.portaereiGriglia10x10.BackColor = System.Drawing.Color.Transparent;
+            this.portaereiGriglia10x10.Image = global::Hyper_Battleship.Properties.Resources.portaerei_Griglia10x10;
+            this.portaereiGriglia10x10.ImageLocation = "";
+            this.portaereiGriglia10x10.Location = new System.Drawing.Point(852, 594);
+            this.portaereiGriglia10x10.Name = "portaereiGriglia10x10";
+            this.portaereiGriglia10x10.Size = new System.Drawing.Size(315, 63);
+            this.portaereiGriglia10x10.TabIndex = 59;
+            this.portaereiGriglia10x10.TabStop = false;
+            this.portaereiGriglia10x10.Visible = false;
+            // 
+            // player2PictureBox
+            // 
+            this.player2PictureBox.Image = global::Hyper_Battleship.Properties.Resources.P2;
+            this.player2PictureBox.Location = new System.Drawing.Point(718, 570);
+            this.player2PictureBox.Name = "player2PictureBox";
+            this.player2PictureBox.Size = new System.Drawing.Size(100, 100);
+            this.player2PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.player2PictureBox.TabIndex = 58;
+            this.player2PictureBox.TabStop = false;
+            this.player2PictureBox.Visible = false;
+            // 
+            // player1PictureBox
+            // 
+            this.player1PictureBox.Image = global::Hyper_Battleship.Properties.Resources.P1;
+            this.player1PictureBox.Location = new System.Drawing.Point(718, 570);
+            this.player1PictureBox.Name = "player1PictureBox";
+            this.player1PictureBox.Size = new System.Drawing.Size(100, 100);
+            this.player1PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.player1PictureBox.TabIndex = 57;
+            this.player1PictureBox.TabStop = false;
+            // 
+            // naveDassaltoPictureBox10x10
+            // 
+            this.naveDassaltoPictureBox10x10.BackColor = System.Drawing.Color.Transparent;
+            this.naveDassaltoPictureBox10x10.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Box10x10;
+            this.naveDassaltoPictureBox10x10.ImageLocation = "";
+            this.naveDassaltoPictureBox10x10.Location = new System.Drawing.Point(985, 400);
+            this.naveDassaltoPictureBox10x10.Name = "naveDassaltoPictureBox10x10";
+            this.naveDassaltoPictureBox10x10.Size = new System.Drawing.Size(63, 63);
+            this.naveDassaltoPictureBox10x10.TabIndex = 12;
+            this.naveDassaltoPictureBox10x10.TabStop = false;
+            // 
+            // cacciatorpedinierePictureBox10x10
+            // 
+            this.cacciatorpedinierePictureBox10x10.BackColor = System.Drawing.Color.Transparent;
+            this.cacciatorpedinierePictureBox10x10.Image = global::Hyper_Battleship.Properties.Resources.cacciatorpediniere_Box10x10;
+            this.cacciatorpedinierePictureBox10x10.ImageLocation = "";
+            this.cacciatorpedinierePictureBox10x10.Location = new System.Drawing.Point(985, 310);
+            this.cacciatorpedinierePictureBox10x10.Name = "cacciatorpedinierePictureBox10x10";
+            this.cacciatorpedinierePictureBox10x10.Size = new System.Drawing.Size(126, 63);
+            this.cacciatorpedinierePictureBox10x10.TabIndex = 11;
+            this.cacciatorpedinierePictureBox10x10.TabStop = false;
+            // 
+            // sottomarinoPictureBox10x10
+            // 
+            this.sottomarinoPictureBox10x10.BackColor = System.Drawing.Color.Transparent;
+            this.sottomarinoPictureBox10x10.Image = global::Hyper_Battleship.Properties.Resources.sottomarino_Box10x10;
+            this.sottomarinoPictureBox10x10.ImageLocation = "";
+            this.sottomarinoPictureBox10x10.Location = new System.Drawing.Point(985, 220);
+            this.sottomarinoPictureBox10x10.Name = "sottomarinoPictureBox10x10";
+            this.sottomarinoPictureBox10x10.Size = new System.Drawing.Size(189, 63);
+            this.sottomarinoPictureBox10x10.TabIndex = 10;
+            this.sottomarinoPictureBox10x10.TabStop = false;
+            // 
+            // corazzataPcitureBox10x10
+            // 
+            this.corazzataPcitureBox10x10.BackColor = System.Drawing.Color.Transparent;
+            this.corazzataPcitureBox10x10.Image = global::Hyper_Battleship.Properties.Resources.corazzata_Box10x10;
+            this.corazzataPcitureBox10x10.ImageLocation = "";
+            this.corazzataPcitureBox10x10.Location = new System.Drawing.Point(985, 130);
+            this.corazzataPcitureBox10x10.Name = "corazzataPcitureBox10x10";
+            this.corazzataPcitureBox10x10.Size = new System.Drawing.Size(252, 63);
+            this.corazzataPcitureBox10x10.TabIndex = 9;
+            this.corazzataPcitureBox10x10.TabStop = false;
+            // 
+            // portaereiPictureBox10x10
+            // 
+            this.portaereiPictureBox10x10.BackColor = System.Drawing.Color.Transparent;
+            this.portaereiPictureBox10x10.Image = global::Hyper_Battleship.Properties.Resources.portaerei_Box10x10;
+            this.portaereiPictureBox10x10.ImageLocation = "";
+            this.portaereiPictureBox10x10.Location = new System.Drawing.Point(985, 40);
+            this.portaereiPictureBox10x10.Name = "portaereiPictureBox10x10";
+            this.portaereiPictureBox10x10.Size = new System.Drawing.Size(315, 63);
+            this.portaereiPictureBox10x10.TabIndex = 8;
+            this.portaereiPictureBox10x10.TabStop = false;
+            this.portaereiPictureBox10x10.Click += new System.EventHandler(this.portaereiPictureBox10x10_Click);
+            // 
+            // doppioAssaltoPictureBox
+            // 
+            this.doppioAssaltoPictureBox.BackColor = System.Drawing.Color.White;
+            this.doppioAssaltoPictureBox.Image = global::Hyper_Battleship.Properties.Resources.doppioAssalto;
+            this.doppioAssaltoPictureBox.Location = new System.Drawing.Point(852, 323);
+            this.doppioAssaltoPictureBox.Name = "doppioAssaltoPictureBox";
+            this.doppioAssaltoPictureBox.Size = new System.Drawing.Size(100, 100);
+            this.doppioAssaltoPictureBox.TabIndex = 4;
+            this.doppioAssaltoPictureBox.TabStop = false;
+            // 
+            // radarPcitureBox
+            // 
+            this.radarPcitureBox.BackColor = System.Drawing.Color.White;
+            this.radarPcitureBox.Image = global::Hyper_Battleship.Properties.Resources.RadarLucchetto;
+            this.radarPcitureBox.Location = new System.Drawing.Point(719, 323);
+            this.radarPcitureBox.Name = "radarPcitureBox";
+            this.radarPcitureBox.Size = new System.Drawing.Size(100, 100);
+            this.radarPcitureBox.TabIndex = 3;
+            this.radarPcitureBox.TabStop = false;
+            // 
+            // grigliaDiGiocoPiccola
+            // 
+            this.grigliaDiGiocoPiccola.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(40)))), ((int)(((byte)(0)))));
+            this.grigliaDiGiocoPiccola.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.grigliaDiGiocoPiccola.Image = global::Hyper_Battleship.Properties.Resources.Griglia10x10_piccola;
+            this.grigliaDiGiocoPiccola.Location = new System.Drawing.Point(718, 40);
+            this.grigliaDiGiocoPiccola.Name = "grigliaDiGiocoPiccola";
+            this.grigliaDiGiocoPiccola.Size = new System.Drawing.Size(252, 252);
+            this.grigliaDiGiocoPiccola.TabIndex = 2;
+            this.grigliaDiGiocoPiccola.TabStop = false;
+            // 
+            // grigliaDiGiocoGrande
+            // 
+            this.grigliaDiGiocoGrande.BackColor = System.Drawing.Color.DodgerBlue;
+            this.grigliaDiGiocoGrande.Image = global::Hyper_Battleship.Properties.Resources.Griglia10x10;
+            this.grigliaDiGiocoGrande.Location = new System.Drawing.Point(45, 40);
+            this.grigliaDiGiocoGrande.Name = "grigliaDiGiocoGrande";
+            this.grigliaDiGiocoGrande.Size = new System.Drawing.Size(630, 630);
+            this.grigliaDiGiocoGrande.TabIndex = 1;
+            this.grigliaDiGiocoGrande.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Box10x10;
+            this.pictureBox2.ImageLocation = "";
+            this.pictureBox2.Location = new System.Drawing.Point(612, 40);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox2.TabIndex = 74;
+            this.pictureBox2.TabStop = false;
+            // 
+            // movimentoDisposizioneNavi
+            // 
+            this.movimentoDisposizioneNavi.Enabled = true;
+            this.movimentoDisposizioneNavi.Tick += new System.EventHandler(this.moveShipEvent);
             // 
             // Gameplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1358, 681);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.quantitàNaveDassalto);
+            this.Controls.Add(this.quantitàCacciatorpediniere);
+            this.Controls.Add(this.quantitàSottomarini);
+            this.Controls.Add(this.quantitàCorazzata);
+            this.Controls.Add(this.quantitàPortaerei);
+            this.Controls.Add(this.naveDassalto3Griglia10x10);
+            this.Controls.Add(this.naveDassalto2Griglia10x10);
+            this.Controls.Add(this.cacciatorpediniere2Griglia10x10);
+            this.Controls.Add(this.sottomarino2Griglia10x10);
+            this.Controls.Add(this.naveDassalto1Griglia10x10);
+            this.Controls.Add(this.cacciatorpediniere1Griglia10x10);
+            this.Controls.Add(this.sottomarino1Griglia10x10);
+            this.Controls.Add(this.corazzataGriglia10x10);
+            this.Controls.Add(this.portaereiGriglia10x10);
+            this.Controls.Add(this.player2PictureBox);
+            this.Controls.Add(this.player1PictureBox);
             this.Controls.Add(this.quantità);
             this.Controls.Add(this.countdownRadar);
             this.Controls.Add(this.GrigliaPiccola10_10);
@@ -719,11 +995,11 @@
             this.Controls.Add(this.c_GrigliaGrande10);
             this.Controls.Add(this.b_GrigliaGrande10);
             this.Controls.Add(this.a_GrigliaGrande10);
-            this.Controls.Add(this.naveDassaltoPictureBox);
-            this.Controls.Add(this.cacciatorpedinierePictureBox);
-            this.Controls.Add(this.sottomarinoPictureBox);
-            this.Controls.Add(this.corazzataPcitureBox);
-            this.Controls.Add(this.portaereiPictureBox);
+            this.Controls.Add(this.naveDassaltoPictureBox10x10);
+            this.Controls.Add(this.cacciatorpedinierePictureBox10x10);
+            this.Controls.Add(this.sottomarinoPictureBox10x10);
+            this.Controls.Add(this.corazzataPcitureBox10x10);
+            this.Controls.Add(this.portaereiPictureBox10x10);
             this.Controls.Add(this.passaTurnoButton);
             this.Controls.Add(this.confermaButton);
             this.Controls.Add(this.doppioAssaltoPictureBox);
@@ -732,17 +1008,33 @@
             this.Controls.Add(this.grigliaDiGiocoGrande);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Name = "Gameplay";
             this.Text = "Hyper Battleship";
-            ((System.ComponentModel.ISupportInitialize)(this.naveDassaltoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpedinierePictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.sottomarinoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.corazzataPcitureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox)).EndInit();
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Gameplay_KeyDown);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Gameplay_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveDassalto3Griglia10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveDassalto2Griglia10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpediniere2Griglia10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sottomarino2Griglia10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveDassalto1Griglia10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpediniere1Griglia10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sottomarino1Griglia10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazzataGriglia10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.portaereiGriglia10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player2PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1PictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveDassaltoPictureBox10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cacciatorpedinierePictureBox10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sottomarinoPictureBox10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.corazzataPcitureBox10x10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -756,11 +1048,10 @@
         private System.Windows.Forms.PictureBox doppioAssaltoPictureBox;
         private System.Windows.Forms.Button confermaButton;
         private System.Windows.Forms.Button passaTurnoButton;
-        private System.Windows.Forms.PictureBox portaereiPictureBox;
-        private System.Windows.Forms.PictureBox corazzataPcitureBox;
-        private System.Windows.Forms.PictureBox sottomarinoPictureBox;
-        private System.Windows.Forms.PictureBox cacciatorpedinierePictureBox;
-        private System.Windows.Forms.PictureBox naveDassaltoPictureBox;
+        private System.Windows.Forms.PictureBox corazzataPcitureBox10x10;
+        private System.Windows.Forms.PictureBox sottomarinoPictureBox10x10;
+        private System.Windows.Forms.PictureBox cacciatorpedinierePictureBox10x10;
+        private System.Windows.Forms.PictureBox naveDassaltoPictureBox10x10;
         private System.Windows.Forms.Label a_GrigliaGrande10;
         private System.Windows.Forms.Label b_GrigliaGrande10;
         private System.Windows.Forms.Label c_GrigliaGrande10;
@@ -803,5 +1094,25 @@
         private System.Windows.Forms.Label GrigliaPiccola10_1;
         private System.Windows.Forms.Label countdownRadar;
         private System.Windows.Forms.Label quantità;
+        private System.Windows.Forms.PictureBox portaereiPictureBox10x10;
+        private System.Windows.Forms.PictureBox player1PictureBox;
+        private System.Windows.Forms.PictureBox player2PictureBox;
+        private System.Windows.Forms.PictureBox portaereiGriglia10x10;
+        private System.Windows.Forms.PictureBox corazzataGriglia10x10;
+        private System.Windows.Forms.PictureBox sottomarino1Griglia10x10;
+        private System.Windows.Forms.PictureBox cacciatorpediniere1Griglia10x10;
+        private System.Windows.Forms.PictureBox naveDassalto1Griglia10x10;
+        private System.Windows.Forms.PictureBox sottomarino2Griglia10x10;
+        private System.Windows.Forms.PictureBox cacciatorpediniere2Griglia10x10;
+        private System.Windows.Forms.PictureBox naveDassalto2Griglia10x10;
+        private System.Windows.Forms.PictureBox naveDassalto3Griglia10x10;
+        private System.Windows.Forms.Label quantitàPortaerei;
+        private System.Windows.Forms.Label quantitàCorazzata;
+        private System.Windows.Forms.Label quantitàSottomarini;
+        private System.Windows.Forms.Label quantitàCacciatorpediniere;
+        private System.Windows.Forms.Label quantitàNaveDassalto;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Timer movimentoDisposizioneNavi;
     }
 }
