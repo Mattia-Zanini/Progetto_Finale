@@ -39,7 +39,7 @@ namespace Hyper_Battleship
         {
             backButton.Visible = true;
             fastMatchButton.Visible = true;
-            fullMatchButton.Visible = true;
+            normalMatchButton.Visible = true;
             schermataPreLobby.Location = new Point(880, schermataPreLobby.Location.Y);
             startText.Visible = false;
             settingsText.Visible = false;
@@ -54,7 +54,7 @@ namespace Hyper_Battleship
             {
                 backButton.Visible = false;
                 fastMatchButton.Visible = false;
-                fullMatchButton.Visible = false;
+                normalMatchButton.Visible = false;
                 schermataPreLobby.Location = new Point(1265, schermataPreLobby.Location.Y);
                 startText.Visible = true;
                 settingsText.Visible = true;
@@ -63,7 +63,7 @@ namespace Hyper_Battleship
             else
             {
                 fastMatchButton.Visible = true;
-                fullMatchButton.Visible = true;
+                normalMatchButton.Visible = true;
                 singlePlayerButton.Visible = false;
                 multiplayerButton.Visible = false;
                 sezione = false;
@@ -76,19 +76,24 @@ namespace Hyper_Battleship
         {
             sezione = true;
             fastMatchButton.Visible = false;
-            fullMatchButton.Visible = false;
+            normalMatchButton.Visible = false;
             singlePlayerButton.Visible = true;
             multiplayerButton.Visible = true;
         }
 
-        private void fullMatchButton_Click(object sender, EventArgs e)
+        private void normalMatchButton_Click(object sender, EventArgs e)
         {
             sezione = true;
             fastMatchButton.Visible = false;
-            fullMatchButton.Visible = false;
+            normalMatchButton.Visible = false;
             singlePlayerButton.Visible = true;
             multiplayerButton.Visible = true;
+            modalitàAssign();
+        }
+        public bool modalitàAssign()
+        {
             modalità = true;
+            return modalità;
         }
 
         public bool multigiocatore = false; //false = giocatore singolo
@@ -100,8 +105,13 @@ namespace Hyper_Battleship
 
         private void multiplayerButton_Click(object sender, EventArgs e)
         {
-            multigiocatore = true;
+            multigiocatoreAssign();
             schermataSuccessiva();
+        }
+        public bool multigiocatoreAssign()
+        {
+            multigiocatore = true;
+            return multigiocatore;
         }
 
         public void schermataSuccessiva()
@@ -110,7 +120,7 @@ namespace Hyper_Battleship
             titoloGioco2.Visible = false;
             backButton.Visible = false;
             fastMatchButton.Visible = false;
-            fullMatchButton.Visible = false;
+            normalMatchButton.Visible = false;
             singlePlayerButton.Visible = false;
             multiplayerButton.Visible = false;
             sezione = false;
