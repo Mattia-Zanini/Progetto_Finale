@@ -36,7 +36,7 @@
             this.schermataPreLobby = new System.Windows.Forms.PictureBox();
             this.backButton = new System.Windows.Forms.Label();
             this.fastMatchButton = new System.Windows.Forms.Label();
-            this.fullMatchButton = new System.Windows.Forms.Label();
+            this.normalMatchButton = new System.Windows.Forms.Label();
             this.titoloGioco1 = new System.Windows.Forms.Label();
             this.singlePlayerButton = new System.Windows.Forms.Label();
             this.multiplayerButton = new System.Windows.Forms.Label();
@@ -129,19 +129,19 @@
             this.fastMatchButton.Visible = false;
             this.fastMatchButton.Click += new System.EventHandler(this.fastMatchButton_Click);
             // 
-            // fullMatchButton
+            // normalMatchButton
             // 
-            this.fullMatchButton.AutoSize = true;
-            this.fullMatchButton.BackColor = System.Drawing.Color.Black;
-            this.fullMatchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fullMatchButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.fullMatchButton.Location = new System.Drawing.Point(890, 298);
-            this.fullMatchButton.Name = "fullMatchButton";
-            this.fullMatchButton.Size = new System.Drawing.Size(202, 31);
-            this.fullMatchButton.TabIndex = 11;
-            this.fullMatchButton.Text = "Partita Normale";
-            this.fullMatchButton.Visible = false;
-            this.fullMatchButton.Click += new System.EventHandler(this.fullMatchButton_Click);
+            this.normalMatchButton.AutoSize = true;
+            this.normalMatchButton.BackColor = System.Drawing.Color.Black;
+            this.normalMatchButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.normalMatchButton.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.normalMatchButton.Location = new System.Drawing.Point(890, 298);
+            this.normalMatchButton.Name = "normalMatchButton";
+            this.normalMatchButton.Size = new System.Drawing.Size(202, 31);
+            this.normalMatchButton.TabIndex = 11;
+            this.normalMatchButton.Text = "Partita Normale";
+            this.normalMatchButton.Visible = false;
+            this.normalMatchButton.Click += new System.EventHandler(this.normalMatchButton_Click);
             // 
             // titoloGioco1
             // 
@@ -192,7 +192,7 @@
             this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.multiplayerButton);
             this.Controls.Add(this.singlePlayerButton);
-            this.Controls.Add(this.fullMatchButton);
+            this.Controls.Add(this.normalMatchButton);
             this.Controls.Add(this.fastMatchButton);
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.schermataPreLobby);
@@ -222,7 +222,7 @@
         private System.Windows.Forms.PictureBox schermataPreLobby;
         private System.Windows.Forms.Label backButton;
         private System.Windows.Forms.Label fastMatchButton;
-        private System.Windows.Forms.Label fullMatchButton;
+        private System.Windows.Forms.Label normalMatchButton;
         private System.Windows.Forms.Label titoloGioco1;
         private System.Windows.Forms.Label singlePlayerButton;
         private System.Windows.Forms.Label multiplayerButton;
