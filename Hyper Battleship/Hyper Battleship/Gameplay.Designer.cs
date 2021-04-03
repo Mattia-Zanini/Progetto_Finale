@@ -79,7 +79,9 @@
             this.quantitàSottomarini = new System.Windows.Forms.Label();
             this.quantitàCacciatorpediniere = new System.Windows.Forms.Label();
             this.quantitàNaveDassalto = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.movimentoDisposizioneNavi = new System.Windows.Forms.Timer(this.components);
+            this.test2 = new System.Windows.Forms.PictureBox();
+            this.test1 = new System.Windows.Forms.PictureBox();
             this.naveDassalto3Griglia10x10 = new System.Windows.Forms.PictureBox();
             this.naveDassalto2Griglia10x10 = new System.Windows.Forms.PictureBox();
             this.cacciatorpediniere2Griglia10x10 = new System.Windows.Forms.PictureBox();
@@ -100,9 +102,10 @@
             this.radarPcitureBox = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoPiccola = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.movimentoDisposizioneNavi = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.test3 = new System.Windows.Forms.PictureBox();
+            this.annullaButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.test2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.test1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto3Griglia10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto2Griglia10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cacciatorpediniere2Griglia10x10)).BeginInit();
@@ -123,15 +126,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.test3)).BeginInit();
             this.SuspendLayout();
             // 
             // confermaButton
             // 
-            this.confermaButton.BackColor = System.Drawing.Color.DarkRed;
+            this.confermaButton.BackColor = System.Drawing.Color.DarkGreen;
             this.confermaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confermaButton.ForeColor = System.Drawing.Color.White;
-            this.confermaButton.Location = new System.Drawing.Point(718, 514);
+            this.confermaButton.Location = new System.Drawing.Point(718, 473);
             this.confermaButton.Name = "confermaButton";
             this.confermaButton.Size = new System.Drawing.Size(100, 29);
             this.confermaButton.TabIndex = 6;
@@ -676,16 +679,33 @@
             this.quantitàNaveDassalto.TabIndex = 72;
             this.quantitàNaveDassalto.Text = "3";
             // 
-            // pictureBox1
+            // movimentoDisposizioneNavi
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Box10x10;
-            this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(297, 292);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.TabIndex = 73;
-            this.pictureBox1.TabStop = false;
+            this.movimentoDisposizioneNavi.Enabled = true;
+            this.movimentoDisposizioneNavi.Interval = 150;
+            this.movimentoDisposizioneNavi.Tick += new System.EventHandler(this.moveShipEvent);
+            // 
+            // test2
+            // 
+            this.test2.BackColor = System.Drawing.Color.Transparent;
+            this.test2.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Box10x10;
+            this.test2.ImageLocation = "";
+            this.test2.Location = new System.Drawing.Point(612, 40);
+            this.test2.Name = "test2";
+            this.test2.Size = new System.Drawing.Size(63, 63);
+            this.test2.TabIndex = 74;
+            this.test2.TabStop = false;
+            // 
+            // test1
+            // 
+            this.test1.BackColor = System.Drawing.Color.Transparent;
+            this.test1.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Box10x10;
+            this.test1.ImageLocation = "";
+            this.test1.Location = new System.Drawing.Point(297, 292);
+            this.test1.Name = "test1";
+            this.test1.Size = new System.Drawing.Size(63, 63);
+            this.test1.TabIndex = 73;
+            this.test1.TabStop = false;
             // 
             // naveDassalto3Griglia10x10
             // 
@@ -695,6 +715,7 @@
             this.naveDassalto3Griglia10x10.Location = new System.Drawing.Point(853, 619);
             this.naveDassalto3Griglia10x10.Name = "naveDassalto3Griglia10x10";
             this.naveDassalto3Griglia10x10.Size = new System.Drawing.Size(63, 63);
+            this.naveDassalto3Griglia10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.naveDassalto3Griglia10x10.TabIndex = 67;
             this.naveDassalto3Griglia10x10.TabStop = false;
             this.naveDassalto3Griglia10x10.Visible = false;
@@ -707,6 +728,7 @@
             this.naveDassalto2Griglia10x10.Location = new System.Drawing.Point(852, 592);
             this.naveDassalto2Griglia10x10.Name = "naveDassalto2Griglia10x10";
             this.naveDassalto2Griglia10x10.Size = new System.Drawing.Size(63, 63);
+            this.naveDassalto2Griglia10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.naveDassalto2Griglia10x10.TabIndex = 66;
             this.naveDassalto2Griglia10x10.TabStop = false;
             this.naveDassalto2Griglia10x10.Visible = false;
@@ -719,6 +741,7 @@
             this.cacciatorpediniere2Griglia10x10.Location = new System.Drawing.Point(852, 619);
             this.cacciatorpediniere2Griglia10x10.Name = "cacciatorpediniere2Griglia10x10";
             this.cacciatorpediniere2Griglia10x10.Size = new System.Drawing.Size(126, 63);
+            this.cacciatorpediniere2Griglia10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.cacciatorpediniere2Griglia10x10.TabIndex = 65;
             this.cacciatorpediniere2Griglia10x10.TabStop = false;
             this.cacciatorpediniere2Griglia10x10.Visible = false;
@@ -731,6 +754,7 @@
             this.sottomarino2Griglia10x10.Location = new System.Drawing.Point(852, 619);
             this.sottomarino2Griglia10x10.Name = "sottomarino2Griglia10x10";
             this.sottomarino2Griglia10x10.Size = new System.Drawing.Size(189, 63);
+            this.sottomarino2Griglia10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.sottomarino2Griglia10x10.TabIndex = 64;
             this.sottomarino2Griglia10x10.TabStop = false;
             this.sottomarino2Griglia10x10.Visible = false;
@@ -743,6 +767,7 @@
             this.naveDassalto1Griglia10x10.Location = new System.Drawing.Point(853, 570);
             this.naveDassalto1Griglia10x10.Name = "naveDassalto1Griglia10x10";
             this.naveDassalto1Griglia10x10.Size = new System.Drawing.Size(63, 63);
+            this.naveDassalto1Griglia10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.naveDassalto1Griglia10x10.TabIndex = 63;
             this.naveDassalto1Griglia10x10.TabStop = false;
             this.naveDassalto1Griglia10x10.Visible = false;
@@ -755,6 +780,7 @@
             this.cacciatorpediniere1Griglia10x10.Location = new System.Drawing.Point(852, 594);
             this.cacciatorpediniere1Griglia10x10.Name = "cacciatorpediniere1Griglia10x10";
             this.cacciatorpediniere1Griglia10x10.Size = new System.Drawing.Size(126, 63);
+            this.cacciatorpediniere1Griglia10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.cacciatorpediniere1Griglia10x10.TabIndex = 62;
             this.cacciatorpediniere1Griglia10x10.TabStop = false;
             this.cacciatorpediniere1Griglia10x10.Visible = false;
@@ -767,6 +793,7 @@
             this.sottomarino1Griglia10x10.Location = new System.Drawing.Point(852, 594);
             this.sottomarino1Griglia10x10.Name = "sottomarino1Griglia10x10";
             this.sottomarino1Griglia10x10.Size = new System.Drawing.Size(189, 63);
+            this.sottomarino1Griglia10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.sottomarino1Griglia10x10.TabIndex = 61;
             this.sottomarino1Griglia10x10.TabStop = false;
             this.sottomarino1Griglia10x10.Visible = false;
@@ -779,6 +806,7 @@
             this.corazzataGriglia10x10.Location = new System.Drawing.Point(852, 594);
             this.corazzataGriglia10x10.Name = "corazzataGriglia10x10";
             this.corazzataGriglia10x10.Size = new System.Drawing.Size(252, 63);
+            this.corazzataGriglia10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.corazzataGriglia10x10.TabIndex = 60;
             this.corazzataGriglia10x10.TabStop = false;
             this.corazzataGriglia10x10.Visible = false;
@@ -791,6 +819,7 @@
             this.portaereiGriglia10x10.Location = new System.Drawing.Point(852, 594);
             this.portaereiGriglia10x10.Name = "portaereiGriglia10x10";
             this.portaereiGriglia10x10.Size = new System.Drawing.Size(315, 63);
+            this.portaereiGriglia10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.portaereiGriglia10x10.TabIndex = 59;
             this.portaereiGriglia10x10.TabStop = false;
             this.portaereiGriglia10x10.Visible = false;
@@ -837,6 +866,7 @@
             this.cacciatorpedinierePictureBox10x10.Size = new System.Drawing.Size(126, 63);
             this.cacciatorpedinierePictureBox10x10.TabIndex = 11;
             this.cacciatorpedinierePictureBox10x10.TabStop = false;
+            this.cacciatorpedinierePictureBox10x10.Click += new System.EventHandler(this.cacciatorpedinierePictureBox10x10_Click);
             // 
             // sottomarinoPictureBox10x10
             // 
@@ -848,6 +878,7 @@
             this.sottomarinoPictureBox10x10.Size = new System.Drawing.Size(189, 63);
             this.sottomarinoPictureBox10x10.TabIndex = 10;
             this.sottomarinoPictureBox10x10.TabStop = false;
+            this.sottomarinoPictureBox10x10.Click += new System.EventHandler(this.sottomarinoPictureBox10x10_Click);
             // 
             // corazzataPcitureBox10x10
             // 
@@ -859,6 +890,7 @@
             this.corazzataPcitureBox10x10.Size = new System.Drawing.Size(252, 63);
             this.corazzataPcitureBox10x10.TabIndex = 9;
             this.corazzataPcitureBox10x10.TabStop = false;
+            this.corazzataPcitureBox10x10.Click += new System.EventHandler(this.corazzataPcitureBox10x10_Click);
             // 
             // portaereiPictureBox10x10
             // 
@@ -913,21 +945,31 @@
             this.grigliaDiGiocoGrande.TabIndex = 1;
             this.grigliaDiGiocoGrande.TabStop = false;
             // 
-            // pictureBox2
+            // test3
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Box10x10;
-            this.pictureBox2.ImageLocation = "";
-            this.pictureBox2.Location = new System.Drawing.Point(612, 40);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox2.TabIndex = 74;
-            this.pictureBox2.TabStop = false;
+            this.test3.BackColor = System.Drawing.Color.Transparent;
+            this.test3.ImageLocation = "";
+            this.test3.Location = new System.Drawing.Point(612, 481);
+            this.test3.Name = "test3";
+            this.test3.Size = new System.Drawing.Size(63, 189);
+            this.test3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.test3.TabIndex = 75;
+            this.test3.TabStop = false;
+            this.test3.Visible = false;
             // 
-            // movimentoDisposizioneNavi
+            // annullaButton
             // 
-            this.movimentoDisposizioneNavi.Enabled = true;
-            this.movimentoDisposizioneNavi.Tick += new System.EventHandler(this.moveShipEvent);
+            this.annullaButton.BackColor = System.Drawing.Color.DarkRed;
+            this.annullaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.annullaButton.ForeColor = System.Drawing.Color.White;
+            this.annullaButton.Location = new System.Drawing.Point(718, 521);
+            this.annullaButton.Name = "annullaButton";
+            this.annullaButton.Size = new System.Drawing.Size(100, 29);
+            this.annullaButton.TabIndex = 76;
+            this.annullaButton.Text = "ANNULLA";
+            this.annullaButton.UseVisualStyleBackColor = false;
+            this.annullaButton.Visible = false;
+            this.annullaButton.Click += new System.EventHandler(this.annullaButton_Click);
             // 
             // Gameplay
             // 
@@ -935,8 +977,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1358, 681);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.annullaButton);
+            this.Controls.Add(this.test3);
+            this.Controls.Add(this.test2);
+            this.Controls.Add(this.test1);
             this.Controls.Add(this.quantitàNaveDassalto);
             this.Controls.Add(this.quantitàCacciatorpediniere);
             this.Controls.Add(this.quantitàSottomarini);
@@ -1013,7 +1057,8 @@
             this.Text = "Hyper Battleship";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Gameplay_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Gameplay_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.test2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.test1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto3Griglia10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto2Griglia10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cacciatorpediniere2Griglia10x10)).EndInit();
@@ -1034,7 +1079,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.test3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1111,8 +1156,10 @@
         private System.Windows.Forms.Label quantitàSottomarini;
         private System.Windows.Forms.Label quantitàCacciatorpediniere;
         private System.Windows.Forms.Label quantitàNaveDassalto;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox test1;
+        private System.Windows.Forms.PictureBox test2;
         private System.Windows.Forms.Timer movimentoDisposizioneNavi;
+        private System.Windows.Forms.PictureBox test3;
+        private System.Windows.Forms.Button annullaButton;
     }
 }

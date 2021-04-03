@@ -203,5 +203,29 @@
   <ItemGroup>
     <None Include="Sprites\sottomarino_Griglia10x10.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\cacciatorpediniere_Griglia6x6Verticale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\cacciatorpediniere_Griglia10x10Verticale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\corazzata_Griglia10x10Verticale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\Nave D%27Assalto_Griglia6x6Verticale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\Nave D%27Assalto_Griglia10x10Verticale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\portaerei_Griglia10x10Verticale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\sottomarino_Griglia6x6Verticale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\sottomarino_Griglia10x10Verticale.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

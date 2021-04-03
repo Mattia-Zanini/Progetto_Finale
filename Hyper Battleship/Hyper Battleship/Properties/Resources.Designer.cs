@@ -93,9 +93,29 @@ namespace Hyper_Battleship.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cacciatorpediniere_Griglia10x10Verticale {
+            get {
+                object obj = ResourceManager.GetObject("cacciatorpediniere_Griglia10x10Verticale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cacciatorpediniere_Griglia6x6 {
             get {
                 object obj = ResourceManager.GetObject("cacciatorpediniere_Griglia6x6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cacciatorpediniere_Griglia6x6Verticale {
+            get {
+                object obj = ResourceManager.GetObject("cacciatorpediniere_Griglia6x6Verticale", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -116,6 +136,16 @@ namespace Hyper_Battleship.Properties {
         internal static System.Drawing.Bitmap corazzata_Griglia10x10 {
             get {
                 object obj = ResourceManager.GetObject("corazzata_Griglia10x10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap corazzata_Griglia10x10Verticale {
+            get {
+                object obj = ResourceManager.GetObject("corazzata_Griglia10x10Verticale", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,9 +253,29 @@ namespace Hyper_Battleship.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Nave_D_Assalto_Griglia10x10Verticale {
+            get {
+                object obj = ResourceManager.GetObject("Nave_D_Assalto_Griglia10x10Verticale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Nave_D_Assalto_Griglia6x6 {
             get {
                 object obj = ResourceManager.GetObject("Nave_D_Assalto_Griglia6x6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Nave_D_Assalto_Griglia6x6Verticale {
+            get {
+                object obj = ResourceManager.GetObject("Nave_D_Assalto_Griglia6x6Verticale", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -266,6 +316,16 @@ namespace Hyper_Battleship.Properties {
         internal static System.Drawing.Bitmap portaerei_Griglia10x10 {
             get {
                 object obj = ResourceManager.GetObject("portaerei_Griglia10x10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap portaerei_Griglia10x10Verticale {
+            get {
+                object obj = ResourceManager.GetObject("portaerei_Griglia10x10Verticale", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -333,9 +393,29 @@ namespace Hyper_Battleship.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sottomarino_Griglia10x10Verticale {
+            get {
+                object obj = ResourceManager.GetObject("sottomarino_Griglia10x10Verticale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sottomarino_Griglia6x6 {
             get {
                 object obj = ResourceManager.GetObject("sottomarino_Griglia6x6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sottomarino_Griglia6x6Verticale {
+            get {
+                object obj = ResourceManager.GetObject("sottomarino_Griglia6x6Verticale", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
