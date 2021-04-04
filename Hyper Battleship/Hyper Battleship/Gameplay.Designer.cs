@@ -104,6 +104,7 @@
             this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
             this.test3 = new System.Windows.Forms.PictureBox();
             this.annullaButton = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.test2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.test1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto3Griglia10x10)).BeginInit();
@@ -127,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.test3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // confermaButton
@@ -855,6 +857,7 @@
             this.naveDassaltoPictureBox10x10.Size = new System.Drawing.Size(63, 63);
             this.naveDassaltoPictureBox10x10.TabIndex = 12;
             this.naveDassaltoPictureBox10x10.TabStop = false;
+            this.naveDassaltoPictureBox10x10.Click += new System.EventHandler(this.naveDassaltoPictureBox10x10_Click);
             // 
             // cacciatorpedinierePictureBox10x10
             // 
@@ -971,12 +974,24 @@
             this.annullaButton.Visible = false;
             this.annullaButton.Click += new System.EventHandler(this.annullaButton_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Box10x10;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(297, 607);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.TabIndex = 77;
+            this.pictureBox1.TabStop = false;
+            // 
             // Gameplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1358, 681);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.annullaButton);
             this.Controls.Add(this.test3);
             this.Controls.Add(this.test2);
@@ -1080,6 +1095,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.test3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1161,5 +1177,6 @@
         private System.Windows.Forms.Timer movimentoDisposizioneNavi;
         private System.Windows.Forms.PictureBox test3;
         private System.Windows.Forms.Button annullaButton;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

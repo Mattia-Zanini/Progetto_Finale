@@ -118,7 +118,7 @@ namespace Hyper_Battleship
                 usernameTextBox.Clear();
                 player1.Visible = false; player2.Visible = true;               
             }
-            else if(pWOS && giocatore == 1)
+            else if(pWOS && giocatore == 1) //nel caso tutti e due i giocatori sono pronti
             {
                 Giocatore2 = usernameTextBox.Text;
                 if(Giocatore1 != Giocatore2)
@@ -216,9 +216,6 @@ namespace Hyper_Battleship
                         player1.Visible = false; player2.Visible = true;                       
                         giocatore++;
                     }
-                    else if (giocatore == 1)//nel caso tutti e due i giocatori sono pronti
-                    {
-                    }
                 }
                 else
                 {
@@ -279,9 +276,6 @@ namespace Hyper_Battleship
                     usernameTextBox.Clear(); passwordTextBox.Clear();                   
                     player1.Visible = false; player2.Visible = true;                   
                     giocatore++;
-                }
-                else if (giocatore == 1)//nel caso tutti e due i giocatori sono pronti
-                {
                 }
             }
         }
