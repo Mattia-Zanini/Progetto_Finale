@@ -120,6 +120,8 @@ namespace Hyper_Battleship
                     if (confirmButtonePressed)
                     {
                         portaereiPosizionata = true;
+                        assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(portaereiGriglia10x10.Location.Y, portaereiGriglia10x10.Location.X);
+                        posizioneNaveNellArray(4);
                         nave = "";
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
@@ -187,6 +189,8 @@ namespace Hyper_Battleship
                     if (confirmButtonePressed)
                     {
                         corazzataPosizionata = true;
+                        assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(corazzataGriglia10x10.Location.Y, corazzataGriglia10x10.Location.X);
+                        posizioneNaveNellArray(4);
                         nave = "";
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
@@ -314,10 +318,14 @@ namespace Hyper_Battleship
                         if (sottomarini == 1)
                         {
                             sottomarinoPosizionato1 = true;
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(sottomarino1Griglia10x10.Location.Y, sottomarino1Griglia10x10.Location.X);
+                            posizioneNaveNellArray(3);
                         }
                         else if (sottomarini == 0)
                         {
                             sottomarinoPosizionato2 = true;
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(sottomarino2Griglia10x10.Location.Y, sottomarino2Griglia10x10.Location.X);
+                            posizioneNaveNellArray(3);
                         }
                         nave = "";
                         annullaButton.Visible = false;
@@ -455,10 +463,14 @@ namespace Hyper_Battleship
                         if(cacciatorpedinieri == 1)
                         {
                             cacciatorpedinierePosizionato1 = true;
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(cacciatorpediniere1Griglia10x10.Location.Y, cacciatorpediniere1Griglia10x10.Location.X);
+                            posizioneNaveNellArray(2);
                         }
                         else if(cacciatorpedinieri == 0)
                         {
                             cacciatorpedinierePosizionato2 = true;
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(cacciatorpediniere2Griglia10x10.Location.Y, cacciatorpediniere2Griglia10x10.Location.X);
+                            posizioneNaveNellArray(2);
                         }
                         nave = "";
                         annullaButton.Visible = false;
@@ -597,14 +609,20 @@ namespace Hyper_Battleship
                         if (naviDassalto == 2)
                         {
                             naveDassaltoPosizionata1 = true;
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(naveDassalto1Griglia10x10.Location.Y, naveDassalto1Griglia10x10.Location.X);
+                            posizioneNaveNellArray(1);
                         }
                         else if (naviDassalto == 1)
                         {
                             naveDassaltoPosizionata2 = true;
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(naveDassalto2Griglia10x10.Location.Y, naveDassalto2Griglia10x10.Location.X);
+                            posizioneNaveNellArray(1);
                         }
                         else if (naviDassalto == 0)
                         {
                             naveDassaltoPosizionata3 = true;
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(naveDassalto3Griglia10x10.Location.Y, naveDassalto3Griglia10x10.Location.X);
+                            posizioneNaveNellArray(1);
                         }
                         nave = "";
                         annullaButton.Visible = false;
@@ -623,7 +641,7 @@ namespace Hyper_Battleship
                         }
                         else if (naviDassalto == 0)
                         {
-                            naveDassalto3Griglia10x10.Visible = true;
+                            naveDassalto3Griglia10x10.Visible = false;
                         }
                         naviDassalto++;
                         quantitàNaveDassalto.Text = naviDassalto.ToString();
@@ -975,13 +993,118 @@ namespace Hyper_Battleship
                 case 2:
                     switch (cacciatorpedinieri)
                     {
-
+                        case 1:
+                            if (!cacciatorpediniereImmagineGirata1)
+                            {
+                                for (int i = 0; i < 2; i++)
+                                {
+                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
+                                    if (player1PictureBox.Visible)
+                                    {
+                                        grigliaArray[0] = "cacciatorpediniere1";
+                                    }
+                                    else
+                                    {
+                                        grigliaArray[1] = "cacciatorpediniere1";
+                                    }
+                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                }
+                            }
+                            else
+                            {
+                                int x = 0;//per salvare la posizione in verticale
+                                for (int i = 0; i < 2; i++)
+                                {
+                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
+                                    if (player1PictureBox.Visible)
+                                    {
+                                        grigliaArray[0] = "cacciatorpediniere1";
+                                    }
+                                    else
+                                    {
+                                        grigliaArray[1] = "cacciatorpediniere1";
+                                    }
+                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                    x += 10;
+                                }
+                            }
+                            break;
+                        case 0:
+                            if (!cacciatorpediniereImmagineGirata2)
+                            {
+                                for (int i = 0; i < 2; i++)
+                                {
+                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
+                                    if (player1PictureBox.Visible)
+                                    {
+                                        grigliaArray[0] = "cacciatorpediniere2";
+                                    }
+                                    else
+                                    {
+                                        grigliaArray[1] = "cacciatorpediniere2";
+                                    }
+                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                }
+                            }
+                            else
+                            {
+                                int x = 0;//per salvare la posizione in verticale
+                                for (int i = 0; i < 2; i++)
+                                {
+                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
+                                    if (player1PictureBox.Visible)
+                                    {
+                                        grigliaArray[0] = "cacciatorpediniere2";
+                                    }
+                                    else
+                                    {
+                                        grigliaArray[1] = "cacciatorpediniere2";
+                                    }
+                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                    x += 10;
+                                }
+                            }
+                            break;
                     }
                     break;
                 case 1:
+                    string[] grigliaArray2 = StrutturaGriglia10[coordinateNaveSuGrigliaArray].Split(',');
                     switch (naviDassalto)
                     {
+                        case 2:
+                            if (player1PictureBox.Visible)
+                            {
+                                grigliaArray2[0] = "nave d'assalto1";
+                            }
+                            else
+                            {
+                                grigliaArray2[1] = "nave d'assalto1";
+                            }
+                            StrutturaGriglia10[coordinateNaveSuGrigliaArray] = $"{grigliaArray2[0]},{grigliaArray2[1]},{grigliaArray2[2]},{grigliaArray2[3]}";
+                            break;
 
+                        case 1:
+                            if (player1PictureBox.Visible)
+                            {
+                                grigliaArray2[0] = "nave d'assalto2";
+                            }
+                            else
+                            {
+                                grigliaArray2[1] = "nave d'assalto2";
+                            }
+                            StrutturaGriglia10[coordinateNaveSuGrigliaArray] = $"{grigliaArray2[0]},{grigliaArray2[1]},{grigliaArray2[2]},{grigliaArray2[3]}";
+                            break;
+                        case 0:
+                            if (player1PictureBox.Visible)
+                            {
+                                grigliaArray2[0] = "nave d'assalto3";
+                            }
+                            else
+                            {
+                                grigliaArray2[1] = "nave d'assalto3";
+                            }
+                            StrutturaGriglia10[coordinateNaveSuGrigliaArray] = $"{grigliaArray2[0]},{grigliaArray2[1]},{grigliaArray2[2]},{grigliaArray2[3]}";
+                            break;
                     }
                     break;
             }
