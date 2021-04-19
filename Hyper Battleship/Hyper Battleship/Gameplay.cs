@@ -14,7 +14,10 @@ namespace Hyper_Battleship
         public Gameplay()
         {
             InitializeComponent();
-            //Gioco();
+        }
+        private void Gameplay_FormClosed(object sender, FormClosedEventArgs e)//per chiudere il form
+        {
+            Application.Exit();
         }
 
         #region Griglie Di Gioco
@@ -43,10 +46,10 @@ namespace Hyper_Battleship
         int sottomarini, cacciatorpedinieri, naviDassalto;
         bool finePartita = false, disposizioneNaviPossibile = true;
         bool portaereiPosizionata, corazzataPosizionata, sottomarinoPosizionato1, sottomarinoPosizionato2, cacciatorpedinierePosizionato1, cacciatorpedinierePosizionato2, naveDassaltoPosizionata1, naveDassaltoPosizionata2, naveDassaltoPosizionata3;
-        bool confirmButtonePressed = false, exitOperation = false;
+        bool confirmButtonPressed = false, exitOperation = false;
         private void confermaButton_Click(object sender, EventArgs e)
         {
-            confirmButtonePressed = true;
+            confirmButtonPressed = true;
             if(portaereiPosizionata && corazzataPosizionata && sottomarinoPosizionato1 && sottomarinoPosizionato2 && cacciatorpedinierePosizionato1 && cacciatorpedinierePosizionato2 && naveDassaltoPosizionata1 && naveDassaltoPosizionata2 && naveDassaltoPosizionata3)
             {
                 MessageBox.Show("Clicca il pulsante 'Passa il turno'");
@@ -68,11 +71,11 @@ namespace Hyper_Battleship
             switch (nave)
             {
                 case "portaerei":
-                    if (moveUp && portaereiGriglia10x10.Top > 40 && !confirmButtonePressed)
+                    if (moveUp && portaereiGriglia10x10.Top > 40 && !confirmButtonPressed)
                     {
                         portaereiGriglia10x10.Top -= 63;
                     }
-                    if (moveDown && portaereiGriglia10x10.Top < 607 && !confirmButtonePressed)
+                    if (moveDown && portaereiGriglia10x10.Top < 607 && !confirmButtonPressed)
                     {
                         if (!portaereiImaggineGirata)
                         {
@@ -83,15 +86,15 @@ namespace Hyper_Battleship
                             portaereiGriglia10x10.Top += 63;
                         }
                     }
-                    if (moveRight && portaereiGriglia10x10.Right < 675 && !confirmButtonePressed)
+                    if (moveRight && portaereiGriglia10x10.Right < 675 && !confirmButtonPressed)
                     {
                         portaereiGriglia10x10.Left += 63;
                     }
-                    if (moveLeft && portaereiGriglia10x10.Left > 45 && !confirmButtonePressed)
+                    if (moveLeft && portaereiGriglia10x10.Left > 45 && !confirmButtonPressed)
                     {
                         portaereiGriglia10x10.Left -= 63;
                     }
-                    if (rotateLeft && !confirmButtonePressed)
+                    if (rotateLeft && !confirmButtonPressed)
                     {
                         if (!portaereiImaggineGirata)
                         {
@@ -104,7 +107,7 @@ namespace Hyper_Battleship
                             }
                         }
                     }
-                    if (rotateRight && !confirmButtonePressed)
+                    if (rotateRight && !confirmButtonPressed)
                     {
                         if (portaereiImaggineGirata)
                         {
@@ -117,31 +120,32 @@ namespace Hyper_Battleship
                             }
                         }
                     }
-                    if (confirmButtonePressed)
+                    if (confirmButtonPressed)
                     {
-                        portaereiPosizionata = true;
                         assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(portaereiGriglia10x10.Location.Y, portaereiGriglia10x10.Location.X);
-                        posizioneNaveNellArray(4);
+                        posizioneNaveNellArray(5);
                         nave = "";
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
-                        confirmButtonePressed = false;
+                        confirmButtonPressed = false;
                     }
                     if (exitOperation)
                     {
                         portaereiGriglia10x10.Visible = false;
                         quantitàPortaerei.Text = "1";
+                        nave = "";
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
                         exitOperation = false;
                     }
                     break;
+
                 case "corazzata":
-                    if (moveUp && corazzataGriglia10x10.Top > 40 && !confirmButtonePressed)
+                    if (moveUp && corazzataGriglia10x10.Top > 40 && !confirmButtonPressed)
                     {
                         corazzataGriglia10x10.Top -= 63;
                     }
-                    if (moveDown && corazzataGriglia10x10.Top < 607 && !confirmButtonePressed)
+                    if (moveDown && corazzataGriglia10x10.Top < 607 && !confirmButtonPressed)
                     {
                         if (!corazzataImaggineGirata)
                         {
@@ -152,15 +156,15 @@ namespace Hyper_Battleship
                             corazzataGriglia10x10.Top += 63;
                         }
                     }
-                    if (moveRight && corazzataGriglia10x10.Right < 675 && !confirmButtonePressed)
+                    if (moveRight && corazzataGriglia10x10.Right < 675 && !confirmButtonPressed)
                     {
                         corazzataGriglia10x10.Left += 63;
                     }
-                    if (moveLeft && corazzataGriglia10x10.Left > 45 && !confirmButtonePressed)
+                    if (moveLeft && corazzataGriglia10x10.Left > 45 && !confirmButtonPressed)
                     {
                         corazzataGriglia10x10.Left -= 63;
                     }
-                    if (rotateLeft && !confirmButtonePressed)
+                    if (rotateLeft && !confirmButtonPressed)
                     {
                         if (!corazzataImaggineGirata)
                         {
@@ -173,7 +177,7 @@ namespace Hyper_Battleship
                             }
                         }
                     }
-                    if (rotateRight && !confirmButtonePressed)
+                    if (rotateRight && !confirmButtonPressed)
                     {
                         if (corazzataImaggineGirata)
                         {
@@ -186,15 +190,14 @@ namespace Hyper_Battleship
                             }
                         }
                     }
-                    if (confirmButtonePressed)
+                    if (confirmButtonPressed)
                     {
-                        corazzataPosizionata = true;
                         assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(corazzataGriglia10x10.Location.Y, corazzataGriglia10x10.Location.X);
                         posizioneNaveNellArray(4);
                         nave = "";
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
-                        confirmButtonePressed = false;
+                        confirmButtonPressed = false;
                     }
                     if (exitOperation)
                     {
@@ -209,11 +212,11 @@ namespace Hyper_Battleship
                     switch (sottomarini)
                     {
                         case 1:
-                            if (moveUp && sottomarino1Griglia10x10.Top > 40 && !confirmButtonePressed)
+                            if (moveUp && sottomarino1Griglia10x10.Top > 40 && !confirmButtonPressed)
                             {
                                 sottomarino1Griglia10x10.Top -= 63;
                             }
-                            if (moveDown && sottomarino1Griglia10x10.Top < 607 && !confirmButtonePressed)
+                            if (moveDown && sottomarino1Griglia10x10.Top < 607 && !confirmButtonPressed)
                             {
                                 if (!sottomarinoImmagineGirata1)
                                 {
@@ -224,15 +227,15 @@ namespace Hyper_Battleship
                                     sottomarino1Griglia10x10.Top += 63;
                                 }
                             }
-                            if (moveRight && sottomarino1Griglia10x10.Right < 675 && !confirmButtonePressed)
+                            if (moveRight && sottomarino1Griglia10x10.Right < 675 && !confirmButtonPressed)
                             {
                                 sottomarino1Griglia10x10.Left += 63;
                             }
-                            if (moveLeft && sottomarino1Griglia10x10.Left > 45 && !confirmButtonePressed)
+                            if (moveLeft && sottomarino1Griglia10x10.Left > 45 && !confirmButtonPressed)
                             {
                                 sottomarino1Griglia10x10.Left -= 63;
                             }
-                            if (rotateLeft && !confirmButtonePressed)
+                            if (rotateLeft && !confirmButtonPressed)
                             {
                                 if (!sottomarinoImmagineGirata1)
                                 {
@@ -245,7 +248,7 @@ namespace Hyper_Battleship
                                     }
                                 }
                             }
-                            if (rotateRight && !confirmButtonePressed)
+                            if (rotateRight && !confirmButtonPressed)
                             {
                                 if (sottomarinoImmagineGirata1)
                                 {
@@ -261,11 +264,11 @@ namespace Hyper_Battleship
                             break;
                         
                         case 0:
-                            if (moveUp && sottomarino2Griglia10x10.Top > 40 && !confirmButtonePressed)
+                            if (moveUp && sottomarino2Griglia10x10.Top > 40 && !confirmButtonPressed)
                             {
                                 sottomarino2Griglia10x10.Top -= 63;
                             }
-                            if (moveDown && sottomarino2Griglia10x10.Top < 607 && !confirmButtonePressed)
+                            if (moveDown && sottomarino2Griglia10x10.Top < 607 && !confirmButtonPressed)
                             {
                                 if (!sottomarinoImmagineGirata2)
                                 {
@@ -276,15 +279,15 @@ namespace Hyper_Battleship
                                     sottomarino2Griglia10x10.Top += 63;
                                 }
                             }
-                            if (moveRight && sottomarino2Griglia10x10.Right < 675 && !confirmButtonePressed)
+                            if (moveRight && sottomarino2Griglia10x10.Right < 675 && !confirmButtonPressed)
                             {
                                 sottomarino2Griglia10x10.Left += 63;
                             }
-                            if (moveLeft && sottomarino2Griglia10x10.Left > 45 && !confirmButtonePressed)
+                            if (moveLeft && sottomarino2Griglia10x10.Left > 45 && !confirmButtonPressed)
                             {
                                 sottomarino2Griglia10x10.Left -= 63;
                             }
-                            if (rotateLeft && !confirmButtonePressed)
+                            if (rotateLeft && !confirmButtonPressed)
                             {
                                 if (!sottomarinoImmagineGirata2)
                                 {
@@ -297,7 +300,7 @@ namespace Hyper_Battleship
                                     }
                                 }
                             }
-                            if (rotateRight && !confirmButtonePressed)
+                            if (rotateRight && !confirmButtonPressed)
                             {
                                 if (sottomarinoImmagineGirata2)
                                 {
@@ -313,24 +316,22 @@ namespace Hyper_Battleship
                             break;
 
                     }
-                    if (confirmButtonePressed)
+                    if (confirmButtonPressed)
                     {
                         if (sottomarini == 1)
                         {
-                            sottomarinoPosizionato1 = true;
                             assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(sottomarino1Griglia10x10.Location.Y, sottomarino1Griglia10x10.Location.X);
                             posizioneNaveNellArray(3);
                         }
                         else if (sottomarini == 0)
                         {
-                            sottomarinoPosizionato2 = true;
                             assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(sottomarino2Griglia10x10.Location.Y, sottomarino2Griglia10x10.Location.X);
                             posizioneNaveNellArray(3);
                         }
                         nave = "";
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
-                        confirmButtonePressed = false;
+                        confirmButtonPressed = false;
                     }
                     if (exitOperation)
                     {
@@ -354,11 +355,11 @@ namespace Hyper_Battleship
                     switch (cacciatorpedinieri)
                     {
                         case 1:
-                            if (moveUp && cacciatorpediniere1Griglia10x10.Top > 40 && !confirmButtonePressed)
+                            if (moveUp && cacciatorpediniere1Griglia10x10.Top > 40 && !confirmButtonPressed)
                             {
                                 cacciatorpediniere1Griglia10x10.Top -= 63;
                             }
-                            if (moveDown && cacciatorpediniere1Griglia10x10.Top < 607 && !confirmButtonePressed)
+                            if (moveDown && cacciatorpediniere1Griglia10x10.Top < 607 && !confirmButtonPressed)
                             {
                                 if (!cacciatorpediniereImmagineGirata1)
                                 {
@@ -369,15 +370,15 @@ namespace Hyper_Battleship
                                     cacciatorpediniere1Griglia10x10.Top += 63;
                                 }
                             }
-                            if (moveRight && cacciatorpediniere1Griglia10x10.Right < 675 && !confirmButtonePressed)
+                            if (moveRight && cacciatorpediniere1Griglia10x10.Right < 675 && !confirmButtonPressed)
                             {
                                 cacciatorpediniere1Griglia10x10.Left += 63;
                             }
-                            if (moveLeft && cacciatorpediniere1Griglia10x10.Left > 45 && !confirmButtonePressed)
+                            if (moveLeft && cacciatorpediniere1Griglia10x10.Left > 45 && !confirmButtonPressed)
                             {
                                 cacciatorpediniere1Griglia10x10.Left -= 63;
                             }
-                            if (rotateLeft && !confirmButtonePressed)
+                            if (rotateLeft && !confirmButtonPressed)
                             {
                                 if (!cacciatorpediniereImmagineGirata1)
                                 {
@@ -390,7 +391,7 @@ namespace Hyper_Battleship
                                     }
                                 }
                             }
-                            if (rotateRight && !confirmButtonePressed)
+                            if (rotateRight && !confirmButtonPressed)
                             {
                                 if (cacciatorpediniereImmagineGirata1)
                                 {
@@ -406,11 +407,11 @@ namespace Hyper_Battleship
                             break;
 
                         case 0:
-                            if (moveUp && cacciatorpediniere2Griglia10x10.Top > 40 && !confirmButtonePressed)
+                            if (moveUp && cacciatorpediniere2Griglia10x10.Top > 40 && !confirmButtonPressed)
                             {
                                 cacciatorpediniere2Griglia10x10.Top -= 63;
                             }
-                            if (moveDown && cacciatorpediniere2Griglia10x10.Top < 607 && !confirmButtonePressed)
+                            if (moveDown && cacciatorpediniere2Griglia10x10.Top < 607 && !confirmButtonPressed)
                             {
                                 if (!cacciatorpediniereImmagineGirata2)
                                 {
@@ -421,15 +422,15 @@ namespace Hyper_Battleship
                                     cacciatorpediniere2Griglia10x10.Top += 63;
                                 }
                             }
-                            if (moveRight && cacciatorpediniere2Griglia10x10.Right < 675 && !confirmButtonePressed)
+                            if (moveRight && cacciatorpediniere2Griglia10x10.Right < 675 && !confirmButtonPressed)
                             {
                                 cacciatorpediniere2Griglia10x10.Left += 63;
                             }
-                            if (moveLeft && cacciatorpediniere2Griglia10x10.Left > 45 && !confirmButtonePressed)
+                            if (moveLeft && cacciatorpediniere2Griglia10x10.Left > 45 && !confirmButtonPressed)
                             {
                                 cacciatorpediniere2Griglia10x10.Left -= 63;
                             }
-                            if (rotateLeft && !confirmButtonePressed)
+                            if (rotateLeft && !confirmButtonPressed)
                             {
                                 if (!cacciatorpediniereImmagineGirata2)
                                 {
@@ -442,14 +443,14 @@ namespace Hyper_Battleship
                                     }
                                 }
                             }
-                            if (rotateRight && !confirmButtonePressed)
+                            if (rotateRight && !confirmButtonPressed)
                             {
                                 if (cacciatorpediniereImmagineGirata2)
                                 {
                                     cacciatorpediniere2Griglia10x10.Width = 126; cacciatorpediniere2Griglia10x10.Height = 63;
                                     cacciatorpediniere2Griglia10x10.Image = Properties.Resources.cacciatorpediniere_Griglia10x10;
                                     cacciatorpediniereImmagineGirata2 = false;
-                                    if (sottomarino2Griglia10x10.Location.X > 549)
+                                    if (cacciatorpediniere2Griglia10x10.Location.X > 549)
                                     {
                                         cacciatorpediniere2Griglia10x10.Location = new Point(549, cacciatorpediniere2Griglia10x10.Location.Y);
                                     }
@@ -458,24 +459,22 @@ namespace Hyper_Battleship
                             break;
 
                     }
-                    if (confirmButtonePressed)
+                    if (confirmButtonPressed)
                     {
                         if(cacciatorpedinieri == 1)
                         {
-                            cacciatorpedinierePosizionato1 = true;
                             assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(cacciatorpediniere1Griglia10x10.Location.Y, cacciatorpediniere1Griglia10x10.Location.X);
                             posizioneNaveNellArray(2);
                         }
                         else if(cacciatorpedinieri == 0)
                         {
-                            cacciatorpedinierePosizionato2 = true;
                             assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(cacciatorpediniere2Griglia10x10.Location.Y, cacciatorpediniere2Griglia10x10.Location.X);
                             posizioneNaveNellArray(2);
                         }
                         nave = "";
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
-                        confirmButtonePressed = false;
+                        confirmButtonPressed = false;
                     }
                     if (exitOperation)
                     {
@@ -499,23 +498,23 @@ namespace Hyper_Battleship
                     switch (naviDassalto)
                     {
                         case 2:
-                            if (moveUp && naveDassalto1Griglia10x10.Top > 40 && !confirmButtonePressed)
+                            if (moveUp && naveDassalto1Griglia10x10.Top > 40 && !confirmButtonPressed)
                             {
                                 naveDassalto1Griglia10x10.Top -= 63;
                             }
-                            if (moveDown && naveDassalto1Griglia10x10.Top < 607 && !confirmButtonePressed)
+                            if (moveDown && naveDassalto1Griglia10x10.Top < 607 && !confirmButtonPressed)
                             {
                                 naveDassalto1Griglia10x10.Top += 63;
                             }
-                            if (moveRight && naveDassalto1Griglia10x10.Right < 675 && !confirmButtonePressed)
+                            if (moveRight && naveDassalto1Griglia10x10.Right < 675 && !confirmButtonPressed)
                             {
                                 naveDassalto1Griglia10x10.Left += 63;
                             }
-                            if (moveLeft && naveDassalto1Griglia10x10.Left > 45 && !confirmButtonePressed)
+                            if (moveLeft && naveDassalto1Griglia10x10.Left > 45 && !confirmButtonPressed)
                             {
                                 naveDassalto1Griglia10x10.Left -= 63;
                             }
-                            if (rotateLeft && !confirmButtonePressed)
+                            if (rotateLeft && !confirmButtonPressed)
                             {
                                 if (!naveDassaltoImmagineGirata1)
                                 {
@@ -523,7 +522,7 @@ namespace Hyper_Battleship
                                     naveDassaltoImmagineGirata1 = true;
                                 }
                             }
-                            if (rotateRight && !confirmButtonePressed)
+                            if (rotateRight && !confirmButtonPressed)
                             {
                                 if (naveDassaltoImmagineGirata1)
                                 {
@@ -534,23 +533,23 @@ namespace Hyper_Battleship
                             break;
 
                         case 1:
-                            if (moveUp && naveDassalto2Griglia10x10.Top > 40 && !confirmButtonePressed)
+                            if (moveUp && naveDassalto2Griglia10x10.Top > 40 && !confirmButtonPressed)
                             {
                                 naveDassalto2Griglia10x10.Top -= 63;
                             }
-                            if (moveDown && naveDassalto2Griglia10x10.Top < 607 && !confirmButtonePressed)
+                            if (moveDown && naveDassalto2Griglia10x10.Top < 607 && !confirmButtonPressed)
                             {
                                 naveDassalto2Griglia10x10.Top += 63;
                             }
-                            if (moveRight && naveDassalto2Griglia10x10.Right < 675 && !confirmButtonePressed)
+                            if (moveRight && naveDassalto2Griglia10x10.Right < 675 && !confirmButtonPressed)
                             {
                                 naveDassalto2Griglia10x10.Left += 63;
                             }
-                            if (moveLeft && naveDassalto2Griglia10x10.Left > 45 && !confirmButtonePressed)
+                            if (moveLeft && naveDassalto2Griglia10x10.Left > 45 && !confirmButtonPressed)
                             {
                                 naveDassalto2Griglia10x10.Left -= 63;
                             }
-                            if (rotateLeft && !confirmButtonePressed)
+                            if (rotateLeft && !confirmButtonPressed)
                             {
                                 if (!naveDassaltoImmagineGirata2)
                                 {
@@ -558,7 +557,7 @@ namespace Hyper_Battleship
                                     naveDassaltoImmagineGirata2 = true;
                                 }
                             }
-                            if (rotateRight && !confirmButtonePressed)
+                            if (rotateRight && !confirmButtonPressed)
                             {
                                 if (naveDassaltoImmagineGirata2)
                                 {
@@ -569,23 +568,23 @@ namespace Hyper_Battleship
                             break;
 
                         case 0:
-                            if (moveUp && naveDassalto3Griglia10x10.Top > 40 && !confirmButtonePressed)
+                            if (moveUp && naveDassalto3Griglia10x10.Top > 40 && !confirmButtonPressed)
                             {
                                 naveDassalto3Griglia10x10.Top -= 63;
                             }
-                            if (moveDown && naveDassalto3Griglia10x10.Top < 607 && !confirmButtonePressed)
+                            if (moveDown && naveDassalto3Griglia10x10.Top < 607 && !confirmButtonPressed)
                             {
                                 naveDassalto3Griglia10x10.Top += 63;
                             }
-                            if (moveRight && naveDassalto3Griglia10x10.Right < 675 && !confirmButtonePressed)
+                            if (moveRight && naveDassalto3Griglia10x10.Right < 675 && !confirmButtonPressed)
                             {
                                 naveDassalto3Griglia10x10.Left += 63;
                             }
-                            if (moveLeft && naveDassalto3Griglia10x10.Left > 45 && !confirmButtonePressed)
+                            if (moveLeft && naveDassalto3Griglia10x10.Left > 45 && !confirmButtonPressed)
                             {
                                 naveDassalto3Griglia10x10.Left -= 63;
                             }
-                            if (rotateLeft && !confirmButtonePressed)
+                            if (rotateLeft && !confirmButtonPressed)
                             {
                                 if (!naveDassaltoImmagineGirata3)
                                 {
@@ -593,7 +592,7 @@ namespace Hyper_Battleship
                                     naveDassaltoImmagineGirata3 = true;
                                 }
                             }
-                            if (rotateRight && !confirmButtonePressed)
+                            if (rotateRight && !confirmButtonPressed)
                             {
                                 if (naveDassaltoImmagineGirata3)
                                 {
@@ -604,30 +603,27 @@ namespace Hyper_Battleship
                             break;
 
                     }
-                    if (confirmButtonePressed)
+                    if (confirmButtonPressed)
                     {
                         if (naviDassalto == 2)
                         {
-                            naveDassaltoPosizionata1 = true;
                             assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(naveDassalto1Griglia10x10.Location.Y, naveDassalto1Griglia10x10.Location.X);
                             posizioneNaveNellArray(1);
                         }
                         else if (naviDassalto == 1)
                         {
-                            naveDassaltoPosizionata2 = true;
                             assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(naveDassalto2Griglia10x10.Location.Y, naveDassalto2Griglia10x10.Location.X);
                             posizioneNaveNellArray(1);
                         }
                         else if (naviDassalto == 0)
                         {
-                            naveDassaltoPosizionata3 = true;
                             assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(naveDassalto3Griglia10x10.Location.Y, naveDassalto3Griglia10x10.Location.X);
                             posizioneNaveNellArray(1);
                         }
                         nave = "";
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
-                        confirmButtonePressed = false;
+                        confirmButtonPressed = false;
                     }
                     if (exitOperation)
                     {
@@ -677,100 +673,115 @@ namespace Hyper_Battleship
         #region Tasti Delle Navi
         private void portaereiPictureBox10x10_Click(object sender, EventArgs e)
         {
-            if (disposizioneNaviPossibile)
+            if (!portaereiPosizionata)
             {
-                nave = "portaerei";
-                quantitàPortaerei.Text = "0";
-                disposizioneNaviPossibile = false;
-                annullaButton.Visible = true;
-                portaereiGriglia10x10.Location = new Point(297 - 63*2, 292);
-                portaereiGriglia10x10.Visible = true;
+                if (disposizioneNaviPossibile)
+                {
+                    nave = "portaerei";
+                    quantitàPortaerei.Text = "0";
+                    disposizioneNaviPossibile = false;
+                    annullaButton.Visible = true;
+                    portaereiGriglia10x10.Location = new Point(297 - 63 * 2, 292);
+                    portaereiGriglia10x10.Visible = true;
+                }
             }
         }
 
         private void corazzataPcitureBox10x10_Click(object sender, EventArgs e)
         {
-            if (disposizioneNaviPossibile)
+            if (!corazzataPosizionata)
             {
-                nave = "corazzata";
-                quantitàCorazzata.Text = "0";
-                disposizioneNaviPossibile = false;
-                annullaButton.Visible = true;
-                corazzataGriglia10x10.Location = new Point(297 - 63, 292);
-                corazzataGriglia10x10.Visible = true;
+                if (disposizioneNaviPossibile)
+                {
+                    nave = "corazzata";
+                    quantitàCorazzata.Text = "0";
+                    disposizioneNaviPossibile = false;
+                    annullaButton.Visible = true;
+                    corazzataGriglia10x10.Location = new Point(297 - 63, 292);
+                    corazzataGriglia10x10.Visible = true;
+                }
             }
         }
 
         private void sottomarinoPictureBox10x10_Click(object sender, EventArgs e)
         {
-            if (disposizioneNaviPossibile)
+            if(!sottomarinoPosizionato1 && !sottomarinoPosizionato2 || sottomarinoPosizionato1 && !sottomarinoPosizionato2)
             {
-                nave = "sottomarino";
-                sottomarini = Convert.ToInt32(quantitàSottomarini.Text);
-                sottomarini--;
-                quantitàSottomarini.Text = sottomarini.ToString();
-                disposizioneNaviPossibile = false;
-                annullaButton.Visible = true;
-                if (sottomarini == 1)
+                if (disposizioneNaviPossibile)
                 {
-                    sottomarino1Griglia10x10.Location = new Point(297 - 63, 292);
-                    sottomarino1Griglia10x10.Visible = true;
-                }
-                else if(sottomarini == 0)
-                {
-                    sottomarino2Griglia10x10.Location = new Point(297 - 63, 292);
-                    sottomarino2Griglia10x10.Visible = true;
+                    nave = "sottomarino";
+                    sottomarini = Convert.ToInt32(quantitàSottomarini.Text);
+                    sottomarini--;
+                    quantitàSottomarini.Text = sottomarini.ToString();
+                    disposizioneNaviPossibile = false;
+                    annullaButton.Visible = true;
+                    if (sottomarini == 1)
+                    {
+                        sottomarino1Griglia10x10.Location = new Point(297 - 63, 292);
+                        sottomarino1Griglia10x10.Visible = true;
+                    }
+                    else if (sottomarini == 0)
+                    {
+                        sottomarino2Griglia10x10.Location = new Point(297 - 63, 292);
+                        sottomarino2Griglia10x10.Visible = true;
+                    }
                 }
             }
         }
 
         private void cacciatorpedinierePictureBox10x10_Click(object sender, EventArgs e)
         {
-            if (disposizioneNaviPossibile)
+            if (!cacciatorpedinierePosizionato1 && !cacciatorpedinierePosizionato2 || cacciatorpedinierePosizionato1 && !cacciatorpedinierePosizionato2)
             {
-                nave = "cacciatorpediniere";
-                cacciatorpedinieri = Convert.ToInt32(quantitàCacciatorpediniere.Text);
-                cacciatorpedinieri--;
-                quantitàCacciatorpediniere.Text = cacciatorpedinieri.ToString();
-                disposizioneNaviPossibile = false;
-                annullaButton.Visible = true;
-                if (cacciatorpedinieri == 1)
+                if (disposizioneNaviPossibile)
                 {
-                    cacciatorpediniere1Griglia10x10.Location = new Point(297, 292);
-                    cacciatorpediniere1Griglia10x10.Visible = true;
-                }
-                else if (cacciatorpedinieri == 0)
-                {
-                    cacciatorpediniere2Griglia10x10.Location = new Point(297, 292);
-                    cacciatorpediniere2Griglia10x10.Visible = true;
+                    nave = "cacciatorpediniere";
+                    cacciatorpedinieri = Convert.ToInt32(quantitàCacciatorpediniere.Text);
+                    cacciatorpedinieri--;
+                    quantitàCacciatorpediniere.Text = cacciatorpedinieri.ToString();
+                    disposizioneNaviPossibile = false;
+                    annullaButton.Visible = true;
+                    if (cacciatorpedinieri == 1)
+                    {
+                        cacciatorpediniere1Griglia10x10.Location = new Point(297, 292);
+                        cacciatorpediniere1Griglia10x10.Visible = true;
+                    }
+                    else if (cacciatorpedinieri == 0)
+                    {
+                        cacciatorpediniere2Griglia10x10.Location = new Point(297, 292);
+                        cacciatorpediniere2Griglia10x10.Visible = true;
+                    }
                 }
             }
         }
 
         private void naveDassaltoPictureBox10x10_Click(object sender, EventArgs e)
         {
-            if (disposizioneNaviPossibile)
+            if(!naveDassaltoPosizionata1 && !naveDassaltoPosizionata2 && !naveDassaltoPosizionata3 || naveDassaltoPosizionata1 && !naveDassaltoPosizionata2 && !naveDassaltoPosizionata3 || naveDassaltoPosizionata1 && naveDassaltoPosizionata2 && !naveDassaltoPosizionata3)
             {
-                nave = "nave d'assalto";
-                naviDassalto = Convert.ToInt32(quantitàNaveDassalto.Text);
-                naviDassalto--;
-                quantitàNaveDassalto.Text = naviDassalto.ToString();
-                disposizioneNaviPossibile = false;
-                annullaButton.Visible = true;
-                if (naviDassalto == 2)
+                if (disposizioneNaviPossibile)
                 {
-                    naveDassalto1Griglia10x10.Location = new Point(297, 292);
-                    naveDassalto1Griglia10x10.Visible = true;
-                }
-                else if (naviDassalto == 1)
-                {
-                    naveDassalto2Griglia10x10.Location = new Point(297, 292);
-                    naveDassalto2Griglia10x10.Visible = true;
-                }
-                else if (naviDassalto == 0)
-                {
-                    naveDassalto3Griglia10x10.Location = new Point(297, 292);
-                    naveDassalto3Griglia10x10.Visible = true;
+                    nave = "nave d'assalto";
+                    naviDassalto = Convert.ToInt32(quantitàNaveDassalto.Text);
+                    naviDassalto--;
+                    quantitàNaveDassalto.Text = naviDassalto.ToString();
+                    disposizioneNaviPossibile = false;
+                    annullaButton.Visible = true;
+                    if (naviDassalto == 2)
+                    {
+                        naveDassalto1Griglia10x10.Location = new Point(297, 292);
+                        naveDassalto1Griglia10x10.Visible = true;
+                    }
+                    else if (naviDassalto == 1)
+                    {
+                        naveDassalto2Griglia10x10.Location = new Point(297, 292);
+                        naveDassalto2Griglia10x10.Visible = true;
+                    }
+                    else if (naviDassalto == 0)
+                    {
+                        naveDassalto3Griglia10x10.Location = new Point(297, 292);
+                        naveDassalto3Griglia10x10.Visible = true;
+                    }
                 }
             }
         }
@@ -830,86 +841,110 @@ namespace Hyper_Battleship
             }
         }
 
-        public void posizioneNaveNellArray(int lunghezzaNave)
+        private void posizioneNaveNellArray(int lunghezzaNave)
         {
             string[] coordXY = coordinateNave.Split(',');
             int coordinateNaveSuGrigliaArray = Convert.ToInt32(coordXY[0]) + Convert.ToInt32(coordXY[1]);
             locazioneNaviSuGriglia(ref lunghezzaNave, ref coordinateNaveSuGrigliaArray);
         }
 
-        public void locazioneNaviSuGriglia(ref int lunghezzaNave, ref int coordinateNaveSuGrigliaArray)
+        private void locazioneNaviSuGriglia(ref int lunghezzaNave, ref int coordinateNaveSuGrigliaArray)
         {
             switch (lunghezzaNave)
             {
                 case 5:
                     if (!portaereiImaggineGirata)
                     {
-                        for(int i = 0; i < 5; i++)
+                        int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                        bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                        if (!nessunaNaveNelleVicinanze)
                         {
-                            string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
-                            if (player1PictureBox.Visible)
+                            for (int i = 0; i < 5; i++)
                             {
-                                grigliaArray[0] = "portaerei";
+                                string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
+                                if (player1PictureBox.Visible)
+                                {
+                                    grigliaArray[0] = "portaerei";
+                                }
+                                else
+                                {
+                                    grigliaArray[1] = "portaerei";
+                                }
+                                StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
                             }
-                            else
-                            {
-                                grigliaArray[1] = "portaerei";
-                            }
-                            StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                            portaereiPosizionata = true;
                         }
                     }
                     else
                     {
-                        int x = 0;//per salvare la posizione in verticale
-                        for (int i = 0; i < 5; i++)
+                        int[] posizioniDaControllare = new int[] { -10,-1, 0, 1, 9, 10, 11, 19, 20, 21, 29, 30, 31, 39, 40, 41, 50 };
+                        bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                        if (!nessunaNaveNelleVicinanze)
                         {
-                            string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
-                            if (player1PictureBox.Visible)
+                            int x = 0;//per salvare la posizione in verticale
+                            for (int i = 0; i < 5; i++)
                             {
-                                grigliaArray[0] = "portaerei";
+                                string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
+                                if (player1PictureBox.Visible)
+                                {
+                                    grigliaArray[0] = "portaerei";
+                                }
+                                else
+                                {
+                                    grigliaArray[1] = "portaerei";
+                                }
+                                StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                x += 10;
                             }
-                            else
-                            {
-                                grigliaArray[1] = "portaerei";
-                            }
-                            StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
-                            x += 10;
+                            portaereiPosizionata = true;
                         }
                     }
                     break;
                 case 4:
                     if (!corazzataImaggineGirata)
                     {
-                        for (int i = 0; i < 4; i++)
+                        int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -1, 0, 1, 2, 3, 4, 10, 11, 12, 13 };
+                        bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                        if (!nessunaNaveNelleVicinanze)
                         {
-                            string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
-                            if (player1PictureBox.Visible)
+                            for (int i = 0; i < 4; i++)
                             {
-                                grigliaArray[0] = "corazzata";
+                                string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
+                                if (player1PictureBox.Visible)
+                                {
+                                    grigliaArray[0] = "corazzata";
+                                }
+                                else
+                                {
+                                    grigliaArray[1] = "corazzata";
+                                }
+                                StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
                             }
-                            else
-                            {
-                                grigliaArray[1] = "corazzata";
-                            }
-                            StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                            corazzataPosizionata = true;
                         }
                     }
                     else
                     {
-                        int x = 0;//per salvare la posizione in verticale
-                        for (int i = 0; i < 4; i++)
+                        int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                        bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                        if (!nessunaNaveNelleVicinanze)
                         {
-                            string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
-                            if (player1PictureBox.Visible)
+                            int x = 0;//per salvare la posizione in verticale
+                            for (int i = 0; i < 4; i++)
                             {
-                                grigliaArray[0] = "corazzata";
+                                string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
+                                if (player1PictureBox.Visible)
+                                {
+                                    grigliaArray[0] = "corazzata";
+                                }
+                                else
+                                {
+                                    grigliaArray[1] = "corazzata";
+                                }
+                                StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                x += 10;
                             }
-                            else
-                            {
-                                grigliaArray[1] = "corazzata";
-                            }
-                            StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
-                            x += 10;
+                            corazzataPosizionata = true;
                         }
                     }
                     break;
@@ -919,215 +954,309 @@ namespace Hyper_Battleship
                         case 1:
                             if (!sottomarinoImmagineGirata1)
                             {
-                                for (int i = 0; i < 3; i++)
+                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                                if (!nessunaNaveNelleVicinanze)
                                 {
-                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
-                                    if (player1PictureBox.Visible)
+                                    for (int i = 0; i < 3; i++)
                                     {
-                                        grigliaArray[0] = "sottomarino1";
+                                        string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
+                                        if (player1PictureBox.Visible)
+                                        {
+                                            grigliaArray[0] = "sottomarino1";
+                                        }
+                                        else
+                                        {
+                                            grigliaArray[1] = "sottomarino1";
+                                        }
+                                        StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
                                     }
-                                    else
-                                    {
-                                        grigliaArray[1] = "sottomarino1";
-                                    }
-                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                    sottomarinoPosizionato1 = true;
                                 }
                             }
                             else
                             {
-                                int x = 0;//per salvare la posizione in verticale
-                                for (int i = 0; i < 3; i++)
+                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                                if (!nessunaNaveNelleVicinanze)
                                 {
-                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
-                                    if (player1PictureBox.Visible)
+                                    int x = 0;//per salvare la posizione in verticale
+                                    for (int i = 0; i < 3; i++)
                                     {
-                                        grigliaArray[0] = "sottomarino1";
+                                        string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
+                                        if (player1PictureBox.Visible)
+                                        {
+                                            grigliaArray[0] = "sottomarino1";
+                                        }
+                                        else
+                                        {
+                                            grigliaArray[1] = "sottomarino1";
+                                        }
+                                        StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                        x += 10;
                                     }
-                                    else
-                                    {
-                                        grigliaArray[1] = "sottomarino1";
-                                    }
-                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
-                                    x += 10;
+                                    sottomarinoPosizionato1 = true;
                                 }
                             }
                             break;
                         case 0:
                             if (!sottomarinoImmagineGirata2)
                             {
-                                for (int i = 0; i < 3; i++)
+                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                                if (!nessunaNaveNelleVicinanze)
                                 {
-                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
-                                    if (player1PictureBox.Visible)
+                                    for (int i = 0; i < 3; i++)
                                     {
-                                        grigliaArray[0] = "sottomarino2";
+                                        string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
+                                        if (player1PictureBox.Visible)
+                                        {
+                                            grigliaArray[0] = "sottomarino2";
+                                        }
+                                        else
+                                        {
+                                            grigliaArray[1] = "sottomarino2";
+                                        }
+                                        StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
                                     }
-                                    else
-                                    {
-                                        grigliaArray[1] = "sottomarino2";
-                                    }
-                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                    sottomarinoPosizionato2 = true;
                                 }
+
                             }
                             else
                             {
-                                int x = 0;//per salvare la posizione in verticale
-                                for (int i = 0; i < 3; i++)
+                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                                if (!nessunaNaveNelleVicinanze)
                                 {
-                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
-                                    if (player1PictureBox.Visible)
+                                    int x = 0;//per salvare la posizione in verticale
+                                    for (int i = 0; i < 3; i++)
                                     {
-                                        grigliaArray[0] = "sottomarino2";
+                                        string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
+                                        if (player1PictureBox.Visible)
+                                        {
+                                            grigliaArray[0] = "sottomarino2";
+                                        }
+                                        else
+                                        {
+                                            grigliaArray[1] = "sottomarino2";
+                                        }
+                                        StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                        x += 10;
                                     }
-                                    else
-                                    {
-                                        grigliaArray[1] = "sottomarino2";
-                                    }
-                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
-                                    x += 10;
+                                    sottomarinoPosizionato2 = true;
                                 }
+
                             }
                             break;
                     }
                     break;
+
                 case 2:
                     switch (cacciatorpedinieri)
                     {
                         case 1:
                             if (!cacciatorpediniereImmagineGirata1)
                             {
-                                for (int i = 0; i < 2; i++)
+                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                                if (!nessunaNaveNelleVicinanze)
                                 {
-                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
-                                    if (player1PictureBox.Visible)
+                                    for (int i = 0; i < 2; i++)
                                     {
-                                        grigliaArray[0] = "cacciatorpediniere1";
+                                        string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
+                                        if (player1PictureBox.Visible)
+                                        {
+                                            grigliaArray[0] = "cacciatorpediniere1";
+                                        }
+                                        else
+                                        {
+                                            grigliaArray[1] = "cacciatorpediniere1";
+                                        }
+                                        StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
                                     }
-                                    else
-                                    {
-                                        grigliaArray[1] = "cacciatorpediniere1";
-                                    }
-                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                    cacciatorpedinierePosizionato1 = true;
                                 }
                             }
                             else
                             {
-                                int x = 0;//per salvare la posizione in verticale
-                                for (int i = 0; i < 2; i++)
+                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                                if (!nessunaNaveNelleVicinanze)
                                 {
-                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
-                                    if (player1PictureBox.Visible)
+                                    int x = 0;//per salvare la posizione in verticale
+                                    for (int i = 0; i < 2; i++)
                                     {
-                                        grigliaArray[0] = "cacciatorpediniere1";
+                                        string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
+                                        if (player1PictureBox.Visible)
+                                        {
+                                            grigliaArray[0] = "cacciatorpediniere1";
+                                        }
+                                        else
+                                        {
+                                            grigliaArray[1] = "cacciatorpediniere1";
+                                        }
+                                        StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                        x += 10;
                                     }
-                                    else
-                                    {
-                                        grigliaArray[1] = "cacciatorpediniere1";
-                                    }
-                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
-                                    x += 10;
+                                    cacciatorpedinierePosizionato1 = true;
                                 }
                             }
                             break;
+
                         case 0:
                             if (!cacciatorpediniereImmagineGirata2)
                             {
-                                for (int i = 0; i < 2; i++)
+                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                                if (!nessunaNaveNelleVicinanze)
                                 {
-                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
-                                    if (player1PictureBox.Visible)
+                                    for (int i = 0; i < 2; i++)
                                     {
-                                        grigliaArray[0] = "cacciatorpediniere2";
+                                        string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + i].Split(',');
+                                        if (player1PictureBox.Visible)
+                                        {
+                                            grigliaArray[0] = "cacciatorpediniere2";
+                                        }
+                                        else
+                                        {
+                                            grigliaArray[1] = "cacciatorpediniere2";
+                                        }
+                                        StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
                                     }
-                                    else
-                                    {
-                                        grigliaArray[1] = "cacciatorpediniere2";
-                                    }
-                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + i] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                    cacciatorpedinierePosizionato2 = true;
                                 }
                             }
                             else
                             {
-                                int x = 0;//per salvare la posizione in verticale
-                                for (int i = 0; i < 2; i++)
+                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                                if (!nessunaNaveNelleVicinanze)
                                 {
-                                    string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
-                                    if (player1PictureBox.Visible)
+                                    int x = 0;//per salvare la posizione in verticale
+                                    for (int i = 0; i < 2; i++)
                                     {
-                                        grigliaArray[0] = "cacciatorpediniere2";
+                                        string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + x].Split(',');
+                                        if (player1PictureBox.Visible)
+                                        {
+                                            grigliaArray[0] = "cacciatorpediniere2";
+                                        }
+                                        else
+                                        {
+                                            grigliaArray[1] = "cacciatorpediniere2";
+                                        }
+                                        StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
+                                        x += 10;
                                     }
-                                    else
-                                    {
-                                        grigliaArray[1] = "cacciatorpediniere2";
-                                    }
-                                    StrutturaGriglia10[coordinateNaveSuGrigliaArray + x] = $"{grigliaArray[0]},{grigliaArray[1]},{grigliaArray[2]},{grigliaArray[3]}";
-                                    x += 10;
+                                    cacciatorpedinierePosizionato2 = true;
                                 }
                             }
                             break;
                     }
                     break;
-                case 1:
-                    string[] grigliaArray2 = StrutturaGriglia10[coordinateNaveSuGrigliaArray].Split(',');
-                    switch (naviDassalto)
-                    {
-                        case 2:
-                            if (player1PictureBox.Visible)
-                            {
-                                grigliaArray2[0] = "nave d'assalto1";
-                            }
-                            else
-                            {
-                                grigliaArray2[1] = "nave d'assalto1";
-                            }
-                            StrutturaGriglia10[coordinateNaveSuGrigliaArray] = $"{grigliaArray2[0]},{grigliaArray2[1]},{grigliaArray2[2]},{grigliaArray2[3]}";
-                            break;
 
-                        case 1:
-                            if (player1PictureBox.Visible)
-                            {
-                                grigliaArray2[0] = "nave d'assalto2";
-                            }
-                            else
-                            {
-                                grigliaArray2[1] = "nave d'assalto2";
-                            }
-                            StrutturaGriglia10[coordinateNaveSuGrigliaArray] = $"{grigliaArray2[0]},{grigliaArray2[1]},{grigliaArray2[2]},{grigliaArray2[3]}";
-                            break;
-                        case 0:
-                            if (player1PictureBox.Visible)
-                            {
-                                grigliaArray2[0] = "nave d'assalto3";
-                            }
-                            else
-                            {
-                                grigliaArray2[1] = "nave d'assalto3";
-                            }
-                            StrutturaGriglia10[coordinateNaveSuGrigliaArray] = $"{grigliaArray2[0]},{grigliaArray2[1]},{grigliaArray2[2]},{grigliaArray2[3]}";
-                            break;
+                case 1:
+                    string[] grigliaArray2 = StrutturaGriglia10[coordinateNaveSuGrigliaArray].Split(',');//per non influenzare i controlli delle altre navi
+                    //NA = nave d'assalto
+                    int[] posizioniDaControllare_NA = new int[] { -10, -1, 0, 1, 10};
+                    bool nessunaNaveNelleVicinanze_NA = controlloNaviNelleVicinanze(posizioniDaControllare_NA, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
+                    if (!nessunaNaveNelleVicinanze_NA)
+                    {
+                        switch (naviDassalto)
+                        {
+                            case 2:
+                                if (player1PictureBox.Visible)
+                                {
+                                    grigliaArray2[0] = "nave d'assalto1";
+                                }
+                                else
+                                {
+                                    grigliaArray2[1] = "nave d'assalto1";
+                                }
+                                StrutturaGriglia10[coordinateNaveSuGrigliaArray] = $"{grigliaArray2[0]},{grigliaArray2[1]},{grigliaArray2[2]},{grigliaArray2[3]}";
+                                naveDassaltoPosizionata1 = true;
+                                break;
+
+                            case 1:
+                                if (player1PictureBox.Visible)
+                                {
+                                    grigliaArray2[0] = "nave d'assalto2";
+                                }
+                                else
+                                {
+                                    grigliaArray2[1] = "nave d'assalto2";
+                                }
+                                StrutturaGriglia10[coordinateNaveSuGrigliaArray] = $"{grigliaArray2[0]},{grigliaArray2[1]},{grigliaArray2[2]},{grigliaArray2[3]}";
+                                naveDassaltoPosizionata2 = true;
+                                break;
+
+                            case 0:
+                                if (player1PictureBox.Visible)
+                                {
+                                    grigliaArray2[0] = "nave d'assalto3";
+                                }
+                                else
+                                {
+                                    grigliaArray2[1] = "nave d'assalto3";
+                                }
+                                StrutturaGriglia10[coordinateNaveSuGrigliaArray] = $"{grigliaArray2[0]},{grigliaArray2[1]},{grigliaArray2[2]},{grigliaArray2[3]}";
+                                naveDassaltoPosizionata3 = true;
+                                break;
+                        }
                     }
                     break;
             }
+        }
+
+        private bool controlloNaviNelleVicinanze(int[] posizioniDaControllare, bool player, ref int coordinateNaveSuGrigliaArray)
+        {
+            bool naveNelleVicinanze = false;
+            switch (player)
+            {
+                case true:
+                    for (int i = 0; i < posizioniDaControllare.Length; i++)
+                    {
+                        if(coordinateNaveSuGrigliaArray + posizioniDaControllare[i] >= 0 && coordinateNaveSuGrigliaArray + posizioniDaControllare[i] < 100)
+                        {
+                            string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + posizioniDaControllare[i]].Split(',');
+                            if (grigliaArray[0] != "acqua1")
+                            {
+                                confirmButtonPressed = false;
+                                annullaButton.Visible = false;
+                                disposizioneNaviPossibile = true;
+                                exitOperation = true;
+                                naveNelleVicinanze = true;
+                                MessageBox.Show("Non puoi posizionare qui la nave");
+                                break;
+                            }
+                        }
+                    }
+                    break;
+
+                case false:
+                    for (int i = 0; i < posizioniDaControllare.Length; i++)
+                    {
+                        if (coordinateNaveSuGrigliaArray + posizioniDaControllare[i] >= 0 && coordinateNaveSuGrigliaArray + posizioniDaControllare[i] < 100)
+                        {
+                            string[] grigliaArray = StrutturaGriglia10[coordinateNaveSuGrigliaArray + posizioniDaControllare[i]].Split(',');
+                            if (grigliaArray[1] != "acqua2")
+                            {
+                                confirmButtonPressed = false;
+                                nave = "";
+                                annullaButton.Visible = false;
+                                disposizioneNaviPossibile = true;
+                                exitOperation = true;
+                                naveNelleVicinanze = true;
+                                MessageBox.Show("Non puoi posizionare qui la nave");
+                                break;
+                            }
+                        }
+                    }
+                    break;
+            }
+            return naveNelleVicinanze;
         }
         #endregion
 
-        public void Gioco()
-        {
-            int turno = 0;
-            Schermata_Iniziale f1 = new Schermata_Iniziale();
-            byte quantitàRadar = 1, quantitàDoppioAssalto;//booster partita
-            if (f1.modalitàAssign() == false)//controllo se l'utente/utenti ha/hanno scelto una partita normale o veloce
-            {
-                quantitàDoppioAssalto = 1;//veloce
-            }
-            else
-            {
-                quantitàDoppioAssalto = 2;//normale
-            }
-
-            //do
-            //{
-            //} while (finePartita == false);
-        }
     }
 }
