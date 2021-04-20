@@ -59,7 +59,6 @@ C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\bin\Debug\Hyper Battle
 C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\bin\Debug\Hyper Battleship.exe
 C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\bin\Debug\Hyper Battleship.pdb
 C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.csprojAssemblyReference.cache
-C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Gameplay.resources
 C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.LoginForm.resources
 C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Properties.Resources.resources
 C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Schermata_Iniziale.resources
@@ -67,3 +66,4 @@ C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battle
 C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.csproj.CoreCompileInputs.cache
 C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.exe
 C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.pdb
+C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Gameplay.resources

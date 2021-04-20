@@ -20,7 +20,6 @@ namespace Hyper_Battleship
             Application.Exit();
         }
 
-        #region Griglie Di Gioco
         //Griglia 10 x 10 caselle. partita normale
         public static string[] StrutturaGriglia10 = new string[]  {"acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
@@ -39,9 +38,8 @@ namespace Hyper_Battleship
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no" };
-        #endregion
 
-        #region Variabili Per il Fuzionamento dell Programma + Tasto "Conferma" e "Annulla"
+        #region Variabili Per il Fuzionamento dell Programma + Tasto "Conferma", "Annulla" e "Passa Turno"
         public static int scoreGiocatore1 = 0, scoreGiocatore2 = 0;
         int sottomarini, cacciatorpedinieri, naviDassalto;
         bool finePartita = false, disposizioneNaviPossibile = true;
@@ -52,13 +50,26 @@ namespace Hyper_Battleship
             confirmButtonPressed = true;
             if(portaereiPosizionata && corazzataPosizionata && sottomarinoPosizionato1 && sottomarinoPosizionato2 && cacciatorpedinierePosizionato1 && cacciatorpedinierePosizionato2 && naveDassaltoPosizionata1 && naveDassaltoPosizionata2 && naveDassaltoPosizionata3)
             {
-                MessageBox.Show("Clicca il pulsante 'Passa il turno'");
+                passaTurnoButton.Visible = true;
+                MessageBox.Show("Hai dispiegato in campo tutte le navi\nClicca il pulsante 'Passa il turno'");
             }
         }
 
         private void annullaButton_Click(object sender, EventArgs e)
         {
             exitOperation = true;
+        }
+
+        private void passaTurnoButton_Click(object sender, EventArgs e) //passa il turno, quindi riporta tutte le variabili al loro stato originale
+        {
+            nave = "";
+            portaereiGriglia10x10.Visible = false; portaereiImaggineGirata = false; quantitàPortaerei.Text = "1"; portaereiPosizionata = false;
+            corazzataGriglia10x10.Visible = false; corazzataImaggineGirata = false; quantitàCorazzata.Text = "1"; corazzataPosizionata = false;
+            sottomarino1Griglia10x10.Visible = false; sottomarino2Griglia10x10.Visible = false; sottomarinoImmagineGirata1 = false; sottomarinoImmagineGirata2 = false; quantitàSottomarini.Text = "2"; sottomarini = 2; sottomarinoPosizionato1 = false; sottomarinoPosizionato2 = false;
+            cacciatorpediniere1Griglia10x10.Visible = false; cacciatorpediniere2Griglia10x10.Visible = false; cacciatorpediniereImmagineGirata1 = false; cacciatorpediniereImmagineGirata2 = false; quantitàCacciatorpediniere.Text = "2"; cacciatorpedinieri = 2; cacciatorpedinierePosizionato1 = false; cacciatorpedinierePosizionato2 = false;
+            naveDassalto1Griglia10x10.Visible = false; naveDassalto2Griglia10x10.Visible = false; naveDassalto3Griglia10x10.Visible = false; naveDassaltoImmagineGirata1 = false; naveDassaltoImmagineGirata2 = false; naveDassaltoImmagineGirata3 = false; quantitàNaveDassalto.Text = "3"; naviDassalto = 3; naveDassaltoPosizionata1 = false; naveDassaltoPosizionata2 = false; naveDassaltoPosizionata3 = false;
+            player1PictureBox.Visible = false; player2PictureBox.Visible = true;
+            passaTurnoButton.Visible = false;
         }
         #endregion
 
@@ -855,7 +866,8 @@ namespace Hyper_Battleship
                 case 5:
                     if (!portaereiImaggineGirata)
                     {
-                        int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                        int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };//orrizontale
+                        controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, false);
                         bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                         if (!nessunaNaveNelleVicinanze)
                         {
@@ -877,7 +889,8 @@ namespace Hyper_Battleship
                     }
                     else
                     {
-                        int[] posizioniDaControllare = new int[] { -10,-1, 0, 1, 9, 10, 11, 19, 20, 21, 29, 30, 31, 39, 40, 41, 50 };
+                        int[] posizioniDaControllare = new int[] { -10, -1, 0, 1, 9, 10, 11, 19, 20, 21, 29, 30, 31, 39, 40, 41, 50 };//verticale
+                        controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, true);
                         bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                         if (!nessunaNaveNelleVicinanze)
                         {
@@ -903,7 +916,8 @@ namespace Hyper_Battleship
                 case 4:
                     if (!corazzataImaggineGirata)
                     {
-                        int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -1, 0, 1, 2, 3, 4, 10, 11, 12, 13 };
+                        int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -1, 0, 1, 2, 3, 4, 10, 11, 12, 13 };//orrizontale
+                        controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, false);
                         bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                         if (!nessunaNaveNelleVicinanze)
                         {
@@ -925,7 +939,8 @@ namespace Hyper_Battleship
                     }
                     else
                     {
-                        int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                        int[] posizioniDaControllare = new int[] { -10, -1, 0, 1, 9, 10, 11, 19, 20, 21, 29, 30, 31, 40 };//verticale
+                        controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, true);
                         bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                         if (!nessunaNaveNelleVicinanze)
                         {
@@ -954,7 +969,8 @@ namespace Hyper_Battleship
                         case 1:
                             if (!sottomarinoImmagineGirata1)
                             {
-                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -1, 0, 1, 2, 3, 10, 11, 12 };//orrizontale
+                                controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, false);
                                 bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                                 if (!nessunaNaveNelleVicinanze)
                                 {
@@ -976,7 +992,8 @@ namespace Hyper_Battleship
                             }
                             else
                             {
-                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                int[] posizioniDaControllare = new int[] { -10, -1, 0, 1, 9, 10, 11, 19, 20, 21, 30 };//verticale
+                                controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, true);
                                 bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                                 if (!nessunaNaveNelleVicinanze)
                                 {
@@ -1002,7 +1019,8 @@ namespace Hyper_Battleship
                         case 0:
                             if (!sottomarinoImmagineGirata2)
                             {
-                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -1, 0, 1, 2, 3, 10, 11, 12 };//verticale
+                                controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, false);
                                 bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                                 if (!nessunaNaveNelleVicinanze)
                                 {
@@ -1025,7 +1043,8 @@ namespace Hyper_Battleship
                             }
                             else
                             {
-                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                int[] posizioniDaControllare = new int[] { -10, -1, 0, 1, 9, 10, 11, 19, 20, 21, 30 };//orrizontale
+                                controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, true);
                                 bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                                 if (!nessunaNaveNelleVicinanze)
                                 {
@@ -1058,7 +1077,8 @@ namespace Hyper_Battleship
                         case 1:
                             if (!cacciatorpediniereImmagineGirata1)
                             {
-                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                int[] posizioniDaControllare = new int[] { -10, -9, -1, 0, 1, 2, 10, 11 };//orrizontale
+                                controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, false);
                                 bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                                 if (!nessunaNaveNelleVicinanze)
                                 {
@@ -1080,7 +1100,8 @@ namespace Hyper_Battleship
                             }
                             else
                             {
-                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                int[] posizioniDaControllare = new int[] { -10, -1, 0, 1, 9, 10, 11, 20 };//verticale
+                                controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, true);
                                 bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                                 if (!nessunaNaveNelleVicinanze)
                                 {
@@ -1107,7 +1128,8 @@ namespace Hyper_Battleship
                         case 0:
                             if (!cacciatorpediniereImmagineGirata2)
                             {
-                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                int[] posizioniDaControllare = new int[] { -10, -9, -1, 0, 1, 2, 10, 11 };//orrizontale
+                                controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, false);
                                 bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                                 if (!nessunaNaveNelleVicinanze)
                                 {
@@ -1129,7 +1151,8 @@ namespace Hyper_Battleship
                             }
                             else
                             {
-                                int[] posizioniDaControllare = new int[] { -10, -9, -8, -7, -6, -1, 0, 1, 2, 3, 4, 5, 10, 11, 12, 13, 14 };
+                                int[] posizioniDaControllare = new int[] { -10, -1, 0, 1, 9, 10, 11, 20 };//verticale
+                                controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare, lunghezzaNave, true);
                                 bool nessunaNaveNelleVicinanze = controlloNaviNelleVicinanze(posizioniDaControllare, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                                 if (!nessunaNaveNelleVicinanze)
                                 {
@@ -1159,6 +1182,7 @@ namespace Hyper_Battleship
                     string[] grigliaArray2 = StrutturaGriglia10[coordinateNaveSuGrigliaArray].Split(',');//per non influenzare i controlli delle altre navi
                     //NA = nave d'assalto
                     int[] posizioniDaControllare_NA = new int[] { -10, -1, 0, 1, 10};
+                    controlloGrigliaASinistra(ref coordinateNaveSuGrigliaArray, ref posizioniDaControllare_NA, lunghezzaNave, false);
                     bool nessunaNaveNelleVicinanze_NA = controlloNaviNelleVicinanze(posizioniDaControllare_NA, player1PictureBox.Visible, ref coordinateNaveSuGrigliaArray);
                     if (!nessunaNaveNelleVicinanze_NA)
                     {
@@ -1255,6 +1279,49 @@ namespace Hyper_Battleship
                     break;
             }
             return naveNelleVicinanze;
+        }
+
+        private void controlloGrigliaASinistra(ref int coordinateNaveSuGrigliaArray, ref int[] posizioniDaControllare,int indexToRemove, bool immagineGirata)//controlla che la nave non sia posizionte al limite a destra della griglia per evitare dei falsi check di navi vicine
+        {
+            int indexToRemoveLeft = indexToRemove * -1;
+            int[] latoDestroGrigliaVerticale = new int[] { 1, 11, 21, 31, 41 };
+            int[] latoSinistroGrigliaVerticale = new int[] { -1, 9, 19, 29, 39 };
+            int[] latoSinistroGrigliaOrrizontale = new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90};
+            int[] latoDestroGrigliaOrrizontale = new int[] { 9, 19, 29, 39, 49, 59, 69, 79, 89 };
+            for (int i = 0; i < 9; i++)//per rimuovere il controllo in eccesso, in quanto si trova agli estremi della griglia
+            {
+                if (coordinateNaveSuGrigliaArray == latoSinistroGrigliaOrrizontale[i])
+                {
+                    if (!immagineGirata)
+                    {
+                        posizioniDaControllare = posizioniDaControllare.RemoveFromArray(indexToRemoveLeft);
+                    }
+                    else
+                    {
+                        for(int j = 0; j < latoSinistroGrigliaVerticale.Length; j++)
+                        {
+                            posizioniDaControllare = posizioniDaControllare.RemoveFromArray(latoSinistroGrigliaVerticale[j]);
+                        }
+                    }
+
+                    break;
+                }
+                if(coordinateNaveSuGrigliaArray == latoDestroGrigliaOrrizontale[i])
+                {
+                    if (!immagineGirata)
+                    {
+                        posizioniDaControllare = posizioniDaControllare.RemoveFromArray(indexToRemove);
+                    }
+                    else
+                    {
+                        for (int j = 0; j < latoDestroGrigliaVerticale.Length; j++)
+                        {
+                            posizioniDaControllare = posizioniDaControllare.RemoveFromArray(latoDestroGrigliaVerticale[j]);
+                        }
+                    }
+                    break;
+                }
+            }
         }
         #endregion
 

@@ -148,6 +148,8 @@
             this.passaTurnoButton.TabIndex = 7;
             this.passaTurnoButton.Text = "PASSA TURNO";
             this.passaTurnoButton.UseVisualStyleBackColor = false;
+            this.passaTurnoButton.Visible = false;
+            this.passaTurnoButton.Click += new System.EventHandler(this.passaTurnoButton_Click);
             // 
             // a_GrigliaGrande10
             // 
