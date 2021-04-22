@@ -73,13 +73,20 @@
             this.GrigliaPiccola10_2 = new System.Windows.Forms.Label();
             this.GrigliaPiccola10_1 = new System.Windows.Forms.Label();
             this.countdownRadar = new System.Windows.Forms.Label();
-            this.quantità = new System.Windows.Forms.Label();
+            this.quantitàAssaltoDoppio = new System.Windows.Forms.Label();
             this.quantitàPortaerei = new System.Windows.Forms.Label();
             this.quantitàCorazzata = new System.Windows.Forms.Label();
             this.quantitàSottomarini = new System.Windows.Forms.Label();
             this.quantitàCacciatorpediniere = new System.Windows.Forms.Label();
             this.quantitàNaveDassalto = new System.Windows.Forms.Label();
             this.movimentoDisposizioneNavi = new System.Windows.Forms.Timer(this.components);
+            this.annullaButton = new System.Windows.Forms.Button();
+            this.turnoLabel = new System.Windows.Forms.Label();
+            this.contatoreTurni = new System.Windows.Forms.Label();
+            this.doppioAssaltoPictureBox = new System.Windows.Forms.PictureBox();
+            this.radarPcitureBox = new System.Windows.Forms.PictureBox();
+            this.selezioneAttacco2 = new System.Windows.Forms.PictureBox();
+            this.selezioneAttacco1 = new System.Windows.Forms.PictureBox();
             this.naveDassalto3Griglia10x10 = new System.Windows.Forms.PictureBox();
             this.naveDassalto2Griglia10x10 = new System.Windows.Forms.PictureBox();
             this.cacciatorpediniere2Griglia10x10 = new System.Windows.Forms.PictureBox();
@@ -96,11 +103,12 @@
             this.sottomarinoPictureBox10x10 = new System.Windows.Forms.PictureBox();
             this.corazzataPcitureBox10x10 = new System.Windows.Forms.PictureBox();
             this.portaereiPictureBox10x10 = new System.Windows.Forms.PictureBox();
-            this.doppioAssaltoPictureBox = new System.Windows.Forms.PictureBox();
-            this.radarPcitureBox = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoPiccola = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
-            this.annullaButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto3Griglia10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto2Griglia10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cacciatorpediniere2Griglia10x10)).BeginInit();
@@ -117,8 +125,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.sottomarinoPictureBox10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.corazzataPcitureBox10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
             this.SuspendLayout();
@@ -128,7 +134,7 @@
             this.confermaButton.BackColor = System.Drawing.Color.DarkGreen;
             this.confermaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.confermaButton.ForeColor = System.Drawing.Color.White;
-            this.confermaButton.Location = new System.Drawing.Point(718, 473);
+            this.confermaButton.Location = new System.Drawing.Point(718, 512);
             this.confermaButton.Name = "confermaButton";
             this.confermaButton.Size = new System.Drawing.Size(100, 29);
             this.confermaButton.TabIndex = 6;
@@ -374,222 +380,242 @@
             // l_GrigliaPiccola10
             // 
             this.l_GrigliaPiccola10.AutoSize = true;
-            this.l_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_GrigliaPiccola10.ForeColor = System.Drawing.Color.White;
-            this.l_GrigliaPiccola10.Location = new System.Drawing.Point(700, 272);
+            this.l_GrigliaPiccola10.Location = new System.Drawing.Point(694, 459);
             this.l_GrigliaPiccola10.Name = "l_GrigliaPiccola10";
-            this.l_GrigliaPiccola10.Size = new System.Drawing.Size(13, 13);
+            this.l_GrigliaPiccola10.Size = new System.Drawing.Size(18, 20);
             this.l_GrigliaPiccola10.TabIndex = 43;
             this.l_GrigliaPiccola10.Text = "L";
+            this.l_GrigliaPiccola10.Visible = false;
             // 
             // i_GrigliaPiccola10
             // 
             this.i_GrigliaPiccola10.AutoSize = true;
-            this.i_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.i_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.i_GrigliaPiccola10.ForeColor = System.Drawing.Color.White;
-            this.i_GrigliaPiccola10.Location = new System.Drawing.Point(701, 247);
+            this.i_GrigliaPiccola10.Location = new System.Drawing.Point(695, 415);
             this.i_GrigliaPiccola10.Name = "i_GrigliaPiccola10";
-            this.i_GrigliaPiccola10.Size = new System.Drawing.Size(10, 13);
+            this.i_GrigliaPiccola10.Size = new System.Drawing.Size(14, 20);
             this.i_GrigliaPiccola10.TabIndex = 42;
             this.i_GrigliaPiccola10.Text = "I";
+            this.i_GrigliaPiccola10.Visible = false;
             // 
             // h_GrigliaPiccola10
             // 
             this.h_GrigliaPiccola10.AutoSize = true;
-            this.h_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.h_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.h_GrigliaPiccola10.ForeColor = System.Drawing.Color.White;
-            this.h_GrigliaPiccola10.Location = new System.Drawing.Point(697, 222);
+            this.h_GrigliaPiccola10.Location = new System.Drawing.Point(691, 369);
             this.h_GrigliaPiccola10.Name = "h_GrigliaPiccola10";
-            this.h_GrigliaPiccola10.Size = new System.Drawing.Size(14, 13);
+            this.h_GrigliaPiccola10.Size = new System.Drawing.Size(21, 20);
             this.h_GrigliaPiccola10.TabIndex = 41;
             this.h_GrigliaPiccola10.Text = "H";
+            this.h_GrigliaPiccola10.Visible = false;
             // 
             // g_GrigliaPiccola10
             // 
             this.g_GrigliaPiccola10.AutoSize = true;
-            this.g_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.g_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.g_GrigliaPiccola10.ForeColor = System.Drawing.Color.White;
-            this.g_GrigliaPiccola10.Location = new System.Drawing.Point(698, 197);
+            this.g_GrigliaPiccola10.Location = new System.Drawing.Point(694, 324);
             this.g_GrigliaPiccola10.Name = "g_GrigliaPiccola10";
-            this.g_GrigliaPiccola10.Size = new System.Drawing.Size(15, 13);
+            this.g_GrigliaPiccola10.Size = new System.Drawing.Size(22, 20);
             this.g_GrigliaPiccola10.TabIndex = 40;
             this.g_GrigliaPiccola10.Text = "G";
+            this.g_GrigliaPiccola10.Visible = false;
             // 
             // f_GrigliaPiccola10
             // 
             this.f_GrigliaPiccola10.AutoSize = true;
-            this.f_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.f_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.f_GrigliaPiccola10.ForeColor = System.Drawing.Color.White;
-            this.f_GrigliaPiccola10.Location = new System.Drawing.Point(698, 172);
+            this.f_GrigliaPiccola10.Location = new System.Drawing.Point(694, 281);
             this.f_GrigliaPiccola10.Name = "f_GrigliaPiccola10";
-            this.f_GrigliaPiccola10.Size = new System.Drawing.Size(13, 13);
+            this.f_GrigliaPiccola10.Size = new System.Drawing.Size(19, 20);
             this.f_GrigliaPiccola10.TabIndex = 39;
             this.f_GrigliaPiccola10.Text = "F";
+            this.f_GrigliaPiccola10.Visible = false;
             // 
             // e_GrigliaPiccola10
             // 
             this.e_GrigliaPiccola10.AutoSize = true;
-            this.e_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.e_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.e_GrigliaPiccola10.ForeColor = System.Drawing.Color.White;
-            this.e_GrigliaPiccola10.Location = new System.Drawing.Point(698, 147);
+            this.e_GrigliaPiccola10.Location = new System.Drawing.Point(692, 233);
             this.e_GrigliaPiccola10.Name = "e_GrigliaPiccola10";
-            this.e_GrigliaPiccola10.Size = new System.Drawing.Size(14, 13);
+            this.e_GrigliaPiccola10.Size = new System.Drawing.Size(20, 20);
             this.e_GrigliaPiccola10.TabIndex = 38;
             this.e_GrigliaPiccola10.Text = "E";
+            this.e_GrigliaPiccola10.Visible = false;
             // 
             // d_GrigliaPiccola10
             // 
             this.d_GrigliaPiccola10.AutoSize = true;
-            this.d_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.d_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.d_GrigliaPiccola10.ForeColor = System.Drawing.Color.White;
-            this.d_GrigliaPiccola10.Location = new System.Drawing.Point(698, 122);
+            this.d_GrigliaPiccola10.Location = new System.Drawing.Point(692, 182);
             this.d_GrigliaPiccola10.Name = "d_GrigliaPiccola10";
-            this.d_GrigliaPiccola10.Size = new System.Drawing.Size(15, 13);
+            this.d_GrigliaPiccola10.Size = new System.Drawing.Size(21, 20);
             this.d_GrigliaPiccola10.TabIndex = 37;
             this.d_GrigliaPiccola10.Text = "D";
+            this.d_GrigliaPiccola10.Visible = false;
             // 
             // c_GrigliaPiccola10
             // 
             this.c_GrigliaPiccola10.AutoSize = true;
-            this.c_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.c_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.c_GrigliaPiccola10.ForeColor = System.Drawing.Color.White;
-            this.c_GrigliaPiccola10.Location = new System.Drawing.Point(698, 97);
+            this.c_GrigliaPiccola10.Location = new System.Drawing.Point(691, 143);
             this.c_GrigliaPiccola10.Name = "c_GrigliaPiccola10";
-            this.c_GrigliaPiccola10.Size = new System.Drawing.Size(14, 13);
+            this.c_GrigliaPiccola10.Size = new System.Drawing.Size(20, 20);
             this.c_GrigliaPiccola10.TabIndex = 36;
             this.c_GrigliaPiccola10.Text = "C";
+            this.c_GrigliaPiccola10.Visible = false;
             // 
             // b_GrigliaPiccola10
             // 
             this.b_GrigliaPiccola10.AutoSize = true;
-            this.b_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_GrigliaPiccola10.ForeColor = System.Drawing.Color.White;
-            this.b_GrigliaPiccola10.Location = new System.Drawing.Point(698, 70);
+            this.b_GrigliaPiccola10.Location = new System.Drawing.Point(693, 100);
             this.b_GrigliaPiccola10.Name = "b_GrigliaPiccola10";
-            this.b_GrigliaPiccola10.Size = new System.Drawing.Size(14, 13);
+            this.b_GrigliaPiccola10.Size = new System.Drawing.Size(20, 20);
             this.b_GrigliaPiccola10.TabIndex = 35;
             this.b_GrigliaPiccola10.Text = "B";
+            this.b_GrigliaPiccola10.Visible = false;
             // 
             // a_GrigliaPiccola10
             // 
             this.a_GrigliaPiccola10.AutoSize = true;
-            this.a_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.a_GrigliaPiccola10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.a_GrigliaPiccola10.ForeColor = System.Drawing.Color.White;
-            this.a_GrigliaPiccola10.Location = new System.Drawing.Point(698, 42);
+            this.a_GrigliaPiccola10.Location = new System.Drawing.Point(695, 54);
             this.a_GrigliaPiccola10.Name = "a_GrigliaPiccola10";
-            this.a_GrigliaPiccola10.Size = new System.Drawing.Size(14, 13);
+            this.a_GrigliaPiccola10.Size = new System.Drawing.Size(20, 20);
             this.a_GrigliaPiccola10.TabIndex = 34;
             this.a_GrigliaPiccola10.Text = "A";
+            this.a_GrigliaPiccola10.Visible = false;
             // 
             // GrigliaPiccola10_10
             // 
             this.GrigliaPiccola10_10.AutoSize = true;
-            this.GrigliaPiccola10_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrigliaPiccola10_10.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrigliaPiccola10_10.ForeColor = System.Drawing.Color.White;
-            this.GrigliaPiccola10_10.Location = new System.Drawing.Point(949, 25);
+            this.GrigliaPiccola10_10.Location = new System.Drawing.Point(1130, 14);
             this.GrigliaPiccola10_10.Name = "GrigliaPiccola10_10";
-            this.GrigliaPiccola10_10.Size = new System.Drawing.Size(19, 13);
+            this.GrigliaPiccola10_10.Size = new System.Drawing.Size(27, 20);
             this.GrigliaPiccola10_10.TabIndex = 54;
             this.GrigliaPiccola10_10.Text = "10";
+            this.GrigliaPiccola10_10.Visible = false;
             // 
             // GrigliaPiccola10_9
             // 
             this.GrigliaPiccola10_9.AutoSize = true;
-            this.GrigliaPiccola10_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrigliaPiccola10_9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrigliaPiccola10_9.ForeColor = System.Drawing.Color.White;
-            this.GrigliaPiccola10_9.Location = new System.Drawing.Point(924, 25);
+            this.GrigliaPiccola10_9.Location = new System.Drawing.Point(1093, 14);
             this.GrigliaPiccola10_9.Name = "GrigliaPiccola10_9";
-            this.GrigliaPiccola10_9.Size = new System.Drawing.Size(13, 13);
+            this.GrigliaPiccola10_9.Size = new System.Drawing.Size(18, 20);
             this.GrigliaPiccola10_9.TabIndex = 53;
             this.GrigliaPiccola10_9.Text = "9";
+            this.GrigliaPiccola10_9.Visible = false;
             // 
             // GrigliaPiccola10_8
             // 
             this.GrigliaPiccola10_8.AutoSize = true;
-            this.GrigliaPiccola10_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrigliaPiccola10_8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrigliaPiccola10_8.ForeColor = System.Drawing.Color.White;
-            this.GrigliaPiccola10_8.Location = new System.Drawing.Point(899, 25);
+            this.GrigliaPiccola10_8.Location = new System.Drawing.Point(1049, 14);
             this.GrigliaPiccola10_8.Name = "GrigliaPiccola10_8";
-            this.GrigliaPiccola10_8.Size = new System.Drawing.Size(13, 13);
+            this.GrigliaPiccola10_8.Size = new System.Drawing.Size(18, 20);
             this.GrigliaPiccola10_8.TabIndex = 52;
             this.GrigliaPiccola10_8.Text = "8";
+            this.GrigliaPiccola10_8.Visible = false;
             // 
             // GrigliaPiccola10_7
             // 
             this.GrigliaPiccola10_7.AutoSize = true;
-            this.GrigliaPiccola10_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrigliaPiccola10_7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrigliaPiccola10_7.ForeColor = System.Drawing.Color.White;
-            this.GrigliaPiccola10_7.Location = new System.Drawing.Point(874, 25);
+            this.GrigliaPiccola10_7.Location = new System.Drawing.Point(1003, 14);
             this.GrigliaPiccola10_7.Name = "GrigliaPiccola10_7";
-            this.GrigliaPiccola10_7.Size = new System.Drawing.Size(13, 13);
+            this.GrigliaPiccola10_7.Size = new System.Drawing.Size(18, 20);
             this.GrigliaPiccola10_7.TabIndex = 51;
             this.GrigliaPiccola10_7.Text = "7";
+            this.GrigliaPiccola10_7.Visible = false;
             // 
             // GrigliaPiccola10_6
             // 
             this.GrigliaPiccola10_6.AutoSize = true;
-            this.GrigliaPiccola10_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrigliaPiccola10_6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrigliaPiccola10_6.ForeColor = System.Drawing.Color.White;
-            this.GrigliaPiccola10_6.Location = new System.Drawing.Point(849, 25);
+            this.GrigliaPiccola10_6.Location = new System.Drawing.Point(960, 14);
             this.GrigliaPiccola10_6.Name = "GrigliaPiccola10_6";
-            this.GrigliaPiccola10_6.Size = new System.Drawing.Size(13, 13);
+            this.GrigliaPiccola10_6.Size = new System.Drawing.Size(18, 20);
             this.GrigliaPiccola10_6.TabIndex = 50;
             this.GrigliaPiccola10_6.Text = "6";
+            this.GrigliaPiccola10_6.Visible = false;
             // 
             // GrigliaPiccola10_5
             // 
             this.GrigliaPiccola10_5.AutoSize = true;
-            this.GrigliaPiccola10_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrigliaPiccola10_5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrigliaPiccola10_5.ForeColor = System.Drawing.Color.White;
-            this.GrigliaPiccola10_5.Location = new System.Drawing.Point(824, 25);
+            this.GrigliaPiccola10_5.Location = new System.Drawing.Point(913, 14);
             this.GrigliaPiccola10_5.Name = "GrigliaPiccola10_5";
-            this.GrigliaPiccola10_5.Size = new System.Drawing.Size(13, 13);
+            this.GrigliaPiccola10_5.Size = new System.Drawing.Size(18, 20);
             this.GrigliaPiccola10_5.TabIndex = 49;
             this.GrigliaPiccola10_5.Text = "5";
+            this.GrigliaPiccola10_5.Visible = false;
             // 
             // GrigliaPiccola10_4
             // 
             this.GrigliaPiccola10_4.AutoSize = true;
-            this.GrigliaPiccola10_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrigliaPiccola10_4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrigliaPiccola10_4.ForeColor = System.Drawing.Color.White;
-            this.GrigliaPiccola10_4.Location = new System.Drawing.Point(799, 24);
+            this.GrigliaPiccola10_4.Location = new System.Drawing.Point(867, 14);
             this.GrigliaPiccola10_4.Name = "GrigliaPiccola10_4";
-            this.GrigliaPiccola10_4.Size = new System.Drawing.Size(13, 13);
+            this.GrigliaPiccola10_4.Size = new System.Drawing.Size(18, 20);
             this.GrigliaPiccola10_4.TabIndex = 48;
             this.GrigliaPiccola10_4.Text = "4";
+            this.GrigliaPiccola10_4.Visible = false;
             // 
             // GrigliaPiccola10_3
             // 
             this.GrigliaPiccola10_3.AutoSize = true;
-            this.GrigliaPiccola10_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrigliaPiccola10_3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrigliaPiccola10_3.ForeColor = System.Drawing.Color.White;
-            this.GrigliaPiccola10_3.Location = new System.Drawing.Point(774, 25);
+            this.GrigliaPiccola10_3.Location = new System.Drawing.Point(819, 14);
             this.GrigliaPiccola10_3.Name = "GrigliaPiccola10_3";
-            this.GrigliaPiccola10_3.Size = new System.Drawing.Size(13, 13);
+            this.GrigliaPiccola10_3.Size = new System.Drawing.Size(18, 20);
             this.GrigliaPiccola10_3.TabIndex = 47;
             this.GrigliaPiccola10_3.Text = "3";
+            this.GrigliaPiccola10_3.Visible = false;
             // 
             // GrigliaPiccola10_2
             // 
             this.GrigliaPiccola10_2.AutoSize = true;
-            this.GrigliaPiccola10_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrigliaPiccola10_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrigliaPiccola10_2.ForeColor = System.Drawing.Color.White;
-            this.GrigliaPiccola10_2.Location = new System.Drawing.Point(749, 25);
+            this.GrigliaPiccola10_2.Location = new System.Drawing.Point(776, 14);
             this.GrigliaPiccola10_2.Name = "GrigliaPiccola10_2";
-            this.GrigliaPiccola10_2.Size = new System.Drawing.Size(13, 13);
+            this.GrigliaPiccola10_2.Size = new System.Drawing.Size(18, 20);
             this.GrigliaPiccola10_2.TabIndex = 46;
             this.GrigliaPiccola10_2.Text = "2";
+            this.GrigliaPiccola10_2.Visible = false;
             // 
             // GrigliaPiccola10_1
             // 
             this.GrigliaPiccola10_1.AutoSize = true;
-            this.GrigliaPiccola10_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GrigliaPiccola10_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.GrigliaPiccola10_1.ForeColor = System.Drawing.Color.White;
-            this.GrigliaPiccola10_1.Location = new System.Drawing.Point(724, 24);
+            this.GrigliaPiccola10_1.Location = new System.Drawing.Point(738, 14);
             this.GrigliaPiccola10_1.Name = "GrigliaPiccola10_1";
-            this.GrigliaPiccola10_1.Size = new System.Drawing.Size(13, 13);
+            this.GrigliaPiccola10_1.Size = new System.Drawing.Size(18, 20);
             this.GrigliaPiccola10_1.TabIndex = 45;
             this.GrigliaPiccola10_1.Text = "1";
+            this.GrigliaPiccola10_1.Visible = false;
             // 
             // countdownRadar
             // 
@@ -597,23 +623,25 @@
             this.countdownRadar.BackColor = System.Drawing.Color.Transparent;
             this.countdownRadar.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countdownRadar.ForeColor = System.Drawing.Color.White;
-            this.countdownRadar.Location = new System.Drawing.Point(750, 431);
+            this.countdownRadar.Location = new System.Drawing.Point(1248, 182);
             this.countdownRadar.Name = "countdownRadar";
             this.countdownRadar.Size = new System.Drawing.Size(39, 29);
             this.countdownRadar.TabIndex = 55;
             this.countdownRadar.Text = "13";
+            this.countdownRadar.Visible = false;
             // 
-            // quantità
+            // quantitàAssaltoDoppio
             // 
-            this.quantità.AutoSize = true;
-            this.quantità.BackColor = System.Drawing.Color.Transparent;
-            this.quantità.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.quantità.ForeColor = System.Drawing.Color.White;
-            this.quantità.Location = new System.Drawing.Point(890, 431);
-            this.quantità.Name = "quantità";
-            this.quantità.Size = new System.Drawing.Size(26, 29);
-            this.quantità.TabIndex = 56;
-            this.quantità.Text = "2";
+            this.quantitàAssaltoDoppio.AutoSize = true;
+            this.quantitàAssaltoDoppio.BackColor = System.Drawing.Color.Transparent;
+            this.quantitàAssaltoDoppio.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.quantitàAssaltoDoppio.ForeColor = System.Drawing.Color.White;
+            this.quantitàAssaltoDoppio.Location = new System.Drawing.Point(1248, 397);
+            this.quantitàAssaltoDoppio.Name = "quantitàAssaltoDoppio";
+            this.quantitàAssaltoDoppio.Size = new System.Drawing.Size(26, 29);
+            this.quantitàAssaltoDoppio.TabIndex = 56;
+            this.quantitàAssaltoDoppio.Text = "2";
+            this.quantitàAssaltoDoppio.Visible = false;
             // 
             // quantitàPortaerei
             // 
@@ -621,7 +649,7 @@
             this.quantitàPortaerei.BackColor = System.Drawing.Color.Transparent;
             this.quantitàPortaerei.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantitàPortaerei.ForeColor = System.Drawing.Color.White;
-            this.quantitàPortaerei.Location = new System.Drawing.Point(1306, 54);
+            this.quantitàPortaerei.Location = new System.Drawing.Point(1048, 54);
             this.quantitàPortaerei.Name = "quantitàPortaerei";
             this.quantitàPortaerei.Size = new System.Drawing.Size(26, 29);
             this.quantitàPortaerei.TabIndex = 68;
@@ -633,7 +661,7 @@
             this.quantitàCorazzata.BackColor = System.Drawing.Color.Transparent;
             this.quantitàCorazzata.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantitàCorazzata.ForeColor = System.Drawing.Color.White;
-            this.quantitàCorazzata.Location = new System.Drawing.Point(1306, 147);
+            this.quantitàCorazzata.Location = new System.Drawing.Point(1002, 134);
             this.quantitàCorazzata.Name = "quantitàCorazzata";
             this.quantitàCorazzata.Size = new System.Drawing.Size(26, 29);
             this.quantitàCorazzata.TabIndex = 69;
@@ -645,7 +673,7 @@
             this.quantitàSottomarini.BackColor = System.Drawing.Color.Transparent;
             this.quantitàSottomarini.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantitàSottomarini.ForeColor = System.Drawing.Color.White;
-            this.quantitàSottomarini.Location = new System.Drawing.Point(1306, 231);
+            this.quantitàSottomarini.Location = new System.Drawing.Point(927, 233);
             this.quantitàSottomarini.Name = "quantitàSottomarini";
             this.quantitàSottomarini.Size = new System.Drawing.Size(26, 29);
             this.quantitàSottomarini.TabIndex = 70;
@@ -657,7 +685,7 @@
             this.quantitàCacciatorpediniere.BackColor = System.Drawing.Color.Transparent;
             this.quantitàCacciatorpediniere.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantitàCacciatorpediniere.ForeColor = System.Drawing.Color.White;
-            this.quantitàCacciatorpediniere.Location = new System.Drawing.Point(1306, 323);
+            this.quantitàCacciatorpediniere.Location = new System.Drawing.Point(866, 326);
             this.quantitàCacciatorpediniere.Name = "quantitàCacciatorpediniere";
             this.quantitàCacciatorpediniere.Size = new System.Drawing.Size(26, 29);
             this.quantitàCacciatorpediniere.TabIndex = 71;
@@ -669,7 +697,7 @@
             this.quantitàNaveDassalto.BackColor = System.Drawing.Color.Transparent;
             this.quantitàNaveDassalto.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.quantitàNaveDassalto.ForeColor = System.Drawing.Color.White;
-            this.quantitàNaveDassalto.Location = new System.Drawing.Point(1306, 420);
+            this.quantitàNaveDassalto.Location = new System.Drawing.Point(811, 415);
             this.quantitàNaveDassalto.Name = "quantitàNaveDassalto";
             this.quantitàNaveDassalto.Size = new System.Drawing.Size(26, 29);
             this.quantitàNaveDassalto.TabIndex = 72;
@@ -680,6 +708,93 @@
             this.movimentoDisposizioneNavi.Enabled = true;
             this.movimentoDisposizioneNavi.Interval = 150;
             this.movimentoDisposizioneNavi.Tick += new System.EventHandler(this.moveShipEvent);
+            // 
+            // annullaButton
+            // 
+            this.annullaButton.BackColor = System.Drawing.Color.DarkRed;
+            this.annullaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.annullaButton.ForeColor = System.Drawing.Color.White;
+            this.annullaButton.Location = new System.Drawing.Point(853, 512);
+            this.annullaButton.Name = "annullaButton";
+            this.annullaButton.Size = new System.Drawing.Size(100, 29);
+            this.annullaButton.TabIndex = 76;
+            this.annullaButton.Text = "ANNULLA";
+            this.annullaButton.UseVisualStyleBackColor = false;
+            this.annullaButton.Visible = false;
+            this.annullaButton.Click += new System.EventHandler(this.annullaButton_Click);
+            // 
+            // turnoLabel
+            // 
+            this.turnoLabel.AutoSize = true;
+            this.turnoLabel.BackColor = System.Drawing.Color.Transparent;
+            this.turnoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.turnoLabel.ForeColor = System.Drawing.Color.White;
+            this.turnoLabel.Location = new System.Drawing.Point(1028, 512);
+            this.turnoLabel.Name = "turnoLabel";
+            this.turnoLabel.Size = new System.Drawing.Size(83, 29);
+            this.turnoLabel.TabIndex = 77;
+            this.turnoLabel.Text = "Turno:";
+            this.turnoLabel.Visible = false;
+            // 
+            // contatoreTurni
+            // 
+            this.contatoreTurni.AutoSize = true;
+            this.contatoreTurni.BackColor = System.Drawing.Color.Transparent;
+            this.contatoreTurni.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contatoreTurni.ForeColor = System.Drawing.Color.White;
+            this.contatoreTurni.Location = new System.Drawing.Point(1129, 512);
+            this.contatoreTurni.Name = "contatoreTurni";
+            this.contatoreTurni.Size = new System.Drawing.Size(0, 29);
+            this.contatoreTurni.TabIndex = 78;
+            this.contatoreTurni.Visible = false;
+            // 
+            // doppioAssaltoPictureBox
+            // 
+            this.doppioAssaltoPictureBox.BackColor = System.Drawing.Color.White;
+            this.doppioAssaltoPictureBox.Image = global::Hyper_Battleship.Properties.Resources.doppioAssalto;
+            this.doppioAssaltoPictureBox.Location = new System.Drawing.Point(1198, 259);
+            this.doppioAssaltoPictureBox.Name = "doppioAssaltoPictureBox";
+            this.doppioAssaltoPictureBox.Size = new System.Drawing.Size(120, 120);
+            this.doppioAssaltoPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.doppioAssaltoPictureBox.TabIndex = 4;
+            this.doppioAssaltoPictureBox.TabStop = false;
+            this.doppioAssaltoPictureBox.Visible = false;
+            // 
+            // radarPcitureBox
+            // 
+            this.radarPcitureBox.BackColor = System.Drawing.Color.White;
+            this.radarPcitureBox.Image = global::Hyper_Battleship.Properties.Resources.RadarLucchetto;
+            this.radarPcitureBox.Location = new System.Drawing.Point(1198, 40);
+            this.radarPcitureBox.Name = "radarPcitureBox";
+            this.radarPcitureBox.Size = new System.Drawing.Size(120, 120);
+            this.radarPcitureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.radarPcitureBox.TabIndex = 3;
+            this.radarPcitureBox.TabStop = false;
+            this.radarPcitureBox.Visible = false;
+            // 
+            // selezioneAttacco2
+            // 
+            this.selezioneAttacco2.BackColor = System.Drawing.Color.Transparent;
+            this.selezioneAttacco2.Image = global::Hyper_Battleship.Properties.Resources.selezione_Attacco_Griglia10x10;
+            this.selezioneAttacco2.ImageLocation = "";
+            this.selezioneAttacco2.Location = new System.Drawing.Point(1036, 397);
+            this.selezioneAttacco2.Name = "selezioneAttacco2";
+            this.selezioneAttacco2.Size = new System.Drawing.Size(45, 45);
+            this.selezioneAttacco2.TabIndex = 80;
+            this.selezioneAttacco2.TabStop = false;
+            this.selezioneAttacco2.Visible = false;
+            // 
+            // selezioneAttacco1
+            // 
+            this.selezioneAttacco1.BackColor = System.Drawing.Color.Transparent;
+            this.selezioneAttacco1.Image = global::Hyper_Battleship.Properties.Resources.selezione_Attacco_Griglia10x10;
+            this.selezioneAttacco1.ImageLocation = "";
+            this.selezioneAttacco1.Location = new System.Drawing.Point(989, 266);
+            this.selezioneAttacco1.Name = "selezioneAttacco1";
+            this.selezioneAttacco1.Size = new System.Drawing.Size(45, 45);
+            this.selezioneAttacco1.TabIndex = 79;
+            this.selezioneAttacco1.TabStop = false;
+            this.selezioneAttacco1.Visible = false;
             // 
             // naveDassalto3Griglia10x10
             // 
@@ -824,7 +939,7 @@
             this.naveDassaltoPictureBox10x10.BackColor = System.Drawing.Color.Transparent;
             this.naveDassaltoPictureBox10x10.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Box10x10;
             this.naveDassaltoPictureBox10x10.ImageLocation = "";
-            this.naveDassaltoPictureBox10x10.Location = new System.Drawing.Point(985, 400);
+            this.naveDassaltoPictureBox10x10.Location = new System.Drawing.Point(718, 397);
             this.naveDassaltoPictureBox10x10.Name = "naveDassaltoPictureBox10x10";
             this.naveDassaltoPictureBox10x10.Size = new System.Drawing.Size(63, 63);
             this.naveDassaltoPictureBox10x10.TabIndex = 12;
@@ -836,7 +951,7 @@
             this.cacciatorpedinierePictureBox10x10.BackColor = System.Drawing.Color.Transparent;
             this.cacciatorpedinierePictureBox10x10.Image = global::Hyper_Battleship.Properties.Resources.cacciatorpediniere_Box10x10;
             this.cacciatorpedinierePictureBox10x10.ImageLocation = "";
-            this.cacciatorpedinierePictureBox10x10.Location = new System.Drawing.Point(985, 310);
+            this.cacciatorpedinierePictureBox10x10.Location = new System.Drawing.Point(718, 310);
             this.cacciatorpedinierePictureBox10x10.Name = "cacciatorpedinierePictureBox10x10";
             this.cacciatorpedinierePictureBox10x10.Size = new System.Drawing.Size(126, 63);
             this.cacciatorpedinierePictureBox10x10.TabIndex = 11;
@@ -848,7 +963,7 @@
             this.sottomarinoPictureBox10x10.BackColor = System.Drawing.Color.Transparent;
             this.sottomarinoPictureBox10x10.Image = global::Hyper_Battleship.Properties.Resources.sottomarino_Box10x10;
             this.sottomarinoPictureBox10x10.ImageLocation = "";
-            this.sottomarinoPictureBox10x10.Location = new System.Drawing.Point(985, 220);
+            this.sottomarinoPictureBox10x10.Location = new System.Drawing.Point(717, 216);
             this.sottomarinoPictureBox10x10.Name = "sottomarinoPictureBox10x10";
             this.sottomarinoPictureBox10x10.Size = new System.Drawing.Size(189, 63);
             this.sottomarinoPictureBox10x10.TabIndex = 10;
@@ -860,7 +975,7 @@
             this.corazzataPcitureBox10x10.BackColor = System.Drawing.Color.Transparent;
             this.corazzataPcitureBox10x10.Image = global::Hyper_Battleship.Properties.Resources.corazzata_Box10x10;
             this.corazzataPcitureBox10x10.ImageLocation = "";
-            this.corazzataPcitureBox10x10.Location = new System.Drawing.Point(985, 130);
+            this.corazzataPcitureBox10x10.Location = new System.Drawing.Point(718, 113);
             this.corazzataPcitureBox10x10.Name = "corazzataPcitureBox10x10";
             this.corazzataPcitureBox10x10.Size = new System.Drawing.Size(252, 63);
             this.corazzataPcitureBox10x10.TabIndex = 9;
@@ -872,43 +987,24 @@
             this.portaereiPictureBox10x10.BackColor = System.Drawing.Color.Transparent;
             this.portaereiPictureBox10x10.Image = global::Hyper_Battleship.Properties.Resources.portaerei_Box10x10;
             this.portaereiPictureBox10x10.ImageLocation = "";
-            this.portaereiPictureBox10x10.Location = new System.Drawing.Point(985, 40);
+            this.portaereiPictureBox10x10.Location = new System.Drawing.Point(717, 40);
             this.portaereiPictureBox10x10.Name = "portaereiPictureBox10x10";
             this.portaereiPictureBox10x10.Size = new System.Drawing.Size(315, 63);
             this.portaereiPictureBox10x10.TabIndex = 8;
             this.portaereiPictureBox10x10.TabStop = false;
             this.portaereiPictureBox10x10.Click += new System.EventHandler(this.portaereiPictureBox10x10_Click);
             // 
-            // doppioAssaltoPictureBox
-            // 
-            this.doppioAssaltoPictureBox.BackColor = System.Drawing.Color.White;
-            this.doppioAssaltoPictureBox.Image = global::Hyper_Battleship.Properties.Resources.doppioAssalto;
-            this.doppioAssaltoPictureBox.Location = new System.Drawing.Point(852, 323);
-            this.doppioAssaltoPictureBox.Name = "doppioAssaltoPictureBox";
-            this.doppioAssaltoPictureBox.Size = new System.Drawing.Size(100, 100);
-            this.doppioAssaltoPictureBox.TabIndex = 4;
-            this.doppioAssaltoPictureBox.TabStop = false;
-            // 
-            // radarPcitureBox
-            // 
-            this.radarPcitureBox.BackColor = System.Drawing.Color.White;
-            this.radarPcitureBox.Image = global::Hyper_Battleship.Properties.Resources.RadarLucchetto;
-            this.radarPcitureBox.Location = new System.Drawing.Point(719, 323);
-            this.radarPcitureBox.Name = "radarPcitureBox";
-            this.radarPcitureBox.Size = new System.Drawing.Size(100, 100);
-            this.radarPcitureBox.TabIndex = 3;
-            this.radarPcitureBox.TabStop = false;
-            // 
             // grigliaDiGiocoPiccola
             // 
             this.grigliaDiGiocoPiccola.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(40)))), ((int)(((byte)(0)))));
             this.grigliaDiGiocoPiccola.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.grigliaDiGiocoPiccola.Image = global::Hyper_Battleship.Properties.Resources.Griglia10x10_piccola;
+            this.grigliaDiGiocoPiccola.Image = global::Hyper_Battleship.Properties.Resources.griglia_Piccola_10x10;
             this.grigliaDiGiocoPiccola.Location = new System.Drawing.Point(718, 40);
             this.grigliaDiGiocoPiccola.Name = "grigliaDiGiocoPiccola";
-            this.grigliaDiGiocoPiccola.Size = new System.Drawing.Size(252, 252);
+            this.grigliaDiGiocoPiccola.Size = new System.Drawing.Size(450, 450);
             this.grigliaDiGiocoPiccola.TabIndex = 2;
             this.grigliaDiGiocoPiccola.TabStop = false;
+            this.grigliaDiGiocoPiccola.Visible = false;
             // 
             // grigliaDiGiocoGrande
             // 
@@ -920,26 +1016,19 @@
             this.grigliaDiGiocoGrande.TabIndex = 1;
             this.grigliaDiGiocoGrande.TabStop = false;
             // 
-            // annullaButton
-            // 
-            this.annullaButton.BackColor = System.Drawing.Color.DarkRed;
-            this.annullaButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.annullaButton.ForeColor = System.Drawing.Color.White;
-            this.annullaButton.Location = new System.Drawing.Point(718, 521);
-            this.annullaButton.Name = "annullaButton";
-            this.annullaButton.Size = new System.Drawing.Size(100, 29);
-            this.annullaButton.TabIndex = 76;
-            this.annullaButton.Text = "ANNULLA";
-            this.annullaButton.UseVisualStyleBackColor = false;
-            this.annullaButton.Visible = false;
-            this.annullaButton.Click += new System.EventHandler(this.annullaButton_Click);
-            // 
             // Gameplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1358, 681);
+            this.Controls.Add(this.countdownRadar);
+            this.Controls.Add(this.doppioAssaltoPictureBox);
+            this.Controls.Add(this.radarPcitureBox);
+            this.Controls.Add(this.selezioneAttacco2);
+            this.Controls.Add(this.selezioneAttacco1);
+            this.Controls.Add(this.contatoreTurni);
+            this.Controls.Add(this.turnoLabel);
             this.Controls.Add(this.annullaButton);
             this.Controls.Add(this.quantitàNaveDassalto);
             this.Controls.Add(this.quantitàCacciatorpediniere);
@@ -957,8 +1046,7 @@
             this.Controls.Add(this.portaereiGriglia10x10);
             this.Controls.Add(this.player2PictureBox);
             this.Controls.Add(this.player1PictureBox);
-            this.Controls.Add(this.quantità);
-            this.Controls.Add(this.countdownRadar);
+            this.Controls.Add(this.quantitàAssaltoDoppio);
             this.Controls.Add(this.GrigliaPiccola10_10);
             this.Controls.Add(this.GrigliaPiccola10_9);
             this.Controls.Add(this.GrigliaPiccola10_8);
@@ -1006,8 +1094,6 @@
             this.Controls.Add(this.portaereiPictureBox10x10);
             this.Controls.Add(this.passaTurnoButton);
             this.Controls.Add(this.confermaButton);
-            this.Controls.Add(this.doppioAssaltoPictureBox);
-            this.Controls.Add(this.radarPcitureBox);
             this.Controls.Add(this.grigliaDiGiocoPiccola);
             this.Controls.Add(this.grigliaDiGiocoGrande);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
@@ -1018,6 +1104,10 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Gameplay_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Gameplay_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Gameplay_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto3Griglia10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto2Griglia10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cacciatorpediniere2Griglia10x10)).EndInit();
@@ -1034,8 +1124,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.sottomarinoPictureBox10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.corazzataPcitureBox10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
             this.ResumeLayout(false);
@@ -1096,7 +1184,7 @@
         private System.Windows.Forms.Label GrigliaPiccola10_2;
         private System.Windows.Forms.Label GrigliaPiccola10_1;
         private System.Windows.Forms.Label countdownRadar;
-        private System.Windows.Forms.Label quantità;
+        private System.Windows.Forms.Label quantitàAssaltoDoppio;
         private System.Windows.Forms.PictureBox portaereiPictureBox10x10;
         private System.Windows.Forms.PictureBox player1PictureBox;
         private System.Windows.Forms.PictureBox player2PictureBox;
@@ -1116,5 +1204,9 @@
         private System.Windows.Forms.Label quantitàNaveDassalto;
         private System.Windows.Forms.Timer movimentoDisposizioneNavi;
         private System.Windows.Forms.Button annullaButton;
+        private System.Windows.Forms.Label turnoLabel;
+        private System.Windows.Forms.Label contatoreTurni;
+        private System.Windows.Forms.PictureBox selezioneAttacco1;
+        private System.Windows.Forms.PictureBox selezioneAttacco2;
     }
 }

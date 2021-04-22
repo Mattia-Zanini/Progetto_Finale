@@ -41,6 +41,7 @@ namespace Hyper_Battleship
 
         #region Variabili Per il Fuzionamento dell Programma + Tasto "Conferma", "Annulla" e "Passa Turno"
         public static int scoreGiocatore1 = 0, scoreGiocatore2 = 0;
+        int turni = 1;
         int sottomarini, cacciatorpedinieri, naviDassalto;
         bool finePartita = false, disposizioneNaviPossibile = true;
         bool portaereiPosizionata, corazzataPosizionata, sottomarinoPosizionato1, sottomarinoPosizionato2, cacciatorpedinierePosizionato1, cacciatorpedinierePosizionato2, naveDassaltoPosizionata1, naveDassaltoPosizionata2, naveDassaltoPosizionata3;
@@ -60,6 +61,7 @@ namespace Hyper_Battleship
             exitOperation = true;
         }
 
+        bool attacco1 = false;
         private void passaTurnoButton_Click(object sender, EventArgs e) //passa il turno, quindi riporta tutte le variabili al loro stato originale
         {
             nave = "";
@@ -70,6 +72,20 @@ namespace Hyper_Battleship
             naveDassalto1Griglia10x10.Visible = false; naveDassalto2Griglia10x10.Visible = false; naveDassalto3Griglia10x10.Visible = false; naveDassaltoImmagineGirata1 = false; naveDassaltoImmagineGirata2 = false; naveDassaltoImmagineGirata3 = false; quantitàNaveDassalto.Text = "3"; naviDassalto = 3; naveDassaltoPosizionata1 = false; naveDassaltoPosizionata2 = false; naveDassaltoPosizionata3 = false;
             player1PictureBox.Visible = false; player2PictureBox.Visible = true;
             passaTurnoButton.Visible = false;
+            if (!player2PictureBox.Visible)
+            {
+                movimentoDisposizioneNavi.Enabled = false;
+                turnoLabel.Visible = true; contatoreTurni.Visible = true; contatoreTurni.Text = turni.ToString();
+                quantitàPortaerei.Visible = false; quantitàCorazzata.Visible = false; quantitàSottomarini.Visible = false;
+                quantitàCacciatorpediniere.Visible = false; quantitàNaveDassalto.Visible = false;
+                portaereiPictureBox10x10.Visible = false; corazzataPcitureBox10x10.Visible = false; sottomarinoPictureBox10x10.Visible = false;
+                cacciatorpedinierePictureBox10x10.Visible = false; naveDassaltoPictureBox10x10.Visible = false;
+                passaTurnoButton.Location = new Point(1008, passaTurnoButton.Location.Y);
+                this.Width = 1200;
+                player1PictureBox.Visible = true; player2PictureBox.Visible = false;
+                selezioneAttacco1.Location = new Point(297, 292); selezioneAttacco1.Visible = true;
+
+            }
         }
         #endregion
 
@@ -657,6 +673,26 @@ namespace Hyper_Battleship
                         exitOperation = false;
                     }
                     break;
+            }
+
+            if (attacco1)
+            {
+                if (moveUp && selezioneAttacco1.Top > 40 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Top -= 63;
+                }
+                if (moveDown && selezioneAttacco1.Top < 607 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Top += 63;
+                }
+                if (moveRight && selezioneAttacco1.Right < 675 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Left += 63;
+                }
+                if (moveLeft && selezioneAttacco1.Left > 45 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Left -= 63;
+                }
             }
         }
 

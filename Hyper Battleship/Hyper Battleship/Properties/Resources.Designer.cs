@@ -173,6 +173,16 @@ namespace Hyper_Battleship.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap griglia_Piccola_10x10 {
+            get {
+                object obj = ResourceManager.GetObject("griglia_Piccola_10x10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Griglia10x10 {
             get {
                 object obj = ResourceManager.GetObject("Griglia10x10", resourceCulture);
@@ -183,29 +193,9 @@ namespace Hyper_Battleship.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Griglia10x10_piccola {
-            get {
-                object obj = ResourceManager.GetObject("Griglia10x10_piccola", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Griglia6x6 {
             get {
                 object obj = ResourceManager.GetObject("Griglia6x6", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Griglia6x6_piccola {
-            get {
-                object obj = ResourceManager.GetObject("Griglia6x6_piccola", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +346,16 @@ namespace Hyper_Battleship.Properties {
         internal static System.Drawing.Bitmap RadarScalaGrigio {
             get {
                 object obj = ResourceManager.GetObject("RadarScalaGrigio", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap selezione_Attacco_Griglia10x10 {
+            get {
+                object obj = ResourceManager.GetObject("selezione_Attacco_Griglia10x10", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

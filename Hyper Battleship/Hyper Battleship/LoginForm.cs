@@ -14,19 +14,20 @@ namespace Hyper_Battleship
 {
     public partial class LoginForm : Form
     {
+        //percorso dove creare i file con all'interno i nomi utenti e password degli account
         public static string playerStats = @"statisticheGiocatori.txt";
         public static string playerStatsFile = AppDomain.CurrentDomain.BaseDirectory + playerStats;
         public LoginForm()
         {
             InitializeComponent();
 
-            if (!File.Exists(playerStatsFile)) { using (StreamWriter sw = File.CreateText(playerStatsFile)) { } }
+            if (!File.Exists(playerStatsFile)) { using (StreamWriter sw = File.CreateText(playerStatsFile)) { } }//cotrnolla se c'è il file nel percorso prestabilito
         }
 
         /// <summary>
         /// Pulsanti
         /// </summary>
-        private void showPassword_CheckedChanged(object sender, EventArgs e)
+        private void showPassword_CheckedChanged(object sender, EventArgs e)//serve per mostrare il contenuto della texture box (dove si inserisce la password)
         {
             if (showPassword.Checked)
             {
@@ -34,7 +35,7 @@ namespace Hyper_Battleship
             }
             else
             {
-                passwordTextBox.PasswordChar = '*';
+                passwordTextBox.PasswordChar = '*';//sostituisce i caratteri all'interno della texturebox con questo simbolo
             }
         }
 
@@ -44,6 +45,8 @@ namespace Hyper_Battleship
             playeresistente = true;
             showLoginLayout();
         }
+
+        //sono tutte funzioni che servono a mostrare cosa fanno le 3 opzioni per il login nella finsetra, con il semplice muovere del mouse
         private void playerLabel_MouseEnter(object sender, EventArgs e)
         {
             playerLabel2.Visible = true; playerLabel3.Visible = true;           
@@ -66,6 +69,7 @@ namespace Hyper_Battleship
             newPlayerLabel2.Visible = false;
         }
 
+        //per i giocatori a cui non si vuole salvare i progessi
         public bool pWOS = false; //playerWithOutScore
         private void playerWithOutScore_Click(object sender, EventArgs e)
         {
@@ -82,6 +86,7 @@ namespace Hyper_Battleship
             playerWithOutScoreLabel.Visible = false;
         }
 
+        //per tornare indietro nelle schermate
         private void backLabel_Click(object sender, EventArgs e)
         {
             pWOS = false;
@@ -98,18 +103,18 @@ namespace Hyper_Battleship
                 giocatore--;
             }
         }
-        private void exitLoginButton_Click(object sender, EventArgs e)
+        private void exitLoginButton_Click(object sender, EventArgs e)//torna al primo form (schermata iniziale)
         {
             Schermata_Iniziale f1 = new Schermata_Iniziale();
             f1.Show();
-            this.Close();
+            this.Close();//chiude il form, non lo nasconde
         }
 
-        private void loginButton_Click(object sender, EventArgs e)
+        private void loginButton_Click(object sender, EventArgs e)//quando viene cliccato il pulsante login
         {
             if (!pWOS)
             {
-                accountChecker();
+                accountChecker();//funzione che controlla "nel file" se l'utente esiste, se sono corrette le credenziali, se non ha inserito nulla nelle texturebox, ecc....
             }
             else if(pWOS && giocatore == 0)
             {
@@ -127,6 +132,7 @@ namespace Hyper_Battleship
                 }
                 else
                 {
+                    //nel caso i 2 giocatori inseriscono lo stesso nome
                     alertLoginAccount.Visible = true;
                     alertLoginAccount.Text = "Non è possibile giocare con 2 player";
                     alertLoginAccount.Text += Environment.NewLine;
@@ -145,7 +151,7 @@ namespace Hyper_Battleship
             this.Close();
         }
 
-        private void noStartMatch_Click(object sender, EventArgs e)
+        private void noStartMatch_Click(object sender, EventArgs e)//reinizializza tutte le variabili per permettere agli utenti di rifare il login da capo
         {
             startMatchLabel.Visible = false;
             yesStartMatch.Visible = false;
@@ -175,6 +181,7 @@ namespace Hyper_Battleship
         public byte giocatore = 0;
         public void accountChecker()
         {
+            //variabili che permettono il controllo delle credenziali
             bool correctPlayerName = false, correctPlayerPassword = false;
             string nomePlayerGiausato = "";
             alertLoginAccount.ForeColor = Color.Red;
@@ -229,8 +236,8 @@ namespace Hyper_Battleship
         {
             correctPlayerName = false;
             correctPlayerPassword = false;
-            var giocatoriPresenti = File.ReadLines(playerStatsFile);
-            for (int i = 0; i < giocatoriPresenti.ToArray().Length; i++)
+            var giocatoriPresenti = File.ReadLines(playerStatsFile);//legge le credenziali slavate nel file .txt nel percorso prestabilito
+            for (int i = 0; i < giocatoriPresenti.ToArray().Length; i++)//separa rispettivamente i nomi utente e le loro password
             {
                 string[] elemento = giocatoriPresenti.ToArray()[i].Split(',');
 
@@ -280,7 +287,7 @@ namespace Hyper_Battleship
             }
         }
 
-        public void prePartita()
+        public void prePartita() //riduce il form ad una grandezza minimale mostrando ai giocatori una scelta
         {
             this.Height = 250; this.CenterToScreen();           
             startMatchLabel.Visible = true; yesStartMatch.Visible = true; noStartMatch.Visible = true;           

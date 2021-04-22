@@ -228,5 +228,11 @@
   <ItemGroup>
     <None Include="Sprites\sottomarino_Griglia10x10Verticale.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\selezione_Attacco_Griglia10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\griglia_Piccola_10x10.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
