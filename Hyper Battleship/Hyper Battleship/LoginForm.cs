@@ -186,37 +186,37 @@ namespace Hyper_Battleship
             string nomePlayerGiausato = "";
             alertLoginAccount.ForeColor = Color.Red;
             controlloGiocatore(ref correctPlayerName, ref correctPlayerPassword, ref nomePlayerGiausato);
-            if (playeresistente == true)
+            if (playeresistente == true)//nel caso esista già l'account a cui si sta provando ad accedere
             {
-                if (usernameTextBox.Text == "")
+                if (usernameTextBox.Text == "")//texbox username vuota
                 {
                     alertLoginAccount.Visible = true;
                     alertLoginAccount.Text = "Inserire una nome utente valido";
                 }
-                else if (passwordTextBox.Text == "")
+                else if (passwordTextBox.Text == "")//texbox della password vuota
                 {
                     alertLoginAccount.Visible = true;
                     alertLoginAccount.Text = "Inserire delle credenziali valide";
                 }
-                else if (correctPlayerName == true && correctPlayerPassword == false)
+                else if (correctPlayerName == true && correctPlayerPassword == false)//utente corretto, esistente, ma password errata
                 {
                     alertLoginAccount.Visible = true;
                     alertLoginAccount.Text = "Password Errata";
                     passwordTextBox.Clear();
                 }
-                else if (nomePlayerGiausato == usernameTextBox.Text)
+                else if (nomePlayerGiausato == usernameTextBox.Text)//nome utente uguale a quello già registrato nell'istanza della pre-lobby
                 {
                     alertLoginAccount.Visible = true;
                     alertLoginAccount.Text = "Sei già entrato con questo utente";
                     usernameTextBox.Clear();
                     passwordTextBox.Clear();
                 }
-                else if (correctPlayerName == true && correctPlayerPassword == true)
+                else if (correctPlayerName == true && correctPlayerPassword == true)//nome utente e password corretti e non già loggati
                 {
                     alertLoginAccount.Visible = true;
                     alertLoginAccount.ForeColor = Color.Lime;
                     alertLoginAccount.Text = "Utente trovato";
-                    if (giocatore == 0)
+                    if (giocatore == 0)//per evitare l'accesso a più untenti della stessa pre-lobby
                     {
                         nomePlayerGiausato = usernameTextBox.Text;
                         usernameTextBox.Clear(); passwordTextBox.Clear();
@@ -224,7 +224,7 @@ namespace Hyper_Battleship
                         giocatore++;
                     }
                 }
-                else
+                else//utente non registrato
                 {
                     alertLoginAccount.Visible = true;
                     alertLoginAccount.Text = "Utente inesistente";
@@ -250,14 +250,14 @@ namespace Hyper_Battleship
                     correctPlayerPassword = true;
                 }
             }
-            if (correctPlayerName == true && playeresistente == false)
+            if (correctPlayerName == true && playeresistente == false)//controlla se è già registrato un determinato utente
             {
                 alertLoginAccount.Visible = true;
                 alertLoginAccount.ForeColor = Color.Red;
                 alertLoginAccount.Text = "Utente già esistente";
                 usernameTextBox.Clear(); passwordTextBox.Clear();               
             }
-            else if (usernameTextBox.Text == "" && playeresistente == false)
+            else if (usernameTextBox.Text == "" && playeresistente == false)//controlla se la texturebox è vuota
             {
                 alertLoginAccount.Visible = true;
                 alertLoginAccount.Text = "Inserire una nome utente valido";
@@ -267,7 +267,7 @@ namespace Hyper_Battleship
                 alertLoginAccount.Visible = true;
                 alertLoginAccount.Text = "Inserire delle credenziali valide";
             }
-            else if (playeresistente == false)
+            else if (playeresistente == false)//nel caso non eista già un determinato utente, quindi è "nuovo"
             {
                 string[] giocatoriFile = new string[giocatoriPresenti.ToArray().Length + 1];
                 Array.Copy(giocatoriPresenti.ToArray(), giocatoriFile, giocatoriPresenti.ToArray().Length);
@@ -277,7 +277,7 @@ namespace Hyper_Battleship
                 alertLoginAccount.ForeColor = Color.Green;
                 alertLoginAccount.Text = "Nuovo utente registrato";
                 usernameTextBox.Clear(); passwordTextBox.Clear();               
-                if (giocatore == 0)
+                if (giocatore == 0)//per evitare di accedere allo stesso account da parte di più utenti nella stessa pre-lobby
                 {
                     nomePlayerGiausato = usernameTextBox.Text;
                     usernameTextBox.Clear(); passwordTextBox.Clear();                   
