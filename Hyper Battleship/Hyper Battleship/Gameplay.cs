@@ -42,6 +42,7 @@ namespace Hyper_Battleship
         #region Variabili Per il Fuzionamento dell Programma + Tasto "Conferma", "Annulla" e "Passa Turno"
         public static int scoreGiocatore1 = 0, scoreGiocatore2 = 0;
         int turni = 1;
+        int naviPosizionate = 0;
         int sottomarini, cacciatorpedinieri, naviDassalto;
         bool finePartita = false, disposizioneNaviPossibile = true;
         bool portaereiPosizionata, corazzataPosizionata, sottomarinoPosizionato1, sottomarinoPosizionato2, cacciatorpedinierePosizionato1, cacciatorpedinierePosizionato2, naveDassaltoPosizionata1, naveDassaltoPosizionata2, naveDassaltoPosizionata3;
@@ -54,12 +55,19 @@ namespace Hyper_Battleship
             {
                 passaTurnoButton.Visible = true;
                 MessageBox.Show("Hai dispiegato in campo tutte le navi\nClicca il pulsante 'Passa il turno'");
+                confermaButton.Visible = false;
+                naviPosizionate = 0;
+            }
+            else if(naviPosizionate < 8)
+            {
+                confermaButton.Visible = false;
             }
         }
 
         private void annullaButton_Click(object sender, EventArgs e)
         {
             exitOperation = true;
+            confermaButton.Visible = false;
         }
 
         bool attacco1 = false;
@@ -72,7 +80,7 @@ namespace Hyper_Battleship
             sottomarino1Griglia10x10.Visible = false; sottomarino2Griglia10x10.Visible = false; sottomarinoImmagineGirata1 = false; sottomarinoImmagineGirata2 = false; quantitàSottomarini.Text = "2"; sottomarini = 2; sottomarinoPosizionato1 = false; sottomarinoPosizionato2 = false;
             cacciatorpediniere1Griglia10x10.Visible = false; cacciatorpediniere2Griglia10x10.Visible = false; cacciatorpediniereImmagineGirata1 = false; cacciatorpediniereImmagineGirata2 = false; quantitàCacciatorpediniere.Text = "2"; cacciatorpedinieri = 2; cacciatorpedinierePosizionato1 = false; cacciatorpedinierePosizionato2 = false;
             naveDassalto1Griglia10x10.Visible = false; naveDassalto2Griglia10x10.Visible = false; naveDassalto3Griglia10x10.Visible = false;  quantitàNaveDassalto.Text = "3"; naviDassalto = 3; naveDassaltoPosizionata1 = false; naveDassaltoPosizionata2 = false; naveDassaltoPosizionata3 = false;
-            player1PictureBox.Visible = false; player2PictureBox.Visible = true;
+            player1PictureBox.Visible = false; player2PictureBox.Visible = true; confirmButtonPressed = false;
             passaTurnoButton.Visible = false;
             if (!player2PictureBox.Visible)//nel caso entrambi i giocatori sono sicuri della loro decisione sull'allocare le navi nelle rispettive posizioni, comincia il gioco
             {
@@ -158,6 +166,7 @@ namespace Hyper_Battleship
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
                         confirmButtonPressed = false;
+                        naviPosizionate++;
                     }
                     if (exitOperation)//per annullare la posiziona attuale della nave
                     {
@@ -230,6 +239,7 @@ namespace Hyper_Battleship
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
                         confirmButtonPressed = false;
+                        naviPosizionate++;
                     }
                     if (exitOperation)
                     {
@@ -364,6 +374,7 @@ namespace Hyper_Battleship
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
                         confirmButtonPressed = false;
+                        naviPosizionate++;
                     }
                     if (exitOperation)
                     {
@@ -507,6 +518,7 @@ namespace Hyper_Battleship
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
                         confirmButtonPressed = false;
+                        naviPosizionate++;
                     }
                     if (exitOperation)
                     {
@@ -608,6 +620,7 @@ namespace Hyper_Battleship
                         annullaButton.Visible = false;
                         disposizioneNaviPossibile = true;
                         confirmButtonPressed = false;
+                        naviPosizionate++;
                     }
                     if (exitOperation)
                     {
@@ -685,6 +698,8 @@ namespace Hyper_Battleship
             {
                 if (disposizioneNaviPossibile)
                 {
+                    confirmButtonPressed = false; //per evitare errori nel posizionamento delle navi
+                    confermaButton.Visible = true;
                     nave = "portaerei";
                     quantitàPortaerei.Text = "0";
                     disposizioneNaviPossibile = false;
@@ -701,6 +716,8 @@ namespace Hyper_Battleship
             {
                 if (disposizioneNaviPossibile)
                 {
+                    confirmButtonPressed = false;
+                    confermaButton.Visible = true;
                     nave = "corazzata";
                     quantitàCorazzata.Text = "0";
                     disposizioneNaviPossibile = false;
@@ -717,6 +734,8 @@ namespace Hyper_Battleship
             {
                 if (disposizioneNaviPossibile)
                 {
+                    confirmButtonPressed = false;
+                    confermaButton.Visible = true;
                     nave = "sottomarino";
                     sottomarini = Convert.ToInt32(quantitàSottomarini.Text);
                     sottomarini--;
@@ -743,6 +762,8 @@ namespace Hyper_Battleship
             {
                 if (disposizioneNaviPossibile)
                 {
+                    confirmButtonPressed = false;
+                    confermaButton.Visible = true;
                     nave = "cacciatorpediniere";
                     cacciatorpedinieri = Convert.ToInt32(quantitàCacciatorpediniere.Text);
                     cacciatorpedinieri--;
@@ -769,6 +790,8 @@ namespace Hyper_Battleship
             {
                 if (disposizioneNaviPossibile)
                 {
+                    confirmButtonPressed = false;
+                    confermaButton.Visible = true;
                     nave = "nave d'assalto";
                     naviDassalto = Convert.ToInt32(quantitàNaveDassalto.Text);
                     naviDassalto--;
@@ -1289,7 +1312,6 @@ namespace Hyper_Battleship
 
         private void controlloLatiDellaNaveEstremiGriglia(ref int coordinateNaveSuGrigliaArray, ref int[] posizioniDaControllare,int indexToRemove, bool immagineGirata)//controlla che la nave non sia posizionte al limite a destra della griglia per evitare dei falsi check di navi vicine
         {
-            int indexToRemoveLeft = indexToRemove * -1;//destra e sinistra della neve, in posizione orrizontale
             int[] latoDestroGrigliaVerticale = new int[] { 1, 11, 21, 31, 41 };
             int[] latoSinistroGrigliaVerticale = new int[] { -1, 9, 19, 29, 39 };
             int[] latoSinistroGrigliaOrrizontale = new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90};
@@ -1300,7 +1322,7 @@ namespace Hyper_Battleship
                 {
                     if (!immagineGirata)
                     {
-                        posizioniDaControllare = posizioniDaControllare.RemoveFromArray(indexToRemoveLeft);
+                        posizioniDaControllare = posizioniDaControllare.RemoveFromArray(-1);
                     }
                     else
                     {
@@ -1312,7 +1334,7 @@ namespace Hyper_Battleship
 
                     break;
                 }
-                if(coordinateNaveSuGrigliaArray == latoDestroGrigliaOrrizontale[i])
+                if(coordinateNaveSuGrigliaArray + indexToRemove - 1 == latoDestroGrigliaOrrizontale[i] || coordinateNaveSuGrigliaArray == latoDestroGrigliaOrrizontale[i])
                 {
                     if (!immagineGirata)
                     {

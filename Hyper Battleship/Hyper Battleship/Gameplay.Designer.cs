@@ -140,6 +140,7 @@
             this.confermaButton.TabIndex = 6;
             this.confermaButton.Text = "CONFERMA";
             this.confermaButton.UseVisualStyleBackColor = false;
+            this.confermaButton.Visible = false;
             this.confermaButton.Click += new System.EventHandler(this.confermaButton_Click);
             // 
             // passaTurnoButton
@@ -975,7 +976,7 @@
             this.corazzataPcitureBox10x10.BackColor = System.Drawing.Color.Transparent;
             this.corazzataPcitureBox10x10.Image = global::Hyper_Battleship.Properties.Resources.corazzata_Box10x10;
             this.corazzataPcitureBox10x10.ImageLocation = "";
-            this.corazzataPcitureBox10x10.Location = new System.Drawing.Point(718, 113);
+            this.corazzataPcitureBox10x10.Location = new System.Drawing.Point(718, 116);
             this.corazzataPcitureBox10x10.Name = "corazzataPcitureBox10x10";
             this.corazzataPcitureBox10x10.Size = new System.Drawing.Size(252, 63);
             this.corazzataPcitureBox10x10.TabIndex = 9;
