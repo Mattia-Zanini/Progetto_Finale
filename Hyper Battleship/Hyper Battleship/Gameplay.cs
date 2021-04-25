@@ -41,7 +41,7 @@ namespace Hyper_Battleship
 
         #region Variabili Per il Fuzionamento dell Programma + Tasto "Conferma", "Annulla" e "Passa Turno"
         public static int scoreGiocatore1 = 0, scoreGiocatore2 = 0;
-        int turni = 1;
+        int nTurno = -1, nTimerRadar;
         int naviPosizionate = 0;
         int sottomarini, cacciatorpedinieri, naviDassalto;
         bool finePartita = false, disposizioneNaviPossibile = true;
@@ -51,14 +51,14 @@ namespace Hyper_Battleship
         {
             confirmButtonPressed = true;
             //quando sono state posizionate tutte le navi
-            if(portaereiPosizionata && corazzataPosizionata && sottomarinoPosizionato1 && sottomarinoPosizionato2 && cacciatorpedinierePosizionato1 && cacciatorpedinierePosizionato2 && naveDassaltoPosizionata1 && naveDassaltoPosizionata2 && naveDassaltoPosizionata3)
+            if (portaereiPosizionata && corazzataPosizionata && sottomarinoPosizionato1 && sottomarinoPosizionato2 && cacciatorpedinierePosizionato1 && cacciatorpedinierePosizionato2 && naveDassaltoPosizionata1 && naveDassaltoPosizionata2 && naveDassaltoPosizionata3)
             {
                 passaTurnoButton.Visible = true;
                 MessageBox.Show("Hai dispiegato in campo tutte le navi\nClicca il pulsante 'Passa il turno'");
                 confermaButton.Visible = false;
                 naviPosizionate = 0;
             }
-            else if(naviPosizionate < 8)
+            else if (naviPosizionate < 8)
             {
                 confermaButton.Visible = false;
             }
@@ -71,37 +71,65 @@ namespace Hyper_Battleship
         }
 
         bool attacco1 = false;
-        private void passaTurnoButton_Click(object sender, EventArgs e) //passa il turno, quindi riporta tutte le variabili al loro stato originale, per permettere al secondo giocatore di posizionare le sue navi
-                                                                        //e di registrarle nella griglia
+        private void passaTurnoButton_Click(object sender, EventArgs e) //passa il turno, quindi riporta tutte le variabili al loro stato originale, 
+                                                                        //per permettere al secondo giocatore di posizionare le sue navi e di registrarle nella griglia (array)
         {
-            nave = "";
-            portaereiGriglia10x10.Visible = false; portaereiImaggineGirata = false; quantitàPortaerei.Text = "1"; portaereiPosizionata = false;
-            corazzataGriglia10x10.Visible = false; corazzataImaggineGirata = false; quantitàCorazzata.Text = "1"; corazzataPosizionata = false;
+            nTurno++; nave = "";
+            portaereiGriglia10x10.Visible = false; portaereiImaggineGirata = false; quantitàPortaerei.Text = "1"; portaereiPosizionata = false; portaereiGriglia10x10.Width = 315; portaereiGriglia10x10.Height = 63; portaereiGriglia10x10.Image = Properties.Resources.portaerei_Griglia10x10;
+
+            corazzataGriglia10x10.Visible = false; corazzataImaggineGirata = false; quantitàCorazzata.Text = "1"; corazzataPosizionata = false; corazzataGriglia10x10.Width = 252; corazzataGriglia10x10.Height = 63; corazzataGriglia10x10.Image = Properties.Resources.corazzata_Griglia10x10;
+
             sottomarino1Griglia10x10.Visible = false; sottomarino2Griglia10x10.Visible = false; sottomarinoImmagineGirata1 = false; sottomarinoImmagineGirata2 = false; quantitàSottomarini.Text = "2"; sottomarini = 2; sottomarinoPosizionato1 = false; sottomarinoPosizionato2 = false;
+            sottomarino1Griglia10x10.Width = 189; sottomarino1Griglia10x10.Height = 63; sottomarino1Griglia10x10.Image = Properties.Resources.sottomarino_Griglia10x10; sottomarino2Griglia10x10.Width = 189; sottomarino2Griglia10x10.Height = 63; sottomarino2Griglia10x10.Image = Properties.Resources.sottomarino_Griglia10x10;
+
             cacciatorpediniere1Griglia10x10.Visible = false; cacciatorpediniere2Griglia10x10.Visible = false; cacciatorpediniereImmagineGirata1 = false; cacciatorpediniereImmagineGirata2 = false; quantitàCacciatorpediniere.Text = "2"; cacciatorpedinieri = 2; cacciatorpedinierePosizionato1 = false; cacciatorpedinierePosizionato2 = false;
-            naveDassalto1Griglia10x10.Visible = false; naveDassalto2Griglia10x10.Visible = false; naveDassalto3Griglia10x10.Visible = false;  quantitàNaveDassalto.Text = "3"; naviDassalto = 3; naveDassaltoPosizionata1 = false; naveDassaltoPosizionata2 = false; naveDassaltoPosizionata3 = false;
-            player1PictureBox.Visible = false; player2PictureBox.Visible = true; confirmButtonPressed = false;
+            cacciatorpediniere1Griglia10x10.Width = 126; cacciatorpediniere1Griglia10x10.Height = 63; cacciatorpediniere1Griglia10x10.Image = Properties.Resources.cacciatorpediniere_Griglia10x10; cacciatorpediniere2Griglia10x10.Width = 126; cacciatorpediniere2Griglia10x10.Height = 63; cacciatorpediniere2Griglia10x10.Image = Properties.Resources.cacciatorpediniere_Griglia10x10;
+
+            naveDassalto1Griglia10x10.Visible = false; naveDassalto2Griglia10x10.Visible = false; naveDassalto3Griglia10x10.Visible = false; quantitàNaveDassalto.Text = "3"; naviDassalto = 3; naveDassaltoPosizionata1 = false; naveDassaltoPosizionata2 = false; naveDassaltoPosizionata3 = false;
+            confirmButtonPressed = false;
             passaTurnoButton.Visible = false;
-            if (!player2PictureBox.Visible)//nel caso entrambi i giocatori sono sicuri della loro decisione sull'allocare le navi nelle rispettive posizioni, comincia il gioco
+            if (nTurno == 0)
             {
-                movimentoDisposizioneNavi.Enabled = false;
-                turnoLabel.Visible = true; contatoreTurni.Visible = true; contatoreTurni.Text = turni.ToString();
+                player1PictureBox.Visible = false;
+                player2PictureBox.Visible = true;
+            }
+            else if (nTurno == 1)//nel caso entrambi i giocatori sono sicuri della loro decisione sull'allocare le navi nelle rispettive posizioni, comincia il gioco
+            {
+                player1PictureBox.Visible = true;
+                player2PictureBox.Visible = false;
+
+                turnoLabel.Visible = true; contatoreTurni.Visible = true; contatoreTurni.Text = nTurno.ToString();
                 quantitàPortaerei.Visible = false; quantitàCorazzata.Visible = false; quantitàSottomarini.Visible = false;
                 quantitàCacciatorpediniere.Visible = false; quantitàNaveDassalto.Visible = false;
                 portaereiPictureBox10x10.Visible = false; corazzataPcitureBox10x10.Visible = false; sottomarinoPictureBox10x10.Visible = false;
                 cacciatorpedinierePictureBox10x10.Visible = false; naveDassaltoPictureBox10x10.Visible = false;
-                passaTurnoButton.Location = new Point(1008, passaTurnoButton.Location.Y);
-                this.Width = 1200;
-                player1PictureBox.Visible = true; player2PictureBox.Visible = false;
-                selezioneAttacco1.Location = new Point(297, 292); selezioneAttacco1.Visible = true;
+                grigliaDiGiocoPiccola.Visible = true;
+                movimentoDisposizioneNavi.Enabled = true;
+                attacco1 = true; selezioneAttacco1.Visible = true;
+                confermaButton.Visible = true;
+                radarPcitureBox.Visible = true; countdownRadar.Visible = true; nTimerRadar = Convert.ToInt32(countdownRadar.Text); nTimerRadar--; countdownRadar.Text = nTimerRadar.ToString();
+                doppioAssaltoPictureBox.Visible = true; quantitàAssaltoDoppio.Visible = true;
+            }
+        }
+
+        private void doppioAssaltoPictureBox_Click(object sender, EventArgs e)
+        {
+            if (attacco1)
+            {
+                MessageBox.Show("Prima devi confermare il primo attacco");
+            }
+            else
+            {
 
             }
         }
+
         #endregion
 
         #region Disposizione Navi
         string nave = "";
         bool moveUp, moveDown, moveLeft, moveRight, rotateLeft, rotateRight;
+
         bool portaereiImaggineGirata, corazzataImaggineGirata, sottomarinoImmagineGirata1, sottomarinoImmagineGirata2, cacciatorpediniereImmagineGirata1, cacciatorpediniereImmagineGirata2;
         private void moveShipEvent(object sender, EventArgs e)//funzione ciclica che permettte di controllare i tasti che l'utente preme per spostare le navi che hanno selezionato
         {                                                    //in ogni "case" che sposta le navi con i rispettivi nomi identificativi, vengono effettuati anche dei controlli per evitare di posizionare
@@ -647,21 +675,26 @@ namespace Hyper_Battleship
 
             if (attacco1)
             {
-                if (moveUp && selezioneAttacco1.Top > 40 && !confirmButtonPressed)
+                if (moveUp && selezioneAttacco1.Top > 85 && !confirmButtonPressed)
                 {
-                    selezioneAttacco1.Top -= 63;
+                    selezioneAttacco1.Top -= 45;
                 }
-                if (moveDown && selezioneAttacco1.Top < 607 && !confirmButtonPressed)
+                if (moveDown && selezioneAttacco1.Top < 445 && !confirmButtonPressed)
                 {
-                    selezioneAttacco1.Top += 63;
+                    selezioneAttacco1.Top += 45;
                 }
-                if (moveRight && selezioneAttacco1.Right < 675 && !confirmButtonPressed)
+                if (moveRight && selezioneAttacco1.Right < 1168 && !confirmButtonPressed)
                 {
-                    selezioneAttacco1.Left += 63;
+                    selezioneAttacco1.Left += 45;
                 }
-                if (moveLeft && selezioneAttacco1.Left > 45 && !confirmButtonPressed)
+                if (moveLeft && selezioneAttacco1.Left > 763 && !confirmButtonPressed)
                 {
-                    selezioneAttacco1.Left -= 63;
+                    selezioneAttacco1.Left -= 45;
+                }
+                if (confirmButtonPressed)
+                {
+                    int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco1.Location.X, selezioneAttacco1.Location.Y);
+                    bool attaccoValido = controlloAttacco(ref coordinateAttacco);
                 }
             }
         }
@@ -684,6 +717,74 @@ namespace Hyper_Battleship
             if (e.KeyCode == Keys.D) { moveRight = false; }
             if (e.KeyCode == Keys.E) { rotateRight = false; }
             if (e.KeyCode == Keys.Q) { rotateLeft = false; }
+        }
+        #endregion
+
+        #region Controllo Degli Attacchi
+        private int assegnazionePosizioneAttacco(int posX, int posY)//come per la navi, viene assegnato un valore numerico nell'array per l'attacco
+        {
+            int coordAtt_XY = 0;
+            string[] coord_XY_Codifica = new string[2];
+
+            switch (posY)
+            {
+                case 40:
+                    coord_XY_Codifica[0] = "-1"; break; //casella A
+                case 85:
+                    coord_XY_Codifica[0] = "9"; break; //casella B
+                case 130:
+                    coord_XY_Codifica[0] = "19"; break; //casella C
+                case 175:
+                    coord_XY_Codifica[0] = "29"; break; //casella D
+                case 220:
+                    coord_XY_Codifica[0] = "39"; break; //casella E
+                case 265:
+                    coord_XY_Codifica[0] = "49"; break; //casella F
+                case 310:
+                    coord_XY_Codifica[0] = "59"; break; //casella G
+                case 355:
+                    coord_XY_Codifica[0] = "69"; break; //casella H
+                case 400:
+                    coord_XY_Codifica[0] = "79"; break; //casella I
+                case 445:
+                    coord_XY_Codifica[0] = "89"; break; //casella L
+            }
+
+            switch (posX)
+            {
+                case 717:
+                    coord_XY_Codifica[1] = "1"; break;
+                case 762:
+                    coord_XY_Codifica[1] = "2"; break;
+                case 807:
+                    coord_XY_Codifica[1] = "3"; break;
+                case 852:
+                    coord_XY_Codifica[1] = "4"; break;
+                case 897:
+                    coord_XY_Codifica[1] = "5"; break;
+                case 942:
+                    coord_XY_Codifica[1] = "6"; break;
+                case 987:
+                    coord_XY_Codifica[1] = "7"; break;
+                case 1032:
+                    coord_XY_Codifica[1] = "8"; break;
+                case 1077:
+                    coord_XY_Codifica[1] = "9"; break;
+                case 1122:
+                    coord_XY_Codifica[1] = "10"; break;
+            }
+
+            coordAtt_XY = Convert.ToInt32(coord_XY_Codifica[0]) + Convert.ToInt32(coord_XY_Codifica[1]);
+
+            return coordAtt_XY;
+        } 
+
+        private bool controlloAttacco(ref int coordinateAttacco)
+        {
+            bool validitàDellAttacco = false;
+
+
+            return validitàDellAttacco;
         }
         #endregion
 

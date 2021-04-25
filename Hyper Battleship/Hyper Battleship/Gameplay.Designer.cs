@@ -105,6 +105,7 @@
             this.portaereiPictureBox10x10 = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoPiccola = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).BeginInit();
@@ -127,6 +128,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // confermaButton
@@ -628,7 +630,7 @@
             this.countdownRadar.Name = "countdownRadar";
             this.countdownRadar.Size = new System.Drawing.Size(39, 29);
             this.countdownRadar.TabIndex = 55;
-            this.countdownRadar.Text = "13";
+            this.countdownRadar.Text = "14";
             this.countdownRadar.Visible = false;
             // 
             // quantitàAssaltoDoppio
@@ -760,6 +762,7 @@
             this.doppioAssaltoPictureBox.TabIndex = 4;
             this.doppioAssaltoPictureBox.TabStop = false;
             this.doppioAssaltoPictureBox.Visible = false;
+            this.doppioAssaltoPictureBox.Click += new System.EventHandler(this.doppioAssaltoPictureBox_Click);
             // 
             // radarPcitureBox
             // 
@@ -778,7 +781,7 @@
             this.selezioneAttacco2.BackColor = System.Drawing.Color.Transparent;
             this.selezioneAttacco2.Image = global::Hyper_Battleship.Properties.Resources.selezione_Attacco_Griglia10x10;
             this.selezioneAttacco2.ImageLocation = "";
-            this.selezioneAttacco2.Location = new System.Drawing.Point(1036, 397);
+            this.selezioneAttacco2.Location = new System.Drawing.Point(944, 266);
             this.selezioneAttacco2.Name = "selezioneAttacco2";
             this.selezioneAttacco2.Size = new System.Drawing.Size(45, 45);
             this.selezioneAttacco2.TabIndex = 80;
@@ -790,7 +793,7 @@
             this.selezioneAttacco1.BackColor = System.Drawing.Color.Transparent;
             this.selezioneAttacco1.Image = global::Hyper_Battleship.Properties.Resources.selezione_Attacco_Griglia10x10;
             this.selezioneAttacco1.ImageLocation = "";
-            this.selezioneAttacco1.Location = new System.Drawing.Point(989, 266);
+            this.selezioneAttacco1.Location = new System.Drawing.Point(899, 221);
             this.selezioneAttacco1.Name = "selezioneAttacco1";
             this.selezioneAttacco1.Size = new System.Drawing.Size(45, 45);
             this.selezioneAttacco1.TabIndex = 79;
@@ -1017,12 +1020,25 @@
             this.grigliaDiGiocoGrande.TabIndex = 1;
             this.grigliaDiGiocoGrande.TabStop = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Hyper_Battleship.Properties.Resources.selezione_Attacco_Griglia10x10;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(1122, 445);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox1.TabIndex = 81;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
             // Gameplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1358, 681);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.countdownRadar);
             this.Controls.Add(this.doppioAssaltoPictureBox);
             this.Controls.Add(this.radarPcitureBox);
@@ -1127,6 +1143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1209,5 +1226,6 @@
         private System.Windows.Forms.Label contatoreTurni;
         private System.Windows.Forms.PictureBox selezioneAttacco1;
         private System.Windows.Forms.PictureBox selezioneAttacco2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
