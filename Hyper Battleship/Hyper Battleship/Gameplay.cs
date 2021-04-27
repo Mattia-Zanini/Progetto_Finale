@@ -70,7 +70,7 @@ namespace Hyper_Battleship
             confermaButton.Visible = false;
         }
 
-        bool attacco1 = false;
+        bool attacco1 = false, attacco2 = false;
         private void passaTurnoButton_Click(object sender, EventArgs e) //passa il turno, quindi riporta tutte le variabili al loro stato originale, 
                                                                         //per permettere al secondo giocatore di posizionare le sue navi e di registrarle nella griglia (array)
         {
@@ -120,7 +120,7 @@ namespace Hyper_Battleship
             }
             else
             {
-
+                attacco2 = true;
             }
         }
 
@@ -672,33 +672,199 @@ namespace Hyper_Battleship
                     }
                     break;
             }
-
+            //funzioni che si occupano dell'attacco delle navi nemiche
             if (attacco1)
             {
+                int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco1.Location.X, selezioneAttacco1.Location.Y);//trova la casella su cui è al momento la selezione dell'attacco del giocatore 1
                 if (moveUp && selezioneAttacco1.Top > 85 && !confirmButtonPressed)
                 {
-                    selezioneAttacco1.Top -= 45;
+                    try//per evitare di mettere la selezione al di sopra della griglia
+                    {
+                        coordinateAttacco -= 10;//casella superiore
+                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);//controlla se nella casella sopra non sia stato effettuato un attacco
+                        if (attaccoNonEffettuato)
+                        {
+                            selezioneAttacco1.Top -= 45;//aumenta di 1 casella nel caso non sia stato effettuato un attacco nella casella di sopra
+                        }
+                        else
+                        {
+                            selezioneAttacco1.Top -= 90;//aumenta di 2 caselle nel caso fosse stata attaccata la casella appena di sopra
+                        }
+                    }
+                    catch { }
+                    coordinateAttacco += 10;//riporta le coordinate della selezione al loro stato originale
                 }
                 if (moveDown && selezioneAttacco1.Top < 445 && !confirmButtonPressed)
                 {
-                    selezioneAttacco1.Top += 45;
+                    try
+                    {
+                        coordinateAttacco += 10;
+                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
+                        if (attaccoNonEffettuato)
+                        {
+                            selezioneAttacco1.Top += 45;
+                        }
+                        else
+                        {
+                            selezioneAttacco1.Top += 90;
+                        }
+                    }
+                    catch { }
+                    coordinateAttacco -= 10;
                 }
                 if (moveRight && selezioneAttacco1.Right < 1168 && !confirmButtonPressed)
                 {
-                    selezioneAttacco1.Left += 45;
+                    try
+                    {
+                        coordinateAttacco += 1;
+                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
+                        if (attaccoNonEffettuato)
+                        {
+                            selezioneAttacco1.Left += 45;
+                        }
+                        else
+                        {
+                            selezioneAttacco1.Left += 90;
+                        }
+                    }
+                    catch { }
+                    coordinateAttacco -= 1;
                 }
                 if (moveLeft && selezioneAttacco1.Left > 763 && !confirmButtonPressed)
                 {
-                    selezioneAttacco1.Left -= 45;
+                    try
+                    {
+                        coordinateAttacco -= 1;
+                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
+                        if (attaccoNonEffettuato)
+                        {
+                            selezioneAttacco1.Left -= 45;
+                        }
+                        else
+                        {
+                            selezioneAttacco1.Left -= 90;
+                        }
+                    }
+                    catch { }
+                    coordinateAttacco += 1;
                 }
                 if (confirmButtonPressed)
                 {
-                    int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco1.Location.X, selezioneAttacco1.Location.Y);
                     bool attaccoValido = controlloAttacco(ref coordinateAttacco);
+                    if (attaccoValido)
+                    {
+                        string[] confermaAttacco = StrutturaGriglia10[coordinateAttacco].Split(',');
+                        if (player1PictureBox.Visible)
+                        {
+                            confermaAttacco[2] = "G1_attacco";
+                        }
+                        else
+                        {
+                            confermaAttacco[3] = "G2_attacco";
+                        }
+                        StrutturaGriglia10[coordinateAttacco] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
+                        attacco1 = false;//permette l'eventuale secondo attacco
+                    }
+                }
+            }
+
+            if (attacco2)//eventuale doppio assalto
+            {
+                int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco2.Location.X, selezioneAttacco2.Location.Y);
+                if (moveUp && selezioneAttacco2.Top > 85 && !confirmButtonPressed)
+                {
+                    try
+                    {
+                        coordinateAttacco -= 10;
+                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
+                        if (attaccoNonEffettuato)
+                        {
+                            selezioneAttacco2.Top -= 45;
+                        }
+                        else
+                        {
+                            selezioneAttacco2.Top -= 90;
+                        }
+                    }
+                    catch { }
+                    coordinateAttacco += 10;
+                }
+                if (moveDown && selezioneAttacco2.Top < 445 && !confirmButtonPressed)
+                {
+                    try
+                    {
+                        coordinateAttacco += 10;
+                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
+                        if (attaccoNonEffettuato)
+                        {
+                            selezioneAttacco2.Top += 45;
+                        }
+                        else
+                        {
+                            selezioneAttacco2.Top += 90;
+                        }
+                    }
+                    catch { }
+                    coordinateAttacco -= 10;
+                }
+                if (moveRight && selezioneAttacco2.Right < 1168 && !confirmButtonPressed)
+                {
+                    try
+                    {
+                        coordinateAttacco += 1;
+                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
+                        if (attaccoNonEffettuato)
+                        {
+                            selezioneAttacco2.Left += 45;
+                        }
+                        else
+                        {
+                            selezioneAttacco2.Left += 90;
+                        }
+                    }
+                    catch { }
+                    coordinateAttacco -= 1;
+                }
+                if (moveLeft && selezioneAttacco2.Left > 763 && !confirmButtonPressed)
+                {
+                    try
+                    {
+                        coordinateAttacco -= 1;
+                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
+                        if (attaccoNonEffettuato)
+                        {
+                            selezioneAttacco2.Left -= 45;
+                        }
+                        else
+                        {
+                            selezioneAttacco2.Left -= 90;
+                        }
+                    }
+                    catch { }
+                    coordinateAttacco += 1;
+                }
+                if (confirmButtonPressed)
+                {
+                    bool attaccoValido = controlloAttacco(ref coordinateAttacco);
+                    if (attaccoValido)
+                    {
+                        string[] confermaAttacco = StrutturaGriglia10[coordinateAttacco].Split(',');
+                        if (player1PictureBox.Visible)
+                        {
+                            confermaAttacco[2] = "G1_attacco";
+                        }
+                        else
+                        {
+                            confermaAttacco[3] = "G2_attacco";
+                        }
+                        StrutturaGriglia10[coordinateAttacco] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
+
+                    }
                 }
             }
         }
 
+        //funzioni che si occupano di rilevare l'input dei tasti da parte dell'utente
         private void Gameplay_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.W) { moveUp = true; }
@@ -779,10 +945,25 @@ namespace Hyper_Battleship
             return coordAtt_XY;
         } 
 
-        private bool controlloAttacco(ref int coordinateAttacco)
+        private bool controlloAttacco(ref int coordinateAttacco)//controlla se in una determinata casella non si già stato effettuato un attacco
         {
             bool validitàDellAttacco = false;
 
+            string[] checkAttack = StrutturaGriglia10[coordinateAttacco].Split(',');
+            if (player1PictureBox.Visible)
+            {
+                if(checkAttack[2] == "G1_no")
+                {
+                    validitàDellAttacco = true;
+                }
+            }
+            else
+            {
+                if (checkAttack[3] == "G2_no")
+                {
+                    validitàDellAttacco = true;
+                }
+            }
 
             return validitàDellAttacco;
         }
