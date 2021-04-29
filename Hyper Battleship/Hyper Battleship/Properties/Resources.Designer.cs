@@ -363,6 +363,16 @@ namespace Hyper_Battleship.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap selezione_Attacco2_Griglia10x10 {
+            get {
+                object obj = ResourceManager.GetObject("selezione_Attacco2_Griglia10x10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sottomarino_Box10x10 {
             get {
                 object obj = ResourceManager.GetObject("sottomarino_Box10x10", resourceCulture);

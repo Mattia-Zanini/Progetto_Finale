@@ -678,75 +678,19 @@ namespace Hyper_Battleship
                 int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco1.Location.X, selezioneAttacco1.Location.Y);//trova la casella su cui è al momento la selezione dell'attacco del giocatore 1
                 if (moveUp && selezioneAttacco1.Top > 85 && !confirmButtonPressed)
                 {
-                    try//per evitare di mettere la selezione al di sopra della griglia
-                    {
-                        coordinateAttacco -= 10;//casella superiore
-                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);//controlla se nella casella sopra non sia stato effettuato un attacco
-                        if (attaccoNonEffettuato)
-                        {
-                            selezioneAttacco1.Top -= 45;//aumenta di 1 casella nel caso non sia stato effettuato un attacco nella casella di sopra
-                        }
-                        else
-                        {
-                            selezioneAttacco1.Top -= 90;//aumenta di 2 caselle nel caso fosse stata attaccata la casella appena di sopra
-                        }
-                    }
-                    catch { }
-                    coordinateAttacco += 10;//riporta le coordinate della selezione al loro stato originale
+                    selezioneAttacco1.Top -= 45;
                 }
                 if (moveDown && selezioneAttacco1.Top < 445 && !confirmButtonPressed)
                 {
-                    try
-                    {
-                        coordinateAttacco += 10;
-                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
-                        if (attaccoNonEffettuato)
-                        {
-                            selezioneAttacco1.Top += 45;
-                        }
-                        else
-                        {
-                            selezioneAttacco1.Top += 90;
-                        }
-                    }
-                    catch { }
-                    coordinateAttacco -= 10;
+                    selezioneAttacco1.Top += 45;
                 }
                 if (moveRight && selezioneAttacco1.Right < 1168 && !confirmButtonPressed)
                 {
-                    try
-                    {
-                        coordinateAttacco += 1;
-                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
-                        if (attaccoNonEffettuato)
-                        {
-                            selezioneAttacco1.Left += 45;
-                        }
-                        else
-                        {
-                            selezioneAttacco1.Left += 90;
-                        }
-                    }
-                    catch { }
-                    coordinateAttacco -= 1;
+                    selezioneAttacco1.Left += 45;
                 }
                 if (moveLeft && selezioneAttacco1.Left > 763 && !confirmButtonPressed)
                 {
-                    try
-                    {
-                        coordinateAttacco -= 1;
-                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
-                        if (attaccoNonEffettuato)
-                        {
-                            selezioneAttacco1.Left -= 45;
-                        }
-                        else
-                        {
-                            selezioneAttacco1.Left -= 90;
-                        }
-                    }
-                    catch { }
-                    coordinateAttacco += 1;
+                    selezioneAttacco1.Left -= 45;
                 }
                 if (confirmButtonPressed)
                 {
@@ -773,75 +717,19 @@ namespace Hyper_Battleship
                 int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco2.Location.X, selezioneAttacco2.Location.Y);
                 if (moveUp && selezioneAttacco2.Top > 85 && !confirmButtonPressed)
                 {
-                    try
-                    {
-                        coordinateAttacco -= 10;
-                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
-                        if (attaccoNonEffettuato)
-                        {
-                            selezioneAttacco2.Top -= 45;
-                        }
-                        else
-                        {
-                            selezioneAttacco2.Top -= 90;
-                        }
-                    }
-                    catch { }
-                    coordinateAttacco += 10;
+                    selezioneAttacco1.Top -= 45;
                 }
                 if (moveDown && selezioneAttacco2.Top < 445 && !confirmButtonPressed)
                 {
-                    try
-                    {
-                        coordinateAttacco += 10;
-                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
-                        if (attaccoNonEffettuato)
-                        {
-                            selezioneAttacco2.Top += 45;
-                        }
-                        else
-                        {
-                            selezioneAttacco2.Top += 90;
-                        }
-                    }
-                    catch { }
-                    coordinateAttacco -= 10;
+                    selezioneAttacco1.Top += 45;
                 }
                 if (moveRight && selezioneAttacco2.Right < 1168 && !confirmButtonPressed)
                 {
-                    try
-                    {
-                        coordinateAttacco += 1;
-                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
-                        if (attaccoNonEffettuato)
-                        {
-                            selezioneAttacco2.Left += 45;
-                        }
-                        else
-                        {
-                            selezioneAttacco2.Left += 90;
-                        }
-                    }
-                    catch { }
-                    coordinateAttacco -= 1;
+                    selezioneAttacco2.Left += 45;
                 }
                 if (moveLeft && selezioneAttacco2.Left > 763 && !confirmButtonPressed)
                 {
-                    try
-                    {
-                        coordinateAttacco -= 1;
-                        bool attaccoNonEffettuato = controlloAttacco(ref coordinateAttacco);
-                        if (attaccoNonEffettuato)
-                        {
-                            selezioneAttacco2.Left -= 45;
-                        }
-                        else
-                        {
-                            selezioneAttacco2.Left -= 90;
-                        }
-                    }
-                    catch { }
-                    coordinateAttacco += 1;
+                    selezioneAttacco2.Left -= 45;
                 }
                 if (confirmButtonPressed)
                 {
@@ -1596,8 +1484,8 @@ namespace Hyper_Battleship
         {
             int[] latoDestroGrigliaVerticale = new int[] { 1, 11, 21, 31, 41 };
             int[] latoSinistroGrigliaVerticale = new int[] { -1, 9, 19, 29, 39 };
-            int[] latoSinistroGrigliaOrrizontale = new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90};
-            int[] latoDestroGrigliaOrrizontale = new int[] { 9, 19, 29, 39, 49, 59, 69, 79, 89 };
+            int[] latoDestroGrigliaOrrizontale = new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90};
+            int[] latoSinistroGrigliaOrrizontale = new int[] { 0, 9, 19, 29, 39, 49, 59, 69, 79, 89 };
             for (int i = 0; i < 9; i++)//per rimuovere il controllo in eccesso, in quanto si trova agli estremi della griglia
             {
                 if (coordinateNaveSuGrigliaArray == latoSinistroGrigliaOrrizontale[i])
@@ -1616,7 +1504,7 @@ namespace Hyper_Battleship
 
                     break;
                 }
-                if(coordinateNaveSuGrigliaArray + indexToRemove - 1 == latoDestroGrigliaOrrizontale[i] || coordinateNaveSuGrigliaArray == latoDestroGrigliaOrrizontale[i])
+                if(coordinateNaveSuGrigliaArray + indexToRemove - 1 == latoDestroGrigliaOrrizontale[i] || coordinateNaveSuGrigliaArray == latoDestroGrigliaOrrizontale[i] || coordinateNaveSuGrigliaArray + indexToRemove == latoDestroGrigliaOrrizontale[i])
                 {
                     if (!immagineGirata)
                     {

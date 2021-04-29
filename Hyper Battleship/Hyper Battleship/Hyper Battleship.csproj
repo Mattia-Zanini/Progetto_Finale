@@ -234,5 +234,8 @@
   <ItemGroup>
     <None Include="Sprites\griglia_Piccola_10x10.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\selezione_Attacco2_Griglia10x10.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
