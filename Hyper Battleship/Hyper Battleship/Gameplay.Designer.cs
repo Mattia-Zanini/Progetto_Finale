@@ -1024,10 +1024,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1358, 681);
+            this.Controls.Add(this.selezioneAttacco2);
             this.Controls.Add(this.countdownRadar);
             this.Controls.Add(this.doppioAssaltoPictureBox);
             this.Controls.Add(this.radarPcitureBox);
-            this.Controls.Add(this.selezioneAttacco2);
             this.Controls.Add(this.selezioneAttacco1);
             this.Controls.Add(this.contatoreTurni);
             this.Controls.Add(this.turnoLabel);

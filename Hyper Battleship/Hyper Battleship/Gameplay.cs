@@ -121,6 +121,10 @@ namespace Hyper_Battleship
             else
             {
                 attacco2 = true;
+                selezioneAttacco2.Visible = true;
+                confermaButton.Visible = true; annullaButton.Visible = true;
+                doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssaltoScalaGrigio;
+                quantitàAssaltoDoppio.Text = (Convert.ToInt32(quantitàAssaltoDoppio.Text) - 1).ToString();
             }
         }
 
@@ -708,20 +712,20 @@ namespace Hyper_Battleship
                         }
                         StrutturaGriglia10[coordinateAttacco] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
                         attacco1 = false;//permette l'eventuale secondo attacco
+                        confirmButtonPressed = false;
                     }
                 }
             }
 
             if (attacco2)//eventuale doppio assalto
             {
-                int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco2.Location.X, selezioneAttacco2.Location.Y);
                 if (moveUp && selezioneAttacco2.Top > 85 && !confirmButtonPressed)
                 {
-                    selezioneAttacco1.Top -= 45;
+                    selezioneAttacco2.Top -= 45;
                 }
                 if (moveDown && selezioneAttacco2.Top < 445 && !confirmButtonPressed)
                 {
-                    selezioneAttacco1.Top += 45;
+                    selezioneAttacco2.Top += 45;
                 }
                 if (moveRight && selezioneAttacco2.Right < 1168 && !confirmButtonPressed)
                 {
@@ -733,6 +737,7 @@ namespace Hyper_Battleship
                 }
                 if (confirmButtonPressed)
                 {
+                    int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco2.Location.X, selezioneAttacco2.Location.Y);
                     bool attaccoValido = controlloAttacco(ref coordinateAttacco);
                     if (attaccoValido)
                     {
@@ -746,8 +751,22 @@ namespace Hyper_Battleship
                             confermaAttacco[3] = "G2_attacco";
                         }
                         StrutturaGriglia10[coordinateAttacco] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
-
+                        confermaButton.Visible = true;
+                        annullaButton.Visible = true;
                     }
+                    else
+                    {
+                        MessageBox.Show("Non puoi selezionare una casella precedentemente attaccata");
+                    }
+                }
+                if (exitOperation)
+                {
+                    selezioneAttacco2.Visible = false;
+                    attacco2 = false;
+                    exitOperation = false;
+                    annullaButton.Visible = false;
+                    confermaButton.Visible = false;
+                    quantitàAssaltoDoppio.Text = (Convert.ToInt32(quantitàAssaltoDoppio.Text) + 1).ToString();
                 }
             }
         }
@@ -1482,29 +1501,28 @@ namespace Hyper_Battleship
 
         private void controlloLatiDellaNaveEstremiGriglia(ref int coordinateNaveSuGrigliaArray, ref int[] posizioniDaControllare,int indexToRemove, bool immagineGirata)//controlla che la nave non sia posizionte al limite a destra della griglia per evitare dei falsi check di navi vicine
         {
-            int[] latoDestroGrigliaVerticale = new int[] { 1, 11, 21, 31, 41 };
-            int[] latoSinistroGrigliaVerticale = new int[] { -1, 9, 19, 29, 39 };
-            int[] latoDestroGrigliaOrrizontale = new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90};
-            int[] latoSinistroGrigliaOrrizontale = new int[] { 0, 9, 19, 29, 39, 49, 59, 69, 79, 89 };
+            int[] controlloLatoDestroNave = new int[] { 1, 11, 21, 31, 41 };
+            int[] controlloLatoSinistroNave = new int[] { -1, 9, 19, 29, 39 };
+            int[] latoSinistroGriglia = new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90};
+            int[] latoDestroGriglia = new int[] { 9, 19, 29, 39, 49, 59, 69, 79, 89 };
             for (int i = 0; i < 9; i++)//per rimuovere il controllo in eccesso, in quanto si trova agli estremi della griglia
             {
-                if (coordinateNaveSuGrigliaArray == latoSinistroGrigliaOrrizontale[i])
+                if(coordinateNaveSuGrigliaArray == latoSinistroGriglia[i] || coordinateNaveSuGrigliaArray == 0)//parte sinistra della griglia
                 {
-                    if (!immagineGirata)
+                    if (!immagineGirata)//se l'iimagine non è girata
                     {
-                        posizioniDaControllare = posizioniDaControllare.RemoveFromArray(-1);
+                        posizioniDaControllare = posizioniDaControllare.RemoveFromArray(-1);//rimuove il controllo alla poppa della nave
                     }
                     else
                     {
-                        for(int j = 0; j < latoSinistroGrigliaVerticale.Length; j++)//quando l'immagine è verticale, verranno eliminati i blocchi da controllare prestabili (universali per tutte le navi)
+                        for(int j = 0; j < controlloLatoSinistroNave.Length; j++)
                         {
-                            posizioniDaControllare = posizioniDaControllare.RemoveFromArray(latoSinistroGrigliaVerticale[j]);
+                            posizioniDaControllare = posizioniDaControllare.RemoveFromArray(controlloLatoSinistroNave[j]);//rimuove i controlli a lato della nave
                         }
                     }
-
                     break;
                 }
-                if(coordinateNaveSuGrigliaArray + indexToRemove - 1 == latoDestroGrigliaOrrizontale[i] || coordinateNaveSuGrigliaArray == latoDestroGrigliaOrrizontale[i] || coordinateNaveSuGrigliaArray + indexToRemove == latoDestroGrigliaOrrizontale[i])
+                if(coordinateNaveSuGrigliaArray == latoDestroGriglia[i])//parte di destra della griglia
                 {
                     if (!immagineGirata)
                     {
@@ -1512,9 +1530,9 @@ namespace Hyper_Battleship
                     }
                     else
                     {
-                        for (int j = 0; j < latoDestroGrigliaVerticale.Length; j++)
+                        for(int j = 0; j < controlloLatoDestroNave.Length; j++)
                         {
-                            posizioniDaControllare = posizioniDaControllare.RemoveFromArray(latoDestroGrigliaVerticale[j]);
+                            posizioniDaControllare = posizioniDaControllare.RemoveFromArray(controlloLatoDestroNave[j]);
                         }
                     }
                     break;
