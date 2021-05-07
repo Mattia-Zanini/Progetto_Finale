@@ -8,6 +8,9 @@ namespace Hyper_Battleship
 {
     static class Program
     {
+        public static int scoreGiocatore1 = 0, scoreGiocatore2 = 0;
+        public static int quantitàAssaltoDoppioGiocatore1 = 2, quantitàAssaltoDoppioGiocatore2 = 2;
+        public static bool finePartita = false;
         /// <summary>
         /// Punto di ingresso principale dell'applicazione.
         /// </summary>

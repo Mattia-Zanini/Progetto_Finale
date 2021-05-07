@@ -85,7 +85,6 @@
             this.contatoreTurni = new System.Windows.Forms.Label();
             this.doppioAssaltoPictureBox = new System.Windows.Forms.PictureBox();
             this.radarPcitureBox = new System.Windows.Forms.PictureBox();
-            this.selezioneAttacco2 = new System.Windows.Forms.PictureBox();
             this.selezioneAttacco1 = new System.Windows.Forms.PictureBox();
             this.naveDassalto3Griglia10x10 = new System.Windows.Forms.PictureBox();
             this.naveDassalto2Griglia10x10 = new System.Windows.Forms.PictureBox();
@@ -105,9 +104,9 @@
             this.portaereiPictureBox10x10 = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoPiccola = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
+            this.selezioneAttacco2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto3Griglia10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto2Griglia10x10)).BeginInit();
@@ -127,6 +126,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).BeginInit();
             this.SuspendLayout();
             // 
             // confermaButton
@@ -774,18 +774,6 @@
             this.radarPcitureBox.TabStop = false;
             this.radarPcitureBox.Visible = false;
             // 
-            // selezioneAttacco2
-            // 
-            this.selezioneAttacco2.BackColor = System.Drawing.Color.Transparent;
-            this.selezioneAttacco2.Image = global::Hyper_Battleship.Properties.Resources.selezione_Attacco2_Griglia10x10;
-            this.selezioneAttacco2.ImageLocation = "";
-            this.selezioneAttacco2.Location = new System.Drawing.Point(944, 266);
-            this.selezioneAttacco2.Name = "selezioneAttacco2";
-            this.selezioneAttacco2.Size = new System.Drawing.Size(45, 45);
-            this.selezioneAttacco2.TabIndex = 80;
-            this.selezioneAttacco2.TabStop = false;
-            this.selezioneAttacco2.Visible = false;
-            // 
             // selezioneAttacco1
             // 
             this.selezioneAttacco1.BackColor = System.Drawing.Color.Transparent;
@@ -1018,6 +1006,18 @@
             this.grigliaDiGiocoGrande.TabIndex = 1;
             this.grigliaDiGiocoGrande.TabStop = false;
             // 
+            // selezioneAttacco2
+            // 
+            this.selezioneAttacco2.BackColor = System.Drawing.Color.Transparent;
+            this.selezioneAttacco2.Image = global::Hyper_Battleship.Properties.Resources.selezione_Attacco2_Griglia10x10;
+            this.selezioneAttacco2.ImageLocation = "";
+            this.selezioneAttacco2.Location = new System.Drawing.Point(899, 221);
+            this.selezioneAttacco2.Name = "selezioneAttacco2";
+            this.selezioneAttacco2.Size = new System.Drawing.Size(45, 45);
+            this.selezioneAttacco2.TabIndex = 81;
+            this.selezioneAttacco2.TabStop = false;
+            this.selezioneAttacco2.Visible = false;
+            // 
             // Gameplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1108,7 +1108,6 @@
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Gameplay_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto3Griglia10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto2Griglia10x10)).EndInit();
@@ -1128,6 +1127,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
