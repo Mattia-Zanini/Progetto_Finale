@@ -83,6 +83,12 @@
             this.annullaButton = new System.Windows.Forms.Button();
             this.turnoLabel = new System.Windows.Forms.Label();
             this.contatoreTurni = new System.Windows.Forms.Label();
+            this.colpitoDimostrativo = new System.Windows.Forms.Label();
+            this.mancatoDimostrativo = new System.Windows.Forms.Label();
+            this.naveMancataDimostrativo = new System.Windows.Forms.PictureBox();
+            this.naveColpitaDimostrativo = new System.Windows.Forms.PictureBox();
+            this.pictureDaCopiare = new System.Windows.Forms.PictureBox();
+            this.selezioneAttacco2 = new System.Windows.Forms.PictureBox();
             this.doppioAssaltoPictureBox = new System.Windows.Forms.PictureBox();
             this.radarPcitureBox = new System.Windows.Forms.PictureBox();
             this.selezioneAttacco1 = new System.Windows.Forms.PictureBox();
@@ -104,12 +110,10 @@
             this.portaereiPictureBox10x10 = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoPiccola = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
-            this.selezioneAttacco2 = new System.Windows.Forms.PictureBox();
-            this.pictureDaCopiare = new System.Windows.Forms.PictureBox();
-            this.naveColpitaDimostrativo = new System.Windows.Forms.PictureBox();
-            this.naveMancataDimostrativo = new System.Windows.Forms.PictureBox();
-            this.colpitoDimostrativo = new System.Windows.Forms.Label();
-            this.mancatoDimostrativo = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancataDimostrativo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveColpitaDimostrativo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureDaCopiare)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco1)).BeginInit();
@@ -131,10 +135,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureDaCopiare)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.naveColpitaDimostrativo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.naveMancataDimostrativo)).BeginInit();
             this.SuspendLayout();
             // 
             // confermaButton
@@ -757,6 +757,81 @@
             this.contatoreTurni.TabIndex = 78;
             this.contatoreTurni.Visible = false;
             // 
+            // colpitoDimostrativo
+            // 
+            this.colpitoDimostrativo.AutoSize = true;
+            this.colpitoDimostrativo.BackColor = System.Drawing.Color.Transparent;
+            this.colpitoDimostrativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colpitoDimostrativo.ForeColor = System.Drawing.Color.White;
+            this.colpitoDimostrativo.Location = new System.Drawing.Point(866, 643);
+            this.colpitoDimostrativo.Name = "colpitoDimostrativo";
+            this.colpitoDimostrativo.Size = new System.Drawing.Size(90, 29);
+            this.colpitoDimostrativo.TabIndex = 85;
+            this.colpitoDimostrativo.Text = "Colpito";
+            this.colpitoDimostrativo.Visible = false;
+            // 
+            // mancatoDimostrativo
+            // 
+            this.mancatoDimostrativo.AutoSize = true;
+            this.mancatoDimostrativo.BackColor = System.Drawing.Color.Transparent;
+            this.mancatoDimostrativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mancatoDimostrativo.ForeColor = System.Drawing.Color.White;
+            this.mancatoDimostrativo.Location = new System.Drawing.Point(1021, 643);
+            this.mancatoDimostrativo.Name = "mancatoDimostrativo";
+            this.mancatoDimostrativo.Size = new System.Drawing.Size(104, 29);
+            this.mancatoDimostrativo.TabIndex = 86;
+            this.mancatoDimostrativo.Text = "Mancato";
+            this.mancatoDimostrativo.Visible = false;
+            // 
+            // naveMancataDimostrativo
+            // 
+            this.naveMancataDimostrativo.BackColor = System.Drawing.Color.White;
+            this.naveMancataDimostrativo.Image = global::Hyper_Battleship.Properties.Resources.attaccoNaveMancata10x10;
+            this.naveMancataDimostrativo.ImageLocation = "";
+            this.naveMancataDimostrativo.Location = new System.Drawing.Point(1044, 580);
+            this.naveMancataDimostrativo.Name = "naveMancataDimostrativo";
+            this.naveMancataDimostrativo.Size = new System.Drawing.Size(60, 60);
+            this.naveMancataDimostrativo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.naveMancataDimostrativo.TabIndex = 84;
+            this.naveMancataDimostrativo.TabStop = false;
+            this.naveMancataDimostrativo.Visible = false;
+            // 
+            // naveColpitaDimostrativo
+            // 
+            this.naveColpitaDimostrativo.BackColor = System.Drawing.Color.White;
+            this.naveColpitaDimostrativo.Image = global::Hyper_Battleship.Properties.Resources.attaccoNaveAffondata10x10;
+            this.naveColpitaDimostrativo.ImageLocation = "";
+            this.naveColpitaDimostrativo.Location = new System.Drawing.Point(884, 580);
+            this.naveColpitaDimostrativo.Name = "naveColpitaDimostrativo";
+            this.naveColpitaDimostrativo.Size = new System.Drawing.Size(60, 60);
+            this.naveColpitaDimostrativo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.naveColpitaDimostrativo.TabIndex = 83;
+            this.naveColpitaDimostrativo.TabStop = false;
+            this.naveColpitaDimostrativo.Visible = false;
+            // 
+            // pictureDaCopiare
+            // 
+            this.pictureDaCopiare.BackColor = System.Drawing.Color.White;
+            this.pictureDaCopiare.ImageLocation = "";
+            this.pictureDaCopiare.Location = new System.Drawing.Point(1301, 14);
+            this.pictureDaCopiare.Name = "pictureDaCopiare";
+            this.pictureDaCopiare.Size = new System.Drawing.Size(45, 45);
+            this.pictureDaCopiare.TabIndex = 82;
+            this.pictureDaCopiare.TabStop = false;
+            this.pictureDaCopiare.Visible = false;
+            // 
+            // selezioneAttacco2
+            // 
+            this.selezioneAttacco2.BackColor = System.Drawing.Color.Transparent;
+            this.selezioneAttacco2.Image = global::Hyper_Battleship.Properties.Resources.selezione_Attacco2_Griglia10x10;
+            this.selezioneAttacco2.ImageLocation = "";
+            this.selezioneAttacco2.Location = new System.Drawing.Point(899, 221);
+            this.selezioneAttacco2.Name = "selezioneAttacco2";
+            this.selezioneAttacco2.Size = new System.Drawing.Size(45, 45);
+            this.selezioneAttacco2.TabIndex = 81;
+            this.selezioneAttacco2.TabStop = false;
+            this.selezioneAttacco2.Visible = false;
+            // 
             // doppioAssaltoPictureBox
             // 
             this.doppioAssaltoPictureBox.BackColor = System.Drawing.Color.White;
@@ -940,6 +1015,7 @@
             this.naveDassaltoPictureBox10x10.Location = new System.Drawing.Point(718, 397);
             this.naveDassaltoPictureBox10x10.Name = "naveDassaltoPictureBox10x10";
             this.naveDassaltoPictureBox10x10.Size = new System.Drawing.Size(63, 63);
+            this.naveDassaltoPictureBox10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.naveDassaltoPictureBox10x10.TabIndex = 12;
             this.naveDassaltoPictureBox10x10.TabStop = false;
             this.naveDassaltoPictureBox10x10.Click += new System.EventHandler(this.naveDassaltoPictureBox10x10_Click);
@@ -952,6 +1028,7 @@
             this.cacciatorpedinierePictureBox10x10.Location = new System.Drawing.Point(718, 310);
             this.cacciatorpedinierePictureBox10x10.Name = "cacciatorpedinierePictureBox10x10";
             this.cacciatorpedinierePictureBox10x10.Size = new System.Drawing.Size(126, 63);
+            this.cacciatorpedinierePictureBox10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.cacciatorpedinierePictureBox10x10.TabIndex = 11;
             this.cacciatorpedinierePictureBox10x10.TabStop = false;
             this.cacciatorpedinierePictureBox10x10.Click += new System.EventHandler(this.cacciatorpedinierePictureBox10x10_Click);
@@ -964,6 +1041,7 @@
             this.sottomarinoPictureBox10x10.Location = new System.Drawing.Point(717, 216);
             this.sottomarinoPictureBox10x10.Name = "sottomarinoPictureBox10x10";
             this.sottomarinoPictureBox10x10.Size = new System.Drawing.Size(189, 63);
+            this.sottomarinoPictureBox10x10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.sottomarinoPictureBox10x10.TabIndex = 10;
             this.sottomarinoPictureBox10x10.TabStop = false;
             this.sottomarinoPictureBox10x10.Click += new System.EventHandler(this.sottomarinoPictureBox10x10_Click);
@@ -1013,81 +1091,6 @@
             this.grigliaDiGiocoGrande.Size = new System.Drawing.Size(630, 630);
             this.grigliaDiGiocoGrande.TabIndex = 1;
             this.grigliaDiGiocoGrande.TabStop = false;
-            // 
-            // selezioneAttacco2
-            // 
-            this.selezioneAttacco2.BackColor = System.Drawing.Color.Transparent;
-            this.selezioneAttacco2.Image = global::Hyper_Battleship.Properties.Resources.selezione_Attacco2_Griglia10x10;
-            this.selezioneAttacco2.ImageLocation = "";
-            this.selezioneAttacco2.Location = new System.Drawing.Point(899, 221);
-            this.selezioneAttacco2.Name = "selezioneAttacco2";
-            this.selezioneAttacco2.Size = new System.Drawing.Size(45, 45);
-            this.selezioneAttacco2.TabIndex = 81;
-            this.selezioneAttacco2.TabStop = false;
-            this.selezioneAttacco2.Visible = false;
-            // 
-            // pictureDaCopiare
-            // 
-            this.pictureDaCopiare.BackColor = System.Drawing.Color.White;
-            this.pictureDaCopiare.ImageLocation = "";
-            this.pictureDaCopiare.Location = new System.Drawing.Point(1301, 14);
-            this.pictureDaCopiare.Name = "pictureDaCopiare";
-            this.pictureDaCopiare.Size = new System.Drawing.Size(45, 45);
-            this.pictureDaCopiare.TabIndex = 82;
-            this.pictureDaCopiare.TabStop = false;
-            this.pictureDaCopiare.Visible = false;
-            // 
-            // naveColpitaDimostrativo
-            // 
-            this.naveColpitaDimostrativo.BackColor = System.Drawing.Color.White;
-            this.naveColpitaDimostrativo.Image = global::Hyper_Battleship.Properties.Resources.attaccoNaveAffondata10x10;
-            this.naveColpitaDimostrativo.ImageLocation = "";
-            this.naveColpitaDimostrativo.Location = new System.Drawing.Point(884, 580);
-            this.naveColpitaDimostrativo.Name = "naveColpitaDimostrativo";
-            this.naveColpitaDimostrativo.Size = new System.Drawing.Size(60, 60);
-            this.naveColpitaDimostrativo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.naveColpitaDimostrativo.TabIndex = 83;
-            this.naveColpitaDimostrativo.TabStop = false;
-            this.naveColpitaDimostrativo.Visible = false;
-            // 
-            // naveMancataDimostrativo
-            // 
-            this.naveMancataDimostrativo.BackColor = System.Drawing.Color.White;
-            this.naveMancataDimostrativo.Image = global::Hyper_Battleship.Properties.Resources.attaccoNaveMancata10x10;
-            this.naveMancataDimostrativo.ImageLocation = "";
-            this.naveMancataDimostrativo.Location = new System.Drawing.Point(1044, 580);
-            this.naveMancataDimostrativo.Name = "naveMancataDimostrativo";
-            this.naveMancataDimostrativo.Size = new System.Drawing.Size(60, 60);
-            this.naveMancataDimostrativo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.naveMancataDimostrativo.TabIndex = 84;
-            this.naveMancataDimostrativo.TabStop = false;
-            this.naveMancataDimostrativo.Visible = false;
-            // 
-            // colpitoDimostrativo
-            // 
-            this.colpitoDimostrativo.AutoSize = true;
-            this.colpitoDimostrativo.BackColor = System.Drawing.Color.Transparent;
-            this.colpitoDimostrativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.colpitoDimostrativo.ForeColor = System.Drawing.Color.White;
-            this.colpitoDimostrativo.Location = new System.Drawing.Point(866, 643);
-            this.colpitoDimostrativo.Name = "colpitoDimostrativo";
-            this.colpitoDimostrativo.Size = new System.Drawing.Size(90, 29);
-            this.colpitoDimostrativo.TabIndex = 85;
-            this.colpitoDimostrativo.Text = "Colpito";
-            this.colpitoDimostrativo.Visible = false;
-            // 
-            // mancatoDimostrativo
-            // 
-            this.mancatoDimostrativo.AutoSize = true;
-            this.mancatoDimostrativo.BackColor = System.Drawing.Color.Transparent;
-            this.mancatoDimostrativo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mancatoDimostrativo.ForeColor = System.Drawing.Color.White;
-            this.mancatoDimostrativo.Location = new System.Drawing.Point(1021, 643);
-            this.mancatoDimostrativo.Name = "mancatoDimostrativo";
-            this.mancatoDimostrativo.Size = new System.Drawing.Size(104, 29);
-            this.mancatoDimostrativo.TabIndex = 86;
-            this.mancatoDimostrativo.Text = "Mancato";
-            this.mancatoDimostrativo.Visible = false;
             // 
             // Gameplay
             // 
@@ -1178,10 +1181,14 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Gameplay";
-            this.Text = "<  ì\'ù";
+            this.Text = "Hyper Battleship";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Gameplay_FormClosed);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Gameplay_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Gameplay_KeyUp);
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancataDimostrativo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveColpitaDimostrativo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureDaCopiare)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco1)).EndInit();
@@ -1203,10 +1210,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureDaCopiare)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.naveColpitaDimostrativo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.naveMancataDimostrativo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

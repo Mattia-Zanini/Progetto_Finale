@@ -285,5 +285,14 @@
   <ItemGroup>
     <None Include="Sprites\contornoTastoOK.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\griglia_Piccola_6x6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\tastoE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\tastoQ.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

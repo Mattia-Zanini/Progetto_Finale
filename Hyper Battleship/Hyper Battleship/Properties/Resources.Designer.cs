@@ -213,6 +213,16 @@ namespace Hyper_Battleship.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap griglia_Piccola_6x6 {
+            get {
+                object obj = ResourceManager.GetObject("griglia_Piccola_6x6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Griglia10x10 {
             get {
                 object obj = ResourceManager.GetObject("Griglia10x10", resourceCulture);
@@ -476,6 +486,26 @@ namespace Hyper_Battleship.Properties {
         internal static System.Drawing.Bitmap tastoD {
             get {
                 object obj = ResourceManager.GetObject("tastoD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tastoE {
+            get {
+                object obj = ResourceManager.GetObject("tastoE", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tastoQ {
+            get {
+                object obj = ResourceManager.GetObject("tastoQ", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

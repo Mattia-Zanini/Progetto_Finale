@@ -14,6 +14,50 @@ namespace Hyper_Battleship
         public Gameplay()
         {
             InitializeComponent();
+            if (Program.modalità == false)//nel caso la partita sia sulla modalità "Partita Veloce" il layout della schermata cambia
+            {
+                grigliaDiGiocoGrande.Image = Properties.Resources.Griglia6x6;
+                grigliaDiGiocoPiccola.Image = Properties.Resources.griglia_Piccola_6x6;
+                g_GrigliaGrande10.Visible = false; g_GrigliaPiccola10.Visible = false;
+                h_GrigliaGrande10.Visible = false; h_GrigliaPiccola10.Visible = false;
+                i_GrigliaGrande10.Visible = false; i_GrigliaPiccola10.Visible = false;
+                l_GrigliaGrande10.Visible = false; l_GrigliaPiccola10.Visible = false;
+                GrigliaGrade10_7.Visible = false; GrigliaPiccola10_7.Visible = false;
+                GrigliaGrade10_8.Visible = false; GrigliaPiccola10_8.Visible = false;
+                GrigliaGrade10_9.Visible = false; GrigliaPiccola10_9.Visible = false;
+                GrigliaGrade10_10.Visible = false; GrigliaPiccola10_10.Visible = false;
+                GrigliaGrade10_1.Location = new Point(81, GrigliaGrade10_1.Location.Y);
+                GrigliaGrade10_2.Location = new Point(189, GrigliaGrade10_1.Location.Y);
+                GrigliaGrade10_3.Location = new Point(293, GrigliaGrade10_1.Location.Y);
+                GrigliaGrade10_4.Location = new Point(400, GrigliaGrade10_1.Location.Y);
+                GrigliaGrade10_5.Location = new Point(503, GrigliaGrade10_1.Location.Y);
+                GrigliaGrade10_6.Location = new Point(607, GrigliaGrade10_1.Location.Y);
+                a_GrigliaGrande10.Location = new Point(a_GrigliaGrande10.Location.X, 74);
+                b_GrigliaGrande10.Location = new Point(a_GrigliaGrande10.Location.X, 179);
+                c_GrigliaGrande10.Location = new Point(a_GrigliaGrande10.Location.X, 284);
+                d_GrigliaGrande10.Location = new Point(a_GrigliaGrande10.Location.X, 397);
+                e_GrigliaGrande10.Location = new Point(a_GrigliaGrande10.Location.X, 498);
+                f_GrigliaGrande10.Location = new Point(a_GrigliaGrande10.Location.X, 604);
+                sottomarinoPictureBox10x10.Image = Properties.Resources.sottomarino_Box6x6; sottomarinoPictureBox10x10.Location = new Point(sottomarinoPictureBox10x10.Location.X, 40);
+                cacciatorpedinierePictureBox10x10.Image = Properties.Resources.cacciatorpediniere_Box6x6; cacciatorpedinierePictureBox10x10.Location = new Point(sottomarinoPictureBox10x10.Location.X, 116);
+                naveDassaltoPictureBox10x10.Image = Properties.Resources.Nave_D_Assalto_Box6x6; naveDassaltoPictureBox10x10.Location = new Point(sottomarinoPictureBox10x10.Location.X, 216);
+                portaereiPictureBox10x10.Visible = false; quantitàPortaerei.Visible = false;
+                corazzataPcitureBox10x10.Visible = false; quantitàCorazzata.Visible = false;
+                GrigliaPiccola10_2.Location = new Point(819, GrigliaPiccola10_2.Location.Y);
+                GrigliaPiccola10_3.Location = new Point(898, GrigliaPiccola10_2.Location.Y);
+                GrigliaPiccola10_4.Location = new Point(974, GrigliaPiccola10_2.Location.Y);
+                GrigliaPiccola10_5.Location = new Point(1049, GrigliaPiccola10_2.Location.Y);
+                GrigliaPiccola10_6.Location = new Point(1125, GrigliaPiccola10_2.Location.Y);
+                a_GrigliaPiccola10.Location = new Point(a_GrigliaPiccola10.Location.X, 63);
+                b_GrigliaPiccola10.Location = new Point(a_GrigliaPiccola10.Location.X, 140);
+                c_GrigliaPiccola10.Location = new Point(a_GrigliaPiccola10.Location.X, 225);
+                d_GrigliaPiccola10.Location = new Point(a_GrigliaPiccola10.Location.X, 287);
+                e_GrigliaPiccola10.Location = new Point(a_GrigliaPiccola10.Location.X, 360);
+                f_GrigliaPiccola10.Location = new Point(a_GrigliaPiccola10.Location.X, 440);
+                naveDassalto1Griglia10x10.Height = 105; naveDassalto1Griglia10x10.Width = 105;
+                naveDassalto2Griglia10x10.Height = 105; naveDassalto2Griglia10x10.Width = 105;
+                naveDassalto3Griglia10x10.Height = 105; naveDassalto3Griglia10x10.Width = 105;
+            }
             for (int i = 0; i < 88; i++)//inizializza le picturebox
             {
                 attaccoMancatoGiocatore1[i] = pictureDaCopiare;
