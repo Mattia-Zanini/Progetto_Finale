@@ -14,6 +14,32 @@ namespace Hyper_Battleship
         public Gameplay()
         {
             InitializeComponent();
+            for (int i = 0; i < 88; i++)//inizializza le picturebox
+            {
+                attaccoMancatoGiocatore1[i] = pictureDaCopiare;
+                attaccoMancatoGiocatore1[i].Visible = false;
+                attaccoMancatoGiocatore1[i].Image = Properties.Resources.attaccoNaveMancata10x10;
+                if (Program.multigiocatore)//nel caso il gioco sia impostato su multigiocatore
+                {
+                    attaccoMancatoGiocatore2[i] = pictureDaCopiare;
+                    attaccoMancatoGiocatore2[i].Visible = false;
+                    attaccoMancatoGiocatore2[i].Image = Properties.Resources.attaccoNaveMancata10x10;
+                }
+            }
+            for (int i = 0; i < 22; i++)
+            {
+                attaccoColpitoGiocatore1[i] = pictureDaCopiare;
+                attaccoColpitoGiocatore1[i].Visible = false;
+                attaccoColpitoGiocatore1[i].Image = Properties.Resources.attaccoNaveAffondata10x10;
+                if (Program.multigiocatore)
+                {
+                    attaccoColpitoGiocatore2[i] = pictureDaCopiare;
+                    attaccoColpitoGiocatore2[i].Visible = false;
+                    attaccoColpitoGiocatore2[i].Image = Properties.Resources.attaccoNaveAffondata10x10;
+                }
+            }
+            selezioneAttacco1.Image = Properties.Resources.selezione_Attacco_Griglia10x10;
+            selezioneAttacco2.Image = Properties.Resources.selezione_Attacco2_Griglia10x10;
         }
         private void Gameplay_FormClosed(object sender, FormClosedEventArgs e)//per chiudere il form
         {
@@ -21,7 +47,7 @@ namespace Hyper_Battleship
         }
 
         //Griglia 10 x 10 caselle. partita normale
-        public static string[] StrutturaGriglia10 = new string[]  {"acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
+        private static string[] StrutturaGriglia10 = new string[] {"acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
@@ -32,12 +58,20 @@ namespace Hyper_Battleship
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no" };
         //Griglia 6 x 6 caselle, partita veloce
-        public static string[] StrutturaGriglia6 = new string[]   {"acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
+        private static string[] StrutturaGriglia6 = new string[]  {"acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no",
                                                                    "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no", "acqua1,acqua2,G1_no,G2_no" };
+
+        //picturebox che servono per indicare ai giocatori se colpiscono o meno le navi nemiche
+        int naviColpiteGiocatore1 = 0, naviColpiteGiocatore2 = 0;
+        int naviMancateGiocatore1 = 0, naviMancateGiocatore2 = 0;
+        PictureBox[] attaccoMancatoGiocatore1 = new PictureBox[88];
+        PictureBox[] attaccoColpitoGiocatore1 = new PictureBox[22];
+        PictureBox[] attaccoMancatoGiocatore2 = new PictureBox[88];
+        PictureBox[] attaccoColpitoGiocatore2 = new PictureBox[22];
 
         #region Variabili Per il Fuzionamento dell Programma + Tasto "Conferma", "Annulla" e "Passa Turno"
         int nTurno = -1, nTimerRadar;
@@ -69,6 +103,13 @@ namespace Hyper_Battleship
             {
                 messaggioGiaMostrato = false;
             }
+            if(nTurno > 0)
+            {
+                naveColpitaDimostrativo.Visible = true;
+                naveMancataDimostrativo.Visible = true;
+                colpitoDimostrativo.Visible = true;
+                mancatoDimostrativo.Visible = true;
+            }
             if (nTurno == 0)//riporta le navi invisibili, permettendo al secondo giocatore di poterle piazzare
             {
                 portaereiGriglia10x10.Visible = false; portaereiImaggineGirata = false; quantitàPortaerei.Text = "1"; portaereiPosizionata = false; portaereiGriglia10x10.Width = 315; portaereiGriglia10x10.Height = 63; portaereiGriglia10x10.Image = Properties.Resources.portaerei_Griglia10x10;
@@ -88,6 +129,9 @@ namespace Hyper_Battleship
             }
             else if (nTurno == 1)//nel caso entrambi i giocatori sono sicuri della loro decisione sull'allocare le navi nelle rispettive posizioni, comincia il gioco
             {
+                IstruzioniAttacco f5 = new IstruzioniAttacco();
+                f5.Show();//per mostrare le istruzioni di come attaccare
+
                 player1PictureBox.Visible = true;
                 player2PictureBox.Visible = false;
 
@@ -110,6 +154,7 @@ namespace Hyper_Battleship
                 player1PictureBox.Visible = true; player2PictureBox.Visible = false;
                 quantitàAssaltoDoppio.Text = Program.quantitàAssaltoDoppioGiocatore1.ToString();
                 mostraNavi(posizioneNaviGiocatore1);
+                selezioneAttacco1.Visible = true;
                 selezioneAttacco1.Location = new Point(899, 221);
                 attacco1 = true; attacco2 = false;
                 confermaButton.Visible = true;
@@ -120,6 +165,24 @@ namespace Hyper_Battleship
                 else
                 {
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
+                }
+                //mostra le navi del giocatore 1
+                for(int i = 0; i < naviColpiteGiocatore1; i++)
+                {
+                    attaccoColpitoGiocatore1[i].Visible = true;
+                }
+                for (int i = 0; i < naviMancateGiocatore1; i++)
+                {
+                    attaccoMancatoGiocatore1[i].Visible = true;
+                }
+                //nasconde le navi del giocatore 2
+                for (int i = 0; i < naviColpiteGiocatore2; i++)
+                {
+                    attaccoColpitoGiocatore2[i].Visible = false;
+                }
+                for (int i = 0; i < naviMancateGiocatore2; i++)
+                {
+                    attaccoMancatoGiocatore2[i].Visible = false;
                 }
             }
             else if(nTurno % 2 == 0)//round giocatore 2
@@ -137,6 +200,24 @@ namespace Hyper_Battleship
                 else
                 {
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
+                }
+                //nasconde le navi del giocatore 1
+                for (int i = 0; i < naviColpiteGiocatore1; i++)
+                {
+                    attaccoColpitoGiocatore1[i].Visible = false;
+                }
+                for (int i = 0; i < naviMancateGiocatore1; i++)
+                {
+                    attaccoMancatoGiocatore1[i].Visible = false;
+                }
+                //mostra le navi del giocatore 2
+                for (int i = 0; i < naviColpiteGiocatore2; i++)
+                {
+                    attaccoColpitoGiocatore2[i].Visible = true;
+                }
+                for (int i = 0; i < naviMancateGiocatore2; i++)
+                {
+                    attaccoMancatoGiocatore2[i].Visible = true;
                 }
             }
         }
@@ -901,6 +982,7 @@ namespace Hyper_Battleship
                         annullaButton.Visible = false;
                         confermaButton.Visible = false;
                         passaTurnoButton.Visible = true;
+                        attaccoAlleNavi(confermaAttacco, selezioneAttacco1);
                     }
                 }
             }
@@ -943,6 +1025,7 @@ namespace Hyper_Battleship
                         confirmButtonPressed = false;
                         annullaButton.Visible = false;
                         passaTurnoButton.Visible = true;
+                        attaccoAlleNavi(confermaAttacco, selezioneAttacco2);
                     }
                     else
                     {
@@ -958,6 +1041,40 @@ namespace Hyper_Battleship
                     confermaButton.Visible = false;
                     quantitàAssaltoDoppio.Text = (Convert.ToInt32(quantitàAssaltoDoppio.Text) + 1).ToString();
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
+                }
+            }
+        }
+
+        private void attaccoAlleNavi(string[] nave, PictureBox attacco)//controlla se un giocatore colpisce o manca una nave
+        {
+            if (player1PictureBox.Visible)
+            {
+                if(nave[0] != "acqua1")
+                {
+                    attaccoColpitoGiocatore1[naviColpiteGiocatore1].Location = new Point(attacco.Location.X, attacco.Location.Y);
+                    attaccoColpitoGiocatore1[naviColpiteGiocatore1].Visible = true;
+                    naviColpiteGiocatore1++;
+                }
+                else
+                {
+                    attaccoMancatoGiocatore1[naviMancateGiocatore1].Location = new Point(attacco.Location.X, attacco.Location.Y);
+                    attaccoMancatoGiocatore1[naviMancateGiocatore1].Visible = true;
+                    naviMancateGiocatore1++;
+                }
+            }
+            else
+            {
+                if (nave[1] != "acqua2")
+                {
+                    attaccoColpitoGiocatore2[naviColpiteGiocatore2].Location = new Point(attacco.Location.X, attacco.Location.Y);
+                    attaccoColpitoGiocatore2[naviColpiteGiocatore2].Visible = true;
+                    naviColpiteGiocatore2++;
+                }
+                else
+                {
+                    attaccoMancatoGiocatore2[naviMancateGiocatore2].Location = new Point(attacco.Location.X, attacco.Location.Y);
+                    attaccoMancatoGiocatore2[naviMancateGiocatore2].Visible = true;
+                    naviMancateGiocatore2++;
                 }
             }
         }

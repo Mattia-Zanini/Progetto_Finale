@@ -69,9 +69,6 @@ namespace Hyper_Battleship
                 sezione = false;
             }
         }
-
-        public bool modalità = false; //false = partita veloce
-                                      //true = partita normale
         private void fastMatchButton_Click(object sender, EventArgs e)//per impostare la partita veloce
         {
             sezione = true;
@@ -88,11 +85,9 @@ namespace Hyper_Battleship
             normalMatchButton.Visible = false;
             singlePlayerButton.Visible = true;
             multiplayerButton.Visible = true;
-            modalità = true;
+            Program.modalità = true;
         }
 
-        public bool multigiocatore = false; //false = giocatore singolo
-                                            //true = multigiocatore
         private void singlePlayerButton_Click(object sender, EventArgs e)
         {
             schermataSuccessiva();
@@ -100,7 +95,7 @@ namespace Hyper_Battleship
 
         private void multiplayerButton_Click(object sender, EventArgs e)//imposta la partita multigiocatore
         {
-            multigiocatore = true;
+            Program.multigiocatore = true;
             schermataSuccessiva();
         }
 

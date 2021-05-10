@@ -63,6 +63,26 @@ namespace Hyper_Battleship.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap attaccoNaveAffondata10x10 {
+            get {
+                object obj = ResourceManager.GetObject("attaccoNaveAffondata10x10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap attaccoNaveMancata10x10 {
+            get {
+                object obj = ResourceManager.GetObject("attaccoNaveMancata10x10", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap cacciatorpediniere_Box10x10 {
             get {
                 object obj = ResourceManager.GetObject("cacciatorpediniere_Box10x10", resourceCulture);
@@ -116,6 +136,16 @@ namespace Hyper_Battleship.Properties {
         internal static System.Drawing.Bitmap cacciatorpediniere_Griglia6x6Verticale {
             get {
                 object obj = ResourceManager.GetObject("cacciatorpediniere_Griglia6x6Verticale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap contornoTastoOK {
+            get {
+                object obj = ResourceManager.GetObject("contornoTastoOK", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -426,6 +456,46 @@ namespace Hyper_Battleship.Properties {
         internal static System.Drawing.Bitmap sottomarino_Griglia6x6Verticale {
             get {
                 object obj = ResourceManager.GetObject("sottomarino_Griglia6x6Verticale", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tastoA {
+            get {
+                object obj = ResourceManager.GetObject("tastoA", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tastoD {
+            get {
+                object obj = ResourceManager.GetObject("tastoD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tastoS {
+            get {
+                object obj = ResourceManager.GetObject("tastoS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tastoW {
+            get {
+                object obj = ResourceManager.GetObject("tastoW", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

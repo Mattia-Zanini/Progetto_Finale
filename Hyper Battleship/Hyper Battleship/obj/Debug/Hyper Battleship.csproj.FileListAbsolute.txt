@@ -67,3 +67,5 @@ C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battle
 C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.pdb
 C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Gameplay.resources
 C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Gameplay.resources
+C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Istruzioni.resources
+C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.IstruzioniAttacco.resources

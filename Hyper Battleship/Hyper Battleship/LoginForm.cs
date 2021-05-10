@@ -147,7 +147,9 @@ namespace Hyper_Battleship
         {
             //comincia la partita
             Gameplay f3 = new Gameplay();
+            Istruzioni f4 = new Istruzioni();
             f3.Show();
+            f4.Show();//per mostrare come muovere le navi da posizionare
             this.Close();
         }
 

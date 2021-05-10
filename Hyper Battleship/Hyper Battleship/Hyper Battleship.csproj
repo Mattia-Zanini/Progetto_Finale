@@ -52,6 +52,18 @@
     <Compile Include="Gameplay.Designer.cs">
       <DependentUpon>Gameplay.cs</DependentUpon>
     </Compile>
+    <Compile Include="Istruzioni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Istruzioni.Designer.cs">
+      <DependentUpon>Istruzioni.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IstruzioniAttacco.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IstruzioniAttacco.Designer.cs">
+      <DependentUpon>IstruzioniAttacco.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +81,12 @@
     </Compile>
     <EmbeddedResource Include="Gameplay.resx">
       <DependentUpon>Gameplay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Istruzioni.resx">
+      <DependentUpon>Istruzioni.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="IstruzioniAttacco.resx">
+      <DependentUpon>IstruzioniAttacco.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -236,6 +254,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Sprites\selezione_Attacco2_Griglia10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\attaccoNaveAffondata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\attaccoNaveMancata.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\attaccoNaveAffondata10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\attaccoNaveMancata10x10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\Hyper_Battleship_Icona.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\tastoA.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\tastoD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\tastoS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\tastoW.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\contornoTastoOK.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

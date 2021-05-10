@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.loginAccountLabel = new System.Windows.Forms.Label();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.usernameLabel = new System.Windows.Forms.Label();
@@ -35,8 +36,6 @@
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.showPassword = new System.Windows.Forms.CheckBox();
             this.loginButton = new System.Windows.Forms.Button();
-            this.player1 = new System.Windows.Forms.PictureBox();
-            this.player2 = new System.Windows.Forms.PictureBox();
             this.playerLabel = new System.Windows.Forms.Label();
             this.newPlayerLabel = new System.Windows.Forms.Label();
             this.backLabel = new System.Windows.Forms.Label();
@@ -50,8 +49,10 @@
             this.startMatchLabel = new System.Windows.Forms.Label();
             this.yesStartMatch = new System.Windows.Forms.Label();
             this.noStartMatch = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.player1)).BeginInit();
+            this.player2 = new System.Windows.Forms.PictureBox();
+            this.player1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.player2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1)).BeginInit();
             this.SuspendLayout();
             // 
             // loginAccountLabel
@@ -138,26 +139,6 @@
             this.loginButton.UseVisualStyleBackColor = false;
             this.loginButton.Visible = false;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
-            // 
-            // player1
-            // 
-            this.player1.Image = global::Hyper_Battleship.Properties.Resources.P1;
-            this.player1.Location = new System.Drawing.Point(143, 12);
-            this.player1.Name = "player1";
-            this.player1.Size = new System.Drawing.Size(50, 50);
-            this.player1.TabIndex = 7;
-            this.player1.TabStop = false;
-            this.player1.Visible = false;
-            // 
-            // player2
-            // 
-            this.player2.Image = global::Hyper_Battleship.Properties.Resources.P2;
-            this.player2.Location = new System.Drawing.Point(143, 12);
-            this.player2.Name = "player2";
-            this.player2.Size = new System.Drawing.Size(50, 50);
-            this.player2.TabIndex = 8;
-            this.player2.TabStop = false;
-            this.player2.Visible = false;
             // 
             // playerLabel
             // 
@@ -302,7 +283,7 @@
             this.yesStartMatch.AutoSize = true;
             this.yesStartMatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yesStartMatch.ForeColor = System.Drawing.Color.Gray;
-            this.yesStartMatch.Location = new System.Drawing.Point(25, 141);
+            this.yesStartMatch.Location = new System.Drawing.Point(25, 160);
             this.yesStartMatch.Name = "yesStartMatch";
             this.yesStartMatch.Size = new System.Drawing.Size(38, 31);
             this.yesStartMatch.TabIndex = 20;
@@ -315,13 +296,33 @@
             this.noStartMatch.AutoSize = true;
             this.noStartMatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noStartMatch.ForeColor = System.Drawing.Color.Gray;
-            this.noStartMatch.Location = new System.Drawing.Point(284, 141);
+            this.noStartMatch.Location = new System.Drawing.Point(284, 160);
             this.noStartMatch.Name = "noStartMatch";
             this.noStartMatch.Size = new System.Drawing.Size(49, 31);
             this.noStartMatch.TabIndex = 21;
             this.noStartMatch.Text = "No";
             this.noStartMatch.Visible = false;
             this.noStartMatch.Click += new System.EventHandler(this.noStartMatch_Click);
+            // 
+            // player2
+            // 
+            this.player2.Image = global::Hyper_Battleship.Properties.Resources.P2;
+            this.player2.Location = new System.Drawing.Point(143, 12);
+            this.player2.Name = "player2";
+            this.player2.Size = new System.Drawing.Size(50, 50);
+            this.player2.TabIndex = 8;
+            this.player2.TabStop = false;
+            this.player2.Visible = false;
+            // 
+            // player1
+            // 
+            this.player1.Image = global::Hyper_Battleship.Properties.Resources.P1;
+            this.player1.Location = new System.Drawing.Point(143, 12);
+            this.player1.Name = "player1";
+            this.player1.Size = new System.Drawing.Size(50, 50);
+            this.player1.TabIndex = 7;
+            this.player1.TabStop = false;
+            this.player1.Visible = false;
             // 
             // LoginForm
             // 
@@ -351,12 +352,13 @@
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.loginAccountLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.Opacity = 0.85D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
-            ((System.ComponentModel.ISupportInitialize)(this.player1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.player2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.player1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
