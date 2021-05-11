@@ -110,6 +110,7 @@
             this.portaereiPictureBox10x10 = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoPiccola = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.naveMancataDimostrativo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveColpitaDimostrativo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDaCopiare)).BeginInit();
@@ -135,6 +136,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // confermaButton
@@ -1085,12 +1087,24 @@
             // grigliaDiGiocoGrande
             // 
             this.grigliaDiGiocoGrande.BackColor = System.Drawing.Color.DodgerBlue;
-            this.grigliaDiGiocoGrande.Image = global::Hyper_Battleship.Properties.Resources.Griglia10x10;
+            this.grigliaDiGiocoGrande.Image = global::Hyper_Battleship.Properties.Resources.Griglia6x6;
             this.grigliaDiGiocoGrande.Location = new System.Drawing.Point(45, 40);
             this.grigliaDiGiocoGrande.Name = "grigliaDiGiocoGrande";
             this.grigliaDiGiocoGrande.Size = new System.Drawing.Size(630, 630);
             this.grigliaDiGiocoGrande.TabIndex = 1;
             this.grigliaDiGiocoGrande.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Hyper_Battleship.Properties.Resources.sottomarino_Griglia6x6;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(150, 355);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(315, 105);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 87;
+            this.pictureBox1.TabStop = false;
             // 
             // Gameplay
             // 
@@ -1098,6 +1112,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1358, 681);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.mancatoDimostrativo);
             this.Controls.Add(this.colpitoDimostrativo);
             this.Controls.Add(this.naveMancataDimostrativo);
@@ -1210,6 +1225,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1297,5 +1313,6 @@
         private System.Windows.Forms.PictureBox naveMancataDimostrativo;
         private System.Windows.Forms.Label colpitoDimostrativo;
         private System.Windows.Forms.Label mancatoDimostrativo;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -54,9 +54,13 @@ namespace Hyper_Battleship
                 d_GrigliaPiccola10.Location = new Point(a_GrigliaPiccola10.Location.X, 287);
                 e_GrigliaPiccola10.Location = new Point(a_GrigliaPiccola10.Location.X, 360);
                 f_GrigliaPiccola10.Location = new Point(a_GrigliaPiccola10.Location.X, 440);
-                naveDassalto1Griglia10x10.Height = 105; naveDassalto1Griglia10x10.Width = 105;
-                naveDassalto2Griglia10x10.Height = 105; naveDassalto2Griglia10x10.Width = 105;
-                naveDassalto3Griglia10x10.Height = 105; naveDassalto3Griglia10x10.Width = 105;
+                naveDassalto1Griglia10x10.Height = 105; naveDassalto1Griglia10x10.Width = 105; naveDassalto1Griglia10x10.Image = Properties.Resources.Nave_D_Assalto_Griglia6x6;
+                naveDassalto2Griglia10x10.Height = 105; naveDassalto2Griglia10x10.Width = 105; naveDassalto2Griglia10x10.Image = Properties.Resources.Nave_D_Assalto_Griglia6x6;
+                naveDassalto3Griglia10x10.Height = 105; naveDassalto3Griglia10x10.Width = 105; naveDassalto3Griglia10x10.Image = Properties.Resources.Nave_D_Assalto_Griglia6x6;
+                cacciatorpediniere1Griglia10x10.Height = 105; cacciatorpediniere1Griglia10x10.Width = 210; cacciatorpediniere1Griglia10x10.Image = Properties.Resources.cacciatorpediniere_Griglia6x6;
+                cacciatorpediniere2Griglia10x10.Height = 105; cacciatorpediniere2Griglia10x10.Width = 210; cacciatorpediniere2Griglia10x10.Image = Properties.Resources.cacciatorpediniere_Griglia6x6;
+                sottomarino1Griglia10x10.Height = 105; sottomarino1Griglia10x10.Width = 315; sottomarino1Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6;
+                sottomarino2Griglia10x10.Height = 105; sottomarino2Griglia10x10.Width = 315; sottomarino2Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6;
             }
             for (int i = 0; i < 88; i++)//inizializza le picturebox
             {
@@ -312,6 +316,7 @@ namespace Hyper_Battleship
 
         #endregion
 
+        #region Salvataggio posizione delle navi dei giocatori
         //per salvare la posizione di tutte le navi per poi mostrare a schermo le rispettive navi di ogni giocatore
         string[] posizioneNaviGiocatore1 = new string[9]; int naviPosizionateGiocatore1 = 0;
         string[] posizioneNaviGiocatore2 = new string[9]; int naviPosizionateGiocatore2 = 0;
@@ -425,6 +430,7 @@ namespace Hyper_Battleship
                 }
             }
         }
+        #endregion
 
         #region Disposizione Navi
         string nave = ""; bool messaggioGiaMostrato = false;
@@ -434,6 +440,532 @@ namespace Hyper_Battleship
         private void moveShipEvent(object sender, EventArgs e)//funzione ciclica che permettte di controllare i tasti che l'utente preme per spostare le navi che hanno selezionato
         {                                                    //in ogni "case" che sposta le navi con i rispettivi nomi identificativi, vengono effettuati anche dei controlli per evitare di posizionare
                                                              //una nave al di fuori della griglia, medesiam situazione anche per ruotarle
+            if(Program.modalità == false)
+            {
+                movimentoNavi6x6();
+            }
+            else
+            {
+                movimentoNavi10x10();
+            }
+            
+            //quando tutte le navi di un giocatore sono pisizionate
+            if (portaereiPosizionata && corazzataPosizionata && sottomarinoPosizionato1 && sottomarinoPosizionato2 && cacciatorpedinierePosizionato1 && cacciatorpedinierePosizionato2 && naveDassaltoPosizionata1 && naveDassaltoPosizionata2 && naveDassaltoPosizionata3 && messaggioGiaMostrato == false)
+            {
+                passaTurnoButton.Visible = true;
+                confermaButton.Visible = false;
+                naviPosizionate = 0;
+                messaggioGiaMostrato = true;
+                MessageBox.Show("Hai dispiegato in campo tutte le navi\nClicca il pulsante 'Passa il turno'");
+            }
+            //funzioni che si occupano dell'attacco delle navi nemiche
+            if (attacco1)
+            {
+                if (moveUp && selezioneAttacco1.Top > 85 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Top -= 45;
+                }
+                if (moveDown && selezioneAttacco1.Top < 445 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Top += 45;
+                }
+                if (moveRight && selezioneAttacco1.Right < 1168 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Left += 45;
+                }
+                if (moveLeft && selezioneAttacco1.Left > 763 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Left -= 45;
+                }
+                if (confirmButtonPressed)
+                {
+                    int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco1.Location.X, selezioneAttacco1.Location.Y);//trova la casella su cui è al momento la selezione dell'attacco del giocatore 1
+                    bool attaccoValido = controlloAttacco(ref coordinateAttacco);
+                    if (attaccoValido)
+                    {
+                        string[] confermaAttacco = StrutturaGriglia10[coordinateAttacco].Split(',');
+                        if (player1PictureBox.Visible)
+                        {
+                            confermaAttacco[2] = "G1_attacco";
+                        }
+                        else
+                        {
+                            confermaAttacco[3] = "G2_attacco";
+                        }
+                        StrutturaGriglia10[coordinateAttacco] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
+                        attacco1 = false;//permette l'eventuale secondo attacco
+                        confirmButtonPressed = false;
+                        annullaButton.Visible = false;
+                        confermaButton.Visible = false;
+                        passaTurnoButton.Visible = true;
+                        attaccoAlleNavi(confermaAttacco, selezioneAttacco1);
+                    }
+                }
+            }
+
+            if (attacco2)//eventuale doppio assalto
+            {
+                if (moveUp && selezioneAttacco2.Top > 85 && !confirmButtonPressed)
+                {
+                    selezioneAttacco2.Top -= 45;
+                }
+                if (moveDown && selezioneAttacco2.Top < 445 && !confirmButtonPressed)
+                {
+                    selezioneAttacco2.Top += 45;
+                }
+                if (moveRight && selezioneAttacco2.Right < 1168 && !confirmButtonPressed)
+                {
+                    selezioneAttacco2.Left += 45;
+                }
+                if (moveLeft && selezioneAttacco2.Left > 763 && !confirmButtonPressed)
+                {
+                    selezioneAttacco2.Left -= 45;
+                }
+                if (confirmButtonPressed)
+                {
+                    int coordinateAttacco2 = assegnazionePosizioneAttacco(selezioneAttacco2.Location.X, selezioneAttacco2.Location.Y);
+                    bool attaccoValido = controlloAttacco(ref coordinateAttacco2);
+                    if (attaccoValido)
+                    {
+                        string[] confermaAttacco = StrutturaGriglia10[coordinateAttacco2].Split(',');
+                        if (player1PictureBox.Visible)
+                        {
+                            confermaAttacco[2] = "G1_attacco";
+                        }
+                        else
+                        {
+                            confermaAttacco[3] = "G2_attacco";
+                        }
+                        StrutturaGriglia10[coordinateAttacco2] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
+                        confermaButton.Visible = false;
+                        confirmButtonPressed = false;
+                        annullaButton.Visible = false;
+                        passaTurnoButton.Visible = true;
+                        attaccoAlleNavi(confermaAttacco, selezioneAttacco2);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Non puoi selezionare una casella precedentemente attaccata");
+                    }
+                }
+                if (exitOperation)
+                {
+                    selezioneAttacco2.Visible = false;
+                    attacco2 = false;
+                    exitOperation = false;
+                    annullaButton.Visible = false;
+                    confermaButton.Visible = false;
+                    quantitàAssaltoDoppio.Text = (Convert.ToInt32(quantitàAssaltoDoppio.Text) + 1).ToString();
+                    doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
+                }
+            }
+        }
+
+        private void movimentoNavi6x6()//partita veloce
+        {
+            switch (nave)
+            {
+                case "sottomarino":
+                    switch (sottomarini)
+                    {
+                        case 1:
+                            if (moveUp && sottomarino1Griglia10x10.Top > 40 && !confirmButtonPressed)
+                            {
+                                sottomarino1Griglia10x10.Top -= 105;
+                            }
+                            if (moveDown && sottomarino1Griglia10x10.Top < 565 && !confirmButtonPressed)
+                            {
+                                if (!sottomarinoImmagineGirata1)
+                                {
+                                    sottomarino1Griglia10x10.Top += 105;
+                                }
+                                else if (sottomarinoImmagineGirata1 && sottomarino1Griglia10x10.Top < 355)
+                                {
+                                    sottomarino1Griglia10x10.Top += 105;
+                                }
+                            }
+                            if (moveRight && sottomarino1Griglia10x10.Right < 675 && !confirmButtonPressed)
+                            {
+                                sottomarino1Griglia10x10.Left += 105;
+                            }
+                            if (moveLeft && sottomarino1Griglia10x10.Left > 45 && !confirmButtonPressed)
+                            {
+                                sottomarino1Griglia10x10.Left -= 105;
+                            }
+                            if (rotateLeft && !confirmButtonPressed)
+                            {
+                                if (!sottomarinoImmagineGirata1)
+                                {
+                                    sottomarino1Griglia10x10.Width = 105; sottomarino1Griglia10x10.Height = 315;
+                                    sottomarino1Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6Verticale;
+                                    sottomarinoImmagineGirata1 = true;
+                                    if (sottomarino1Griglia10x10.Location.Y > 355)
+                                    {
+                                        sottomarino1Griglia10x10.Location = new Point(sottomarino1Griglia10x10.Location.X, 355);
+                                    }
+                                }
+                            }
+                            if (rotateRight && !confirmButtonPressed)
+                            {
+                                if (sottomarinoImmagineGirata1)
+                                {
+                                    sottomarino1Griglia10x10.Width = 315; sottomarino1Griglia10x10.Height = 105;
+                                    sottomarino1Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6;
+                                    sottomarinoImmagineGirata1 = false;
+                                    if (sottomarino1Griglia10x10.Location.X > 360)
+                                    {
+                                        sottomarino1Griglia10x10.Location = new Point(360, sottomarino1Griglia10x10.Location.Y);
+                                    }
+                                }
+                            }
+                            break;
+
+                        case 0:
+                            if (moveUp && sottomarino2Griglia10x10.Top > 40 && !confirmButtonPressed)
+                            {
+                                sottomarino2Griglia10x10.Top -= 105;
+                            }
+                            if (moveDown && sottomarino2Griglia10x10.Top < 565 && !confirmButtonPressed)
+                            {
+                                if (!sottomarinoImmagineGirata2)
+                                {
+                                    sottomarino2Griglia10x10.Top += 105;
+                                }
+                                else if (sottomarinoImmagineGirata2 && sottomarino2Griglia10x10.Top < 355)
+                                {
+                                    sottomarino2Griglia10x10.Top += 105;
+                                }
+                            }
+                            if (moveRight && sottomarino2Griglia10x10.Right < 675 && !confirmButtonPressed)
+                            {
+                                sottomarino2Griglia10x10.Left += 105;
+                            }
+                            if (moveLeft && sottomarino2Griglia10x10.Left > 45 && !confirmButtonPressed)
+                            {
+                                sottomarino2Griglia10x10.Left -= 105;
+                            }
+                            if (rotateLeft && !confirmButtonPressed)
+                            {
+                                if (!sottomarinoImmagineGirata2)
+                                {
+                                    sottomarino2Griglia10x10.Width = 105; sottomarino2Griglia10x10.Height = 315;
+                                    sottomarino2Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6Verticale;
+                                    sottomarinoImmagineGirata2 = true;
+                                    if (sottomarino2Griglia10x10.Location.Y > 355)
+                                    {
+                                        sottomarino2Griglia10x10.Location = new Point(sottomarino2Griglia10x10.Location.X, 355);
+                                    }
+                                }
+                            }
+                            if (rotateRight && !confirmButtonPressed)
+                            {
+                                if (sottomarinoImmagineGirata2)
+                                {
+                                    sottomarino2Griglia10x10.Width = 315; sottomarino2Griglia10x10.Height = 105;
+                                    sottomarino2Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6;
+                                    sottomarinoImmagineGirata2 = false;
+                                    if (sottomarino2Griglia10x10.Location.X > 360)
+                                    {
+                                        sottomarino2Griglia10x10.Location = new Point(360, sottomarino2Griglia10x10.Location.Y);
+                                    }
+                                }
+                            }
+                            break;
+
+                    }
+                    if (confirmButtonPressed)
+                    {
+                        if (sottomarini == 1)
+                        {
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(sottomarino1Griglia10x10.Location.Y, sottomarino1Griglia10x10.Location.X);
+                            posizioneNaveNellArray(3);
+                        }
+                        else if (sottomarini == 0)
+                        {
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(sottomarino2Griglia10x10.Location.Y, sottomarino2Griglia10x10.Location.X);
+                            posizioneNaveNellArray(3);
+                        }
+                        nave = "";
+                        annullaButton.Visible = false;
+                        disposizioneNaviPossibile = true;
+                        confirmButtonPressed = false;
+                        naviPosizionate++;
+                        confermaButton.Visible = false;
+                    }
+                    if (exitOperation)
+                    {
+                        if (sottomarini == 1)
+                        {
+                            sottomarino1Griglia10x10.Visible = false;
+                        }
+                        else if (sottomarini == 0)
+                        {
+                            sottomarino2Griglia10x10.Visible = false;
+                        }
+                        sottomarini++;
+                        quantitàSottomarini.Text = sottomarini.ToString();
+                        annullaButton.Visible = false;
+                        disposizioneNaviPossibile = true;
+                        exitOperation = false;
+                    }
+                    break;
+
+                case "cacciatorpediniere":
+                    switch (cacciatorpedinieri)
+                    {
+                        case 1:
+                            if (moveUp && cacciatorpediniere1Griglia10x10.Top > 40 && !confirmButtonPressed)
+                            {
+                                cacciatorpediniere1Griglia10x10.Top -= 105;
+                            }
+                            if (moveDown && cacciatorpediniere1Griglia10x10.Top < 565 && !confirmButtonPressed)
+                            {
+                                if (!cacciatorpediniereImmagineGirata1)
+                                {
+                                    cacciatorpediniere1Griglia10x10.Top += 105;
+                                }
+                                else if (cacciatorpediniereImmagineGirata1 && cacciatorpediniere1Griglia10x10.Top < 460)
+                                {
+                                    cacciatorpediniere1Griglia10x10.Top += 105;
+                                }
+                            }
+                            if (moveRight && cacciatorpediniere1Griglia10x10.Right < 675 && !confirmButtonPressed)
+                            {
+                                cacciatorpediniere1Griglia10x10.Left += 105;
+                            }
+                            if (moveLeft && cacciatorpediniere1Griglia10x10.Left > 45 && !confirmButtonPressed)
+                            {
+                                cacciatorpediniere1Griglia10x10.Left -= 105;
+                            }
+                            if (rotateLeft && !confirmButtonPressed)
+                            {
+                                if (!cacciatorpediniereImmagineGirata1)
+                                {
+                                    cacciatorpediniere1Griglia10x10.Width = 105; cacciatorpediniere1Griglia10x10.Height = 210;
+                                    cacciatorpediniere1Griglia10x10.Image = Properties.Resources.cacciatorpediniere_Griglia6x6Verticale;
+                                    cacciatorpediniereImmagineGirata1 = true;
+                                    if (cacciatorpediniere1Griglia10x10.Location.Y > 460)
+                                    {
+                                        cacciatorpediniere1Griglia10x10.Location = new Point(cacciatorpediniere1Griglia10x10.Location.X, 460);
+                                    }
+                                }
+                            }
+                            if (rotateRight && !confirmButtonPressed)
+                            {
+                                if (cacciatorpediniereImmagineGirata1)
+                                {
+                                    cacciatorpediniere1Griglia10x10.Width = 210; cacciatorpediniere1Griglia10x10.Height = 105;
+                                    cacciatorpediniere1Griglia10x10.Image = Properties.Resources.cacciatorpediniere_Griglia6x6;
+                                    cacciatorpediniereImmagineGirata1 = false;
+                                    if (cacciatorpediniere1Griglia10x10.Location.X > 465)
+                                    {
+                                        cacciatorpediniere1Griglia10x10.Location = new Point(465, cacciatorpediniere1Griglia10x10.Location.Y);
+                                    }
+                                }
+                            }
+                            break;
+
+                        case 0:
+                            if (moveUp && cacciatorpediniere2Griglia10x10.Top > 40 && !confirmButtonPressed)
+                            {
+                                cacciatorpediniere2Griglia10x10.Top -= 105;
+                            }
+                            if (moveDown && cacciatorpediniere2Griglia10x10.Top < 565 && !confirmButtonPressed)
+                            {
+                                if (!cacciatorpediniereImmagineGirata2)
+                                {
+                                    cacciatorpediniere2Griglia10x10.Top += 105;
+                                }
+                                else if (cacciatorpediniereImmagineGirata2 && cacciatorpediniere2Griglia10x10.Top < 460)
+                                {
+                                    cacciatorpediniere2Griglia10x10.Top += 105;
+                                }
+                            }
+                            if (moveRight && cacciatorpediniere2Griglia10x10.Right < 675 && !confirmButtonPressed)
+                            {
+                                cacciatorpediniere2Griglia10x10.Left += 105;
+                            }
+                            if (moveLeft && cacciatorpediniere2Griglia10x10.Left > 45 && !confirmButtonPressed)
+                            {
+                                cacciatorpediniere2Griglia10x10.Left -= 105;
+                            }
+                            if (rotateLeft && !confirmButtonPressed)
+                            {
+                                if (!cacciatorpediniereImmagineGirata2)
+                                {
+                                    cacciatorpediniere2Griglia10x10.Width = 105; cacciatorpediniere2Griglia10x10.Height = 210;
+                                    cacciatorpediniere2Griglia10x10.Image = Properties.Resources.cacciatorpediniere_Griglia6x6Verticale;
+                                    cacciatorpediniereImmagineGirata2 = true;
+                                    if (cacciatorpediniere2Griglia10x10.Location.Y > 460)
+                                    {
+                                        cacciatorpediniere2Griglia10x10.Location = new Point(cacciatorpediniere2Griglia10x10.Location.X, 460);
+                                    }
+                                }
+                            }
+                            if (rotateRight && !confirmButtonPressed)
+                            {
+                                if (cacciatorpediniereImmagineGirata2)
+                                {
+                                    cacciatorpediniere2Griglia10x10.Width = 210; cacciatorpediniere2Griglia10x10.Height = 105;
+                                    cacciatorpediniere2Griglia10x10.Image = Properties.Resources.cacciatorpediniere_Griglia6x6;
+                                    cacciatorpediniereImmagineGirata2 = false;
+                                    if (cacciatorpediniere2Griglia10x10.Location.X > 465)
+                                    {
+                                        cacciatorpediniere2Griglia10x10.Location = new Point(465, cacciatorpediniere2Griglia10x10.Location.Y);
+                                    }
+                                }
+                            }
+                            break;
+
+                    }
+                    if (confirmButtonPressed)
+                    {
+                        if (cacciatorpedinieri == 1)
+                        {
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(cacciatorpediniere1Griglia10x10.Location.Y, cacciatorpediniere1Griglia10x10.Location.X);
+                            posizioneNaveNellArray(2);
+                        }
+                        else if (cacciatorpedinieri == 0)
+                        {
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(cacciatorpediniere2Griglia10x10.Location.Y, cacciatorpediniere2Griglia10x10.Location.X);
+                            posizioneNaveNellArray(2);
+                        }
+                        nave = "";
+                        annullaButton.Visible = false;
+                        disposizioneNaviPossibile = true;
+                        confirmButtonPressed = false;
+                        naviPosizionate++;
+                        confermaButton.Visible = false;
+                    }
+                    if (exitOperation)
+                    {
+                        if (cacciatorpedinieri == 1)
+                        {
+                            cacciatorpediniere1Griglia10x10.Visible = false;
+                        }
+                        else if (cacciatorpedinieri == 0)
+                        {
+                            cacciatorpediniere2Griglia10x10.Visible = false;
+                        }
+                        cacciatorpedinieri++;
+                        quantitàCacciatorpediniere.Text = cacciatorpedinieri.ToString();
+                        annullaButton.Visible = false;
+                        disposizioneNaviPossibile = true;
+                        exitOperation = false;
+                    }
+                    break;
+
+                case "nave d'assalto":
+                    switch (naviDassalto)
+                    {
+                        case 2:
+                            if (moveUp && naveDassalto1Griglia10x10.Top > 40 && !confirmButtonPressed)
+                            {
+                                naveDassalto1Griglia10x10.Top -= 105;
+                            }
+                            if (moveDown && naveDassalto1Griglia10x10.Top < 565 && !confirmButtonPressed)
+                            {
+                                naveDassalto1Griglia10x10.Top += 105;
+                            }
+                            if (moveRight && naveDassalto1Griglia10x10.Right < 675 && !confirmButtonPressed)
+                            {
+                                naveDassalto1Griglia10x10.Left += 105;
+                            }
+                            if (moveLeft && naveDassalto1Griglia10x10.Left > 45 && !confirmButtonPressed)
+                            {
+                                naveDassalto1Griglia10x10.Left -= 105;
+                            }
+                            break;
+
+                        case 1:
+                            if (moveUp && naveDassalto2Griglia10x10.Top > 40 && !confirmButtonPressed)
+                            {
+                                naveDassalto2Griglia10x10.Top -= 105;
+                            }
+                            if (moveDown && naveDassalto2Griglia10x10.Top < 565 && !confirmButtonPressed)
+                            {
+                                naveDassalto2Griglia10x10.Top += 105;
+                            }
+                            if (moveRight && naveDassalto2Griglia10x10.Right < 675 && !confirmButtonPressed)
+                            {
+                                naveDassalto2Griglia10x10.Left += 105;
+                            }
+                            if (moveLeft && naveDassalto2Griglia10x10.Left > 45 && !confirmButtonPressed)
+                            {
+                                naveDassalto2Griglia10x10.Left -= 105;
+                            }
+                            break;
+
+                        case 0:
+                            if (moveUp && naveDassalto3Griglia10x10.Top > 40 && !confirmButtonPressed)
+                            {
+                                naveDassalto3Griglia10x10.Top -= 105;
+                            }
+                            if (moveDown && naveDassalto3Griglia10x10.Top < 565 && !confirmButtonPressed)
+                            {
+                                naveDassalto3Griglia10x10.Top += 105;
+                            }
+                            if (moveRight && naveDassalto3Griglia10x10.Right < 675 && !confirmButtonPressed)
+                            {
+                                naveDassalto3Griglia10x10.Left += 105;
+                            }
+                            if (moveLeft && naveDassalto3Griglia10x10.Left > 45 && !confirmButtonPressed)
+                            {
+                                naveDassalto3Griglia10x10.Left -= 105;
+                            }
+                            break;
+
+                    }
+                    if (confirmButtonPressed)
+                    {
+                        if (naviDassalto == 2)
+                        {
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(naveDassalto1Griglia10x10.Location.Y, naveDassalto1Griglia10x10.Location.X);
+                            posizioneNaveNellArray(1);
+                        }
+                        else if (naviDassalto == 1)
+                        {
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(naveDassalto2Griglia10x10.Location.Y, naveDassalto2Griglia10x10.Location.X);
+                            posizioneNaveNellArray(1);
+                        }
+                        else if (naviDassalto == 0)
+                        {
+                            assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(naveDassalto3Griglia10x10.Location.Y, naveDassalto3Griglia10x10.Location.X);
+                            posizioneNaveNellArray(1);
+                        }
+                        nave = "";
+                        annullaButton.Visible = false;
+                        disposizioneNaviPossibile = true;
+                        confirmButtonPressed = false;
+                        naviPosizionate++;
+                        confermaButton.Visible = false;
+                    }
+                    if (exitOperation)
+                    {
+                        if (naviDassalto == 2)
+                        {
+                            naveDassalto1Griglia10x10.Visible = false;
+                        }
+                        else if (naviDassalto == 1)
+                        {
+                            naveDassalto2Griglia10x10.Visible = false;
+                        }
+                        else if (naviDassalto == 0)
+                        {
+                            naveDassalto3Griglia10x10.Visible = false;
+                        }
+                        naviDassalto++;
+                        quantitàNaveDassalto.Text = naviDassalto.ToString();
+                        annullaButton.Visible = false;
+                        disposizioneNaviPossibile = true;
+                        exitOperation = false;
+                    }
+                    break;
+            }
+        }
+
+        private void movimentoNavi10x10()
+        {
             switch (nave)
             {
                 case "portaerei":
@@ -508,7 +1040,7 @@ namespace Hyper_Battleship
                     }
                     break;
 
-//STESSA MEDESIMA COSA AVVIENE ANCHE PER LE ALTRE NAVI, CON CONTROLLI LEGGERMENTE DIVERSI SOLO PER LA FUNZIONE "posizioneNellArray"
+                //STESSA MEDESIMA COSA AVVIENE ANCHE PER LE ALTRE NAVI, CON CONTROLLI LEGGERMENTE DIVERSI SOLO PER LA FUNZIONE "posizioneNellArray"
 
                 case "corazzata":
                     if (moveUp && corazzataGriglia10x10.Top > 40 && !confirmButtonPressed)
@@ -634,7 +1166,7 @@ namespace Hyper_Battleship
                                 }
                             }
                             break;
-                        
+
                         case 0:
                             if (moveUp && sottomarino2Griglia10x10.Top > 40 && !confirmButtonPressed)
                             {
@@ -835,12 +1367,12 @@ namespace Hyper_Battleship
                     }
                     if (confirmButtonPressed)
                     {
-                        if(cacciatorpedinieri == 1)
+                        if (cacciatorpedinieri == 1)
                         {
                             assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(cacciatorpediniere1Griglia10x10.Location.Y, cacciatorpediniere1Griglia10x10.Location.X);
                             posizioneNaveNellArray(2);
                         }
-                        else if(cacciatorpedinieri == 0)
+                        else if (cacciatorpedinieri == 0)
                         {
                             assegnazioneLocazioneNellaGrigliaNavi_YX_10x10(cacciatorpediniere2Griglia10x10.Location.Y, cacciatorpediniere2Griglia10x10.Location.X);
                             posizioneNaveNellArray(2);
@@ -976,116 +1508,6 @@ namespace Hyper_Battleship
                         exitOperation = false;
                     }
                     break;
-            }
-            //quando tutte le navi di un giocatore sono pisizionate
-            if (portaereiPosizionata && corazzataPosizionata && sottomarinoPosizionato1 && sottomarinoPosizionato2 && cacciatorpedinierePosizionato1 && cacciatorpedinierePosizionato2 && naveDassaltoPosizionata1 && naveDassaltoPosizionata2 && naveDassaltoPosizionata3 && messaggioGiaMostrato == false)
-            {
-                passaTurnoButton.Visible = true;
-                confermaButton.Visible = false;
-                naviPosizionate = 0;
-                messaggioGiaMostrato = true;
-                MessageBox.Show("Hai dispiegato in campo tutte le navi\nClicca il pulsante 'Passa il turno'");
-            }
-            //funzioni che si occupano dell'attacco delle navi nemiche
-            if (attacco1)
-            {
-                if (moveUp && selezioneAttacco1.Top > 85 && !confirmButtonPressed)
-                {
-                    selezioneAttacco1.Top -= 45;
-                }
-                if (moveDown && selezioneAttacco1.Top < 445 && !confirmButtonPressed)
-                {
-                    selezioneAttacco1.Top += 45;
-                }
-                if (moveRight && selezioneAttacco1.Right < 1168 && !confirmButtonPressed)
-                {
-                    selezioneAttacco1.Left += 45;
-                }
-                if (moveLeft && selezioneAttacco1.Left > 763 && !confirmButtonPressed)
-                {
-                    selezioneAttacco1.Left -= 45;
-                }
-                if (confirmButtonPressed)
-                {
-                    int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco1.Location.X, selezioneAttacco1.Location.Y);//trova la casella su cui è al momento la selezione dell'attacco del giocatore 1
-                    bool attaccoValido = controlloAttacco(ref coordinateAttacco);
-                    if (attaccoValido)
-                    {
-                        string[] confermaAttacco = StrutturaGriglia10[coordinateAttacco].Split(',');
-                        if (player1PictureBox.Visible)
-                        {
-                            confermaAttacco[2] = "G1_attacco";
-                        }
-                        else
-                        {
-                            confermaAttacco[3] = "G2_attacco";
-                        }
-                        StrutturaGriglia10[coordinateAttacco] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
-                        attacco1 = false;//permette l'eventuale secondo attacco
-                        confirmButtonPressed = false;
-                        annullaButton.Visible = false;
-                        confermaButton.Visible = false;
-                        passaTurnoButton.Visible = true;
-                        attaccoAlleNavi(confermaAttacco, selezioneAttacco1);
-                    }
-                }
-            }
-
-            if (attacco2)//eventuale doppio assalto
-            {
-                if (moveUp && selezioneAttacco2.Top > 85 && !confirmButtonPressed)
-                {
-                    selezioneAttacco2.Top -= 45;
-                }
-                if (moveDown && selezioneAttacco2.Top < 445 && !confirmButtonPressed)
-                {
-                    selezioneAttacco2.Top += 45;
-                }
-                if (moveRight && selezioneAttacco2.Right < 1168 && !confirmButtonPressed)
-                {
-                    selezioneAttacco2.Left += 45;
-                }
-                if (moveLeft && selezioneAttacco2.Left > 763 && !confirmButtonPressed)
-                {
-                    selezioneAttacco2.Left -= 45;
-                }
-                if (confirmButtonPressed)
-                {
-                    int coordinateAttacco2 = assegnazionePosizioneAttacco(selezioneAttacco2.Location.X, selezioneAttacco2.Location.Y);
-                    bool attaccoValido = controlloAttacco(ref coordinateAttacco2);
-                    if (attaccoValido)
-                    {
-                        string[] confermaAttacco = StrutturaGriglia10[coordinateAttacco2].Split(',');
-                        if (player1PictureBox.Visible)
-                        {
-                            confermaAttacco[2] = "G1_attacco";
-                        }
-                        else
-                        {
-                            confermaAttacco[3] = "G2_attacco";
-                        }
-                        StrutturaGriglia10[coordinateAttacco2] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
-                        confermaButton.Visible = false;
-                        confirmButtonPressed = false;
-                        annullaButton.Visible = false;
-                        passaTurnoButton.Visible = true;
-                        attaccoAlleNavi(confermaAttacco, selezioneAttacco2);
-                    }
-                    else
-                    {
-                        MessageBox.Show("Non puoi selezionare una casella precedentemente attaccata");
-                    }
-                }
-                if (exitOperation)
-                {
-                    selezioneAttacco2.Visible = false;
-                    attacco2 = false;
-                    exitOperation = false;
-                    annullaButton.Visible = false;
-                    confermaButton.Visible = false;
-                    quantitàAssaltoDoppio.Text = (Convert.ToInt32(quantitàAssaltoDoppio.Text) + 1).ToString();
-                    doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
-                }
             }
         }
 
@@ -1285,12 +1707,26 @@ namespace Hyper_Battleship
                     annullaButton.Visible = true;
                     if (sottomarini == 1)
                     {
-                        sottomarino1Griglia10x10.Location = new Point(297 - 63, 292);
+                        if(Program.modalità == true)
+                        {
+                            sottomarino1Griglia10x10.Location = new Point(297 - 63, 292);//partita normale
+                        }
+                        else
+                        {
+                            sottomarino1Griglia10x10.Location = new Point(150, 250);//partita veloce
+                        }
                         sottomarino1Griglia10x10.Visible = true;
                     }
                     else if (sottomarini == 0)
                     {
-                        sottomarino2Griglia10x10.Location = new Point(297 - 63, 292);
+                        if (Program.modalità == true)
+                        {
+                            sottomarino2Griglia10x10.Location = new Point(297 - 63, 292);//partita normale
+                        }
+                        else
+                        {
+                            sottomarino2Griglia10x10.Location = new Point(150, 250);//partita veloce
+                        }
                         sottomarino2Griglia10x10.Visible = true;
                     }
                 }
@@ -1313,12 +1749,26 @@ namespace Hyper_Battleship
                     annullaButton.Visible = true;
                     if (cacciatorpedinieri == 1)
                     {
-                        cacciatorpediniere1Griglia10x10.Location = new Point(297, 292);
+                        if (Program.modalità == true)
+                        {
+                            cacciatorpediniere1Griglia10x10.Location = new Point(297, 292);//partita normale
+                        }
+                        else
+                        {
+                            cacciatorpediniere1Griglia10x10.Location = new Point(255, 250);//partita veloce
+                        }
                         cacciatorpediniere1Griglia10x10.Visible = true;
                     }
                     else if (cacciatorpedinieri == 0)
                     {
-                        cacciatorpediniere2Griglia10x10.Location = new Point(297, 292);
+                        if (Program.modalità == true)
+                        {
+                            cacciatorpediniere2Griglia10x10.Location = new Point(297, 292);//partita normale
+                        }
+                        else
+                        {
+                            cacciatorpediniere2Griglia10x10.Location = new Point(255, 250);//partita veloce
+                        }
                         cacciatorpediniere2Griglia10x10.Visible = true;
                     }
                 }
@@ -1341,17 +1791,38 @@ namespace Hyper_Battleship
                     annullaButton.Visible = true;
                     if (naviDassalto == 2)
                     {
-                        naveDassalto1Griglia10x10.Location = new Point(297, 292);
+                        if (Program.modalità == true)
+                        {
+                            naveDassalto1Griglia10x10.Location = new Point(297, 292);//partita normale
+                        }
+                        else
+                        {
+                            naveDassalto1Griglia10x10.Location = new Point(255, 250);//partita veloce
+                        }
                         naveDassalto1Griglia10x10.Visible = true;
                     }
                     else if (naviDassalto == 1)
                     {
-                        naveDassalto2Griglia10x10.Location = new Point(297, 292);
+                        if (Program.modalità == true)
+                        {
+                            naveDassalto2Griglia10x10.Location = new Point(297, 292);//partita normale
+                        }
+                        else
+                        {
+                            naveDassalto2Griglia10x10.Location = new Point(255, 250);//partita veloce
+                        }
                         naveDassalto2Griglia10x10.Visible = true;
                     }
                     else if (naviDassalto == 0)
                     {
-                        naveDassalto3Griglia10x10.Location = new Point(297, 292);
+                        if (Program.modalità == true)
+                        {
+                            naveDassalto3Griglia10x10.Location = new Point(297, 292);//partita normale
+                        }
+                        else
+                        {
+                            naveDassalto3Griglia10x10.Location = new Point(255, 250);//partita veloce
+                        }
                         naveDassalto3Griglia10x10.Visible = true;
                     }
                 }

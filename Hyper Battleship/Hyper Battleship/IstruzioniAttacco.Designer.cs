@@ -64,6 +64,7 @@
             this.okLabel.TabIndex = 19;
             this.okLabel.Text = "OK";
             this.okLabel.Click += new System.EventHandler(this.okLabel_Click);
+            this.okLabel.MouseEnter += new System.EventHandler(this.contornoTastoOK_MouseEnter);
             // 
             // contornoTastoOK
             // 
