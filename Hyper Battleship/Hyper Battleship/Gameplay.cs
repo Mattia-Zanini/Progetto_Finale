@@ -61,33 +61,62 @@ namespace Hyper_Battleship
                 cacciatorpediniere2Griglia10x10.Height = 105; cacciatorpediniere2Griglia10x10.Width = 210; cacciatorpediniere2Griglia10x10.Image = Properties.Resources.cacciatorpediniere_Griglia6x6;
                 sottomarino1Griglia10x10.Height = 105; sottomarino1Griglia10x10.Width = 315; sottomarino1Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6;
                 sottomarino2Griglia10x10.Height = 105; sottomarino2Griglia10x10.Width = 315; sottomarino2Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6;
-            }
-            for (int i = 0; i < 88; i++)//inizializza le picturebox
-            {
-                attaccoMancatoGiocatore1[i] = pictureDaCopiare;
-                attaccoMancatoGiocatore1[i].Visible = false;
-                attaccoMancatoGiocatore1[i].Image = Properties.Resources.attaccoNaveMancata10x10;
-                if (Program.multigiocatore)//nel caso il gioco sia impostato su multigiocatore
+
+                Array.Resize(ref attaccoMancatoGiocatore1, attaccoMancatoGiocatore1.Length - 62);
+                Array.Resize(ref attaccoMancatoGiocatore2, attaccoMancatoGiocatore1.Length - 62);
+                Array.Resize(ref attaccoColpitoGiocatore1, attaccoColpitoGiocatore1.Length - 12);
+                Array.Resize(ref attaccoColpitoGiocatore2, attaccoColpitoGiocatore2.Length - 12);
+
+                for (int i = 0; i < 26; i++)//inizializza le picturebox
                 {
-                    attaccoMancatoGiocatore2[i] = pictureDaCopiare;
-                    attaccoMancatoGiocatore2[i].Visible = false;
-                    attaccoMancatoGiocatore2[i].Image = Properties.Resources.attaccoNaveMancata10x10;
+                    attaccoMancatoGiocatore1[i] = pictureDaCopiare;
+                    attaccoMancatoGiocatore1[i].Visible = false;
+                    if (Program.multigiocatore)//nel caso il gioco sia impostato su multigiocatore
+                    {
+                        attaccoMancatoGiocatore2[i] = pictureDaCopiare;
+                        attaccoMancatoGiocatore2[i].Visible = false;
+                    }
                 }
-            }
-            for (int i = 0; i < 22; i++)
-            {
-                attaccoColpitoGiocatore1[i] = pictureDaCopiare;
-                attaccoColpitoGiocatore1[i].Visible = false;
-                attaccoColpitoGiocatore1[i].Image = Properties.Resources.attaccoNaveAffondata10x10;
-                if (Program.multigiocatore)
+                for (int i = 0; i < 10; i++)
                 {
-                    attaccoColpitoGiocatore2[i] = pictureDaCopiare;
-                    attaccoColpitoGiocatore2[i].Visible = false;
-                    attaccoColpitoGiocatore2[i].Image = Properties.Resources.attaccoNaveAffondata10x10;
+                    attaccoColpitoGiocatore1[i] = pictureDaCopiare;
+                    attaccoColpitoGiocatore1[i].Visible = false;
+                    if (Program.multigiocatore)
+                    {
+                        attaccoColpitoGiocatore2[i] = pictureDaCopiare;
+                        attaccoColpitoGiocatore2[i].Visible = false;
+                    }
                 }
+                selezioneAttacco1.Width = 105; selezioneAttacco1.Height = 105;
+                selezioneAttacco2.Width = 105; selezioneAttacco2.Height = 105;
             }
-            selezioneAttacco1.Image = Properties.Resources.selezione_Attacco_Griglia10x10;
-            selezioneAttacco2.Image = Properties.Resources.selezione_Attacco2_Griglia10x10;
+            else
+            {
+                grigliaDiGiocoGrande.Image = Properties.Resources.Griglia10x10;
+                grigliaDiGiocoPiccola.Image = Properties.Resources.griglia_Piccola_10x10;
+                for (int i = 0; i < 88; i++)//inizializza le picturebox
+                {
+                    attaccoMancatoGiocatore1[i] = pictureDaCopiare;
+                    attaccoMancatoGiocatore1[i].Visible = false;
+                    if (Program.multigiocatore)//nel caso il gioco sia impostato su multigiocatore
+                    {
+                        attaccoMancatoGiocatore2[i] = pictureDaCopiare;
+                        attaccoMancatoGiocatore2[i].Visible = false;
+                    }
+                }
+                for (int i = 0; i < 22; i++)
+                {
+                    attaccoColpitoGiocatore1[i] = pictureDaCopiare;
+                    attaccoColpitoGiocatore1[i].Visible = false;
+                    if (Program.multigiocatore)
+                    {
+                        attaccoColpitoGiocatore2[i] = pictureDaCopiare;
+                        attaccoColpitoGiocatore2[i].Visible = false;
+                    }
+                }
+                selezioneAttacco1.Image = Properties.Resources.selezione_Attacco_Griglia10x10;
+                selezioneAttacco2.Image = Properties.Resources.selezione_Attacco2_Griglia10x10;
+            }
         }
         private void Gameplay_FormClosed(object sender, FormClosedEventArgs e)//per chiudere il form
         {
@@ -218,10 +247,14 @@ namespace Hyper_Battleship
                 for(int i = 0; i < naviColpiteGiocatore1; i++)
                 {
                     attaccoColpitoGiocatore1[i].Visible = true;
+                    attaccoColpitoGiocatore1[i].Image = Properties.Resources.attaccoNaveAffondata10x10;
+                    attaccoColpitoGiocatore1[i].BringToFront();
                 }
                 for (int i = 0; i < naviMancateGiocatore1; i++)
                 {
                     attaccoMancatoGiocatore1[i].Visible = true;
+                    attaccoMancatoGiocatore1[i].Image = Properties.Resources.attaccoNaveMancata10x10;
+                    attaccoMancatoGiocatore1[i].BringToFront();
                 }
                 //nasconde le navi del giocatore 2
                 for (int i = 0; i < naviColpiteGiocatore2; i++)
@@ -262,10 +295,14 @@ namespace Hyper_Battleship
                 for (int i = 0; i < naviColpiteGiocatore2; i++)
                 {
                     attaccoColpitoGiocatore2[i].Visible = true;
+                    attaccoColpitoGiocatore2[i].Image = Properties.Resources.attaccoNaveAffondata10x10;
+                    attaccoColpitoGiocatore2[i].BringToFront();
                 }
                 for (int i = 0; i < naviMancateGiocatore2; i++)
                 {
                     attaccoMancatoGiocatore2[i].Visible = true;
+                    attaccoMancatoGiocatore2[i].Image = Properties.Resources.attaccoNaveMancata10x10;
+                    attaccoMancatoGiocatore2[i].BringToFront();
                 }
             }
         }
@@ -542,6 +579,7 @@ namespace Hyper_Battleship
                         annullaButton.Visible = false;
                         passaTurnoButton.Visible = true;
                         attaccoAlleNavi(confermaAttacco, selezioneAttacco2);
+                        attacco2 = false;
                     }
                     else
                     {
@@ -1515,31 +1553,39 @@ namespace Hyper_Battleship
         {
             if (player1PictureBox.Visible)
             {
-                if(nave[0] != "acqua1")
+                if(nave[1] != "acqua2")
                 {
                     attaccoColpitoGiocatore1[naviColpiteGiocatore1].Location = new Point(attacco.Location.X, attacco.Location.Y);
                     attaccoColpitoGiocatore1[naviColpiteGiocatore1].Visible = true;
+                    attaccoColpitoGiocatore1[naviColpiteGiocatore1].Image = Properties.Resources.attaccoNaveAffondata10x10;
+                    attaccoColpitoGiocatore1[naviColpiteGiocatore1].BringToFront();
                     naviColpiteGiocatore1++;
                 }
                 else
                 {
                     attaccoMancatoGiocatore1[naviMancateGiocatore1].Location = new Point(attacco.Location.X, attacco.Location.Y);
                     attaccoMancatoGiocatore1[naviMancateGiocatore1].Visible = true;
+                    attaccoColpitoGiocatore1[naviMancateGiocatore1].Image = Properties.Resources.attaccoNaveMancata10x10;
+                    attaccoMancatoGiocatore1[naviMancateGiocatore1].BringToFront();
                     naviMancateGiocatore1++;
                 }
             }
             else
             {
-                if (nave[1] != "acqua2")
+                if (nave[0] != "acqua1")
                 {
                     attaccoColpitoGiocatore2[naviColpiteGiocatore2].Location = new Point(attacco.Location.X, attacco.Location.Y);
                     attaccoColpitoGiocatore2[naviColpiteGiocatore2].Visible = true;
+                    attaccoColpitoGiocatore2[naviColpiteGiocatore2].Image = Properties.Resources.attaccoNaveAffondata10x10;
+                    attaccoColpitoGiocatore2[naviColpiteGiocatore2].BringToFront();
                     naviColpiteGiocatore2++;
                 }
                 else
                 {
                     attaccoMancatoGiocatore2[naviMancateGiocatore2].Location = new Point(attacco.Location.X, attacco.Location.Y);
                     attaccoMancatoGiocatore2[naviMancateGiocatore2].Visible = true;
+                    attaccoMancatoGiocatore2[naviMancateGiocatore2].Image = Properties.Resources.attaccoNaveMancata10x10;
+                    attaccoMancatoGiocatore2[naviMancateGiocatore2].BringToFront();
                     naviMancateGiocatore2++;
                 }
             }
