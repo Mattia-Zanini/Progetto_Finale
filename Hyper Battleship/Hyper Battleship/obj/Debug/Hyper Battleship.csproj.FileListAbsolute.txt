@@ -69,3 +69,17 @@ C:\Users\Mattia\Desktop\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battle
 C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Gameplay.resources
 C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Istruzioni.resources
 C:\Users\Mattia\Desktop\Scuola\3 superiore\Informatica\Progetto Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.IstruzioniAttacco.resources
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\bin\Debug\Hyper Battleship.exe.config
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\bin\Debug\Hyper Battleship.exe
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\bin\Debug\Hyper Battleship.pdb
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.csprojAssemblyReference.cache
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Gameplay.resources
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Istruzioni.resources
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.IstruzioniAttacco.resources
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.LoginForm.resources
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Properties.Resources.resources
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Schermata_Iniziale.resources
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.csproj.GenerateResource.cache
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.csproj.CoreCompileInputs.cache
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.exe
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.pdb

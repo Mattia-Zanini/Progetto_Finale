@@ -579,6 +579,8 @@ namespace Hyper_Battleship
                         annullaButton.Visible = false;
                         passaTurnoButton.Visible = true;
                         attaccoAlleNavi(confermaAttacco, selezioneAttacco2);
+                        selezioneAttacco2.SendToBack();
+                        selezioneAttacco1.SendToBack();
                         attacco2 = false;
                     }
                     else
@@ -1565,7 +1567,7 @@ namespace Hyper_Battleship
                 {
                     attaccoMancatoGiocatore1[naviMancateGiocatore1].Location = new Point(attacco.Location.X, attacco.Location.Y);
                     attaccoMancatoGiocatore1[naviMancateGiocatore1].Visible = true;
-                    attaccoColpitoGiocatore1[naviMancateGiocatore1].Image = Properties.Resources.attaccoNaveMancata10x10;
+                    attaccoMancatoGiocatore1[naviMancateGiocatore1].Image = Properties.Resources.attaccoNaveMancata10x10;
                     attaccoMancatoGiocatore1[naviMancateGiocatore1].BringToFront();
                     naviMancateGiocatore1++;
                 }
