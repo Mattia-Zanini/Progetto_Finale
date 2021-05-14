@@ -83,3 +83,5 @@ C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battle
 C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.csproj.CoreCompileInputs.cache
 C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.exe
 C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper Battleship.pdb
+C:\Users\Mattia\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Istruzioni.resources
+C:\Users\Mattia\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.IstruzioniAttacco.resources

@@ -180,14 +180,7 @@ namespace Hyper_Battleship
             {
                 messaggioGiaMostrato = false;
             }
-            if(nTurno > 0)
-            {
-                naveColpitaDimostrativo.Visible = true;
-                naveMancataDimostrativo.Visible = true;
-                colpitoDimostrativo.Visible = true;
-                mancatoDimostrativo.Visible = true;
-            }
-            if (nTurno == 0)//riporta le navi invisibili, permettendo al secondo giocatore di poterle piazzare
+            if (nTurno == 0 && nTurno < 3)//riporta le navi invisibili, permettendo al secondo giocatore di poterle piazzare
             {
                 portaereiGriglia10x10.Visible = false; portaereiImaggineGirata = false; quantitàPortaerei.Text = "1"; portaereiPosizionata = false; portaereiGriglia10x10.Width = 315; portaereiGriglia10x10.Height = 63; portaereiGriglia10x10.Image = Properties.Resources.portaerei_Griglia10x10;
 
@@ -204,7 +197,7 @@ namespace Hyper_Battleship
                 player1PictureBox.Visible = false;
                 player2PictureBox.Visible = true;
             }
-            else if (nTurno == 1)//nel caso entrambi i giocatori sono sicuri della loro decisione sull'allocare le navi nelle rispettive posizioni, comincia il gioco
+            else if (nTurno == 1 && nTurno < 3)//nel caso entrambi i giocatori sono sicuri della loro decisione sull'allocare le navi nelle rispettive posizioni, comincia il gioco
             {
                 IstruzioniAttacco f5 = new IstruzioniAttacco();
                 f5.Show();//per mostrare le istruzioni di come attaccare
@@ -265,6 +258,10 @@ namespace Hyper_Battleship
                 {
                     attaccoMancatoGiocatore2[i].Visible = false;
                 }
+
+                countdownRadar.Text = (Convert.ToInt32(countdownRadar.Text) - nTurno + 1).ToString();
+                selezioneAttacco1.BringToFront(); selezioneAttacco2.BringToFront();
+                selezioneAttacco2.Visible = false;
             }
             else if(nTurno % 2 == 0)//round giocatore 2
             {
@@ -304,6 +301,10 @@ namespace Hyper_Battleship
                     attaccoMancatoGiocatore2[i].Image = Properties.Resources.attaccoNaveMancata10x10;
                     attaccoMancatoGiocatore2[i].BringToFront();
                 }
+
+                countdownRadar.Text = (Convert.ToInt32(countdownRadar.Text) - nTurno + 1).ToString();
+                selezioneAttacco1.BringToFront(); selezioneAttacco2.BringToFront();
+                selezioneAttacco2.Visible = false;
             }
         }
 
@@ -349,6 +350,11 @@ namespace Hyper_Battleship
                     }
                 }
             }
+        }
+
+        private void radarPcitureBox_Click(object sender, EventArgs e)
+        {
+
         }
 
         #endregion
@@ -535,7 +541,13 @@ namespace Hyper_Battleship
                         annullaButton.Visible = false;
                         confermaButton.Visible = false;
                         passaTurnoButton.Visible = true;
+                        selezioneAttacco1.SendToBack();
                         attaccoAlleNavi(confermaAttacco, selezioneAttacco1);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Non puoi riattaccare in una posizione già attaccata");
+                        confirmButtonPressed = false;
                     }
                 }
             }
@@ -578,14 +590,14 @@ namespace Hyper_Battleship
                         confirmButtonPressed = false;
                         annullaButton.Visible = false;
                         passaTurnoButton.Visible = true;
-                        attaccoAlleNavi(confermaAttacco, selezioneAttacco2);
                         selezioneAttacco2.SendToBack();
-                        selezioneAttacco1.SendToBack();
+                        attaccoAlleNavi(confermaAttacco, selezioneAttacco2);
                         attacco2 = false;
                     }
                     else
                     {
-                        MessageBox.Show("Non puoi selezionare una casella precedentemente attaccata");
+                        MessageBox.Show("Non puoi riattaccare in una posizione già attaccata");
+                        confirmButtonPressed = false;
                     }
                 }
                 if (exitOperation)
@@ -598,6 +610,12 @@ namespace Hyper_Battleship
                     quantitàAssaltoDoppio.Text = (Convert.ToInt32(quantitàAssaltoDoppio.Text) + 1).ToString();
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
                 }
+            }
+
+            if (Convert.ToInt32(countdownRadar.Text) == 0)
+            {
+                countdownRadar.Visible = false;
+                radarPcitureBox.Image = Properties.Resources.Radar;
             }
         }
 
@@ -2408,7 +2426,7 @@ namespace Hyper_Battleship
                     }
                     break;
                 }
-                if(coordinateNaveSuGrigliaArray == latoDestroGriglia[i])//parte di destra della griglia
+                if(coordinateNaveSuGrigliaArray == latoDestroGriglia[i] || coordinateNaveSuGrigliaArray == latoDestroGriglia[i] - (indexToRemove - 1))//parte di destra della griglia
                 {
                     if (!immagineGirata)
                     {
