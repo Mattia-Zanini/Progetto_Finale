@@ -141,6 +141,8 @@ namespace Hyper_Battleship
                     Giocatore2 = usernameTextBox.Text;
                     if (Giocatore1 != Giocatore2)
                     {
+                        Program.nomeGiocatore1 = Giocatore1;
+                        Program.nomeGiocatore2 = Giocatore2;
                         prePartita();
                     }
                     else

@@ -73,6 +73,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="removeIndexFromArray.cs" />
+    <Compile Include="SchermataFinale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchermataFinale.Designer.cs">
+      <DependentUpon>SchermataFinale.cs</DependentUpon>
+    </Compile>
     <Compile Include="Schermata_Iniziale.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -101,6 +107,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SchermataFinale.resx">
+      <DependentUpon>SchermataFinale.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schermata_Iniziale.resx">
       <DependentUpon>Schermata_Iniziale.cs</DependentUpon>
     </EmbeddedResource>

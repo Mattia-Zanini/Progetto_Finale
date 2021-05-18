@@ -106,7 +106,9 @@
             this.portaereiPictureBox10x10 = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoPiccola = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.puntiLabel = new System.Windows.Forms.Label();
+            this.puntiCount = new System.Windows.Forms.Label();
+            this.radarGrigliaPictureBox = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureDaCopiare)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).BeginInit();
@@ -130,7 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radarGrigliaPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // confermaButton
@@ -1030,24 +1032,50 @@
             // grigliaDiGiocoGrande
             // 
             this.grigliaDiGiocoGrande.BackColor = System.Drawing.Color.DodgerBlue;
-            this.grigliaDiGiocoGrande.Image = global::Hyper_Battleship.Properties.Resources.Griglia6x6;
+            this.grigliaDiGiocoGrande.Image = global::Hyper_Battleship.Properties.Resources.Griglia10x10;
             this.grigliaDiGiocoGrande.Location = new System.Drawing.Point(45, 40);
             this.grigliaDiGiocoGrande.Name = "grigliaDiGiocoGrande";
             this.grigliaDiGiocoGrande.Size = new System.Drawing.Size(630, 630);
             this.grigliaDiGiocoGrande.TabIndex = 1;
             this.grigliaDiGiocoGrande.TabStop = false;
             // 
-            // pictureBox1
+            // puntiLabel
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Hyper_Battleship.Properties.Resources.sottomarino_Griglia6x6;
-            this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(150, 355);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(315, 105);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 87;
-            this.pictureBox1.TabStop = false;
+            this.puntiLabel.AutoSize = true;
+            this.puntiLabel.BackColor = System.Drawing.Color.Transparent;
+            this.puntiLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.puntiLabel.ForeColor = System.Drawing.Color.White;
+            this.puntiLabel.Location = new System.Drawing.Point(848, 619);
+            this.puntiLabel.Name = "puntiLabel";
+            this.puntiLabel.Size = new System.Drawing.Size(73, 29);
+            this.puntiLabel.TabIndex = 88;
+            this.puntiLabel.Text = "Punti:";
+            this.puntiLabel.Visible = false;
+            // 
+            // puntiCount
+            // 
+            this.puntiCount.AutoSize = true;
+            this.puntiCount.BackColor = System.Drawing.Color.Transparent;
+            this.puntiCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.puntiCount.ForeColor = System.Drawing.Color.White;
+            this.puntiCount.Location = new System.Drawing.Point(927, 619);
+            this.puntiCount.Name = "puntiCount";
+            this.puntiCount.Size = new System.Drawing.Size(0, 29);
+            this.puntiCount.TabIndex = 89;
+            this.puntiCount.Visible = false;
+            // 
+            // radarGrigliaPictureBox
+            // 
+            this.radarGrigliaPictureBox.BackColor = System.Drawing.Color.Transparent;
+            this.radarGrigliaPictureBox.Image = global::Hyper_Battleship.Properties.Resources.Radar;
+            this.radarGrigliaPictureBox.ImageLocation = "";
+            this.radarGrigliaPictureBox.Location = new System.Drawing.Point(899, 311);
+            this.radarGrigliaPictureBox.Name = "radarGrigliaPictureBox";
+            this.radarGrigliaPictureBox.Size = new System.Drawing.Size(45, 45);
+            this.radarGrigliaPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.radarGrigliaPictureBox.TabIndex = 90;
+            this.radarGrigliaPictureBox.TabStop = false;
+            this.radarGrigliaPictureBox.Visible = false;
             // 
             // Gameplay
             // 
@@ -1055,7 +1083,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1358, 681);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.radarGrigliaPictureBox);
+            this.Controls.Add(this.puntiCount);
+            this.Controls.Add(this.puntiLabel);
             this.Controls.Add(this.pictureDaCopiare);
             this.Controls.Add(this.selezioneAttacco2);
             this.Controls.Add(this.countdownRadar);
@@ -1162,7 +1192,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radarGrigliaPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1246,6 +1276,8 @@
         private System.Windows.Forms.PictureBox selezioneAttacco1;
         private System.Windows.Forms.PictureBox selezioneAttacco2;
         private System.Windows.Forms.PictureBox pictureDaCopiare;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label puntiLabel;
+        private System.Windows.Forms.Label puntiCount;
+        private System.Windows.Forms.PictureBox radarGrigliaPictureBox;
     }
 }

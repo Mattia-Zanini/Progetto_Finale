@@ -151,7 +151,7 @@ namespace Hyper_Battleship
         PictureBox[] attaccoColpitoGiocatore2 = new PictureBox[22];
 
         #region Variabili Per il Fuzionamento dell Programma + Tasto "Conferma", "Annulla" e "Passa Turno"
-        int nTurno = -1, nTimerRadar;
+        int nTurno = -1, nTimerRadar1, nTimerRadar2;
         int naviPosizionate = 0;
         int sottomarini, cacciatorpedinieri, naviDassalto;
         bool disposizioneNaviPossibile = true;
@@ -207,6 +207,11 @@ namespace Hyper_Battleship
 
                 mostraNavi(posizioneNaviGiocatore1);
 
+                //per mostrare il punteggio dei giocatori
+                puntiLabel.Visible = true;
+                puntiCount.Visible = true;
+                puntiCount.Text = Program.scoreGiocatore1.ToString();
+
                 turnoLabel.Visible = true; contatoreTurni.Visible = true; contatoreTurni.Text = nTurno.ToString();
                 quantitàPortaerei.Visible = false; quantitàCorazzata.Visible = false; quantitàSottomarini.Visible = false;
                 quantitàCacciatorpediniere.Visible = false; quantitàNaveDassalto.Visible = false;
@@ -216,11 +221,12 @@ namespace Hyper_Battleship
                 movimentoDisposizioneNavi.Enabled = true;
                 attacco1 = true; selezioneAttacco1.Visible = true;
                 confermaButton.Visible = true;
-                radarPcitureBox.Visible = true; countdownRadar.Visible = true; nTimerRadar = Convert.ToInt32(countdownRadar.Text); nTimerRadar--; countdownRadar.Text = nTimerRadar.ToString();
+                radarPcitureBox.Visible = true; countdownRadar.Visible = true; nTimerRadar1 = Convert.ToInt32(countdownRadar.Text); nTimerRadar1--; countdownRadar.Text = nTimerRadar1.ToString();
                 doppioAssaltoPictureBox.Visible = true; quantitàAssaltoDoppio.Visible = true;
             }
             else if(nTurno % 2 == 1)//round giocatore 1
             {
+                puntiCount.Text = Program.scoreGiocatore1.ToString();
                 player1PictureBox.Visible = true; player2PictureBox.Visible = false;
                 quantitàAssaltoDoppio.Text = Program.quantitàAssaltoDoppioGiocatore1.ToString();
                 mostraNavi(posizioneNaviGiocatore1);
@@ -259,12 +265,14 @@ namespace Hyper_Battleship
                     attaccoMancatoGiocatore2[i].Visible = false;
                 }
 
-                countdownRadar.Text = (Convert.ToInt32(countdownRadar.Text) - nTurno + 1).ToString();
+                nTimerRadar1 = Convert.ToInt32(countdownRadar.Text); nTimerRadar1--; countdownRadar.Text = nTimerRadar1.ToString();
+                //countdownRadar.Text = (Convert.ToInt32(countdownRadar.Text) - nTurno + 1).ToString();
                 selezioneAttacco1.BringToFront(); selezioneAttacco2.BringToFront();
                 selezioneAttacco2.Visible = false;
             }
             else if(nTurno % 2 == 0)//round giocatore 2
             {
+                puntiCount.Text = Program.scoreGiocatore2.ToString();
                 player1PictureBox.Visible = false; player2PictureBox.Visible = true;
                 quantitàAssaltoDoppio.Text = Program.quantitàAssaltoDoppioGiocatore2.ToString();
                 mostraNavi(posizioneNaviGiocatore2);
@@ -302,7 +310,8 @@ namespace Hyper_Battleship
                     attaccoMancatoGiocatore2[i].BringToFront();
                 }
 
-                countdownRadar.Text = (Convert.ToInt32(countdownRadar.Text) - nTurno + 1).ToString();
+                nTimerRadar2 = Convert.ToInt32(countdownRadar.Text); nTimerRadar2--; countdownRadar.Text = nTimerRadar2.ToString();
+                //countdownRadar.Text = (Convert.ToInt32(countdownRadar.Text) - nTurno + 1).ToString();
                 selezioneAttacco1.BringToFront(); selezioneAttacco2.BringToFront();
                 selezioneAttacco2.Visible = false;
             }
@@ -310,6 +319,7 @@ namespace Hyper_Battleship
 
         private void doppioAssaltoPictureBox_Click(object sender, EventArgs e)
         {
+            //mostra rispettivamente la quantità delle abilità di entrambi i giocatori
             if (player1PictureBox.Visible)
             {
                 if(Program.quantitàAssaltoDoppioGiocatore1 > 0)
@@ -334,7 +344,7 @@ namespace Hyper_Battleship
             }
             else
             {
-                if (!attacco2)
+                if (!attacco2)//per evitare di dare conferma dell'uso dell'abilità se quest'ultima è già attiva
                 {
                     attacco2 = true;
                     selezioneAttacco2.Visible = true;
@@ -352,9 +362,23 @@ namespace Hyper_Battleship
             }
         }
 
+        bool radarAttivo = false, radarUsato1 = false, radarUsato2 = false;
         private void radarPcitureBox_Click(object sender, EventArgs e)
         {
-
+            if(Convert.ToInt32(countdownRadar.Text) == 0 && radarAttivo == false)
+            {
+                if (Program.modalità == false)
+                {
+                    radarGrigliaPictureBox.Width = 105; radarGrigliaPictureBox.Height = 105;
+                    radarGrigliaPictureBox.Location = new Point(945, 267);
+                }
+                radarGrigliaPictureBox.Location = new Point(899, 311);
+                radarGrigliaPictureBox.BringToFront();
+                radarAttivo = true;
+                radarPcitureBox.Image = Properties.Resources.RadarScalaGrigio;
+                annullaButton.Visible = true;
+                confermaButton.Visible = true;
+            }
         }
 
         #endregion
@@ -376,7 +400,7 @@ namespace Hyper_Battleship
                 naviPosizionateGiocatore2++;
             }
         }
-        private void mostraNavi(string[] dettagliNavi)
+        private void mostraNavi(string[] dettagliNavi)//posiziona le navi nelle allocazioni stabilite da entrambi i giocatori
         {
             for(int i = 0; i < dettagliNavi.Length; i++)
             {
@@ -546,8 +570,8 @@ namespace Hyper_Battleship
                     }
                     else
                     {
-                        MessageBox.Show("Non puoi riattaccare in una posizione già attaccata");
                         confirmButtonPressed = false;
+                        MessageBox.Show("Non puoi riattaccare in una posizione già attaccata");
                     }
                 }
             }
@@ -596,8 +620,8 @@ namespace Hyper_Battleship
                     }
                     else
                     {
-                        MessageBox.Show("Non puoi riattaccare in una posizione già attaccata");
                         confirmButtonPressed = false;
+                        MessageBox.Show("Non puoi riattaccare in una posizione già attaccata");
                     }
                 }
                 if (exitOperation)
@@ -612,11 +636,75 @@ namespace Hyper_Battleship
                 }
             }
 
-            if (Convert.ToInt32(countdownRadar.Text) == 0)
+            radarDeiGiocatori();
+
+            //if()
+
+            switch (Program.modalità)
             {
-                countdownRadar.Visible = false;
-                radarPcitureBox.Image = Properties.Resources.Radar;
+                case true:
+                    if (naviColpiteGiocatore1 == 22 || naviColpiteGiocatore2 == 22)
+                    {
+                        movimentoDisposizioneNavi.Enabled = false;
+                        finePartita();
+                    }
+                    break;
+                case false:
+                    if (naviColpiteGiocatore1 == 10 || naviColpiteGiocatore2 == 10)
+                    {
+                        movimentoDisposizioneNavi.Enabled = false;
+                        finePartita();
+                    }
+                    break;
             }
+        }
+
+        private void radarDeiGiocatori()//per far scendere il countdown dei timer dei timer dei giocatori
+        {
+            if(radarAttivo == false)
+            {
+                if (player1PictureBox.Visible && radarUsato1 == false)
+                {
+                    if (nTimerRadar1 == 0)
+                    {
+                        countdownRadar.Visible = false;
+                        radarPcitureBox.Image = Properties.Resources.Radar;
+                    }
+                }
+                else if(player2PictureBox.Visible && radarUsato2 == false)
+                {
+                    if (nTimerRadar2 == 0)
+                    {
+                        countdownRadar.Visible = false;
+                        radarPcitureBox.Image = Properties.Resources.Radar;
+                    }
+                }
+            }
+        }
+
+        private void finePartita()
+        {
+            if (player1PictureBox.Visible)
+            {
+                Program.nomeVincitore = Program.nomeGiocatore1;
+                conclusionePartita();
+            }
+            else
+            {
+                Program.nomeVincitore = Program.nomeGiocatore2;
+                conclusionePartita();
+            }
+        }
+
+        private void conclusionePartita()
+        {
+            while (!Program.partitaConclusa)
+            {
+                Application.DoEvents();
+            }
+            Schermata_Iniziale f1 = new Schermata_Iniziale();
+            f1.Show();
+            this.Close();
         }
 
         private void movimentoNavi6x6()//partita veloce
@@ -1571,7 +1659,8 @@ namespace Hyper_Battleship
 
         private void attaccoAlleNavi(string[] nave, PictureBox attacco)//controlla se un giocatore colpisce o manca una nave
         {
-            if (player1PictureBox.Visible)
+            if (player1PictureBox.Visible)//se si manca la nave nemica si perdono 5 punti
+                                          //se invece i giocatori colpiscono la nave nemica guadagnano 100 punti
             {
                 if(nave[1] != "acqua2")
                 {
@@ -1580,6 +1669,7 @@ namespace Hyper_Battleship
                     attaccoColpitoGiocatore1[naviColpiteGiocatore1].Image = Properties.Resources.attaccoNaveAffondata10x10;
                     attaccoColpitoGiocatore1[naviColpiteGiocatore1].BringToFront();
                     naviColpiteGiocatore1++;
+                    Program.scoreGiocatore1 += 100;
                 }
                 else
                 {
@@ -1588,7 +1678,9 @@ namespace Hyper_Battleship
                     attaccoMancatoGiocatore1[naviMancateGiocatore1].Image = Properties.Resources.attaccoNaveMancata10x10;
                     attaccoMancatoGiocatore1[naviMancateGiocatore1].BringToFront();
                     naviMancateGiocatore1++;
+                    Program.scoreGiocatore1 -= 5;
                 }
+                puntiCount.Text = Program.scoreGiocatore1.ToString();
             }
             else
             {
@@ -1599,6 +1691,7 @@ namespace Hyper_Battleship
                     attaccoColpitoGiocatore2[naviColpiteGiocatore2].Image = Properties.Resources.attaccoNaveAffondata10x10;
                     attaccoColpitoGiocatore2[naviColpiteGiocatore2].BringToFront();
                     naviColpiteGiocatore2++;
+                    Program.scoreGiocatore2 += 100;
                 }
                 else
                 {
@@ -1607,7 +1700,9 @@ namespace Hyper_Battleship
                     attaccoMancatoGiocatore2[naviMancateGiocatore2].Image = Properties.Resources.attaccoNaveMancata10x10;
                     attaccoMancatoGiocatore2[naviMancateGiocatore2].BringToFront();
                     naviMancateGiocatore2++;
+                    Program.scoreGiocatore2 -= 5;
                 }
+                puntiCount.Text = Program.scoreGiocatore2.ToString();
             }
         }
 
@@ -2432,9 +2527,9 @@ namespace Hyper_Battleship
                     {
                         posizioniDaControllare = posizioniDaControllare.RemoveFromArray(indexToRemove);
                     }
-                    else
+                    else if(immagineGirata && coordinateNaveSuGrigliaArray != latoDestroGriglia[i] - (indexToRemove - 1))
                     {
-                        for(int j = 0; j < controlloLatoDestroNave.Length; j++)
+                        for (int j = 0; j < controlloLatoDestroNave.Length; j++)
                         {
                             posizioniDaControllare = posizioniDaControllare.RemoveFromArray(controlloLatoDestroNave[j]);
                         }
