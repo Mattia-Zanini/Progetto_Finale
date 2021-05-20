@@ -303,5 +303,11 @@
   <ItemGroup>
     <None Include="Sprites\tastoQ.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\naveIndividuata6x6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\naveIndividuata10x10.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

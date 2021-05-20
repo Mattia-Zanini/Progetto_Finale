@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//dimensioni originali 1374; 720
+//naveColpita_1
 namespace Hyper_Battleship
 {
     public partial class Gameplay : Form
@@ -14,6 +16,7 @@ namespace Hyper_Battleship
         public Gameplay()
         {
             InitializeComponent();
+            this.Width = 1374;
             if (Program.modalità == false)//nel caso la partita sia sulla modalità "Partita Veloce" il layout della schermata cambia
             {
                 grigliaDiGiocoGrande.Image = Properties.Resources.Griglia6x6;
@@ -62,31 +65,6 @@ namespace Hyper_Battleship
                 sottomarino1Griglia10x10.Height = 105; sottomarino1Griglia10x10.Width = 315; sottomarino1Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6;
                 sottomarino2Griglia10x10.Height = 105; sottomarino2Griglia10x10.Width = 315; sottomarino2Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6;
 
-                Array.Resize(ref attaccoMancatoGiocatore1, attaccoMancatoGiocatore1.Length - 62);
-                Array.Resize(ref attaccoMancatoGiocatore2, attaccoMancatoGiocatore1.Length - 62);
-                Array.Resize(ref attaccoColpitoGiocatore1, attaccoColpitoGiocatore1.Length - 12);
-                Array.Resize(ref attaccoColpitoGiocatore2, attaccoColpitoGiocatore2.Length - 12);
-
-                for (int i = 0; i < 26; i++)//inizializza le picturebox
-                {
-                    attaccoMancatoGiocatore1[i] = pictureDaCopiare;
-                    attaccoMancatoGiocatore1[i].Visible = false;
-                    if (Program.multigiocatore)//nel caso il gioco sia impostato su multigiocatore
-                    {
-                        attaccoMancatoGiocatore2[i] = pictureDaCopiare;
-                        attaccoMancatoGiocatore2[i].Visible = false;
-                    }
-                }
-                for (int i = 0; i < 10; i++)
-                {
-                    attaccoColpitoGiocatore1[i] = pictureDaCopiare;
-                    attaccoColpitoGiocatore1[i].Visible = false;
-                    if (Program.multigiocatore)
-                    {
-                        attaccoColpitoGiocatore2[i] = pictureDaCopiare;
-                        attaccoColpitoGiocatore2[i].Visible = false;
-                    }
-                }
                 selezioneAttacco1.Width = 105; selezioneAttacco1.Height = 105;
                 selezioneAttacco2.Width = 105; selezioneAttacco2.Height = 105;
             }
@@ -94,26 +72,6 @@ namespace Hyper_Battleship
             {
                 grigliaDiGiocoGrande.Image = Properties.Resources.Griglia10x10;
                 grigliaDiGiocoPiccola.Image = Properties.Resources.griglia_Piccola_10x10;
-                for (int i = 0; i < 88; i++)//inizializza le picturebox
-                {
-                    attaccoMancatoGiocatore1[i] = pictureDaCopiare;
-                    attaccoMancatoGiocatore1[i].Visible = false;
-                    if (Program.multigiocatore)//nel caso il gioco sia impostato su multigiocatore
-                    {
-                        attaccoMancatoGiocatore2[i] = pictureDaCopiare;
-                        attaccoMancatoGiocatore2[i].Visible = false;
-                    }
-                }
-                for (int i = 0; i < 22; i++)
-                {
-                    attaccoColpitoGiocatore1[i] = pictureDaCopiare;
-                    attaccoColpitoGiocatore1[i].Visible = false;
-                    if (Program.multigiocatore)
-                    {
-                        attaccoColpitoGiocatore2[i] = pictureDaCopiare;
-                        attaccoColpitoGiocatore2[i].Visible = false;
-                    }
-                }
                 selezioneAttacco1.Image = Properties.Resources.selezione_Attacco_Griglia10x10;
                 selezioneAttacco2.Image = Properties.Resources.selezione_Attacco2_Griglia10x10;
             }
@@ -145,10 +103,6 @@ namespace Hyper_Battleship
         //picturebox che servono per indicare ai giocatori se colpiscono o meno le navi nemiche
         int naviColpiteGiocatore1 = 0, naviColpiteGiocatore2 = 0;
         int naviMancateGiocatore1 = 0, naviMancateGiocatore2 = 0;
-        PictureBox[] attaccoMancatoGiocatore1 = new PictureBox[88];
-        PictureBox[] attaccoColpitoGiocatore1 = new PictureBox[22];
-        PictureBox[] attaccoMancatoGiocatore2 = new PictureBox[88];
-        PictureBox[] attaccoColpitoGiocatore2 = new PictureBox[22];
 
         #region Variabili Per il Fuzionamento dell Programma + Tasto "Conferma", "Annulla" e "Passa Turno"
         int nTurno = -1, nTimerRadar1, nTimerRadar2;
@@ -242,28 +196,6 @@ namespace Hyper_Battleship
                 {
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
                 }
-                //mostra le navi del giocatore 1
-                for(int i = 0; i < naviColpiteGiocatore1; i++)
-                {
-                    attaccoColpitoGiocatore1[i].Visible = true;
-                    attaccoColpitoGiocatore1[i].Image = Properties.Resources.attaccoNaveAffondata10x10;
-                    attaccoColpitoGiocatore1[i].BringToFront();
-                }
-                for (int i = 0; i < naviMancateGiocatore1; i++)
-                {
-                    attaccoMancatoGiocatore1[i].Visible = true;
-                    attaccoMancatoGiocatore1[i].Image = Properties.Resources.attaccoNaveMancata10x10;
-                    attaccoMancatoGiocatore1[i].BringToFront();
-                }
-                //nasconde le navi del giocatore 2
-                for (int i = 0; i < naviColpiteGiocatore2; i++)
-                {
-                    attaccoColpitoGiocatore2[i].Visible = false;
-                }
-                for (int i = 0; i < naviMancateGiocatore2; i++)
-                {
-                    attaccoMancatoGiocatore2[i].Visible = false;
-                }
 
                 nTimerRadar1 = Convert.ToInt32(countdownRadar.Text); nTimerRadar1--; countdownRadar.Text = nTimerRadar1.ToString();
                 //countdownRadar.Text = (Convert.ToInt32(countdownRadar.Text) - nTurno + 1).ToString();
@@ -286,28 +218,6 @@ namespace Hyper_Battleship
                 else
                 {
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
-                }
-                //nasconde le navi del giocatore 1
-                for (int i = 0; i < naviColpiteGiocatore1; i++)
-                {
-                    attaccoColpitoGiocatore1[i].Visible = false;
-                }
-                for (int i = 0; i < naviMancateGiocatore1; i++)
-                {
-                    attaccoMancatoGiocatore1[i].Visible = false;
-                }
-                //mostra le navi del giocatore 2
-                for (int i = 0; i < naviColpiteGiocatore2; i++)
-                {
-                    attaccoColpitoGiocatore2[i].Visible = true;
-                    attaccoColpitoGiocatore2[i].Image = Properties.Resources.attaccoNaveAffondata10x10;
-                    attaccoColpitoGiocatore2[i].BringToFront();
-                }
-                for (int i = 0; i < naviMancateGiocatore2; i++)
-                {
-                    attaccoMancatoGiocatore2[i].Visible = true;
-                    attaccoMancatoGiocatore2[i].Image = Properties.Resources.attaccoNaveMancata10x10;
-                    attaccoMancatoGiocatore2[i].BringToFront();
                 }
 
                 nTimerRadar2 = Convert.ToInt32(countdownRadar.Text); nTimerRadar2--; countdownRadar.Text = nTimerRadar2.ToString();
@@ -350,7 +260,7 @@ namespace Hyper_Battleship
                     selezioneAttacco2.Visible = true;
                     confermaButton.Visible = true; annullaButton.Visible = true;
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssaltoScalaGrigio;
-                    if (player1PictureBox.Visible)
+                    if (player1PictureBox.Visible)//diminuisce il quantitativo di doppio assalto disponibile al corrispondete giocatore che ha attivato l'abilità in quel turno
                     {
                         quantitàAssaltoDoppio.Text = (Program.quantitàAssaltoDoppioGiocatore1 - 1).ToString();
                     }
@@ -363,11 +273,11 @@ namespace Hyper_Battleship
         }
 
         bool radarAttivo = false, radarUsato1 = false, radarUsato2 = false;
-        private void radarPcitureBox_Click(object sender, EventArgs e)
+        private void radarPcitureBox_Click(object sender, EventArgs e)//quando un giocatore vuole usare il radar
         {
             if(Convert.ToInt32(countdownRadar.Text) == 0 && radarAttivo == false)
             {
-                if (Program.modalità == false)
+                if (Program.modalità == false)//nel caso la partita sia in modalità veloce
                 {
                     radarGrigliaPictureBox.Width = 105; radarGrigliaPictureBox.Height = 105;
                     radarGrigliaPictureBox.Location = new Point(945, 267);
@@ -638,7 +548,45 @@ namespace Hyper_Battleship
 
             radarDeiGiocatori();
 
-            //if()
+            if (radarAttivo)
+            {
+                if (moveUp && selezioneAttacco2.Top > 85 && !confirmButtonPressed)
+                {
+                    radarGrigliaPictureBox.Top -= 45;
+                }
+                if (moveDown && selezioneAttacco2.Top < 445 && !confirmButtonPressed)
+                {
+                    radarGrigliaPictureBox.Top += 45;
+                }
+                if (moveRight && selezioneAttacco2.Right < 1168 && !confirmButtonPressed)
+                {
+                    radarGrigliaPictureBox.Left += 45;
+                }
+                if (moveLeft && selezioneAttacco2.Left > 763 && !confirmButtonPressed)
+                {
+                    radarGrigliaPictureBox.Left -= 45;
+                }
+                if (confirmButtonPressed)
+                {
+
+                    radarGrigliaPictureBox.Visible = false;
+                    radarAttivo = false;
+                    annullaButton.Visible = false;
+                    confermaButton.Visible = false;
+                    countdownRadar.Text = "0";
+                    radarPcitureBox.Image = Properties.Resources.RadarScalaGrigio;
+                }
+                if (exitOperation)
+                {
+                    radarGrigliaPictureBox.Visible = false;
+                    radarAttivo = false;
+                    exitOperation = false;
+                    annullaButton.Visible = false;
+                    confermaButton.Visible = false;
+                    countdownRadar.Text = "1";
+                    radarPcitureBox.Image = Properties.Resources.Radar;
+                }
+            }
 
             switch (Program.modalità)
             {
@@ -1664,19 +1612,11 @@ namespace Hyper_Battleship
             {
                 if(nave[1] != "acqua2")
                 {
-                    attaccoColpitoGiocatore1[naviColpiteGiocatore1].Location = new Point(attacco.Location.X, attacco.Location.Y);
-                    attaccoColpitoGiocatore1[naviColpiteGiocatore1].Visible = true;
-                    attaccoColpitoGiocatore1[naviColpiteGiocatore1].Image = Properties.Resources.attaccoNaveAffondata10x10;
-                    attaccoColpitoGiocatore1[naviColpiteGiocatore1].BringToFront();
                     naviColpiteGiocatore1++;
                     Program.scoreGiocatore1 += 100;
                 }
                 else
                 {
-                    attaccoMancatoGiocatore1[naviMancateGiocatore1].Location = new Point(attacco.Location.X, attacco.Location.Y);
-                    attaccoMancatoGiocatore1[naviMancateGiocatore1].Visible = true;
-                    attaccoMancatoGiocatore1[naviMancateGiocatore1].Image = Properties.Resources.attaccoNaveMancata10x10;
-                    attaccoMancatoGiocatore1[naviMancateGiocatore1].BringToFront();
                     naviMancateGiocatore1++;
                     Program.scoreGiocatore1 -= 5;
                 }
@@ -1686,19 +1626,11 @@ namespace Hyper_Battleship
             {
                 if (nave[0] != "acqua1")
                 {
-                    attaccoColpitoGiocatore2[naviColpiteGiocatore2].Location = new Point(attacco.Location.X, attacco.Location.Y);
-                    attaccoColpitoGiocatore2[naviColpiteGiocatore2].Visible = true;
-                    attaccoColpitoGiocatore2[naviColpiteGiocatore2].Image = Properties.Resources.attaccoNaveAffondata10x10;
-                    attaccoColpitoGiocatore2[naviColpiteGiocatore2].BringToFront();
                     naviColpiteGiocatore2++;
                     Program.scoreGiocatore2 += 100;
                 }
                 else
                 {
-                    attaccoMancatoGiocatore2[naviMancateGiocatore2].Location = new Point(attacco.Location.X, attacco.Location.Y);
-                    attaccoMancatoGiocatore2[naviMancateGiocatore2].Visible = true;
-                    attaccoMancatoGiocatore2[naviMancateGiocatore2].Image = Properties.Resources.attaccoNaveMancata10x10;
-                    attaccoMancatoGiocatore2[naviMancateGiocatore2].BringToFront();
                     naviMancateGiocatore2++;
                     Program.scoreGiocatore2 -= 5;
                 }
