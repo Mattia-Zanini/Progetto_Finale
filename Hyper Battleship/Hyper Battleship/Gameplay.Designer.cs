@@ -152,94 +152,94 @@
             this.portaereiPictureBox10x10 = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoPiccola = new System.Windows.Forms.PictureBox();
             this.grigliaDiGiocoGrande = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox15 = new System.Windows.Forms.PictureBox();
-            this.pictureBox16 = new System.Windows.Forms.PictureBox();
-            this.pictureBox17 = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
-            this.pictureBox19 = new System.Windows.Forms.PictureBox();
-            this.pictureBox20 = new System.Windows.Forms.PictureBox();
-            this.pictureBox21 = new System.Windows.Forms.PictureBox();
-            this.pictureBox22 = new System.Windows.Forms.PictureBox();
-            this.pictureBox23 = new System.Windows.Forms.PictureBox();
-            this.pictureBox24 = new System.Windows.Forms.PictureBox();
-            this.pictureBox25 = new System.Windows.Forms.PictureBox();
-            this.pictureBox26 = new System.Windows.Forms.PictureBox();
-            this.pictureBox27 = new System.Windows.Forms.PictureBox();
-            this.pictureBox28 = new System.Windows.Forms.PictureBox();
-            this.pictureBox29 = new System.Windows.Forms.PictureBox();
-            this.pictureBox30 = new System.Windows.Forms.PictureBox();
-            this.pictureBox31 = new System.Windows.Forms.PictureBox();
-            this.pictureBox32 = new System.Windows.Forms.PictureBox();
-            this.pictureBox33 = new System.Windows.Forms.PictureBox();
-            this.pictureBox34 = new System.Windows.Forms.PictureBox();
-            this.pictureBox35 = new System.Windows.Forms.PictureBox();
-            this.pictureBox36 = new System.Windows.Forms.PictureBox();
-            this.pictureBox37 = new System.Windows.Forms.PictureBox();
-            this.pictureBox38 = new System.Windows.Forms.PictureBox();
-            this.pictureBox39 = new System.Windows.Forms.PictureBox();
-            this.pictureBox40 = new System.Windows.Forms.PictureBox();
-            this.pictureBox41 = new System.Windows.Forms.PictureBox();
-            this.pictureBox42 = new System.Windows.Forms.PictureBox();
-            this.pictureBox43 = new System.Windows.Forms.PictureBox();
-            this.pictureBox44 = new System.Windows.Forms.PictureBox();
-            this.pictureBox45 = new System.Windows.Forms.PictureBox();
-            this.pictureBox46 = new System.Windows.Forms.PictureBox();
-            this.pictureBox47 = new System.Windows.Forms.PictureBox();
-            this.pictureBox48 = new System.Windows.Forms.PictureBox();
-            this.pictureBox49 = new System.Windows.Forms.PictureBox();
-            this.pictureBox50 = new System.Windows.Forms.PictureBox();
-            this.pictureBox51 = new System.Windows.Forms.PictureBox();
-            this.pictureBox52 = new System.Windows.Forms.PictureBox();
-            this.pictureBox53 = new System.Windows.Forms.PictureBox();
-            this.pictureBox54 = new System.Windows.Forms.PictureBox();
-            this.pictureBox55 = new System.Windows.Forms.PictureBox();
-            this.pictureBox56 = new System.Windows.Forms.PictureBox();
-            this.pictureBox57 = new System.Windows.Forms.PictureBox();
-            this.pictureBox58 = new System.Windows.Forms.PictureBox();
-            this.pictureBox59 = new System.Windows.Forms.PictureBox();
-            this.pictureBox60 = new System.Windows.Forms.PictureBox();
-            this.pictureBox61 = new System.Windows.Forms.PictureBox();
-            this.pictureBox62 = new System.Windows.Forms.PictureBox();
-            this.pictureBox63 = new System.Windows.Forms.PictureBox();
-            this.pictureBox64 = new System.Windows.Forms.PictureBox();
-            this.pictureBox65 = new System.Windows.Forms.PictureBox();
-            this.pictureBox66 = new System.Windows.Forms.PictureBox();
-            this.pictureBox67 = new System.Windows.Forms.PictureBox();
-            this.pictureBox68 = new System.Windows.Forms.PictureBox();
-            this.pictureBox69 = new System.Windows.Forms.PictureBox();
-            this.pictureBox70 = new System.Windows.Forms.PictureBox();
-            this.pictureBox71 = new System.Windows.Forms.PictureBox();
-            this.pictureBox72 = new System.Windows.Forms.PictureBox();
-            this.pictureBox73 = new System.Windows.Forms.PictureBox();
-            this.pictureBox74 = new System.Windows.Forms.PictureBox();
-            this.pictureBox75 = new System.Windows.Forms.PictureBox();
-            this.pictureBox76 = new System.Windows.Forms.PictureBox();
-            this.pictureBox77 = new System.Windows.Forms.PictureBox();
-            this.pictureBox78 = new System.Windows.Forms.PictureBox();
-            this.pictureBox79 = new System.Windows.Forms.PictureBox();
-            this.pictureBox80 = new System.Windows.Forms.PictureBox();
-            this.pictureBox81 = new System.Windows.Forms.PictureBox();
-            this.pictureBox82 = new System.Windows.Forms.PictureBox();
-            this.pictureBox83 = new System.Windows.Forms.PictureBox();
-            this.pictureBox84 = new System.Windows.Forms.PictureBox();
-            this.pictureBox85 = new System.Windows.Forms.PictureBox();
-            this.pictureBox86 = new System.Windows.Forms.PictureBox();
-            this.pictureBox87 = new System.Windows.Forms.PictureBox();
-            this.pictureBox88 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_22 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_21 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_20 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_19 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_18 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_17 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_16 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_15 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_14 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_13 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_12 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_11 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_10 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_9 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_8 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_7 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_6 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_5 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_4 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_3 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_2 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_1 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_44 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_43 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_42 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_41 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_40 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_39 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_38 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_37 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_36 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_35 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_34 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_33 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_32 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_31 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_30 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_29 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_28 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_27 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_26 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_25 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_24 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_23 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_66 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_65 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_64 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_63 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_62 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_61 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_60 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_59 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_58 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_57 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_56 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_55 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_54 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_53 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_52 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_51 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_50 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_49 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_48 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_47 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_46 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_45 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_88 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_87 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_86 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_85 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_84 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_83 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_82 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_81 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_80 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_79 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_78 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_77 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_76 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_75 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_74 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_73 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_72 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_71 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_70 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_69 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_68 = new System.Windows.Forms.PictureBox();
+            this.naveMancata_67 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.naveColpita_22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveColpita_21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveColpita_20)).BeginInit();
@@ -307,94 +307,94 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox56)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox63)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox73)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox74)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox78)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox79)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox82)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox83)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox84)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox85)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox86)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox87)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox88)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_22)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_44)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_43)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_42)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_41)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_40)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_39)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_38)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_37)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_36)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_35)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_34)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_33)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_32)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_31)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_30)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_29)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_28)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_27)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_26)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_25)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_24)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_23)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_66)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_65)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_64)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_63)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_62)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_61)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_60)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_59)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_58)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_57)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_56)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_55)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_54)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_53)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_52)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_51)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_50)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_49)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_48)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_47)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_46)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_45)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_88)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_87)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_86)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_85)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_84)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_83)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_82)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_81)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_80)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_79)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_78)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_77)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_76)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_75)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_74)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_73)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_72)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_71)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_70)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_69)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_68)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_67)).BeginInit();
             this.SuspendLayout();
             // 
             // confermaButton
@@ -1047,7 +1047,7 @@
             this.naveColpita_22.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_22.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_22.Image")));
             this.naveColpita_22.ImageLocation = "";
-            this.naveColpita_22.Location = new System.Drawing.Point(1627, 115);
+            this.naveColpita_22.Location = new System.Drawing.Point(1689, 130);
             this.naveColpita_22.Name = "naveColpita_22";
             this.naveColpita_22.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_22.TabIndex = 134;
@@ -1059,7 +1059,7 @@
             this.naveColpita_21.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_21.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_21.Image")));
             this.naveColpita_21.ImageLocation = "";
-            this.naveColpita_21.Location = new System.Drawing.Point(1616, 115);
+            this.naveColpita_21.Location = new System.Drawing.Point(1678, 130);
             this.naveColpita_21.Name = "naveColpita_21";
             this.naveColpita_21.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_21.TabIndex = 133;
@@ -1071,7 +1071,7 @@
             this.naveColpita_20.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_20.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_20.Image")));
             this.naveColpita_20.ImageLocation = "";
-            this.naveColpita_20.Location = new System.Drawing.Point(1603, 115);
+            this.naveColpita_20.Location = new System.Drawing.Point(1665, 130);
             this.naveColpita_20.Name = "naveColpita_20";
             this.naveColpita_20.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_20.TabIndex = 132;
@@ -1083,7 +1083,7 @@
             this.naveColpita_19.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_19.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_19.Image")));
             this.naveColpita_19.ImageLocation = "";
-            this.naveColpita_19.Location = new System.Drawing.Point(1590, 115);
+            this.naveColpita_19.Location = new System.Drawing.Point(1652, 130);
             this.naveColpita_19.Name = "naveColpita_19";
             this.naveColpita_19.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_19.TabIndex = 131;
@@ -1095,7 +1095,7 @@
             this.naveColpita_18.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_18.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_18.Image")));
             this.naveColpita_18.ImageLocation = "";
-            this.naveColpita_18.Location = new System.Drawing.Point(1576, 115);
+            this.naveColpita_18.Location = new System.Drawing.Point(1638, 130);
             this.naveColpita_18.Name = "naveColpita_18";
             this.naveColpita_18.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_18.TabIndex = 130;
@@ -1107,7 +1107,7 @@
             this.naveColpita_17.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_17.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_17.Image")));
             this.naveColpita_17.ImageLocation = "";
-            this.naveColpita_17.Location = new System.Drawing.Point(1565, 115);
+            this.naveColpita_17.Location = new System.Drawing.Point(1627, 130);
             this.naveColpita_17.Name = "naveColpita_17";
             this.naveColpita_17.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_17.TabIndex = 129;
@@ -1119,7 +1119,7 @@
             this.naveColpita_16.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_16.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_16.Image")));
             this.naveColpita_16.ImageLocation = "";
-            this.naveColpita_16.Location = new System.Drawing.Point(1552, 115);
+            this.naveColpita_16.Location = new System.Drawing.Point(1614, 130);
             this.naveColpita_16.Name = "naveColpita_16";
             this.naveColpita_16.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_16.TabIndex = 128;
@@ -1131,7 +1131,7 @@
             this.naveColpita_15.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_15.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_15.Image")));
             this.naveColpita_15.ImageLocation = "";
-            this.naveColpita_15.Location = new System.Drawing.Point(1539, 115);
+            this.naveColpita_15.Location = new System.Drawing.Point(1601, 130);
             this.naveColpita_15.Name = "naveColpita_15";
             this.naveColpita_15.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_15.TabIndex = 127;
@@ -1143,7 +1143,7 @@
             this.naveColpita_14.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_14.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_14.Image")));
             this.naveColpita_14.ImageLocation = "";
-            this.naveColpita_14.Location = new System.Drawing.Point(1525, 115);
+            this.naveColpita_14.Location = new System.Drawing.Point(1587, 130);
             this.naveColpita_14.Name = "naveColpita_14";
             this.naveColpita_14.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_14.TabIndex = 126;
@@ -1155,7 +1155,7 @@
             this.naveColpita_13.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_13.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_13.Image")));
             this.naveColpita_13.ImageLocation = "";
-            this.naveColpita_13.Location = new System.Drawing.Point(1514, 115);
+            this.naveColpita_13.Location = new System.Drawing.Point(1576, 130);
             this.naveColpita_13.Name = "naveColpita_13";
             this.naveColpita_13.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_13.TabIndex = 125;
@@ -1167,7 +1167,7 @@
             this.naveColpita_12.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_12.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_12.Image")));
             this.naveColpita_12.ImageLocation = "";
-            this.naveColpita_12.Location = new System.Drawing.Point(1501, 115);
+            this.naveColpita_12.Location = new System.Drawing.Point(1563, 130);
             this.naveColpita_12.Name = "naveColpita_12";
             this.naveColpita_12.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_12.TabIndex = 124;
@@ -1179,7 +1179,7 @@
             this.naveColpita_11.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_11.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_11.Image")));
             this.naveColpita_11.ImageLocation = "";
-            this.naveColpita_11.Location = new System.Drawing.Point(1488, 115);
+            this.naveColpita_11.Location = new System.Drawing.Point(1550, 130);
             this.naveColpita_11.Name = "naveColpita_11";
             this.naveColpita_11.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_11.TabIndex = 123;
@@ -1191,7 +1191,7 @@
             this.naveColpita_10.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_10.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_10.Image")));
             this.naveColpita_10.ImageLocation = "";
-            this.naveColpita_10.Location = new System.Drawing.Point(1474, 115);
+            this.naveColpita_10.Location = new System.Drawing.Point(1536, 130);
             this.naveColpita_10.Name = "naveColpita_10";
             this.naveColpita_10.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_10.TabIndex = 122;
@@ -1203,7 +1203,7 @@
             this.naveColpita_9.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_9.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_9.Image")));
             this.naveColpita_9.ImageLocation = "";
-            this.naveColpita_9.Location = new System.Drawing.Point(1463, 115);
+            this.naveColpita_9.Location = new System.Drawing.Point(1525, 130);
             this.naveColpita_9.Name = "naveColpita_9";
             this.naveColpita_9.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_9.TabIndex = 121;
@@ -1215,7 +1215,7 @@
             this.naveColpita_8.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_8.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_8.Image")));
             this.naveColpita_8.ImageLocation = "";
-            this.naveColpita_8.Location = new System.Drawing.Point(1450, 115);
+            this.naveColpita_8.Location = new System.Drawing.Point(1512, 130);
             this.naveColpita_8.Name = "naveColpita_8";
             this.naveColpita_8.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_8.TabIndex = 120;
@@ -1227,7 +1227,7 @@
             this.naveColpita_7.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_7.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_7.Image")));
             this.naveColpita_7.ImageLocation = "";
-            this.naveColpita_7.Location = new System.Drawing.Point(1437, 115);
+            this.naveColpita_7.Location = new System.Drawing.Point(1499, 130);
             this.naveColpita_7.Name = "naveColpita_7";
             this.naveColpita_7.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_7.TabIndex = 119;
@@ -1239,7 +1239,7 @@
             this.naveColpita_6.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_6.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_6.Image")));
             this.naveColpita_6.ImageLocation = "";
-            this.naveColpita_6.Location = new System.Drawing.Point(1423, 115);
+            this.naveColpita_6.Location = new System.Drawing.Point(1485, 130);
             this.naveColpita_6.Name = "naveColpita_6";
             this.naveColpita_6.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_6.TabIndex = 118;
@@ -1251,7 +1251,7 @@
             this.naveColpita_5.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_5.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_5.Image")));
             this.naveColpita_5.ImageLocation = "";
-            this.naveColpita_5.Location = new System.Drawing.Point(1412, 115);
+            this.naveColpita_5.Location = new System.Drawing.Point(1474, 130);
             this.naveColpita_5.Name = "naveColpita_5";
             this.naveColpita_5.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_5.TabIndex = 117;
@@ -1263,7 +1263,7 @@
             this.naveColpita_4.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_4.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_4.Image")));
             this.naveColpita_4.ImageLocation = "";
-            this.naveColpita_4.Location = new System.Drawing.Point(1399, 115);
+            this.naveColpita_4.Location = new System.Drawing.Point(1461, 130);
             this.naveColpita_4.Name = "naveColpita_4";
             this.naveColpita_4.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_4.TabIndex = 116;
@@ -1275,7 +1275,7 @@
             this.naveColpita_3.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_3.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_3.Image")));
             this.naveColpita_3.ImageLocation = "";
-            this.naveColpita_3.Location = new System.Drawing.Point(1386, 115);
+            this.naveColpita_3.Location = new System.Drawing.Point(1448, 130);
             this.naveColpita_3.Name = "naveColpita_3";
             this.naveColpita_3.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_3.TabIndex = 115;
@@ -1287,7 +1287,7 @@
             this.naveColpita_2.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_2.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_2.Image")));
             this.naveColpita_2.ImageLocation = "";
-            this.naveColpita_2.Location = new System.Drawing.Point(1372, 115);
+            this.naveColpita_2.Location = new System.Drawing.Point(1434, 130);
             this.naveColpita_2.Name = "naveColpita_2";
             this.naveColpita_2.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_2.TabIndex = 114;
@@ -1299,7 +1299,7 @@
             this.naveColpita_1.BackColor = System.Drawing.Color.Transparent;
             this.naveColpita_1.Image = ((System.Drawing.Image)(resources.GetObject("naveColpita_1.Image")));
             this.naveColpita_1.ImageLocation = "";
-            this.naveColpita_1.Location = new System.Drawing.Point(1361, 115);
+            this.naveColpita_1.Location = new System.Drawing.Point(1423, 130);
             this.naveColpita_1.Name = "naveColpita_1";
             this.naveColpita_1.Size = new System.Drawing.Size(45, 45);
             this.naveColpita_1.TabIndex = 113;
@@ -1311,7 +1311,7 @@
             this.naveIndividuata_22.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_22.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_22.ImageLocation = "";
-            this.naveIndividuata_22.Location = new System.Drawing.Point(1627, 14);
+            this.naveIndividuata_22.Location = new System.Drawing.Point(1689, 29);
             this.naveIndividuata_22.Name = "naveIndividuata_22";
             this.naveIndividuata_22.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_22.TabIndex = 111;
@@ -1323,7 +1323,7 @@
             this.naveIndividuata_21.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_21.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_21.ImageLocation = "";
-            this.naveIndividuata_21.Location = new System.Drawing.Point(1616, 14);
+            this.naveIndividuata_21.Location = new System.Drawing.Point(1678, 29);
             this.naveIndividuata_21.Name = "naveIndividuata_21";
             this.naveIndividuata_21.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_21.TabIndex = 110;
@@ -1335,7 +1335,7 @@
             this.naveIndividuata_20.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_20.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_20.ImageLocation = "";
-            this.naveIndividuata_20.Location = new System.Drawing.Point(1603, 14);
+            this.naveIndividuata_20.Location = new System.Drawing.Point(1665, 29);
             this.naveIndividuata_20.Name = "naveIndividuata_20";
             this.naveIndividuata_20.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_20.TabIndex = 109;
@@ -1347,7 +1347,7 @@
             this.naveIndividuata_19.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_19.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_19.ImageLocation = "";
-            this.naveIndividuata_19.Location = new System.Drawing.Point(1590, 14);
+            this.naveIndividuata_19.Location = new System.Drawing.Point(1652, 29);
             this.naveIndividuata_19.Name = "naveIndividuata_19";
             this.naveIndividuata_19.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_19.TabIndex = 108;
@@ -1359,7 +1359,7 @@
             this.naveIndividuata_18.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_18.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_18.ImageLocation = "";
-            this.naveIndividuata_18.Location = new System.Drawing.Point(1576, 14);
+            this.naveIndividuata_18.Location = new System.Drawing.Point(1638, 29);
             this.naveIndividuata_18.Name = "naveIndividuata_18";
             this.naveIndividuata_18.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_18.TabIndex = 107;
@@ -1371,7 +1371,7 @@
             this.naveIndividuata_17.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_17.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_17.ImageLocation = "";
-            this.naveIndividuata_17.Location = new System.Drawing.Point(1565, 14);
+            this.naveIndividuata_17.Location = new System.Drawing.Point(1627, 29);
             this.naveIndividuata_17.Name = "naveIndividuata_17";
             this.naveIndividuata_17.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_17.TabIndex = 106;
@@ -1383,7 +1383,7 @@
             this.naveIndividuata_16.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_16.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_16.ImageLocation = "";
-            this.naveIndividuata_16.Location = new System.Drawing.Point(1552, 14);
+            this.naveIndividuata_16.Location = new System.Drawing.Point(1614, 29);
             this.naveIndividuata_16.Name = "naveIndividuata_16";
             this.naveIndividuata_16.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_16.TabIndex = 105;
@@ -1395,7 +1395,7 @@
             this.naveIndividuata_15.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_15.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_15.ImageLocation = "";
-            this.naveIndividuata_15.Location = new System.Drawing.Point(1539, 14);
+            this.naveIndividuata_15.Location = new System.Drawing.Point(1601, 29);
             this.naveIndividuata_15.Name = "naveIndividuata_15";
             this.naveIndividuata_15.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_15.TabIndex = 104;
@@ -1407,7 +1407,7 @@
             this.naveIndividuata_14.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_14.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_14.ImageLocation = "";
-            this.naveIndividuata_14.Location = new System.Drawing.Point(1525, 14);
+            this.naveIndividuata_14.Location = new System.Drawing.Point(1587, 29);
             this.naveIndividuata_14.Name = "naveIndividuata_14";
             this.naveIndividuata_14.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_14.TabIndex = 103;
@@ -1419,7 +1419,7 @@
             this.naveIndividuata_13.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_13.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_13.ImageLocation = "";
-            this.naveIndividuata_13.Location = new System.Drawing.Point(1514, 14);
+            this.naveIndividuata_13.Location = new System.Drawing.Point(1576, 29);
             this.naveIndividuata_13.Name = "naveIndividuata_13";
             this.naveIndividuata_13.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_13.TabIndex = 102;
@@ -1431,7 +1431,7 @@
             this.naveIndividuata_12.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_12.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_12.ImageLocation = "";
-            this.naveIndividuata_12.Location = new System.Drawing.Point(1501, 14);
+            this.naveIndividuata_12.Location = new System.Drawing.Point(1563, 29);
             this.naveIndividuata_12.Name = "naveIndividuata_12";
             this.naveIndividuata_12.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_12.TabIndex = 101;
@@ -1443,7 +1443,7 @@
             this.naveIndividuata_11.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_11.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_11.ImageLocation = "";
-            this.naveIndividuata_11.Location = new System.Drawing.Point(1488, 14);
+            this.naveIndividuata_11.Location = new System.Drawing.Point(1550, 29);
             this.naveIndividuata_11.Name = "naveIndividuata_11";
             this.naveIndividuata_11.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_11.TabIndex = 100;
@@ -1455,7 +1455,7 @@
             this.naveIndividuata_10.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_10.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_10.ImageLocation = "";
-            this.naveIndividuata_10.Location = new System.Drawing.Point(1474, 14);
+            this.naveIndividuata_10.Location = new System.Drawing.Point(1536, 29);
             this.naveIndividuata_10.Name = "naveIndividuata_10";
             this.naveIndividuata_10.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_10.TabIndex = 99;
@@ -1467,7 +1467,7 @@
             this.naveIndividuata_9.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_9.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_9.ImageLocation = "";
-            this.naveIndividuata_9.Location = new System.Drawing.Point(1463, 14);
+            this.naveIndividuata_9.Location = new System.Drawing.Point(1525, 29);
             this.naveIndividuata_9.Name = "naveIndividuata_9";
             this.naveIndividuata_9.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_9.TabIndex = 98;
@@ -1479,7 +1479,7 @@
             this.naveIndividuata_8.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_8.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_8.ImageLocation = "";
-            this.naveIndividuata_8.Location = new System.Drawing.Point(1450, 14);
+            this.naveIndividuata_8.Location = new System.Drawing.Point(1512, 29);
             this.naveIndividuata_8.Name = "naveIndividuata_8";
             this.naveIndividuata_8.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_8.TabIndex = 97;
@@ -1491,7 +1491,7 @@
             this.naveIndividuata_7.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_7.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_7.ImageLocation = "";
-            this.naveIndividuata_7.Location = new System.Drawing.Point(1437, 14);
+            this.naveIndividuata_7.Location = new System.Drawing.Point(1499, 29);
             this.naveIndividuata_7.Name = "naveIndividuata_7";
             this.naveIndividuata_7.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_7.TabIndex = 96;
@@ -1503,7 +1503,7 @@
             this.naveIndividuata_6.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_6.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_6.ImageLocation = "";
-            this.naveIndividuata_6.Location = new System.Drawing.Point(1423, 14);
+            this.naveIndividuata_6.Location = new System.Drawing.Point(1485, 29);
             this.naveIndividuata_6.Name = "naveIndividuata_6";
             this.naveIndividuata_6.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_6.TabIndex = 95;
@@ -1515,7 +1515,7 @@
             this.naveIndividuata_5.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_5.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_5.ImageLocation = "";
-            this.naveIndividuata_5.Location = new System.Drawing.Point(1412, 14);
+            this.naveIndividuata_5.Location = new System.Drawing.Point(1474, 29);
             this.naveIndividuata_5.Name = "naveIndividuata_5";
             this.naveIndividuata_5.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_5.TabIndex = 94;
@@ -1527,7 +1527,7 @@
             this.naveIndividuata_4.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_4.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_4.ImageLocation = "";
-            this.naveIndividuata_4.Location = new System.Drawing.Point(1399, 14);
+            this.naveIndividuata_4.Location = new System.Drawing.Point(1461, 29);
             this.naveIndividuata_4.Name = "naveIndividuata_4";
             this.naveIndividuata_4.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_4.TabIndex = 93;
@@ -1539,7 +1539,7 @@
             this.naveIndividuata_3.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_3.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_3.ImageLocation = "";
-            this.naveIndividuata_3.Location = new System.Drawing.Point(1386, 14);
+            this.naveIndividuata_3.Location = new System.Drawing.Point(1448, 29);
             this.naveIndividuata_3.Name = "naveIndividuata_3";
             this.naveIndividuata_3.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_3.TabIndex = 92;
@@ -1551,7 +1551,7 @@
             this.naveIndividuata_2.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_2.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_2.ImageLocation = "";
-            this.naveIndividuata_2.Location = new System.Drawing.Point(1372, 14);
+            this.naveIndividuata_2.Location = new System.Drawing.Point(1434, 29);
             this.naveIndividuata_2.Name = "naveIndividuata_2";
             this.naveIndividuata_2.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_2.TabIndex = 91;
@@ -1576,7 +1576,7 @@
             this.naveIndividuata_1.BackColor = System.Drawing.Color.Transparent;
             this.naveIndividuata_1.Image = global::Hyper_Battleship.Properties.Resources.naveIndividuata10x10;
             this.naveIndividuata_1.ImageLocation = "";
-            this.naveIndividuata_1.Location = new System.Drawing.Point(1361, 14);
+            this.naveIndividuata_1.Location = new System.Drawing.Point(1423, 29);
             this.naveIndividuata_1.Name = "naveIndividuata_1";
             this.naveIndividuata_1.Size = new System.Drawing.Size(45, 45);
             this.naveIndividuata_1.TabIndex = 82;
@@ -1856,1061 +1856,1061 @@
             this.grigliaDiGiocoGrande.TabIndex = 1;
             this.grigliaDiGiocoGrande.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(1627, 242);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox1.TabIndex = 156;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.ImageLocation = "";
-            this.pictureBox2.Location = new System.Drawing.Point(1616, 242);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox2.TabIndex = 155;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.ImageLocation = "";
-            this.pictureBox3.Location = new System.Drawing.Point(1603, 242);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox3.TabIndex = 154;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.ImageLocation = "";
-            this.pictureBox4.Location = new System.Drawing.Point(1590, 242);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox4.TabIndex = 153;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.ImageLocation = "";
-            this.pictureBox5.Location = new System.Drawing.Point(1576, 242);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox5.TabIndex = 152;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Visible = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.ImageLocation = "";
-            this.pictureBox6.Location = new System.Drawing.Point(1565, 242);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox6.TabIndex = 151;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Visible = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.ImageLocation = "";
-            this.pictureBox7.Location = new System.Drawing.Point(1552, 242);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox7.TabIndex = 150;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Visible = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.ImageLocation = "";
-            this.pictureBox8.Location = new System.Drawing.Point(1539, 242);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox8.TabIndex = 149;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Visible = false;
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.ImageLocation = "";
-            this.pictureBox9.Location = new System.Drawing.Point(1525, 242);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox9.TabIndex = 148;
-            this.pictureBox9.TabStop = false;
-            this.pictureBox9.Visible = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.ImageLocation = "";
-            this.pictureBox10.Location = new System.Drawing.Point(1514, 242);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox10.TabIndex = 147;
-            this.pictureBox10.TabStop = false;
-            this.pictureBox10.Visible = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.ImageLocation = "";
-            this.pictureBox11.Location = new System.Drawing.Point(1501, 242);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox11.TabIndex = 146;
-            this.pictureBox11.TabStop = false;
-            this.pictureBox11.Visible = false;
-            // 
-            // pictureBox12
-            // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox12.Image")));
-            this.pictureBox12.ImageLocation = "";
-            this.pictureBox12.Location = new System.Drawing.Point(1488, 242);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox12.TabIndex = 145;
-            this.pictureBox12.TabStop = false;
-            this.pictureBox12.Visible = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox13.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox13.Image")));
-            this.pictureBox13.ImageLocation = "";
-            this.pictureBox13.Location = new System.Drawing.Point(1474, 242);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox13.TabIndex = 144;
-            this.pictureBox13.TabStop = false;
-            this.pictureBox13.Visible = false;
-            // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.ImageLocation = "";
-            this.pictureBox14.Location = new System.Drawing.Point(1463, 242);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox14.TabIndex = 143;
-            this.pictureBox14.TabStop = false;
-            this.pictureBox14.Visible = false;
-            // 
-            // pictureBox15
-            // 
-            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox15.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox15.Image")));
-            this.pictureBox15.ImageLocation = "";
-            this.pictureBox15.Location = new System.Drawing.Point(1450, 242);
-            this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox15.TabIndex = 142;
-            this.pictureBox15.TabStop = false;
-            this.pictureBox15.Visible = false;
-            // 
-            // pictureBox16
-            // 
-            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox16.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox16.Image")));
-            this.pictureBox16.ImageLocation = "";
-            this.pictureBox16.Location = new System.Drawing.Point(1437, 242);
-            this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox16.TabIndex = 141;
-            this.pictureBox16.TabStop = false;
-            this.pictureBox16.Visible = false;
-            // 
-            // pictureBox17
-            // 
-            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox17.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox17.Image")));
-            this.pictureBox17.ImageLocation = "";
-            this.pictureBox17.Location = new System.Drawing.Point(1423, 242);
-            this.pictureBox17.Name = "pictureBox17";
-            this.pictureBox17.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox17.TabIndex = 140;
-            this.pictureBox17.TabStop = false;
-            this.pictureBox17.Visible = false;
-            // 
-            // pictureBox18
-            // 
-            this.pictureBox18.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox18.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox18.Image")));
-            this.pictureBox18.ImageLocation = "";
-            this.pictureBox18.Location = new System.Drawing.Point(1412, 242);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox18.TabIndex = 139;
-            this.pictureBox18.TabStop = false;
-            this.pictureBox18.Visible = false;
-            // 
-            // pictureBox19
-            // 
-            this.pictureBox19.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox19.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox19.Image")));
-            this.pictureBox19.ImageLocation = "";
-            this.pictureBox19.Location = new System.Drawing.Point(1399, 242);
-            this.pictureBox19.Name = "pictureBox19";
-            this.pictureBox19.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox19.TabIndex = 138;
-            this.pictureBox19.TabStop = false;
-            this.pictureBox19.Visible = false;
-            // 
-            // pictureBox20
-            // 
-            this.pictureBox20.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox20.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox20.Image")));
-            this.pictureBox20.ImageLocation = "";
-            this.pictureBox20.Location = new System.Drawing.Point(1386, 242);
-            this.pictureBox20.Name = "pictureBox20";
-            this.pictureBox20.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox20.TabIndex = 137;
-            this.pictureBox20.TabStop = false;
-            this.pictureBox20.Visible = false;
-            // 
-            // pictureBox21
-            // 
-            this.pictureBox21.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox21.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox21.Image")));
-            this.pictureBox21.ImageLocation = "";
-            this.pictureBox21.Location = new System.Drawing.Point(1372, 242);
-            this.pictureBox21.Name = "pictureBox21";
-            this.pictureBox21.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox21.TabIndex = 136;
-            this.pictureBox21.TabStop = false;
-            this.pictureBox21.Visible = false;
-            // 
-            // pictureBox22
-            // 
-            this.pictureBox22.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox22.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox22.Image")));
-            this.pictureBox22.ImageLocation = "";
-            this.pictureBox22.Location = new System.Drawing.Point(1361, 242);
-            this.pictureBox22.Name = "pictureBox22";
-            this.pictureBox22.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox22.TabIndex = 135;
-            this.pictureBox22.TabStop = false;
-            this.pictureBox22.Visible = false;
-            // 
-            // pictureBox23
-            // 
-            this.pictureBox23.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox23.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox23.Image")));
-            this.pictureBox23.ImageLocation = "";
-            this.pictureBox23.Location = new System.Drawing.Point(1627, 328);
-            this.pictureBox23.Name = "pictureBox23";
-            this.pictureBox23.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox23.TabIndex = 178;
-            this.pictureBox23.TabStop = false;
-            this.pictureBox23.Visible = false;
-            // 
-            // pictureBox24
-            // 
-            this.pictureBox24.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox24.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox24.Image")));
-            this.pictureBox24.ImageLocation = "";
-            this.pictureBox24.Location = new System.Drawing.Point(1616, 328);
-            this.pictureBox24.Name = "pictureBox24";
-            this.pictureBox24.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox24.TabIndex = 177;
-            this.pictureBox24.TabStop = false;
-            this.pictureBox24.Visible = false;
-            // 
-            // pictureBox25
-            // 
-            this.pictureBox25.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox25.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox25.Image")));
-            this.pictureBox25.ImageLocation = "";
-            this.pictureBox25.Location = new System.Drawing.Point(1603, 328);
-            this.pictureBox25.Name = "pictureBox25";
-            this.pictureBox25.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox25.TabIndex = 176;
-            this.pictureBox25.TabStop = false;
-            this.pictureBox25.Visible = false;
-            // 
-            // pictureBox26
-            // 
-            this.pictureBox26.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox26.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox26.Image")));
-            this.pictureBox26.ImageLocation = "";
-            this.pictureBox26.Location = new System.Drawing.Point(1590, 328);
-            this.pictureBox26.Name = "pictureBox26";
-            this.pictureBox26.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox26.TabIndex = 175;
-            this.pictureBox26.TabStop = false;
-            this.pictureBox26.Visible = false;
-            // 
-            // pictureBox27
-            // 
-            this.pictureBox27.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox27.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox27.Image")));
-            this.pictureBox27.ImageLocation = "";
-            this.pictureBox27.Location = new System.Drawing.Point(1576, 328);
-            this.pictureBox27.Name = "pictureBox27";
-            this.pictureBox27.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox27.TabIndex = 174;
-            this.pictureBox27.TabStop = false;
-            this.pictureBox27.Visible = false;
-            // 
-            // pictureBox28
-            // 
-            this.pictureBox28.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox28.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox28.Image")));
-            this.pictureBox28.ImageLocation = "";
-            this.pictureBox28.Location = new System.Drawing.Point(1565, 328);
-            this.pictureBox28.Name = "pictureBox28";
-            this.pictureBox28.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox28.TabIndex = 173;
-            this.pictureBox28.TabStop = false;
-            this.pictureBox28.Visible = false;
-            // 
-            // pictureBox29
-            // 
-            this.pictureBox29.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox29.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox29.Image")));
-            this.pictureBox29.ImageLocation = "";
-            this.pictureBox29.Location = new System.Drawing.Point(1552, 328);
-            this.pictureBox29.Name = "pictureBox29";
-            this.pictureBox29.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox29.TabIndex = 172;
-            this.pictureBox29.TabStop = false;
-            this.pictureBox29.Visible = false;
-            // 
-            // pictureBox30
-            // 
-            this.pictureBox30.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox30.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox30.Image")));
-            this.pictureBox30.ImageLocation = "";
-            this.pictureBox30.Location = new System.Drawing.Point(1539, 328);
-            this.pictureBox30.Name = "pictureBox30";
-            this.pictureBox30.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox30.TabIndex = 171;
-            this.pictureBox30.TabStop = false;
-            this.pictureBox30.Visible = false;
-            // 
-            // pictureBox31
-            // 
-            this.pictureBox31.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox31.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox31.Image")));
-            this.pictureBox31.ImageLocation = "";
-            this.pictureBox31.Location = new System.Drawing.Point(1525, 328);
-            this.pictureBox31.Name = "pictureBox31";
-            this.pictureBox31.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox31.TabIndex = 170;
-            this.pictureBox31.TabStop = false;
-            this.pictureBox31.Visible = false;
-            // 
-            // pictureBox32
-            // 
-            this.pictureBox32.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox32.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox32.Image")));
-            this.pictureBox32.ImageLocation = "";
-            this.pictureBox32.Location = new System.Drawing.Point(1514, 328);
-            this.pictureBox32.Name = "pictureBox32";
-            this.pictureBox32.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox32.TabIndex = 169;
-            this.pictureBox32.TabStop = false;
-            this.pictureBox32.Visible = false;
-            // 
-            // pictureBox33
-            // 
-            this.pictureBox33.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox33.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox33.Image")));
-            this.pictureBox33.ImageLocation = "";
-            this.pictureBox33.Location = new System.Drawing.Point(1501, 328);
-            this.pictureBox33.Name = "pictureBox33";
-            this.pictureBox33.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox33.TabIndex = 168;
-            this.pictureBox33.TabStop = false;
-            this.pictureBox33.Visible = false;
-            // 
-            // pictureBox34
-            // 
-            this.pictureBox34.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox34.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox34.Image")));
-            this.pictureBox34.ImageLocation = "";
-            this.pictureBox34.Location = new System.Drawing.Point(1488, 328);
-            this.pictureBox34.Name = "pictureBox34";
-            this.pictureBox34.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox34.TabIndex = 167;
-            this.pictureBox34.TabStop = false;
-            this.pictureBox34.Visible = false;
-            // 
-            // pictureBox35
-            // 
-            this.pictureBox35.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox35.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox35.Image")));
-            this.pictureBox35.ImageLocation = "";
-            this.pictureBox35.Location = new System.Drawing.Point(1474, 328);
-            this.pictureBox35.Name = "pictureBox35";
-            this.pictureBox35.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox35.TabIndex = 166;
-            this.pictureBox35.TabStop = false;
-            this.pictureBox35.Visible = false;
-            // 
-            // pictureBox36
-            // 
-            this.pictureBox36.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox36.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox36.Image")));
-            this.pictureBox36.ImageLocation = "";
-            this.pictureBox36.Location = new System.Drawing.Point(1463, 328);
-            this.pictureBox36.Name = "pictureBox36";
-            this.pictureBox36.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox36.TabIndex = 165;
-            this.pictureBox36.TabStop = false;
-            this.pictureBox36.Visible = false;
-            // 
-            // pictureBox37
-            // 
-            this.pictureBox37.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox37.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox37.Image")));
-            this.pictureBox37.ImageLocation = "";
-            this.pictureBox37.Location = new System.Drawing.Point(1450, 328);
-            this.pictureBox37.Name = "pictureBox37";
-            this.pictureBox37.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox37.TabIndex = 164;
-            this.pictureBox37.TabStop = false;
-            this.pictureBox37.Visible = false;
-            // 
-            // pictureBox38
-            // 
-            this.pictureBox38.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox38.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox38.Image")));
-            this.pictureBox38.ImageLocation = "";
-            this.pictureBox38.Location = new System.Drawing.Point(1437, 328);
-            this.pictureBox38.Name = "pictureBox38";
-            this.pictureBox38.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox38.TabIndex = 163;
-            this.pictureBox38.TabStop = false;
-            this.pictureBox38.Visible = false;
-            // 
-            // pictureBox39
-            // 
-            this.pictureBox39.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox39.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox39.Image")));
-            this.pictureBox39.ImageLocation = "";
-            this.pictureBox39.Location = new System.Drawing.Point(1423, 328);
-            this.pictureBox39.Name = "pictureBox39";
-            this.pictureBox39.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox39.TabIndex = 162;
-            this.pictureBox39.TabStop = false;
-            this.pictureBox39.Visible = false;
-            // 
-            // pictureBox40
-            // 
-            this.pictureBox40.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox40.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox40.Image")));
-            this.pictureBox40.ImageLocation = "";
-            this.pictureBox40.Location = new System.Drawing.Point(1412, 328);
-            this.pictureBox40.Name = "pictureBox40";
-            this.pictureBox40.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox40.TabIndex = 161;
-            this.pictureBox40.TabStop = false;
-            this.pictureBox40.Visible = false;
-            // 
-            // pictureBox41
-            // 
-            this.pictureBox41.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox41.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox41.Image")));
-            this.pictureBox41.ImageLocation = "";
-            this.pictureBox41.Location = new System.Drawing.Point(1399, 328);
-            this.pictureBox41.Name = "pictureBox41";
-            this.pictureBox41.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox41.TabIndex = 160;
-            this.pictureBox41.TabStop = false;
-            this.pictureBox41.Visible = false;
-            // 
-            // pictureBox42
-            // 
-            this.pictureBox42.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox42.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox42.Image")));
-            this.pictureBox42.ImageLocation = "";
-            this.pictureBox42.Location = new System.Drawing.Point(1386, 328);
-            this.pictureBox42.Name = "pictureBox42";
-            this.pictureBox42.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox42.TabIndex = 159;
-            this.pictureBox42.TabStop = false;
-            this.pictureBox42.Visible = false;
-            // 
-            // pictureBox43
-            // 
-            this.pictureBox43.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox43.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox43.Image")));
-            this.pictureBox43.ImageLocation = "";
-            this.pictureBox43.Location = new System.Drawing.Point(1372, 328);
-            this.pictureBox43.Name = "pictureBox43";
-            this.pictureBox43.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox43.TabIndex = 158;
-            this.pictureBox43.TabStop = false;
-            this.pictureBox43.Visible = false;
-            // 
-            // pictureBox44
-            // 
-            this.pictureBox44.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox44.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox44.Image")));
-            this.pictureBox44.ImageLocation = "";
-            this.pictureBox44.Location = new System.Drawing.Point(1361, 328);
-            this.pictureBox44.Name = "pictureBox44";
-            this.pictureBox44.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox44.TabIndex = 157;
-            this.pictureBox44.TabStop = false;
-            this.pictureBox44.Visible = false;
-            // 
-            // pictureBox45
-            // 
-            this.pictureBox45.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox45.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox45.Image")));
-            this.pictureBox45.ImageLocation = "";
-            this.pictureBox45.Location = new System.Drawing.Point(1627, 415);
-            this.pictureBox45.Name = "pictureBox45";
-            this.pictureBox45.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox45.TabIndex = 200;
-            this.pictureBox45.TabStop = false;
-            this.pictureBox45.Visible = false;
-            // 
-            // pictureBox46
-            // 
-            this.pictureBox46.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox46.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox46.Image")));
-            this.pictureBox46.ImageLocation = "";
-            this.pictureBox46.Location = new System.Drawing.Point(1616, 415);
-            this.pictureBox46.Name = "pictureBox46";
-            this.pictureBox46.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox46.TabIndex = 199;
-            this.pictureBox46.TabStop = false;
-            this.pictureBox46.Visible = false;
-            // 
-            // pictureBox47
-            // 
-            this.pictureBox47.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox47.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox47.Image")));
-            this.pictureBox47.ImageLocation = "";
-            this.pictureBox47.Location = new System.Drawing.Point(1603, 415);
-            this.pictureBox47.Name = "pictureBox47";
-            this.pictureBox47.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox47.TabIndex = 198;
-            this.pictureBox47.TabStop = false;
-            this.pictureBox47.Visible = false;
-            // 
-            // pictureBox48
-            // 
-            this.pictureBox48.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox48.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox48.Image")));
-            this.pictureBox48.ImageLocation = "";
-            this.pictureBox48.Location = new System.Drawing.Point(1590, 415);
-            this.pictureBox48.Name = "pictureBox48";
-            this.pictureBox48.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox48.TabIndex = 197;
-            this.pictureBox48.TabStop = false;
-            this.pictureBox48.Visible = false;
-            // 
-            // pictureBox49
-            // 
-            this.pictureBox49.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox49.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox49.Image")));
-            this.pictureBox49.ImageLocation = "";
-            this.pictureBox49.Location = new System.Drawing.Point(1576, 415);
-            this.pictureBox49.Name = "pictureBox49";
-            this.pictureBox49.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox49.TabIndex = 196;
-            this.pictureBox49.TabStop = false;
-            this.pictureBox49.Visible = false;
-            // 
-            // pictureBox50
-            // 
-            this.pictureBox50.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox50.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox50.Image")));
-            this.pictureBox50.ImageLocation = "";
-            this.pictureBox50.Location = new System.Drawing.Point(1565, 415);
-            this.pictureBox50.Name = "pictureBox50";
-            this.pictureBox50.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox50.TabIndex = 195;
-            this.pictureBox50.TabStop = false;
-            this.pictureBox50.Visible = false;
-            // 
-            // pictureBox51
-            // 
-            this.pictureBox51.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox51.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox51.Image")));
-            this.pictureBox51.ImageLocation = "";
-            this.pictureBox51.Location = new System.Drawing.Point(1552, 415);
-            this.pictureBox51.Name = "pictureBox51";
-            this.pictureBox51.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox51.TabIndex = 194;
-            this.pictureBox51.TabStop = false;
-            this.pictureBox51.Visible = false;
-            // 
-            // pictureBox52
-            // 
-            this.pictureBox52.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox52.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox52.Image")));
-            this.pictureBox52.ImageLocation = "";
-            this.pictureBox52.Location = new System.Drawing.Point(1539, 415);
-            this.pictureBox52.Name = "pictureBox52";
-            this.pictureBox52.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox52.TabIndex = 193;
-            this.pictureBox52.TabStop = false;
-            this.pictureBox52.Visible = false;
-            // 
-            // pictureBox53
-            // 
-            this.pictureBox53.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox53.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox53.Image")));
-            this.pictureBox53.ImageLocation = "";
-            this.pictureBox53.Location = new System.Drawing.Point(1525, 415);
-            this.pictureBox53.Name = "pictureBox53";
-            this.pictureBox53.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox53.TabIndex = 192;
-            this.pictureBox53.TabStop = false;
-            this.pictureBox53.Visible = false;
-            // 
-            // pictureBox54
-            // 
-            this.pictureBox54.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox54.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox54.Image")));
-            this.pictureBox54.ImageLocation = "";
-            this.pictureBox54.Location = new System.Drawing.Point(1514, 415);
-            this.pictureBox54.Name = "pictureBox54";
-            this.pictureBox54.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox54.TabIndex = 191;
-            this.pictureBox54.TabStop = false;
-            this.pictureBox54.Visible = false;
-            // 
-            // pictureBox55
-            // 
-            this.pictureBox55.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox55.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox55.Image")));
-            this.pictureBox55.ImageLocation = "";
-            this.pictureBox55.Location = new System.Drawing.Point(1501, 415);
-            this.pictureBox55.Name = "pictureBox55";
-            this.pictureBox55.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox55.TabIndex = 190;
-            this.pictureBox55.TabStop = false;
-            this.pictureBox55.Visible = false;
-            // 
-            // pictureBox56
-            // 
-            this.pictureBox56.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox56.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox56.Image")));
-            this.pictureBox56.ImageLocation = "";
-            this.pictureBox56.Location = new System.Drawing.Point(1488, 415);
-            this.pictureBox56.Name = "pictureBox56";
-            this.pictureBox56.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox56.TabIndex = 189;
-            this.pictureBox56.TabStop = false;
-            this.pictureBox56.Visible = false;
-            // 
-            // pictureBox57
-            // 
-            this.pictureBox57.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox57.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox57.Image")));
-            this.pictureBox57.ImageLocation = "";
-            this.pictureBox57.Location = new System.Drawing.Point(1474, 415);
-            this.pictureBox57.Name = "pictureBox57";
-            this.pictureBox57.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox57.TabIndex = 188;
-            this.pictureBox57.TabStop = false;
-            this.pictureBox57.Visible = false;
-            // 
-            // pictureBox58
-            // 
-            this.pictureBox58.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox58.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox58.Image")));
-            this.pictureBox58.ImageLocation = "";
-            this.pictureBox58.Location = new System.Drawing.Point(1463, 415);
-            this.pictureBox58.Name = "pictureBox58";
-            this.pictureBox58.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox58.TabIndex = 187;
-            this.pictureBox58.TabStop = false;
-            this.pictureBox58.Visible = false;
-            // 
-            // pictureBox59
-            // 
-            this.pictureBox59.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox59.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox59.Image")));
-            this.pictureBox59.ImageLocation = "";
-            this.pictureBox59.Location = new System.Drawing.Point(1450, 415);
-            this.pictureBox59.Name = "pictureBox59";
-            this.pictureBox59.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox59.TabIndex = 186;
-            this.pictureBox59.TabStop = false;
-            this.pictureBox59.Visible = false;
-            // 
-            // pictureBox60
-            // 
-            this.pictureBox60.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox60.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox60.Image")));
-            this.pictureBox60.ImageLocation = "";
-            this.pictureBox60.Location = new System.Drawing.Point(1437, 415);
-            this.pictureBox60.Name = "pictureBox60";
-            this.pictureBox60.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox60.TabIndex = 185;
-            this.pictureBox60.TabStop = false;
-            this.pictureBox60.Visible = false;
-            // 
-            // pictureBox61
-            // 
-            this.pictureBox61.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox61.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox61.Image")));
-            this.pictureBox61.ImageLocation = "";
-            this.pictureBox61.Location = new System.Drawing.Point(1423, 415);
-            this.pictureBox61.Name = "pictureBox61";
-            this.pictureBox61.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox61.TabIndex = 184;
-            this.pictureBox61.TabStop = false;
-            this.pictureBox61.Visible = false;
-            // 
-            // pictureBox62
-            // 
-            this.pictureBox62.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox62.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox62.Image")));
-            this.pictureBox62.ImageLocation = "";
-            this.pictureBox62.Location = new System.Drawing.Point(1412, 415);
-            this.pictureBox62.Name = "pictureBox62";
-            this.pictureBox62.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox62.TabIndex = 183;
-            this.pictureBox62.TabStop = false;
-            this.pictureBox62.Visible = false;
-            // 
-            // pictureBox63
-            // 
-            this.pictureBox63.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox63.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox63.Image")));
-            this.pictureBox63.ImageLocation = "";
-            this.pictureBox63.Location = new System.Drawing.Point(1399, 415);
-            this.pictureBox63.Name = "pictureBox63";
-            this.pictureBox63.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox63.TabIndex = 182;
-            this.pictureBox63.TabStop = false;
-            this.pictureBox63.Visible = false;
-            // 
-            // pictureBox64
-            // 
-            this.pictureBox64.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox64.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox64.Image")));
-            this.pictureBox64.ImageLocation = "";
-            this.pictureBox64.Location = new System.Drawing.Point(1386, 415);
-            this.pictureBox64.Name = "pictureBox64";
-            this.pictureBox64.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox64.TabIndex = 181;
-            this.pictureBox64.TabStop = false;
-            this.pictureBox64.Visible = false;
-            // 
-            // pictureBox65
-            // 
-            this.pictureBox65.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox65.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox65.Image")));
-            this.pictureBox65.ImageLocation = "";
-            this.pictureBox65.Location = new System.Drawing.Point(1372, 415);
-            this.pictureBox65.Name = "pictureBox65";
-            this.pictureBox65.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox65.TabIndex = 180;
-            this.pictureBox65.TabStop = false;
-            this.pictureBox65.Visible = false;
-            // 
-            // pictureBox66
-            // 
-            this.pictureBox66.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox66.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox66.Image")));
-            this.pictureBox66.ImageLocation = "";
-            this.pictureBox66.Location = new System.Drawing.Point(1361, 415);
-            this.pictureBox66.Name = "pictureBox66";
-            this.pictureBox66.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox66.TabIndex = 179;
-            this.pictureBox66.TabStop = false;
-            this.pictureBox66.Visible = false;
-            // 
-            // pictureBox67
-            // 
-            this.pictureBox67.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox67.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox67.Image")));
-            this.pictureBox67.ImageLocation = "";
-            this.pictureBox67.Location = new System.Drawing.Point(1627, 493);
-            this.pictureBox67.Name = "pictureBox67";
-            this.pictureBox67.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox67.TabIndex = 222;
-            this.pictureBox67.TabStop = false;
-            this.pictureBox67.Visible = false;
-            // 
-            // pictureBox68
-            // 
-            this.pictureBox68.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox68.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox68.Image")));
-            this.pictureBox68.ImageLocation = "";
-            this.pictureBox68.Location = new System.Drawing.Point(1616, 493);
-            this.pictureBox68.Name = "pictureBox68";
-            this.pictureBox68.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox68.TabIndex = 221;
-            this.pictureBox68.TabStop = false;
-            this.pictureBox68.Visible = false;
-            // 
-            // pictureBox69
-            // 
-            this.pictureBox69.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox69.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox69.Image")));
-            this.pictureBox69.ImageLocation = "";
-            this.pictureBox69.Location = new System.Drawing.Point(1603, 493);
-            this.pictureBox69.Name = "pictureBox69";
-            this.pictureBox69.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox69.TabIndex = 220;
-            this.pictureBox69.TabStop = false;
-            this.pictureBox69.Visible = false;
-            // 
-            // pictureBox70
-            // 
-            this.pictureBox70.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox70.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox70.Image")));
-            this.pictureBox70.ImageLocation = "";
-            this.pictureBox70.Location = new System.Drawing.Point(1590, 493);
-            this.pictureBox70.Name = "pictureBox70";
-            this.pictureBox70.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox70.TabIndex = 219;
-            this.pictureBox70.TabStop = false;
-            this.pictureBox70.Visible = false;
-            // 
-            // pictureBox71
-            // 
-            this.pictureBox71.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox71.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox71.Image")));
-            this.pictureBox71.ImageLocation = "";
-            this.pictureBox71.Location = new System.Drawing.Point(1576, 493);
-            this.pictureBox71.Name = "pictureBox71";
-            this.pictureBox71.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox71.TabIndex = 218;
-            this.pictureBox71.TabStop = false;
-            this.pictureBox71.Visible = false;
-            // 
-            // pictureBox72
-            // 
-            this.pictureBox72.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox72.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox72.Image")));
-            this.pictureBox72.ImageLocation = "";
-            this.pictureBox72.Location = new System.Drawing.Point(1565, 493);
-            this.pictureBox72.Name = "pictureBox72";
-            this.pictureBox72.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox72.TabIndex = 217;
-            this.pictureBox72.TabStop = false;
-            this.pictureBox72.Visible = false;
-            // 
-            // pictureBox73
-            // 
-            this.pictureBox73.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox73.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox73.Image")));
-            this.pictureBox73.ImageLocation = "";
-            this.pictureBox73.Location = new System.Drawing.Point(1552, 493);
-            this.pictureBox73.Name = "pictureBox73";
-            this.pictureBox73.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox73.TabIndex = 216;
-            this.pictureBox73.TabStop = false;
-            this.pictureBox73.Visible = false;
-            // 
-            // pictureBox74
-            // 
-            this.pictureBox74.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox74.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox74.Image")));
-            this.pictureBox74.ImageLocation = "";
-            this.pictureBox74.Location = new System.Drawing.Point(1539, 493);
-            this.pictureBox74.Name = "pictureBox74";
-            this.pictureBox74.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox74.TabIndex = 215;
-            this.pictureBox74.TabStop = false;
-            this.pictureBox74.Visible = false;
-            // 
-            // pictureBox75
-            // 
-            this.pictureBox75.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox75.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox75.Image")));
-            this.pictureBox75.ImageLocation = "";
-            this.pictureBox75.Location = new System.Drawing.Point(1525, 493);
-            this.pictureBox75.Name = "pictureBox75";
-            this.pictureBox75.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox75.TabIndex = 214;
-            this.pictureBox75.TabStop = false;
-            this.pictureBox75.Visible = false;
-            // 
-            // pictureBox76
-            // 
-            this.pictureBox76.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox76.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox76.Image")));
-            this.pictureBox76.ImageLocation = "";
-            this.pictureBox76.Location = new System.Drawing.Point(1514, 493);
-            this.pictureBox76.Name = "pictureBox76";
-            this.pictureBox76.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox76.TabIndex = 213;
-            this.pictureBox76.TabStop = false;
-            this.pictureBox76.Visible = false;
-            // 
-            // pictureBox77
-            // 
-            this.pictureBox77.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox77.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox77.Image")));
-            this.pictureBox77.ImageLocation = "";
-            this.pictureBox77.Location = new System.Drawing.Point(1501, 493);
-            this.pictureBox77.Name = "pictureBox77";
-            this.pictureBox77.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox77.TabIndex = 212;
-            this.pictureBox77.TabStop = false;
-            this.pictureBox77.Visible = false;
-            // 
-            // pictureBox78
-            // 
-            this.pictureBox78.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox78.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox78.Image")));
-            this.pictureBox78.ImageLocation = "";
-            this.pictureBox78.Location = new System.Drawing.Point(1488, 493);
-            this.pictureBox78.Name = "pictureBox78";
-            this.pictureBox78.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox78.TabIndex = 211;
-            this.pictureBox78.TabStop = false;
-            this.pictureBox78.Visible = false;
-            // 
-            // pictureBox79
-            // 
-            this.pictureBox79.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox79.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox79.Image")));
-            this.pictureBox79.ImageLocation = "";
-            this.pictureBox79.Location = new System.Drawing.Point(1474, 493);
-            this.pictureBox79.Name = "pictureBox79";
-            this.pictureBox79.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox79.TabIndex = 210;
-            this.pictureBox79.TabStop = false;
-            this.pictureBox79.Visible = false;
-            // 
-            // pictureBox80
-            // 
-            this.pictureBox80.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox80.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox80.Image")));
-            this.pictureBox80.ImageLocation = "";
-            this.pictureBox80.Location = new System.Drawing.Point(1463, 493);
-            this.pictureBox80.Name = "pictureBox80";
-            this.pictureBox80.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox80.TabIndex = 209;
-            this.pictureBox80.TabStop = false;
-            this.pictureBox80.Visible = false;
-            // 
-            // pictureBox81
-            // 
-            this.pictureBox81.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox81.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox81.Image")));
-            this.pictureBox81.ImageLocation = "";
-            this.pictureBox81.Location = new System.Drawing.Point(1450, 493);
-            this.pictureBox81.Name = "pictureBox81";
-            this.pictureBox81.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox81.TabIndex = 208;
-            this.pictureBox81.TabStop = false;
-            this.pictureBox81.Visible = false;
-            // 
-            // pictureBox82
-            // 
-            this.pictureBox82.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox82.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox82.Image")));
-            this.pictureBox82.ImageLocation = "";
-            this.pictureBox82.Location = new System.Drawing.Point(1437, 493);
-            this.pictureBox82.Name = "pictureBox82";
-            this.pictureBox82.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox82.TabIndex = 207;
-            this.pictureBox82.TabStop = false;
-            this.pictureBox82.Visible = false;
-            // 
-            // pictureBox83
-            // 
-            this.pictureBox83.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox83.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox83.Image")));
-            this.pictureBox83.ImageLocation = "";
-            this.pictureBox83.Location = new System.Drawing.Point(1423, 493);
-            this.pictureBox83.Name = "pictureBox83";
-            this.pictureBox83.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox83.TabIndex = 206;
-            this.pictureBox83.TabStop = false;
-            this.pictureBox83.Visible = false;
-            // 
-            // pictureBox84
-            // 
-            this.pictureBox84.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox84.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox84.Image")));
-            this.pictureBox84.ImageLocation = "";
-            this.pictureBox84.Location = new System.Drawing.Point(1412, 493);
-            this.pictureBox84.Name = "pictureBox84";
-            this.pictureBox84.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox84.TabIndex = 205;
-            this.pictureBox84.TabStop = false;
-            this.pictureBox84.Visible = false;
-            // 
-            // pictureBox85
-            // 
-            this.pictureBox85.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox85.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox85.Image")));
-            this.pictureBox85.ImageLocation = "";
-            this.pictureBox85.Location = new System.Drawing.Point(1399, 493);
-            this.pictureBox85.Name = "pictureBox85";
-            this.pictureBox85.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox85.TabIndex = 204;
-            this.pictureBox85.TabStop = false;
-            this.pictureBox85.Visible = false;
-            // 
-            // pictureBox86
-            // 
-            this.pictureBox86.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox86.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox86.Image")));
-            this.pictureBox86.ImageLocation = "";
-            this.pictureBox86.Location = new System.Drawing.Point(1386, 493);
-            this.pictureBox86.Name = "pictureBox86";
-            this.pictureBox86.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox86.TabIndex = 203;
-            this.pictureBox86.TabStop = false;
-            this.pictureBox86.Visible = false;
-            // 
-            // pictureBox87
-            // 
-            this.pictureBox87.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox87.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox87.Image")));
-            this.pictureBox87.ImageLocation = "";
-            this.pictureBox87.Location = new System.Drawing.Point(1372, 493);
-            this.pictureBox87.Name = "pictureBox87";
-            this.pictureBox87.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox87.TabIndex = 202;
-            this.pictureBox87.TabStop = false;
-            this.pictureBox87.Visible = false;
-            // 
-            // pictureBox88
-            // 
-            this.pictureBox88.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox88.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox88.Image")));
-            this.pictureBox88.ImageLocation = "";
-            this.pictureBox88.Location = new System.Drawing.Point(1361, 493);
-            this.pictureBox88.Name = "pictureBox88";
-            this.pictureBox88.Size = new System.Drawing.Size(45, 45);
-            this.pictureBox88.TabIndex = 201;
-            this.pictureBox88.TabStop = false;
-            this.pictureBox88.Visible = false;
+            // naveMancata_22
+            // 
+            this.naveMancata_22.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_22.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_22.Image")));
+            this.naveMancata_22.ImageLocation = "";
+            this.naveMancata_22.Location = new System.Drawing.Point(1689, 257);
+            this.naveMancata_22.Name = "naveMancata_22";
+            this.naveMancata_22.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_22.TabIndex = 156;
+            this.naveMancata_22.TabStop = false;
+            this.naveMancata_22.Visible = false;
+            // 
+            // naveMancata_21
+            // 
+            this.naveMancata_21.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_21.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_21.Image")));
+            this.naveMancata_21.ImageLocation = "";
+            this.naveMancata_21.Location = new System.Drawing.Point(1678, 257);
+            this.naveMancata_21.Name = "naveMancata_21";
+            this.naveMancata_21.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_21.TabIndex = 155;
+            this.naveMancata_21.TabStop = false;
+            this.naveMancata_21.Visible = false;
+            // 
+            // naveMancata_20
+            // 
+            this.naveMancata_20.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_20.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_20.Image")));
+            this.naveMancata_20.ImageLocation = "";
+            this.naveMancata_20.Location = new System.Drawing.Point(1665, 257);
+            this.naveMancata_20.Name = "naveMancata_20";
+            this.naveMancata_20.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_20.TabIndex = 154;
+            this.naveMancata_20.TabStop = false;
+            this.naveMancata_20.Visible = false;
+            // 
+            // naveMancata_19
+            // 
+            this.naveMancata_19.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_19.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_19.Image")));
+            this.naveMancata_19.ImageLocation = "";
+            this.naveMancata_19.Location = new System.Drawing.Point(1652, 257);
+            this.naveMancata_19.Name = "naveMancata_19";
+            this.naveMancata_19.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_19.TabIndex = 153;
+            this.naveMancata_19.TabStop = false;
+            this.naveMancata_19.Visible = false;
+            // 
+            // naveMancata_18
+            // 
+            this.naveMancata_18.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_18.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_18.Image")));
+            this.naveMancata_18.ImageLocation = "";
+            this.naveMancata_18.Location = new System.Drawing.Point(1638, 257);
+            this.naveMancata_18.Name = "naveMancata_18";
+            this.naveMancata_18.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_18.TabIndex = 152;
+            this.naveMancata_18.TabStop = false;
+            this.naveMancata_18.Visible = false;
+            // 
+            // naveMancata_17
+            // 
+            this.naveMancata_17.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_17.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_17.Image")));
+            this.naveMancata_17.ImageLocation = "";
+            this.naveMancata_17.Location = new System.Drawing.Point(1627, 257);
+            this.naveMancata_17.Name = "naveMancata_17";
+            this.naveMancata_17.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_17.TabIndex = 151;
+            this.naveMancata_17.TabStop = false;
+            this.naveMancata_17.Visible = false;
+            // 
+            // naveMancata_16
+            // 
+            this.naveMancata_16.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_16.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_16.Image")));
+            this.naveMancata_16.ImageLocation = "";
+            this.naveMancata_16.Location = new System.Drawing.Point(1614, 257);
+            this.naveMancata_16.Name = "naveMancata_16";
+            this.naveMancata_16.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_16.TabIndex = 150;
+            this.naveMancata_16.TabStop = false;
+            this.naveMancata_16.Visible = false;
+            // 
+            // naveMancata_15
+            // 
+            this.naveMancata_15.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_15.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_15.Image")));
+            this.naveMancata_15.ImageLocation = "";
+            this.naveMancata_15.Location = new System.Drawing.Point(1601, 257);
+            this.naveMancata_15.Name = "naveMancata_15";
+            this.naveMancata_15.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_15.TabIndex = 149;
+            this.naveMancata_15.TabStop = false;
+            this.naveMancata_15.Visible = false;
+            // 
+            // naveMancata_14
+            // 
+            this.naveMancata_14.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_14.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_14.Image")));
+            this.naveMancata_14.ImageLocation = "";
+            this.naveMancata_14.Location = new System.Drawing.Point(1587, 257);
+            this.naveMancata_14.Name = "naveMancata_14";
+            this.naveMancata_14.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_14.TabIndex = 148;
+            this.naveMancata_14.TabStop = false;
+            this.naveMancata_14.Visible = false;
+            // 
+            // naveMancata_13
+            // 
+            this.naveMancata_13.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_13.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_13.Image")));
+            this.naveMancata_13.ImageLocation = "";
+            this.naveMancata_13.Location = new System.Drawing.Point(1576, 257);
+            this.naveMancata_13.Name = "naveMancata_13";
+            this.naveMancata_13.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_13.TabIndex = 147;
+            this.naveMancata_13.TabStop = false;
+            this.naveMancata_13.Visible = false;
+            // 
+            // naveMancata_12
+            // 
+            this.naveMancata_12.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_12.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_12.Image")));
+            this.naveMancata_12.ImageLocation = "";
+            this.naveMancata_12.Location = new System.Drawing.Point(1563, 257);
+            this.naveMancata_12.Name = "naveMancata_12";
+            this.naveMancata_12.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_12.TabIndex = 146;
+            this.naveMancata_12.TabStop = false;
+            this.naveMancata_12.Visible = false;
+            // 
+            // naveMancata_11
+            // 
+            this.naveMancata_11.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_11.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_11.Image")));
+            this.naveMancata_11.ImageLocation = "";
+            this.naveMancata_11.Location = new System.Drawing.Point(1550, 257);
+            this.naveMancata_11.Name = "naveMancata_11";
+            this.naveMancata_11.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_11.TabIndex = 145;
+            this.naveMancata_11.TabStop = false;
+            this.naveMancata_11.Visible = false;
+            // 
+            // naveMancata_10
+            // 
+            this.naveMancata_10.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_10.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_10.Image")));
+            this.naveMancata_10.ImageLocation = "";
+            this.naveMancata_10.Location = new System.Drawing.Point(1536, 257);
+            this.naveMancata_10.Name = "naveMancata_10";
+            this.naveMancata_10.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_10.TabIndex = 144;
+            this.naveMancata_10.TabStop = false;
+            this.naveMancata_10.Visible = false;
+            // 
+            // naveMancata_9
+            // 
+            this.naveMancata_9.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_9.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_9.Image")));
+            this.naveMancata_9.ImageLocation = "";
+            this.naveMancata_9.Location = new System.Drawing.Point(1525, 257);
+            this.naveMancata_9.Name = "naveMancata_9";
+            this.naveMancata_9.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_9.TabIndex = 143;
+            this.naveMancata_9.TabStop = false;
+            this.naveMancata_9.Visible = false;
+            // 
+            // naveMancata_8
+            // 
+            this.naveMancata_8.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_8.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_8.Image")));
+            this.naveMancata_8.ImageLocation = "";
+            this.naveMancata_8.Location = new System.Drawing.Point(1512, 257);
+            this.naveMancata_8.Name = "naveMancata_8";
+            this.naveMancata_8.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_8.TabIndex = 142;
+            this.naveMancata_8.TabStop = false;
+            this.naveMancata_8.Visible = false;
+            // 
+            // naveMancata_7
+            // 
+            this.naveMancata_7.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_7.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_7.Image")));
+            this.naveMancata_7.ImageLocation = "";
+            this.naveMancata_7.Location = new System.Drawing.Point(1499, 257);
+            this.naveMancata_7.Name = "naveMancata_7";
+            this.naveMancata_7.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_7.TabIndex = 141;
+            this.naveMancata_7.TabStop = false;
+            this.naveMancata_7.Visible = false;
+            // 
+            // naveMancata_6
+            // 
+            this.naveMancata_6.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_6.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_6.Image")));
+            this.naveMancata_6.ImageLocation = "";
+            this.naveMancata_6.Location = new System.Drawing.Point(1485, 257);
+            this.naveMancata_6.Name = "naveMancata_6";
+            this.naveMancata_6.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_6.TabIndex = 140;
+            this.naveMancata_6.TabStop = false;
+            this.naveMancata_6.Visible = false;
+            // 
+            // naveMancata_5
+            // 
+            this.naveMancata_5.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_5.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_5.Image")));
+            this.naveMancata_5.ImageLocation = "";
+            this.naveMancata_5.Location = new System.Drawing.Point(1474, 257);
+            this.naveMancata_5.Name = "naveMancata_5";
+            this.naveMancata_5.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_5.TabIndex = 139;
+            this.naveMancata_5.TabStop = false;
+            this.naveMancata_5.Visible = false;
+            // 
+            // naveMancata_4
+            // 
+            this.naveMancata_4.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_4.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_4.Image")));
+            this.naveMancata_4.ImageLocation = "";
+            this.naveMancata_4.Location = new System.Drawing.Point(1461, 257);
+            this.naveMancata_4.Name = "naveMancata_4";
+            this.naveMancata_4.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_4.TabIndex = 138;
+            this.naveMancata_4.TabStop = false;
+            this.naveMancata_4.Visible = false;
+            // 
+            // naveMancata_3
+            // 
+            this.naveMancata_3.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_3.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_3.Image")));
+            this.naveMancata_3.ImageLocation = "";
+            this.naveMancata_3.Location = new System.Drawing.Point(1448, 257);
+            this.naveMancata_3.Name = "naveMancata_3";
+            this.naveMancata_3.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_3.TabIndex = 137;
+            this.naveMancata_3.TabStop = false;
+            this.naveMancata_3.Visible = false;
+            // 
+            // naveMancata_2
+            // 
+            this.naveMancata_2.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_2.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_2.Image")));
+            this.naveMancata_2.ImageLocation = "";
+            this.naveMancata_2.Location = new System.Drawing.Point(1434, 257);
+            this.naveMancata_2.Name = "naveMancata_2";
+            this.naveMancata_2.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_2.TabIndex = 136;
+            this.naveMancata_2.TabStop = false;
+            this.naveMancata_2.Visible = false;
+            // 
+            // naveMancata_1
+            // 
+            this.naveMancata_1.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_1.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_1.Image")));
+            this.naveMancata_1.ImageLocation = "";
+            this.naveMancata_1.Location = new System.Drawing.Point(1423, 257);
+            this.naveMancata_1.Name = "naveMancata_1";
+            this.naveMancata_1.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_1.TabIndex = 135;
+            this.naveMancata_1.TabStop = false;
+            this.naveMancata_1.Visible = false;
+            // 
+            // naveMancata_44
+            // 
+            this.naveMancata_44.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_44.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_44.Image")));
+            this.naveMancata_44.ImageLocation = "";
+            this.naveMancata_44.Location = new System.Drawing.Point(1689, 343);
+            this.naveMancata_44.Name = "naveMancata_44";
+            this.naveMancata_44.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_44.TabIndex = 178;
+            this.naveMancata_44.TabStop = false;
+            this.naveMancata_44.Visible = false;
+            // 
+            // naveMancata_43
+            // 
+            this.naveMancata_43.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_43.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_43.Image")));
+            this.naveMancata_43.ImageLocation = "";
+            this.naveMancata_43.Location = new System.Drawing.Point(1678, 343);
+            this.naveMancata_43.Name = "naveMancata_43";
+            this.naveMancata_43.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_43.TabIndex = 177;
+            this.naveMancata_43.TabStop = false;
+            this.naveMancata_43.Visible = false;
+            // 
+            // naveMancata_42
+            // 
+            this.naveMancata_42.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_42.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_42.Image")));
+            this.naveMancata_42.ImageLocation = "";
+            this.naveMancata_42.Location = new System.Drawing.Point(1665, 343);
+            this.naveMancata_42.Name = "naveMancata_42";
+            this.naveMancata_42.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_42.TabIndex = 176;
+            this.naveMancata_42.TabStop = false;
+            this.naveMancata_42.Visible = false;
+            // 
+            // naveMancata_41
+            // 
+            this.naveMancata_41.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_41.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_41.Image")));
+            this.naveMancata_41.ImageLocation = "";
+            this.naveMancata_41.Location = new System.Drawing.Point(1652, 343);
+            this.naveMancata_41.Name = "naveMancata_41";
+            this.naveMancata_41.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_41.TabIndex = 175;
+            this.naveMancata_41.TabStop = false;
+            this.naveMancata_41.Visible = false;
+            // 
+            // naveMancata_40
+            // 
+            this.naveMancata_40.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_40.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_40.Image")));
+            this.naveMancata_40.ImageLocation = "";
+            this.naveMancata_40.Location = new System.Drawing.Point(1638, 343);
+            this.naveMancata_40.Name = "naveMancata_40";
+            this.naveMancata_40.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_40.TabIndex = 174;
+            this.naveMancata_40.TabStop = false;
+            this.naveMancata_40.Visible = false;
+            // 
+            // naveMancata_39
+            // 
+            this.naveMancata_39.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_39.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_39.Image")));
+            this.naveMancata_39.ImageLocation = "";
+            this.naveMancata_39.Location = new System.Drawing.Point(1627, 343);
+            this.naveMancata_39.Name = "naveMancata_39";
+            this.naveMancata_39.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_39.TabIndex = 173;
+            this.naveMancata_39.TabStop = false;
+            this.naveMancata_39.Visible = false;
+            // 
+            // naveMancata_38
+            // 
+            this.naveMancata_38.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_38.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_38.Image")));
+            this.naveMancata_38.ImageLocation = "";
+            this.naveMancata_38.Location = new System.Drawing.Point(1614, 343);
+            this.naveMancata_38.Name = "naveMancata_38";
+            this.naveMancata_38.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_38.TabIndex = 172;
+            this.naveMancata_38.TabStop = false;
+            this.naveMancata_38.Visible = false;
+            // 
+            // naveMancata_37
+            // 
+            this.naveMancata_37.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_37.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_37.Image")));
+            this.naveMancata_37.ImageLocation = "";
+            this.naveMancata_37.Location = new System.Drawing.Point(1601, 343);
+            this.naveMancata_37.Name = "naveMancata_37";
+            this.naveMancata_37.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_37.TabIndex = 171;
+            this.naveMancata_37.TabStop = false;
+            this.naveMancata_37.Visible = false;
+            // 
+            // naveMancata_36
+            // 
+            this.naveMancata_36.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_36.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_36.Image")));
+            this.naveMancata_36.ImageLocation = "";
+            this.naveMancata_36.Location = new System.Drawing.Point(1587, 343);
+            this.naveMancata_36.Name = "naveMancata_36";
+            this.naveMancata_36.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_36.TabIndex = 170;
+            this.naveMancata_36.TabStop = false;
+            this.naveMancata_36.Visible = false;
+            // 
+            // naveMancata_35
+            // 
+            this.naveMancata_35.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_35.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_35.Image")));
+            this.naveMancata_35.ImageLocation = "";
+            this.naveMancata_35.Location = new System.Drawing.Point(1576, 343);
+            this.naveMancata_35.Name = "naveMancata_35";
+            this.naveMancata_35.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_35.TabIndex = 169;
+            this.naveMancata_35.TabStop = false;
+            this.naveMancata_35.Visible = false;
+            // 
+            // naveMancata_34
+            // 
+            this.naveMancata_34.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_34.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_34.Image")));
+            this.naveMancata_34.ImageLocation = "";
+            this.naveMancata_34.Location = new System.Drawing.Point(1563, 343);
+            this.naveMancata_34.Name = "naveMancata_34";
+            this.naveMancata_34.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_34.TabIndex = 168;
+            this.naveMancata_34.TabStop = false;
+            this.naveMancata_34.Visible = false;
+            // 
+            // naveMancata_33
+            // 
+            this.naveMancata_33.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_33.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_33.Image")));
+            this.naveMancata_33.ImageLocation = "";
+            this.naveMancata_33.Location = new System.Drawing.Point(1550, 343);
+            this.naveMancata_33.Name = "naveMancata_33";
+            this.naveMancata_33.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_33.TabIndex = 167;
+            this.naveMancata_33.TabStop = false;
+            this.naveMancata_33.Visible = false;
+            // 
+            // naveMancata_32
+            // 
+            this.naveMancata_32.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_32.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_32.Image")));
+            this.naveMancata_32.ImageLocation = "";
+            this.naveMancata_32.Location = new System.Drawing.Point(1536, 343);
+            this.naveMancata_32.Name = "naveMancata_32";
+            this.naveMancata_32.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_32.TabIndex = 166;
+            this.naveMancata_32.TabStop = false;
+            this.naveMancata_32.Visible = false;
+            // 
+            // naveMancata_31
+            // 
+            this.naveMancata_31.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_31.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_31.Image")));
+            this.naveMancata_31.ImageLocation = "";
+            this.naveMancata_31.Location = new System.Drawing.Point(1525, 343);
+            this.naveMancata_31.Name = "naveMancata_31";
+            this.naveMancata_31.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_31.TabIndex = 165;
+            this.naveMancata_31.TabStop = false;
+            this.naveMancata_31.Visible = false;
+            // 
+            // naveMancata_30
+            // 
+            this.naveMancata_30.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_30.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_30.Image")));
+            this.naveMancata_30.ImageLocation = "";
+            this.naveMancata_30.Location = new System.Drawing.Point(1512, 343);
+            this.naveMancata_30.Name = "naveMancata_30";
+            this.naveMancata_30.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_30.TabIndex = 164;
+            this.naveMancata_30.TabStop = false;
+            this.naveMancata_30.Visible = false;
+            // 
+            // naveMancata_29
+            // 
+            this.naveMancata_29.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_29.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_29.Image")));
+            this.naveMancata_29.ImageLocation = "";
+            this.naveMancata_29.Location = new System.Drawing.Point(1499, 343);
+            this.naveMancata_29.Name = "naveMancata_29";
+            this.naveMancata_29.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_29.TabIndex = 163;
+            this.naveMancata_29.TabStop = false;
+            this.naveMancata_29.Visible = false;
+            // 
+            // naveMancata_28
+            // 
+            this.naveMancata_28.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_28.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_28.Image")));
+            this.naveMancata_28.ImageLocation = "";
+            this.naveMancata_28.Location = new System.Drawing.Point(1485, 343);
+            this.naveMancata_28.Name = "naveMancata_28";
+            this.naveMancata_28.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_28.TabIndex = 162;
+            this.naveMancata_28.TabStop = false;
+            this.naveMancata_28.Visible = false;
+            // 
+            // naveMancata_27
+            // 
+            this.naveMancata_27.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_27.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_27.Image")));
+            this.naveMancata_27.ImageLocation = "";
+            this.naveMancata_27.Location = new System.Drawing.Point(1474, 343);
+            this.naveMancata_27.Name = "naveMancata_27";
+            this.naveMancata_27.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_27.TabIndex = 161;
+            this.naveMancata_27.TabStop = false;
+            this.naveMancata_27.Visible = false;
+            // 
+            // naveMancata_26
+            // 
+            this.naveMancata_26.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_26.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_26.Image")));
+            this.naveMancata_26.ImageLocation = "";
+            this.naveMancata_26.Location = new System.Drawing.Point(1461, 343);
+            this.naveMancata_26.Name = "naveMancata_26";
+            this.naveMancata_26.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_26.TabIndex = 160;
+            this.naveMancata_26.TabStop = false;
+            this.naveMancata_26.Visible = false;
+            // 
+            // naveMancata_25
+            // 
+            this.naveMancata_25.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_25.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_25.Image")));
+            this.naveMancata_25.ImageLocation = "";
+            this.naveMancata_25.Location = new System.Drawing.Point(1448, 343);
+            this.naveMancata_25.Name = "naveMancata_25";
+            this.naveMancata_25.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_25.TabIndex = 159;
+            this.naveMancata_25.TabStop = false;
+            this.naveMancata_25.Visible = false;
+            // 
+            // naveMancata_24
+            // 
+            this.naveMancata_24.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_24.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_24.Image")));
+            this.naveMancata_24.ImageLocation = "";
+            this.naveMancata_24.Location = new System.Drawing.Point(1434, 343);
+            this.naveMancata_24.Name = "naveMancata_24";
+            this.naveMancata_24.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_24.TabIndex = 158;
+            this.naveMancata_24.TabStop = false;
+            this.naveMancata_24.Visible = false;
+            // 
+            // naveMancata_23
+            // 
+            this.naveMancata_23.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_23.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_23.Image")));
+            this.naveMancata_23.ImageLocation = "";
+            this.naveMancata_23.Location = new System.Drawing.Point(1423, 343);
+            this.naveMancata_23.Name = "naveMancata_23";
+            this.naveMancata_23.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_23.TabIndex = 157;
+            this.naveMancata_23.TabStop = false;
+            this.naveMancata_23.Visible = false;
+            // 
+            // naveMancata_66
+            // 
+            this.naveMancata_66.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_66.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_66.Image")));
+            this.naveMancata_66.ImageLocation = "";
+            this.naveMancata_66.Location = new System.Drawing.Point(1689, 430);
+            this.naveMancata_66.Name = "naveMancata_66";
+            this.naveMancata_66.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_66.TabIndex = 200;
+            this.naveMancata_66.TabStop = false;
+            this.naveMancata_66.Visible = false;
+            // 
+            // naveMancata_65
+            // 
+            this.naveMancata_65.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_65.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_65.Image")));
+            this.naveMancata_65.ImageLocation = "";
+            this.naveMancata_65.Location = new System.Drawing.Point(1678, 430);
+            this.naveMancata_65.Name = "naveMancata_65";
+            this.naveMancata_65.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_65.TabIndex = 199;
+            this.naveMancata_65.TabStop = false;
+            this.naveMancata_65.Visible = false;
+            // 
+            // naveMancata_64
+            // 
+            this.naveMancata_64.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_64.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_64.Image")));
+            this.naveMancata_64.ImageLocation = "";
+            this.naveMancata_64.Location = new System.Drawing.Point(1665, 430);
+            this.naveMancata_64.Name = "naveMancata_64";
+            this.naveMancata_64.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_64.TabIndex = 198;
+            this.naveMancata_64.TabStop = false;
+            this.naveMancata_64.Visible = false;
+            // 
+            // naveMancata_63
+            // 
+            this.naveMancata_63.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_63.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_63.Image")));
+            this.naveMancata_63.ImageLocation = "";
+            this.naveMancata_63.Location = new System.Drawing.Point(1652, 430);
+            this.naveMancata_63.Name = "naveMancata_63";
+            this.naveMancata_63.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_63.TabIndex = 197;
+            this.naveMancata_63.TabStop = false;
+            this.naveMancata_63.Visible = false;
+            // 
+            // naveMancata_62
+            // 
+            this.naveMancata_62.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_62.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_62.Image")));
+            this.naveMancata_62.ImageLocation = "";
+            this.naveMancata_62.Location = new System.Drawing.Point(1638, 430);
+            this.naveMancata_62.Name = "naveMancata_62";
+            this.naveMancata_62.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_62.TabIndex = 196;
+            this.naveMancata_62.TabStop = false;
+            this.naveMancata_62.Visible = false;
+            // 
+            // naveMancata_61
+            // 
+            this.naveMancata_61.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_61.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_61.Image")));
+            this.naveMancata_61.ImageLocation = "";
+            this.naveMancata_61.Location = new System.Drawing.Point(1627, 430);
+            this.naveMancata_61.Name = "naveMancata_61";
+            this.naveMancata_61.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_61.TabIndex = 195;
+            this.naveMancata_61.TabStop = false;
+            this.naveMancata_61.Visible = false;
+            // 
+            // naveMancata_60
+            // 
+            this.naveMancata_60.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_60.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_60.Image")));
+            this.naveMancata_60.ImageLocation = "";
+            this.naveMancata_60.Location = new System.Drawing.Point(1614, 430);
+            this.naveMancata_60.Name = "naveMancata_60";
+            this.naveMancata_60.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_60.TabIndex = 194;
+            this.naveMancata_60.TabStop = false;
+            this.naveMancata_60.Visible = false;
+            // 
+            // naveMancata_59
+            // 
+            this.naveMancata_59.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_59.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_59.Image")));
+            this.naveMancata_59.ImageLocation = "";
+            this.naveMancata_59.Location = new System.Drawing.Point(1601, 430);
+            this.naveMancata_59.Name = "naveMancata_59";
+            this.naveMancata_59.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_59.TabIndex = 193;
+            this.naveMancata_59.TabStop = false;
+            this.naveMancata_59.Visible = false;
+            // 
+            // naveMancata_58
+            // 
+            this.naveMancata_58.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_58.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_58.Image")));
+            this.naveMancata_58.ImageLocation = "";
+            this.naveMancata_58.Location = new System.Drawing.Point(1587, 430);
+            this.naveMancata_58.Name = "naveMancata_58";
+            this.naveMancata_58.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_58.TabIndex = 192;
+            this.naveMancata_58.TabStop = false;
+            this.naveMancata_58.Visible = false;
+            // 
+            // naveMancata_57
+            // 
+            this.naveMancata_57.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_57.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_57.Image")));
+            this.naveMancata_57.ImageLocation = "";
+            this.naveMancata_57.Location = new System.Drawing.Point(1576, 430);
+            this.naveMancata_57.Name = "naveMancata_57";
+            this.naveMancata_57.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_57.TabIndex = 191;
+            this.naveMancata_57.TabStop = false;
+            this.naveMancata_57.Visible = false;
+            // 
+            // naveMancata_56
+            // 
+            this.naveMancata_56.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_56.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_56.Image")));
+            this.naveMancata_56.ImageLocation = "";
+            this.naveMancata_56.Location = new System.Drawing.Point(1563, 430);
+            this.naveMancata_56.Name = "naveMancata_56";
+            this.naveMancata_56.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_56.TabIndex = 190;
+            this.naveMancata_56.TabStop = false;
+            this.naveMancata_56.Visible = false;
+            // 
+            // naveMancata_55
+            // 
+            this.naveMancata_55.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_55.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_55.Image")));
+            this.naveMancata_55.ImageLocation = "";
+            this.naveMancata_55.Location = new System.Drawing.Point(1550, 430);
+            this.naveMancata_55.Name = "naveMancata_55";
+            this.naveMancata_55.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_55.TabIndex = 189;
+            this.naveMancata_55.TabStop = false;
+            this.naveMancata_55.Visible = false;
+            // 
+            // naveMancata_54
+            // 
+            this.naveMancata_54.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_54.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_54.Image")));
+            this.naveMancata_54.ImageLocation = "";
+            this.naveMancata_54.Location = new System.Drawing.Point(1536, 430);
+            this.naveMancata_54.Name = "naveMancata_54";
+            this.naveMancata_54.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_54.TabIndex = 188;
+            this.naveMancata_54.TabStop = false;
+            this.naveMancata_54.Visible = false;
+            // 
+            // naveMancata_53
+            // 
+            this.naveMancata_53.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_53.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_53.Image")));
+            this.naveMancata_53.ImageLocation = "";
+            this.naveMancata_53.Location = new System.Drawing.Point(1525, 430);
+            this.naveMancata_53.Name = "naveMancata_53";
+            this.naveMancata_53.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_53.TabIndex = 187;
+            this.naveMancata_53.TabStop = false;
+            this.naveMancata_53.Visible = false;
+            // 
+            // naveMancata_52
+            // 
+            this.naveMancata_52.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_52.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_52.Image")));
+            this.naveMancata_52.ImageLocation = "";
+            this.naveMancata_52.Location = new System.Drawing.Point(1512, 430);
+            this.naveMancata_52.Name = "naveMancata_52";
+            this.naveMancata_52.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_52.TabIndex = 186;
+            this.naveMancata_52.TabStop = false;
+            this.naveMancata_52.Visible = false;
+            // 
+            // naveMancata_51
+            // 
+            this.naveMancata_51.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_51.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_51.Image")));
+            this.naveMancata_51.ImageLocation = "";
+            this.naveMancata_51.Location = new System.Drawing.Point(1499, 430);
+            this.naveMancata_51.Name = "naveMancata_51";
+            this.naveMancata_51.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_51.TabIndex = 185;
+            this.naveMancata_51.TabStop = false;
+            this.naveMancata_51.Visible = false;
+            // 
+            // naveMancata_50
+            // 
+            this.naveMancata_50.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_50.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_50.Image")));
+            this.naveMancata_50.ImageLocation = "";
+            this.naveMancata_50.Location = new System.Drawing.Point(1485, 430);
+            this.naveMancata_50.Name = "naveMancata_50";
+            this.naveMancata_50.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_50.TabIndex = 184;
+            this.naveMancata_50.TabStop = false;
+            this.naveMancata_50.Visible = false;
+            // 
+            // naveMancata_49
+            // 
+            this.naveMancata_49.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_49.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_49.Image")));
+            this.naveMancata_49.ImageLocation = "";
+            this.naveMancata_49.Location = new System.Drawing.Point(1474, 430);
+            this.naveMancata_49.Name = "naveMancata_49";
+            this.naveMancata_49.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_49.TabIndex = 183;
+            this.naveMancata_49.TabStop = false;
+            this.naveMancata_49.Visible = false;
+            // 
+            // naveMancata_48
+            // 
+            this.naveMancata_48.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_48.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_48.Image")));
+            this.naveMancata_48.ImageLocation = "";
+            this.naveMancata_48.Location = new System.Drawing.Point(1461, 430);
+            this.naveMancata_48.Name = "naveMancata_48";
+            this.naveMancata_48.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_48.TabIndex = 182;
+            this.naveMancata_48.TabStop = false;
+            this.naveMancata_48.Visible = false;
+            // 
+            // naveMancata_47
+            // 
+            this.naveMancata_47.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_47.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_47.Image")));
+            this.naveMancata_47.ImageLocation = "";
+            this.naveMancata_47.Location = new System.Drawing.Point(1448, 430);
+            this.naveMancata_47.Name = "naveMancata_47";
+            this.naveMancata_47.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_47.TabIndex = 181;
+            this.naveMancata_47.TabStop = false;
+            this.naveMancata_47.Visible = false;
+            // 
+            // naveMancata_46
+            // 
+            this.naveMancata_46.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_46.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_46.Image")));
+            this.naveMancata_46.ImageLocation = "";
+            this.naveMancata_46.Location = new System.Drawing.Point(1434, 430);
+            this.naveMancata_46.Name = "naveMancata_46";
+            this.naveMancata_46.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_46.TabIndex = 180;
+            this.naveMancata_46.TabStop = false;
+            this.naveMancata_46.Visible = false;
+            // 
+            // naveMancata_45
+            // 
+            this.naveMancata_45.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_45.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_45.Image")));
+            this.naveMancata_45.ImageLocation = "";
+            this.naveMancata_45.Location = new System.Drawing.Point(1423, 430);
+            this.naveMancata_45.Name = "naveMancata_45";
+            this.naveMancata_45.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_45.TabIndex = 179;
+            this.naveMancata_45.TabStop = false;
+            this.naveMancata_45.Visible = false;
+            // 
+            // naveMancata_88
+            // 
+            this.naveMancata_88.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_88.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_88.Image")));
+            this.naveMancata_88.ImageLocation = "";
+            this.naveMancata_88.Location = new System.Drawing.Point(1689, 508);
+            this.naveMancata_88.Name = "naveMancata_88";
+            this.naveMancata_88.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_88.TabIndex = 222;
+            this.naveMancata_88.TabStop = false;
+            this.naveMancata_88.Visible = false;
+            // 
+            // naveMancata_87
+            // 
+            this.naveMancata_87.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_87.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_87.Image")));
+            this.naveMancata_87.ImageLocation = "";
+            this.naveMancata_87.Location = new System.Drawing.Point(1678, 508);
+            this.naveMancata_87.Name = "naveMancata_87";
+            this.naveMancata_87.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_87.TabIndex = 221;
+            this.naveMancata_87.TabStop = false;
+            this.naveMancata_87.Visible = false;
+            // 
+            // naveMancata_86
+            // 
+            this.naveMancata_86.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_86.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_86.Image")));
+            this.naveMancata_86.ImageLocation = "";
+            this.naveMancata_86.Location = new System.Drawing.Point(1665, 508);
+            this.naveMancata_86.Name = "naveMancata_86";
+            this.naveMancata_86.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_86.TabIndex = 220;
+            this.naveMancata_86.TabStop = false;
+            this.naveMancata_86.Visible = false;
+            // 
+            // naveMancata_85
+            // 
+            this.naveMancata_85.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_85.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_85.Image")));
+            this.naveMancata_85.ImageLocation = "";
+            this.naveMancata_85.Location = new System.Drawing.Point(1652, 508);
+            this.naveMancata_85.Name = "naveMancata_85";
+            this.naveMancata_85.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_85.TabIndex = 219;
+            this.naveMancata_85.TabStop = false;
+            this.naveMancata_85.Visible = false;
+            // 
+            // naveMancata_84
+            // 
+            this.naveMancata_84.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_84.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_84.Image")));
+            this.naveMancata_84.ImageLocation = "";
+            this.naveMancata_84.Location = new System.Drawing.Point(1638, 508);
+            this.naveMancata_84.Name = "naveMancata_84";
+            this.naveMancata_84.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_84.TabIndex = 218;
+            this.naveMancata_84.TabStop = false;
+            this.naveMancata_84.Visible = false;
+            // 
+            // naveMancata_83
+            // 
+            this.naveMancata_83.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_83.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_83.Image")));
+            this.naveMancata_83.ImageLocation = "";
+            this.naveMancata_83.Location = new System.Drawing.Point(1627, 508);
+            this.naveMancata_83.Name = "naveMancata_83";
+            this.naveMancata_83.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_83.TabIndex = 217;
+            this.naveMancata_83.TabStop = false;
+            this.naveMancata_83.Visible = false;
+            // 
+            // naveMancata_82
+            // 
+            this.naveMancata_82.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_82.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_82.Image")));
+            this.naveMancata_82.ImageLocation = "";
+            this.naveMancata_82.Location = new System.Drawing.Point(1614, 508);
+            this.naveMancata_82.Name = "naveMancata_82";
+            this.naveMancata_82.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_82.TabIndex = 216;
+            this.naveMancata_82.TabStop = false;
+            this.naveMancata_82.Visible = false;
+            // 
+            // naveMancata_81
+            // 
+            this.naveMancata_81.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_81.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_81.Image")));
+            this.naveMancata_81.ImageLocation = "";
+            this.naveMancata_81.Location = new System.Drawing.Point(1601, 508);
+            this.naveMancata_81.Name = "naveMancata_81";
+            this.naveMancata_81.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_81.TabIndex = 215;
+            this.naveMancata_81.TabStop = false;
+            this.naveMancata_81.Visible = false;
+            // 
+            // naveMancata_80
+            // 
+            this.naveMancata_80.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_80.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_80.Image")));
+            this.naveMancata_80.ImageLocation = "";
+            this.naveMancata_80.Location = new System.Drawing.Point(1587, 508);
+            this.naveMancata_80.Name = "naveMancata_80";
+            this.naveMancata_80.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_80.TabIndex = 214;
+            this.naveMancata_80.TabStop = false;
+            this.naveMancata_80.Visible = false;
+            // 
+            // naveMancata_79
+            // 
+            this.naveMancata_79.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_79.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_79.Image")));
+            this.naveMancata_79.ImageLocation = "";
+            this.naveMancata_79.Location = new System.Drawing.Point(1576, 508);
+            this.naveMancata_79.Name = "naveMancata_79";
+            this.naveMancata_79.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_79.TabIndex = 213;
+            this.naveMancata_79.TabStop = false;
+            this.naveMancata_79.Visible = false;
+            // 
+            // naveMancata_78
+            // 
+            this.naveMancata_78.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_78.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_78.Image")));
+            this.naveMancata_78.ImageLocation = "";
+            this.naveMancata_78.Location = new System.Drawing.Point(1563, 508);
+            this.naveMancata_78.Name = "naveMancata_78";
+            this.naveMancata_78.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_78.TabIndex = 212;
+            this.naveMancata_78.TabStop = false;
+            this.naveMancata_78.Visible = false;
+            // 
+            // naveMancata_77
+            // 
+            this.naveMancata_77.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_77.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_77.Image")));
+            this.naveMancata_77.ImageLocation = "";
+            this.naveMancata_77.Location = new System.Drawing.Point(1550, 508);
+            this.naveMancata_77.Name = "naveMancata_77";
+            this.naveMancata_77.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_77.TabIndex = 211;
+            this.naveMancata_77.TabStop = false;
+            this.naveMancata_77.Visible = false;
+            // 
+            // naveMancata_76
+            // 
+            this.naveMancata_76.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_76.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_76.Image")));
+            this.naveMancata_76.ImageLocation = "";
+            this.naveMancata_76.Location = new System.Drawing.Point(1536, 508);
+            this.naveMancata_76.Name = "naveMancata_76";
+            this.naveMancata_76.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_76.TabIndex = 210;
+            this.naveMancata_76.TabStop = false;
+            this.naveMancata_76.Visible = false;
+            // 
+            // naveMancata_75
+            // 
+            this.naveMancata_75.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_75.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_75.Image")));
+            this.naveMancata_75.ImageLocation = "";
+            this.naveMancata_75.Location = new System.Drawing.Point(1525, 508);
+            this.naveMancata_75.Name = "naveMancata_75";
+            this.naveMancata_75.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_75.TabIndex = 209;
+            this.naveMancata_75.TabStop = false;
+            this.naveMancata_75.Visible = false;
+            // 
+            // naveMancata_74
+            // 
+            this.naveMancata_74.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_74.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_74.Image")));
+            this.naveMancata_74.ImageLocation = "";
+            this.naveMancata_74.Location = new System.Drawing.Point(1512, 508);
+            this.naveMancata_74.Name = "naveMancata_74";
+            this.naveMancata_74.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_74.TabIndex = 208;
+            this.naveMancata_74.TabStop = false;
+            this.naveMancata_74.Visible = false;
+            // 
+            // naveMancata_73
+            // 
+            this.naveMancata_73.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_73.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_73.Image")));
+            this.naveMancata_73.ImageLocation = "";
+            this.naveMancata_73.Location = new System.Drawing.Point(1499, 508);
+            this.naveMancata_73.Name = "naveMancata_73";
+            this.naveMancata_73.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_73.TabIndex = 207;
+            this.naveMancata_73.TabStop = false;
+            this.naveMancata_73.Visible = false;
+            // 
+            // naveMancata_72
+            // 
+            this.naveMancata_72.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_72.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_72.Image")));
+            this.naveMancata_72.ImageLocation = "";
+            this.naveMancata_72.Location = new System.Drawing.Point(1485, 508);
+            this.naveMancata_72.Name = "naveMancata_72";
+            this.naveMancata_72.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_72.TabIndex = 206;
+            this.naveMancata_72.TabStop = false;
+            this.naveMancata_72.Visible = false;
+            // 
+            // naveMancata_71
+            // 
+            this.naveMancata_71.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_71.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_71.Image")));
+            this.naveMancata_71.ImageLocation = "";
+            this.naveMancata_71.Location = new System.Drawing.Point(1474, 508);
+            this.naveMancata_71.Name = "naveMancata_71";
+            this.naveMancata_71.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_71.TabIndex = 205;
+            this.naveMancata_71.TabStop = false;
+            this.naveMancata_71.Visible = false;
+            // 
+            // naveMancata_70
+            // 
+            this.naveMancata_70.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_70.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_70.Image")));
+            this.naveMancata_70.ImageLocation = "";
+            this.naveMancata_70.Location = new System.Drawing.Point(1461, 508);
+            this.naveMancata_70.Name = "naveMancata_70";
+            this.naveMancata_70.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_70.TabIndex = 204;
+            this.naveMancata_70.TabStop = false;
+            this.naveMancata_70.Visible = false;
+            // 
+            // naveMancata_69
+            // 
+            this.naveMancata_69.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_69.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_69.Image")));
+            this.naveMancata_69.ImageLocation = "";
+            this.naveMancata_69.Location = new System.Drawing.Point(1448, 508);
+            this.naveMancata_69.Name = "naveMancata_69";
+            this.naveMancata_69.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_69.TabIndex = 203;
+            this.naveMancata_69.TabStop = false;
+            this.naveMancata_69.Visible = false;
+            // 
+            // naveMancata_68
+            // 
+            this.naveMancata_68.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_68.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_68.Image")));
+            this.naveMancata_68.ImageLocation = "";
+            this.naveMancata_68.Location = new System.Drawing.Point(1434, 508);
+            this.naveMancata_68.Name = "naveMancata_68";
+            this.naveMancata_68.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_68.TabIndex = 202;
+            this.naveMancata_68.TabStop = false;
+            this.naveMancata_68.Visible = false;
+            // 
+            // naveMancata_67
+            // 
+            this.naveMancata_67.BackColor = System.Drawing.Color.Transparent;
+            this.naveMancata_67.Image = ((System.Drawing.Image)(resources.GetObject("naveMancata_67.Image")));
+            this.naveMancata_67.ImageLocation = "";
+            this.naveMancata_67.Location = new System.Drawing.Point(1423, 508);
+            this.naveMancata_67.Name = "naveMancata_67";
+            this.naveMancata_67.Size = new System.Drawing.Size(45, 45);
+            this.naveMancata_67.TabIndex = 201;
+            this.naveMancata_67.TabStop = false;
+            this.naveMancata_67.Visible = false;
             // 
             // Gameplay
             // 
@@ -2918,94 +2918,94 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1924, 681);
-            this.Controls.Add(this.pictureBox67);
-            this.Controls.Add(this.pictureBox68);
-            this.Controls.Add(this.pictureBox69);
-            this.Controls.Add(this.pictureBox70);
-            this.Controls.Add(this.pictureBox71);
-            this.Controls.Add(this.pictureBox72);
-            this.Controls.Add(this.pictureBox73);
-            this.Controls.Add(this.pictureBox74);
-            this.Controls.Add(this.pictureBox75);
-            this.Controls.Add(this.pictureBox76);
-            this.Controls.Add(this.pictureBox77);
-            this.Controls.Add(this.pictureBox78);
-            this.Controls.Add(this.pictureBox79);
-            this.Controls.Add(this.pictureBox80);
-            this.Controls.Add(this.pictureBox81);
-            this.Controls.Add(this.pictureBox82);
-            this.Controls.Add(this.pictureBox83);
-            this.Controls.Add(this.pictureBox84);
-            this.Controls.Add(this.pictureBox85);
-            this.Controls.Add(this.pictureBox86);
-            this.Controls.Add(this.pictureBox87);
-            this.Controls.Add(this.pictureBox88);
-            this.Controls.Add(this.pictureBox45);
-            this.Controls.Add(this.pictureBox46);
-            this.Controls.Add(this.pictureBox47);
-            this.Controls.Add(this.pictureBox48);
-            this.Controls.Add(this.pictureBox49);
-            this.Controls.Add(this.pictureBox50);
-            this.Controls.Add(this.pictureBox51);
-            this.Controls.Add(this.pictureBox52);
-            this.Controls.Add(this.pictureBox53);
-            this.Controls.Add(this.pictureBox54);
-            this.Controls.Add(this.pictureBox55);
-            this.Controls.Add(this.pictureBox56);
-            this.Controls.Add(this.pictureBox57);
-            this.Controls.Add(this.pictureBox58);
-            this.Controls.Add(this.pictureBox59);
-            this.Controls.Add(this.pictureBox60);
-            this.Controls.Add(this.pictureBox61);
-            this.Controls.Add(this.pictureBox62);
-            this.Controls.Add(this.pictureBox63);
-            this.Controls.Add(this.pictureBox64);
-            this.Controls.Add(this.pictureBox65);
-            this.Controls.Add(this.pictureBox66);
-            this.Controls.Add(this.pictureBox23);
-            this.Controls.Add(this.pictureBox24);
-            this.Controls.Add(this.pictureBox25);
-            this.Controls.Add(this.pictureBox26);
-            this.Controls.Add(this.pictureBox27);
-            this.Controls.Add(this.pictureBox28);
-            this.Controls.Add(this.pictureBox29);
-            this.Controls.Add(this.pictureBox30);
-            this.Controls.Add(this.pictureBox31);
-            this.Controls.Add(this.pictureBox32);
-            this.Controls.Add(this.pictureBox33);
-            this.Controls.Add(this.pictureBox34);
-            this.Controls.Add(this.pictureBox35);
-            this.Controls.Add(this.pictureBox36);
-            this.Controls.Add(this.pictureBox37);
-            this.Controls.Add(this.pictureBox38);
-            this.Controls.Add(this.pictureBox39);
-            this.Controls.Add(this.pictureBox40);
-            this.Controls.Add(this.pictureBox41);
-            this.Controls.Add(this.pictureBox42);
-            this.Controls.Add(this.pictureBox43);
-            this.Controls.Add(this.pictureBox44);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox9);
-            this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.pictureBox11);
-            this.Controls.Add(this.pictureBox12);
-            this.Controls.Add(this.pictureBox13);
-            this.Controls.Add(this.pictureBox14);
-            this.Controls.Add(this.pictureBox15);
-            this.Controls.Add(this.pictureBox16);
-            this.Controls.Add(this.pictureBox17);
-            this.Controls.Add(this.pictureBox18);
-            this.Controls.Add(this.pictureBox19);
-            this.Controls.Add(this.pictureBox20);
-            this.Controls.Add(this.pictureBox21);
-            this.Controls.Add(this.pictureBox22);
+            this.Controls.Add(this.naveMancata_88);
+            this.Controls.Add(this.naveMancata_87);
+            this.Controls.Add(this.naveMancata_86);
+            this.Controls.Add(this.naveMancata_85);
+            this.Controls.Add(this.naveMancata_84);
+            this.Controls.Add(this.naveMancata_83);
+            this.Controls.Add(this.naveMancata_82);
+            this.Controls.Add(this.naveMancata_81);
+            this.Controls.Add(this.naveMancata_80);
+            this.Controls.Add(this.naveMancata_79);
+            this.Controls.Add(this.naveMancata_78);
+            this.Controls.Add(this.naveMancata_77);
+            this.Controls.Add(this.naveMancata_76);
+            this.Controls.Add(this.naveMancata_75);
+            this.Controls.Add(this.naveMancata_74);
+            this.Controls.Add(this.naveMancata_73);
+            this.Controls.Add(this.naveMancata_72);
+            this.Controls.Add(this.naveMancata_71);
+            this.Controls.Add(this.naveMancata_70);
+            this.Controls.Add(this.naveMancata_69);
+            this.Controls.Add(this.naveMancata_68);
+            this.Controls.Add(this.naveMancata_67);
+            this.Controls.Add(this.naveMancata_66);
+            this.Controls.Add(this.naveMancata_65);
+            this.Controls.Add(this.naveMancata_64);
+            this.Controls.Add(this.naveMancata_63);
+            this.Controls.Add(this.naveMancata_62);
+            this.Controls.Add(this.naveMancata_61);
+            this.Controls.Add(this.naveMancata_60);
+            this.Controls.Add(this.naveMancata_59);
+            this.Controls.Add(this.naveMancata_58);
+            this.Controls.Add(this.naveMancata_57);
+            this.Controls.Add(this.naveMancata_56);
+            this.Controls.Add(this.naveMancata_55);
+            this.Controls.Add(this.naveMancata_54);
+            this.Controls.Add(this.naveMancata_53);
+            this.Controls.Add(this.naveMancata_52);
+            this.Controls.Add(this.naveMancata_51);
+            this.Controls.Add(this.naveMancata_50);
+            this.Controls.Add(this.naveMancata_49);
+            this.Controls.Add(this.naveMancata_48);
+            this.Controls.Add(this.naveMancata_47);
+            this.Controls.Add(this.naveMancata_46);
+            this.Controls.Add(this.naveMancata_45);
+            this.Controls.Add(this.naveMancata_44);
+            this.Controls.Add(this.naveMancata_43);
+            this.Controls.Add(this.naveMancata_42);
+            this.Controls.Add(this.naveMancata_41);
+            this.Controls.Add(this.naveMancata_40);
+            this.Controls.Add(this.naveMancata_39);
+            this.Controls.Add(this.naveMancata_38);
+            this.Controls.Add(this.naveMancata_37);
+            this.Controls.Add(this.naveMancata_36);
+            this.Controls.Add(this.naveMancata_35);
+            this.Controls.Add(this.naveMancata_34);
+            this.Controls.Add(this.naveMancata_33);
+            this.Controls.Add(this.naveMancata_32);
+            this.Controls.Add(this.naveMancata_31);
+            this.Controls.Add(this.naveMancata_30);
+            this.Controls.Add(this.naveMancata_29);
+            this.Controls.Add(this.naveMancata_28);
+            this.Controls.Add(this.naveMancata_27);
+            this.Controls.Add(this.naveMancata_26);
+            this.Controls.Add(this.naveMancata_25);
+            this.Controls.Add(this.naveMancata_24);
+            this.Controls.Add(this.naveMancata_23);
+            this.Controls.Add(this.naveMancata_22);
+            this.Controls.Add(this.naveMancata_21);
+            this.Controls.Add(this.naveMancata_20);
+            this.Controls.Add(this.naveMancata_19);
+            this.Controls.Add(this.naveMancata_18);
+            this.Controls.Add(this.naveMancata_17);
+            this.Controls.Add(this.naveMancata_16);
+            this.Controls.Add(this.naveMancata_15);
+            this.Controls.Add(this.naveMancata_14);
+            this.Controls.Add(this.naveMancata_13);
+            this.Controls.Add(this.naveMancata_12);
+            this.Controls.Add(this.naveMancata_11);
+            this.Controls.Add(this.naveMancata_10);
+            this.Controls.Add(this.naveMancata_9);
+            this.Controls.Add(this.naveMancata_8);
+            this.Controls.Add(this.naveMancata_7);
+            this.Controls.Add(this.naveMancata_6);
+            this.Controls.Add(this.naveMancata_5);
+            this.Controls.Add(this.naveMancata_4);
+            this.Controls.Add(this.naveMancata_3);
+            this.Controls.Add(this.naveMancata_2);
+            this.Controls.Add(this.naveMancata_1);
             this.Controls.Add(this.naveColpita_22);
             this.Controls.Add(this.naveColpita_21);
             this.Controls.Add(this.naveColpita_20);
@@ -3202,94 +3202,94 @@
             ((System.ComponentModel.ISupportInitialize)(this.portaereiPictureBox10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoPiccola)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grigliaDiGiocoGrande)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox19)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox20)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox21)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox22)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox23)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox24)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox25)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox26)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox27)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox28)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox31)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox32)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox33)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox34)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox35)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox36)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox37)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox38)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox39)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox40)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox41)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox42)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox43)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox44)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox45)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox46)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox47)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox48)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox49)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox50)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox51)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox52)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox53)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox54)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox55)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox56)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox57)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox58)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox59)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox60)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox61)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox62)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox63)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox64)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox65)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox66)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox67)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox68)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox69)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox70)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox71)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox72)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox73)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox74)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox75)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox76)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox77)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox78)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox79)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox82)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox83)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox84)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox85)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox86)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox87)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox88)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_22)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_44)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_43)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_41)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_40)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_39)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_38)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_37)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_36)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_35)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_34)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_33)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_32)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_31)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_30)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_29)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_28)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_27)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_26)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_25)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_24)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_23)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_66)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_65)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_64)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_63)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_62)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_61)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_60)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_59)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_58)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_57)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_56)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_55)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_54)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_53)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_52)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_51)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_50)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_49)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_48)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_47)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_46)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_45)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_88)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_87)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_86)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_85)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_84)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_83)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_82)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_81)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_80)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_79)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_78)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_77)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_76)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_75)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_74)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_73)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_72)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_71)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_70)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_69)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_68)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.naveMancata_67)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3419,93 +3419,93 @@
         private System.Windows.Forms.PictureBox naveColpita_3;
         private System.Windows.Forms.PictureBox naveColpita_2;
         private System.Windows.Forms.PictureBox naveColpita_1;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.PictureBox pictureBox11;
-        private System.Windows.Forms.PictureBox pictureBox12;
-        private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
-        private System.Windows.Forms.PictureBox pictureBox15;
-        private System.Windows.Forms.PictureBox pictureBox16;
-        private System.Windows.Forms.PictureBox pictureBox17;
-        private System.Windows.Forms.PictureBox pictureBox18;
-        private System.Windows.Forms.PictureBox pictureBox19;
-        private System.Windows.Forms.PictureBox pictureBox20;
-        private System.Windows.Forms.PictureBox pictureBox21;
-        private System.Windows.Forms.PictureBox pictureBox22;
-        private System.Windows.Forms.PictureBox pictureBox23;
-        private System.Windows.Forms.PictureBox pictureBox24;
-        private System.Windows.Forms.PictureBox pictureBox25;
-        private System.Windows.Forms.PictureBox pictureBox26;
-        private System.Windows.Forms.PictureBox pictureBox27;
-        private System.Windows.Forms.PictureBox pictureBox28;
-        private System.Windows.Forms.PictureBox pictureBox29;
-        private System.Windows.Forms.PictureBox pictureBox30;
-        private System.Windows.Forms.PictureBox pictureBox31;
-        private System.Windows.Forms.PictureBox pictureBox32;
-        private System.Windows.Forms.PictureBox pictureBox33;
-        private System.Windows.Forms.PictureBox pictureBox34;
-        private System.Windows.Forms.PictureBox pictureBox35;
-        private System.Windows.Forms.PictureBox pictureBox36;
-        private System.Windows.Forms.PictureBox pictureBox37;
-        private System.Windows.Forms.PictureBox pictureBox38;
-        private System.Windows.Forms.PictureBox pictureBox39;
-        private System.Windows.Forms.PictureBox pictureBox40;
-        private System.Windows.Forms.PictureBox pictureBox41;
-        private System.Windows.Forms.PictureBox pictureBox42;
-        private System.Windows.Forms.PictureBox pictureBox43;
-        private System.Windows.Forms.PictureBox pictureBox44;
-        private System.Windows.Forms.PictureBox pictureBox45;
-        private System.Windows.Forms.PictureBox pictureBox46;
-        private System.Windows.Forms.PictureBox pictureBox47;
-        private System.Windows.Forms.PictureBox pictureBox48;
-        private System.Windows.Forms.PictureBox pictureBox49;
-        private System.Windows.Forms.PictureBox pictureBox50;
-        private System.Windows.Forms.PictureBox pictureBox51;
-        private System.Windows.Forms.PictureBox pictureBox52;
-        private System.Windows.Forms.PictureBox pictureBox53;
-        private System.Windows.Forms.PictureBox pictureBox54;
-        private System.Windows.Forms.PictureBox pictureBox55;
-        private System.Windows.Forms.PictureBox pictureBox56;
-        private System.Windows.Forms.PictureBox pictureBox57;
-        private System.Windows.Forms.PictureBox pictureBox58;
-        private System.Windows.Forms.PictureBox pictureBox59;
-        private System.Windows.Forms.PictureBox pictureBox60;
-        private System.Windows.Forms.PictureBox pictureBox61;
-        private System.Windows.Forms.PictureBox pictureBox62;
-        private System.Windows.Forms.PictureBox pictureBox63;
-        private System.Windows.Forms.PictureBox pictureBox64;
-        private System.Windows.Forms.PictureBox pictureBox65;
-        private System.Windows.Forms.PictureBox pictureBox66;
-        private System.Windows.Forms.PictureBox pictureBox67;
-        private System.Windows.Forms.PictureBox pictureBox68;
-        private System.Windows.Forms.PictureBox pictureBox69;
-        private System.Windows.Forms.PictureBox pictureBox70;
-        private System.Windows.Forms.PictureBox pictureBox71;
-        private System.Windows.Forms.PictureBox pictureBox72;
-        private System.Windows.Forms.PictureBox pictureBox73;
-        private System.Windows.Forms.PictureBox pictureBox74;
-        private System.Windows.Forms.PictureBox pictureBox75;
-        private System.Windows.Forms.PictureBox pictureBox76;
-        private System.Windows.Forms.PictureBox pictureBox77;
-        private System.Windows.Forms.PictureBox pictureBox78;
-        private System.Windows.Forms.PictureBox pictureBox79;
-        private System.Windows.Forms.PictureBox pictureBox80;
-        private System.Windows.Forms.PictureBox pictureBox81;
-        private System.Windows.Forms.PictureBox pictureBox82;
-        private System.Windows.Forms.PictureBox pictureBox83;
-        private System.Windows.Forms.PictureBox pictureBox84;
-        private System.Windows.Forms.PictureBox pictureBox85;
-        private System.Windows.Forms.PictureBox pictureBox86;
-        private System.Windows.Forms.PictureBox pictureBox87;
-        private System.Windows.Forms.PictureBox pictureBox88;
+        private System.Windows.Forms.PictureBox naveMancata_22;
+        private System.Windows.Forms.PictureBox naveMancata_21;
+        private System.Windows.Forms.PictureBox naveMancata_20;
+        private System.Windows.Forms.PictureBox naveMancata_19;
+        private System.Windows.Forms.PictureBox naveMancata_18;
+        private System.Windows.Forms.PictureBox naveMancata_17;
+        private System.Windows.Forms.PictureBox naveMancata_16;
+        private System.Windows.Forms.PictureBox naveMancata_15;
+        private System.Windows.Forms.PictureBox naveMancata_14;
+        private System.Windows.Forms.PictureBox naveMancata_13;
+        private System.Windows.Forms.PictureBox naveMancata_12;
+        private System.Windows.Forms.PictureBox naveMancata_11;
+        private System.Windows.Forms.PictureBox naveMancata_10;
+        private System.Windows.Forms.PictureBox naveMancata_9;
+        private System.Windows.Forms.PictureBox naveMancata_8;
+        private System.Windows.Forms.PictureBox naveMancata_7;
+        private System.Windows.Forms.PictureBox naveMancata_6;
+        private System.Windows.Forms.PictureBox naveMancata_5;
+        private System.Windows.Forms.PictureBox naveMancata_4;
+        private System.Windows.Forms.PictureBox naveMancata_3;
+        private System.Windows.Forms.PictureBox naveMancata_2;
+        private System.Windows.Forms.PictureBox naveMancata_1;
+        private System.Windows.Forms.PictureBox naveMancata_44;
+        private System.Windows.Forms.PictureBox naveMancata_43;
+        private System.Windows.Forms.PictureBox naveMancata_42;
+        private System.Windows.Forms.PictureBox naveMancata_41;
+        private System.Windows.Forms.PictureBox naveMancata_40;
+        private System.Windows.Forms.PictureBox naveMancata_39;
+        private System.Windows.Forms.PictureBox naveMancata_38;
+        private System.Windows.Forms.PictureBox naveMancata_37;
+        private System.Windows.Forms.PictureBox naveMancata_36;
+        private System.Windows.Forms.PictureBox naveMancata_35;
+        private System.Windows.Forms.PictureBox naveMancata_34;
+        private System.Windows.Forms.PictureBox naveMancata_33;
+        private System.Windows.Forms.PictureBox naveMancata_32;
+        private System.Windows.Forms.PictureBox naveMancata_31;
+        private System.Windows.Forms.PictureBox naveMancata_30;
+        private System.Windows.Forms.PictureBox naveMancata_29;
+        private System.Windows.Forms.PictureBox naveMancata_28;
+        private System.Windows.Forms.PictureBox naveMancata_27;
+        private System.Windows.Forms.PictureBox naveMancata_26;
+        private System.Windows.Forms.PictureBox naveMancata_25;
+        private System.Windows.Forms.PictureBox naveMancata_24;
+        private System.Windows.Forms.PictureBox naveMancata_23;
+        private System.Windows.Forms.PictureBox naveMancata_66;
+        private System.Windows.Forms.PictureBox naveMancata_65;
+        private System.Windows.Forms.PictureBox naveMancata_64;
+        private System.Windows.Forms.PictureBox naveMancata_63;
+        private System.Windows.Forms.PictureBox naveMancata_62;
+        private System.Windows.Forms.PictureBox naveMancata_61;
+        private System.Windows.Forms.PictureBox naveMancata_60;
+        private System.Windows.Forms.PictureBox naveMancata_59;
+        private System.Windows.Forms.PictureBox naveMancata_58;
+        private System.Windows.Forms.PictureBox naveMancata_57;
+        private System.Windows.Forms.PictureBox naveMancata_56;
+        private System.Windows.Forms.PictureBox naveMancata_55;
+        private System.Windows.Forms.PictureBox naveMancata_54;
+        private System.Windows.Forms.PictureBox naveMancata_53;
+        private System.Windows.Forms.PictureBox naveMancata_52;
+        private System.Windows.Forms.PictureBox naveMancata_51;
+        private System.Windows.Forms.PictureBox naveMancata_50;
+        private System.Windows.Forms.PictureBox naveMancata_49;
+        private System.Windows.Forms.PictureBox naveMancata_48;
+        private System.Windows.Forms.PictureBox naveMancata_47;
+        private System.Windows.Forms.PictureBox naveMancata_46;
+        private System.Windows.Forms.PictureBox naveMancata_45;
+        private System.Windows.Forms.PictureBox naveMancata_88;
+        private System.Windows.Forms.PictureBox naveMancata_87;
+        private System.Windows.Forms.PictureBox naveMancata_86;
+        private System.Windows.Forms.PictureBox naveMancata_85;
+        private System.Windows.Forms.PictureBox naveMancata_84;
+        private System.Windows.Forms.PictureBox naveMancata_83;
+        private System.Windows.Forms.PictureBox naveMancata_82;
+        private System.Windows.Forms.PictureBox naveMancata_81;
+        private System.Windows.Forms.PictureBox naveMancata_80;
+        private System.Windows.Forms.PictureBox naveMancata_79;
+        private System.Windows.Forms.PictureBox naveMancata_78;
+        private System.Windows.Forms.PictureBox naveMancata_77;
+        private System.Windows.Forms.PictureBox naveMancata_76;
+        private System.Windows.Forms.PictureBox naveMancata_75;
+        private System.Windows.Forms.PictureBox naveMancata_74;
+        private System.Windows.Forms.PictureBox naveMancata_73;
+        private System.Windows.Forms.PictureBox naveMancata_72;
+        private System.Windows.Forms.PictureBox naveMancata_71;
+        private System.Windows.Forms.PictureBox naveMancata_70;
+        private System.Windows.Forms.PictureBox naveMancata_69;
+        private System.Windows.Forms.PictureBox naveMancata_68;
+        private System.Windows.Forms.PictureBox naveMancata_67;
     }
 }

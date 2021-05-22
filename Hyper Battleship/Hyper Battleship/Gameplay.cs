@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 //dimensioni originali 1374; 720
-//naveColpita_1
+//naveMancata_8
 namespace Hyper_Battleship
 {
     public partial class Gameplay : Form
@@ -65,8 +65,13 @@ namespace Hyper_Battleship
                 sottomarino1Griglia10x10.Height = 105; sottomarino1Griglia10x10.Width = 315; sottomarino1Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6;
                 sottomarino2Griglia10x10.Height = 105; sottomarino2Griglia10x10.Width = 315; sottomarino2Griglia10x10.Image = Properties.Resources.sottomarino_Griglia6x6;
 
-                selezioneAttacco1.Width = 105; selezioneAttacco1.Height = 105;
-                selezioneAttacco2.Width = 105; selezioneAttacco2.Height = 105;
+                selezioneAttacco1.Width = 75; selezioneAttacco1.Height = 75;
+                selezioneAttacco2.Width = 75; selezioneAttacco2.Height = 75;
+
+                //serve per ingrandire le picturebox che di default sono 45x45(partita normale) a 75x75 (partita veloce)
+                naveIndividuataPictureBoxResize();
+                naveColpitaResize();
+                naveMancataResize();
             }
             else
             {
@@ -76,6 +81,65 @@ namespace Hyper_Battleship
                 selezioneAttacco2.Image = Properties.Resources.selezione_Attacco2_Griglia10x10;
             }
         }
+
+        private void naveIndividuataPictureBoxResize()
+        {
+            naveIndividuata_1.Size = new Size(75, 75);
+            naveIndividuata_2.Size = new Size(75, 75);
+            naveIndividuata_3.Size = new Size(75, 75);
+            naveIndividuata_4.Size = new Size(75, 75);
+            naveIndividuata_5.Size = new Size(75, 75);
+            naveIndividuata_6.Size = new Size(75, 75);
+            naveIndividuata_7.Size = new Size(75, 75);
+            naveIndividuata_8.Size = new Size(75, 75);
+            naveIndividuata_9.Size = new Size(75, 75);
+            naveIndividuata_10.Size = new Size(75, 75);
+        }
+
+        private void naveColpitaResize()
+        {
+            naveColpita_1.Size = new Size(75, 75);
+            naveColpita_2.Size = new Size(75, 75);
+            naveColpita_3.Size = new Size(75, 75);
+            naveColpita_4.Size = new Size(75, 75);
+            naveColpita_5.Size = new Size(75, 75);
+            naveColpita_6.Size = new Size(75, 75);
+            naveColpita_7.Size = new Size(75, 75);
+            naveColpita_8.Size = new Size(75, 75);
+            naveColpita_9.Size = new Size(75, 75);
+            naveColpita_10.Size = new Size(75, 75);
+        }
+
+        private void naveMancataResize()
+        {
+            naveMancata_1.Size = new Size(75, 75);
+            naveMancata_2.Size = new Size(75, 75);
+            naveMancata_3.Size = new Size(75, 75);
+            naveMancata_4.Size = new Size(75, 75);
+            naveMancata_5.Size = new Size(75, 75);
+            naveMancata_6.Size = new Size(75, 75);
+            naveMancata_7.Size = new Size(75, 75);
+            naveMancata_8.Size = new Size(75, 75);
+            naveMancata_9.Size = new Size(75, 75);
+            naveMancata_10.Size = new Size(75, 75);
+            naveMancata_11.Size = new Size(75, 75);
+            naveMancata_12.Size = new Size(75, 75);
+            naveMancata_13.Size = new Size(75, 75);
+            naveMancata_14.Size = new Size(75, 75);
+            naveMancata_15.Size = new Size(75, 75);
+            naveMancata_16.Size = new Size(75, 75);
+            naveMancata_17.Size = new Size(75, 75);
+            naveMancata_18.Size = new Size(75, 75);
+            naveMancata_19.Size = new Size(75, 75);
+            naveMancata_20.Size = new Size(75, 75);
+            naveMancata_21.Size = new Size(75, 75);
+            naveMancata_22.Size = new Size(75, 75);
+            naveMancata_23.Size = new Size(75, 75);
+            naveMancata_24.Size = new Size(75, 75);
+            naveMancata_25.Size = new Size(75, 75);
+            naveMancata_26.Size = new Size(75, 75);
+        }
+
         private void Gameplay_FormClosed(object sender, FormClosedEventArgs e)//per chiudere il form
         {
             Application.Exit();
@@ -1612,11 +1676,15 @@ namespace Hyper_Battleship
             {
                 if(nave[1] != "acqua2")
                 {
+
+                    visibilitaPictureBoxDegliAttacchiNaveColpita(naviColpiteGiocatore1, true);
                     naviColpiteGiocatore1++;
                     Program.scoreGiocatore1 += 100;
                 }
                 else
                 {
+
+                    visibilitaPictureBoxDegliAttacchiNaveMancata(naviMancateGiocatore1, true);
                     naviMancateGiocatore1++;
                     Program.scoreGiocatore1 -= 5;
                 }
@@ -1626,15 +1694,707 @@ namespace Hyper_Battleship
             {
                 if (nave[0] != "acqua1")
                 {
+
+                    visibilitaPictureBoxDegliAttacchiNaveColpita(naviColpiteGiocatore2, true);
                     naviColpiteGiocatore2++;
                     Program.scoreGiocatore2 += 100;
                 }
                 else
                 {
+
+                    visibilitaPictureBoxDegliAttacchiNaveMancata(naviMancateGiocatore2, true);
                     naviMancateGiocatore2++;
                     Program.scoreGiocatore2 -= 5;
                 }
                 puntiCount.Text = Program.scoreGiocatore2.ToString();
+            }
+        }
+
+        private void visibilitaPictureBoxDegliAttacchiNaveColpita(int numeroNaveColpita, bool visibilita)//mostra o nasconde le naviColpite
+        {
+            switch (numeroNaveColpita)
+            {
+                case 0:
+                    naveColpita_1.Visible = visibilita;
+                    break;
+                case 1:
+                    naveColpita_2.Visible = visibilita;
+                    break;
+                case 2:
+                    naveColpita_3.Visible = visibilita;
+                    break;
+                case 3:
+                    naveColpita_4.Visible = visibilita;
+                    break;
+                case 4:
+                    naveColpita_5.Visible = visibilita;
+                    break;
+                case 5:
+                    naveColpita_6.Visible = visibilita;
+                    break;
+                case 6:
+                    naveColpita_7.Visible = visibilita;
+                    break;
+                case 7:
+                    naveColpita_8.Visible = visibilita;
+                    break;
+                case 8:
+                    naveColpita_9.Visible = visibilita;
+                    break;
+                case 9:
+                    naveColpita_10.Visible = visibilita;
+                    break;
+                case 10:
+                    naveColpita_11.Visible = visibilita;
+                    break;
+                case 11:
+                    naveColpita_12.Visible = visibilita;
+                    break;
+                case 12:
+                    naveColpita_13.Visible = visibilita;
+                    break;
+                case 13:
+                    naveColpita_14.Visible = visibilita;
+                    break;
+                case 14:
+                    naveColpita_15.Visible = visibilita;
+                    break;
+                case 15:
+                    naveColpita_16.Visible = visibilita;
+                    break;
+                case 16:
+                    naveColpita_17.Visible = visibilita;
+                    break;
+                case 17:
+                    naveColpita_18.Visible = visibilita;
+                    break;
+                case 18:
+                    naveColpita_19.Visible = visibilita;
+                    break;
+                case 19:
+                    naveColpita_20.Visible = visibilita;
+                    break;
+                case 20:
+                    naveColpita_21.Visible = visibilita;
+                    break;
+                case 21:
+                    naveColpita_22.Visible = visibilita;
+                    break;
+            }
+        }
+
+        private void visibilitaPictureBoxDegliAttacchiNaveMancata(int numeroNaveMancata, bool visibilita)//mostra o nasconde le naviColpite
+        {
+            switch (numeroNaveMancata)
+            {
+                case 0:
+                    naveMancata_1.Visible = visibilita;
+                    break;
+                case 1:
+                    naveMancata_2.Visible = visibilita;
+                    break;
+                case 2:
+                    naveMancata_3.Visible = visibilita;
+                    break;
+                case 3:
+                    naveMancata_4.Visible = visibilita;
+                    break;
+                case 4:
+                    naveMancata_5.Visible = visibilita;
+                    break;
+                case 5:
+                    naveMancata_6.Visible = visibilita;
+                    break;
+                case 6:
+                    naveMancata_7.Visible = visibilita;
+                    break;
+                case 7:
+                    naveMancata_8.Visible = visibilita;
+                    break;
+                case 8:
+                    naveMancata_9.Visible = visibilita;
+                    break;
+                case 9:
+                    naveMancata_10.Visible = visibilita;
+                    break;
+                case 10:
+                    naveMancata_11.Visible = visibilita;
+                    break;
+                case 11:
+                    naveMancata_12.Visible = visibilita;
+                    break;
+                case 12:
+                    naveMancata_13.Visible = visibilita;
+                    break;
+                case 13:
+                    naveMancata_14.Visible = visibilita;
+                    break;
+                case 14:
+                    naveMancata_15.Visible = visibilita;
+                    break;
+                case 15:
+                    naveMancata_16.Visible = visibilita;
+                    break;
+                case 16:
+                    naveMancata_17.Visible = visibilita;
+                    break;
+                case 17:
+                    naveMancata_18.Visible = visibilita;
+                    break;
+                case 18:
+                    naveMancata_19.Visible = visibilita;
+                    break;
+                case 19:
+                    naveMancata_20.Visible = visibilita;
+                    break;
+                case 20:
+                    naveMancata_21.Visible = visibilita;
+                    break;
+                case 21:
+                    naveMancata_22.Visible = visibilita;
+                    break;
+                case 22:
+                    naveMancata_23.Visible = visibilita;
+                    break;
+                case 23:
+                    naveMancata_24.Visible = visibilita;
+                    break;
+                case 24:
+                    naveMancata_25.Visible = visibilita;
+                    break;
+                case 25:
+                    naveMancata_26.Visible = visibilita;
+                    break;
+                case 26:
+                    naveMancata_27.Visible = visibilita;
+                    break;
+                case 27:
+                    naveMancata_28.Visible = visibilita;
+                    break;
+                case 28:
+                    naveMancata_29.Visible = visibilita;
+                    break;
+                case 29:
+                    naveMancata_30.Visible = visibilita;
+                    break;
+                case 30:
+                    naveMancata_31.Visible = visibilita;
+                    break;
+                case 31:
+                    naveMancata_32.Visible = visibilita;
+                    break;
+                case 32:
+                    naveMancata_33.Visible = visibilita;
+                    break;
+                case 33:
+                    naveMancata_34.Visible = visibilita;
+                    break;
+                case 34:
+                    naveMancata_35.Visible = visibilita;
+                    break;
+                case 35:
+                    naveMancata_36.Visible = visibilita;
+                    break;
+                case 36:
+                    naveMancata_37.Visible = visibilita;
+                    break;
+                case 37:
+                    naveMancata_38.Visible = visibilita;
+                    break;
+                case 38:
+                    naveMancata_39.Visible = visibilita;
+                    break;
+                case 39:
+                    naveMancata_40.Visible = visibilita;
+                    break;
+                case 40:
+                    naveMancata_41.Visible = visibilita;
+                    break;
+                case 41:
+                    naveMancata_42.Visible = visibilita;
+                    break;
+                case 42:
+                    naveMancata_43.Visible = visibilita;
+                    break;
+                case 43:
+                    naveMancata_44.Visible = visibilita;
+                    break;
+                case 44:
+                    naveMancata_45.Visible = visibilita;
+                    break;
+                case 45:
+                    naveMancata_46.Visible = visibilita;
+                    break;
+                case 46:
+                    naveMancata_47.Visible = visibilita;
+                    break;
+                case 47:
+                    naveMancata_48.Visible = visibilita;
+                    break;
+                case 48:
+                    naveMancata_49.Visible = visibilita;
+                    break;
+                case 49:
+                    naveMancata_50.Visible = visibilita;
+                    break;
+                case 50:
+                    naveMancata_51.Visible = visibilita;
+                    break;
+                case 51:
+                    naveMancata_52.Visible = visibilita;
+                    break;
+                case 52:
+                    naveMancata_53.Visible = visibilita;
+                    break;
+                case 53:
+                    naveMancata_54.Visible = visibilita;
+                    break;
+                case 54:
+                    naveMancata_55.Visible = visibilita;
+                    break;
+                case 55:
+                    naveMancata_56.Visible = visibilita;
+                    break;
+                case 56:
+                    naveMancata_57.Visible = visibilita;
+                    break;
+                case 57:
+                    naveMancata_58.Visible = visibilita;
+                    break;
+                case 58:
+                    naveMancata_59.Visible = visibilita;
+                    break;
+                case 59:
+                    naveMancata_60.Visible = visibilita;
+                    break;
+                case 60:
+                    naveMancata_61.Visible = visibilita;
+                    break;
+                case 61:
+                    naveMancata_62.Visible = visibilita;
+                    break;
+                case 62:
+                    naveMancata_63.Visible = visibilita;
+                    break;
+                case 63:
+                    naveMancata_64.Visible = visibilita;
+                    break;
+                case 64:
+                    naveMancata_65.Visible = visibilita;
+                    break;
+                case 65:
+                    naveMancata_66.Visible = visibilita;
+                    break;
+                case 66:
+                    naveMancata_67.Visible = visibilita;
+                    break;
+                case 67:
+                    naveMancata_68.Visible = visibilita;
+                    break;
+                case 68:
+                    naveMancata_69.Visible = visibilita;
+                    break;
+                case 69:
+                    naveMancata_70.Visible = visibilita;
+                    break;
+                case 70:
+                    naveMancata_71.Visible = visibilita;
+                    break;
+                case 71:
+                    naveMancata_72.Visible = visibilita;
+                    break;
+                case 72:
+                    naveMancata_73.Visible = visibilita;
+                    break;
+                case 73:
+                    naveMancata_74.Visible = visibilita;
+                    break;
+                case 74:
+                    naveMancata_75.Visible = visibilita;
+                    break;
+                case 75:
+                    naveMancata_76.Visible = visibilita;
+                    break;
+                case 76:
+                    naveMancata_77.Visible = visibilita;
+                    break;
+                case 77:
+                    naveMancata_78.Visible = visibilita;
+                    break;
+                case 78:
+                    naveMancata_79.Visible = visibilita;
+                    break;
+                case 79:
+                    naveMancata_80.Visible = visibilita;
+                    break;
+                case 80:
+                    naveMancata_81.Visible = visibilita;
+                    break;
+                case 81:
+                    naveMancata_82.Visible = visibilita;
+                    break;
+                case 82:
+                    naveMancata_83.Visible = visibilita;
+                    break;
+                case 83:
+                    naveMancata_84.Visible = visibilita;
+                    break;
+                case 84:
+                    naveMancata_85.Visible = visibilita;
+                    break;
+                case 85:
+                    naveMancata_86.Visible = visibilita;
+                    break;
+                case 86:
+                    naveMancata_87.Visible = visibilita;
+                    break;
+                case 87:
+                    naveMancata_88.Visible = visibilita;
+                    break;
+            }
+        }
+
+        private void posizionePictureBoxDegliAttacchiNaveColpita(int numeroNaveColpita, int x, int y)//imposta la posizione delle picturebox delle navi colpite
+        {
+            switch (numeroNaveColpita)
+            {
+                case 0:
+                    naveColpita_1.Location = new Point(x, y);
+                    break;
+                case 1:
+                    naveColpita_2.Location = new Point(x, y);
+                    break;
+                case 2:
+                    naveColpita_3.Location = new Point(x, y);
+                    break;
+                case 3:
+                    naveColpita_4.Location = new Point(x, y);
+                    break;
+                case 4:
+                    naveColpita_5.Location = new Point(x, y);
+                    break;
+                case 5:
+                    naveColpita_6.Location = new Point(x, y);
+                    break;
+                case 6:
+                    naveColpita_7.Location = new Point(x, y);
+                    break;
+                case 7:
+                    naveColpita_8.Location = new Point(x, y);
+                    break;
+                case 8:
+                    naveColpita_9.Location = new Point(x, y);
+                    break;
+                case 9:
+                    naveColpita_10.Location = new Point(x, y);
+                    break;
+                case 10:
+                    naveColpita_11.Location = new Point(x, y);
+                    break;
+                case 11:
+                    naveColpita_12.Location = new Point(x, y);
+                    break;
+                case 12:
+                    naveColpita_13.Location = new Point(x, y);
+                    break;
+                case 13:
+                    naveColpita_14.Location = new Point(x, y);
+                    break;
+                case 14:
+                    naveColpita_15.Location = new Point(x, y);
+                    break;
+                case 15:
+                    naveColpita_16.Location = new Point(x, y);
+                    break;
+                case 16:
+                    naveColpita_17.Location = new Point(x, y);
+                    break;
+                case 17:
+                    naveColpita_18.Location = new Point(x, y);
+                    break;
+                case 18:
+                    naveColpita_19.Location = new Point(x, y);
+                    break;
+                case 19:
+                    naveColpita_20.Location = new Point(x, y);
+                    break;
+                case 20:
+                    naveColpita_21.Location = new Point(x, y);
+                    break;
+                case 21:
+                    naveColpita_22.Location = new Point(x, y);
+                    break;
+            }
+        }
+
+        private void posizionePictureBoxDegliAttacchiNaveMancata(int numeroNaveMancata, int x, int y)//imposta la posizione delle picturebox delle navi mancate
+        {
+            switch (numeroNaveMancata)
+            {
+                case 0:
+                    naveMancata_1.Location = new Point(x, y);
+                    break;
+                case 1:
+                    naveMancata_2.Location = new Point(x, y);
+                    break;
+                case 2:
+                    naveMancata_3.Location = new Point(x, y);
+                    break;
+                case 3:
+                    naveMancata_4.Location = new Point(x, y);
+                    break;
+                case 4:
+                    naveMancata_5.Location = new Point(x, y);
+                    break;
+                case 5:
+                    naveMancata_6.Location = new Point(x, y);
+                    break;
+                case 6:
+                    naveMancata_7.Location = new Point(x, y);
+                    break;
+                case 7:
+                    naveMancata_8.Location = new Point(x, y);
+                    break;
+                case 8:
+                    naveMancata_9.Location = new Point(x, y);
+                    break;
+                case 9:
+                    naveMancata_10.Location = new Point(x, y);
+                    break;
+                case 10:
+                    naveMancata_11.Location = new Point(x, y);
+                    break;
+                case 11:
+                    naveMancata_12.Location = new Point(x, y);
+                    break;
+                case 12:
+                    naveMancata_13.Location = new Point(x, y);
+                    break;
+                case 13:
+                    naveMancata_14.Location = new Point(x, y);
+                    break;
+                case 14:
+                    naveMancata_15.Location = new Point(x, y);
+                    break;
+                case 15:
+                    naveMancata_16.Location = new Point(x, y);
+                    break;
+                case 16:
+                    naveMancata_17.Location = new Point(x, y);
+                    break;
+                case 17:
+                    naveMancata_18.Location = new Point(x, y);
+                    break;
+                case 18:
+                    naveMancata_19.Location = new Point(x, y);
+                    break;
+                case 19:
+                    naveMancata_20.Location = new Point(x, y);
+                    break;
+                case 20:
+                    naveMancata_21.Location = new Point(x, y);
+                    break;
+                case 21:
+                    naveMancata_22.Location = new Point(x, y);
+                    break;
+                case 22:
+                    naveMancata_23.Location = new Point(x, y);
+                    break;
+                case 23:
+                    naveMancata_24.Location = new Point(x, y);
+                    break;
+                case 24:
+                    naveMancata_25.Location = new Point(x, y);
+                    break;
+                case 25:
+                    naveMancata_26.Location = new Point(x, y);
+                    break;
+                case 26:
+                    naveMancata_27.Location = new Point(x, y);
+                    break;
+                case 27:
+                    naveMancata_28.Location = new Point(x, y);
+                    break;
+                case 28:
+                    naveMancata_29.Location = new Point(x, y);
+                    break;
+                case 29:
+                    naveMancata_30.Location = new Point(x, y);
+                    break;
+                case 30:
+                    naveMancata_31.Location = new Point(x, y);
+                    break;
+                case 31:
+                    naveMancata_32.Location = new Point(x, y);
+                    break;
+                case 32:
+                    naveMancata_33.Location = new Point(x, y);
+                    break;
+                case 33:
+                    naveMancata_34.Location = new Point(x, y);
+                    break;
+                case 34:
+                    naveMancata_35.Location = new Point(x, y);
+                    break;
+                case 35:
+                    naveMancata_36.Location = new Point(x, y);
+                    break;
+                case 36:
+                    naveMancata_37.Location = new Point(x, y);
+                    break;
+                case 37:
+                    naveMancata_38.Location = new Point(x, y);
+                    break;
+                case 38:
+                    naveMancata_39.Location = new Point(x, y);
+                    break;
+                case 39:
+                    naveMancata_40.Location = new Point(x, y);
+                    break;
+                case 40:
+                    naveMancata_41.Location = new Point(x, y);
+                    break;
+                case 41:
+                    naveMancata_42.Location = new Point(x, y);
+                    break;
+                case 42:
+                    naveMancata_43.Location = new Point(x, y);
+                    break;
+                case 43:
+                    naveMancata_44.Location = new Point(x, y);
+                    break;
+                case 44:
+                    naveMancata_45.Location = new Point(x, y);
+                    break;
+                case 45:
+                    naveMancata_46.Location = new Point(x, y);
+                    break;
+                case 46:
+                    naveMancata_47.Location = new Point(x, y);
+                    break;
+                case 47:
+                    naveMancata_48.Location = new Point(x, y);
+                    break;
+                case 48:
+                    naveMancata_49.Location = new Point(x, y);
+                    break;
+                case 49:
+                    naveMancata_50.Location = new Point(x, y);
+                    break;
+                case 50:
+                    naveMancata_51.Location = new Point(x, y);
+                    break;
+                case 51:
+                    naveMancata_52.Location = new Point(x, y);
+                    break;
+                case 52:
+                    naveMancata_53.Location = new Point(x, y);
+                    break;
+                case 53:
+                    naveMancata_54.Location = new Point(x, y);
+                    break;
+                case 54:
+                    naveMancata_55.Location = new Point(x, y);
+                    break;
+                case 55:
+                    naveMancata_56.Location = new Point(x, y);
+                    break;
+                case 56:
+                    naveMancata_57.Location = new Point(x, y);
+                    break;
+                case 57:
+                    naveMancata_58.Location = new Point(x, y);
+                    break;
+                case 58:
+                    naveMancata_59.Location = new Point(x, y);
+                    break;
+                case 59:
+                    naveMancata_60.Location = new Point(x, y);
+                    break;
+                case 60:
+                    naveMancata_61.Location = new Point(x, y);
+                    break;
+                case 61:
+                    naveMancata_62.Location = new Point(x, y);
+                    break;
+                case 62:
+                    naveMancata_63.Location = new Point(x, y);
+                    break;
+                case 63:
+                    naveMancata_64.Location = new Point(x, y);
+                    break;
+                case 64:
+                    naveMancata_65.Location = new Point(x, y);
+                    break;
+                case 65:
+                    naveMancata_66.Location = new Point(x, y);
+                    break;
+                case 66:
+                    naveMancata_67.Location = new Point(x, y);
+                    break;
+                case 67:
+                    naveMancata_68.Location = new Point(x, y);
+                    break;
+                case 68:
+                    naveMancata_69.Location = new Point(x, y);
+                    break;
+                case 69:
+                    naveMancata_70.Location = new Point(x, y);
+                    break;
+                case 70:
+                    naveMancata_71.Location = new Point(x, y);
+                    break;
+                case 71:
+                    naveMancata_72.Location = new Point(x, y);
+                    break;
+                case 72:
+                    naveMancata_73.Location = new Point(x, y);
+                    break;
+                case 73:
+                    naveMancata_74.Location = new Point(x, y);
+                    break;
+                case 74:
+                    naveMancata_75.Location = new Point(x, y);
+                    break;
+                case 75:
+                    naveMancata_76.Location = new Point(x, y);
+                    break;
+                case 76:
+                    naveMancata_77.Location = new Point(x, y);
+                    break;
+                case 77:
+                    naveMancata_78.Location = new Point(x, y);
+                    break;
+                case 78:
+                    naveMancata_79.Location = new Point(x, y);
+                    break;
+                case 79:
+                    naveMancata_80.Location = new Point(x, y);
+                    break;
+                case 80:
+                    naveMancata_81.Location = new Point(x, y);
+                    break;
+                case 81:
+                    naveMancata_82.Location = new Point(x, y);
+                    break;
+                case 82:
+                    naveMancata_83.Location = new Point(x, y);
+                    break;
+                case 83:
+                    naveMancata_84.Location = new Point(x, y);
+                    break;
+                case 84:
+                    naveMancata_85.Location = new Point(x, y);
+                    break;
+                case 85:
+                    naveMancata_86.Location = new Point(x, y);
+                    break;
+                case 86:
+                    naveMancata_87.Location = new Point(x, y);
+                    break;
+                case 87:
+                    naveMancata_88.Location = new Point(x, y);
+                    break;
             }
         }
 
