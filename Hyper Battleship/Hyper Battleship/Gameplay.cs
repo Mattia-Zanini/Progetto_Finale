@@ -1669,6 +1669,8 @@ namespace Hyper_Battleship
             }
         }
 
+        int[] posiizoneAttacchiNaviColpitePictureBox = new int[22];
+
         private void attaccoAlleNavi(string[] nave, PictureBox attacco)//controlla se un giocatore colpisce o manca una nave
         {
             if (player1PictureBox.Visible)//se si manca la nave nemica si perdono 5 punti
@@ -1676,7 +1678,7 @@ namespace Hyper_Battleship
             {
                 if(nave[1] != "acqua2")
                 {
-
+                    posizionePictureBoxDegliAttacchiNaveColpita(naviColpiteGiocatore1, attacco.Location.X, attacco.Location.Y);
                     visibilitaPictureBoxDegliAttacchiNaveColpita(naviColpiteGiocatore1, true);
                     naviColpiteGiocatore1++;
                     Program.scoreGiocatore1 += 100;
@@ -2394,6 +2396,79 @@ namespace Hyper_Battleship
                     break;
                 case 87:
                     naveMancata_88.Location = new Point(x, y);
+                    break;
+            }
+        }
+
+        private void posizionePictureBoxNaveIndividuata(int numeroNaveIndividuata, int x, int y)//imposta la posizione delle picturebox delle navi colpite
+        {
+            switch (numeroNaveIndividuata)
+            {
+                case 0:
+                    naveIndividuata_1.Location = new Point(x, y);
+                    break;
+                case 1:
+                    naveIndividuata_2.Location = new Point(x, y);
+                    break;
+                case 2:
+                    naveIndividuata_3.Location = new Point(x, y);
+                    break;
+                case 3:
+                    naveIndividuata_4.Location = new Point(x, y);
+                    break;
+                case 4:
+                    naveIndividuata_5.Location = new Point(x, y);
+                    break;
+                case 5:
+                    naveIndividuata_6.Location = new Point(x, y);
+                    break;
+                case 6:
+                    naveIndividuata_7.Location = new Point(x, y);
+                    break;
+                case 7:
+                    naveIndividuata_8.Location = new Point(x, y);
+                    break;
+                case 8:
+                    naveIndividuata_9.Location = new Point(x, y);
+                    break;
+                case 9:
+                    naveIndividuata_10.Location = new Point(x, y);
+                    break;
+                case 10:
+                    naveIndividuata_11.Location = new Point(x, y);
+                    break;
+                case 11:
+                    naveIndividuata_12.Location = new Point(x, y);
+                    break;
+                case 12:
+                    naveIndividuata_13.Location = new Point(x, y);
+                    break;
+                case 13:
+                    naveIndividuata_14.Location = new Point(x, y);
+                    break;
+                case 14:
+                    naveIndividuata_15.Location = new Point(x, y);
+                    break;
+                case 15:
+                    naveIndividuata_16.Location = new Point(x, y);
+                    break;
+                case 16:
+                    naveIndividuata_17.Location = new Point(x, y);
+                    break;
+                case 17:
+                    naveIndividuata_18.Location = new Point(x, y);
+                    break;
+                case 18:
+                    naveIndividuata_19.Location = new Point(x, y);
+                    break;
+                case 19:
+                    naveIndividuata_20.Location = new Point(x, y);
+                    break;
+                case 20:
+                    naveIndividuata_21.Location = new Point(x, y);
+                    break;
+                case 21:
+                    naveIndividuata_22.Location = new Point(x, y);
                     break;
             }
         }
