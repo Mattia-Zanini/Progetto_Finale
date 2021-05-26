@@ -74,11 +74,11 @@
             this.settingsText.AutoSize = true;
             this.settingsText.BackColor = System.Drawing.Color.Transparent;
             this.settingsText.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsText.Location = new System.Drawing.Point(364, 413);
+            this.settingsText.Location = new System.Drawing.Point(377, 414);
             this.settingsText.Name = "settingsText";
-            this.settingsText.Size = new System.Drawing.Size(303, 46);
+            this.settingsText.Size = new System.Drawing.Size(252, 46);
             this.settingsText.TabIndex = 5;
-            this.settingsText.Text = "IMPOSTAZIONI";
+            this.settingsText.Text = "CLASSIFICA";
             // 
             // quitText
             // 

@@ -67,6 +67,8 @@ namespace Hyper_Battleship
 
                 selezioneAttacco1.Width = 75; selezioneAttacco1.Height = 75;
                 selezioneAttacco2.Width = 75; selezioneAttacco2.Height = 75;
+                radarGrigliaPictureBox.Width = 105; radarGrigliaPictureBox.Height = 105;
+                quantitàAssaltoDoppioGiocatore1 = 1; quantitàAssaltoDoppioGiocatore2 = 1;
 
                 //serve per ingrandire le picturebox che di default sono 45x45(partita normale) a 75x75 (partita veloce)
                 naveIndividuataPictureBoxResize();
@@ -169,7 +171,8 @@ namespace Hyper_Battleship
         int naviMancateGiocatore1 = 0, naviMancateGiocatore2 = 0;
 
         #region Variabili Per il Fuzionamento dell Programma + Tasto "Conferma", "Annulla" e "Passa Turno"
-        int nTurno = -1, nTimerRadar1, nTimerRadar2;
+        int quantitàAssaltoDoppioGiocatore1 = 2, quantitàAssaltoDoppioGiocatore2 = 2;
+        int nTurno = -1, nTimerRadar1 = 14, nTimerRadar2 = 14;
         int naviPosizionate = 0;
         int sottomarini, cacciatorpedinieri, naviDassalto;
         bool disposizioneNaviPossibile = true;
@@ -239,43 +242,53 @@ namespace Hyper_Battleship
                 movimentoDisposizioneNavi.Enabled = true;
                 attacco1 = true; selezioneAttacco1.Visible = true;
                 confermaButton.Visible = true;
-                radarPcitureBox.Visible = true; countdownRadar.Visible = true; nTimerRadar1 = Convert.ToInt32(countdownRadar.Text); nTimerRadar1--; countdownRadar.Text = nTimerRadar1.ToString();
+                radarPictureBox.Visible = true; countdownRadar.Visible = true; nTimerRadar1--; countdownRadar.Text = nTimerRadar1.ToString();
                 doppioAssaltoPictureBox.Visible = true; quantitàAssaltoDoppio.Visible = true;
             }
             else if(nTurno % 2 == 1)//round giocatore 1
             {
                 puntiCount.Text = Program.scoreGiocatore1.ToString();
                 player1PictureBox.Visible = true; player2PictureBox.Visible = false;
-                quantitàAssaltoDoppio.Text = Program.quantitàAssaltoDoppioGiocatore1.ToString();
+                quantitàAssaltoDoppio.Text = quantitàAssaltoDoppioGiocatore1.ToString();
                 mostraNavi(posizioneNaviGiocatore1);
                 selezioneAttacco1.Visible = true;
                 selezioneAttacco1.Location = new Point(899, 221);
                 attacco1 = true; attacco2 = false;
                 confermaButton.Visible = true;
-                if(Program.quantitàAssaltoDoppioGiocatore1 == 0)
+                if(quantitàAssaltoDoppioGiocatore1 == 0)
                 {
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssaltoScalaGrigio;
                 }
-                else
+                else//nel caso il giocatore due abbia finito gli attacchi doppi, riporta l'immagine alla normalità
                 {
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
                 }
 
-                nTimerRadar1 = Convert.ToInt32(countdownRadar.Text); nTimerRadar1--; countdownRadar.Text = nTimerRadar1.ToString();
-                //countdownRadar.Text = (Convert.ToInt32(countdownRadar.Text) - nTurno + 1).ToString();
+                nTimerRadar1--; countdownRadar.Text = nTimerRadar1.ToString();
+                if (radarUsato1)
+                {
+                    radarPictureBox.Image = Properties.Resources.RadarScalaGrigio;
+                }
+                else if (radarUsato1 == false && nTimerRadar1 == 0)
+                {
+                    countdownRadar.Visible = false;
+                    radarPictureBox.Image = Properties.Resources.Radar;
+                }
                 selezioneAttacco1.BringToFront(); selezioneAttacco2.BringToFront();
                 selezioneAttacco2.Visible = false;
+                aspettoAttacchi(naviColpiteGiocatore2, naviMancateGiocatore2, posizioneAttacchiNaviColpitePictureBoxG2, posizioneAttacchiNaviMancatePictureBoxG2, false);
+                aspettoAttacchi(naviColpiteGiocatore1, naviMancateGiocatore1, posizioneAttacchiNaviColpitePictureBoxG1, posizioneAttacchiNaviMancatePictureBoxG1, true);
             }
             else if(nTurno % 2 == 0)//round giocatore 2
             {
                 puntiCount.Text = Program.scoreGiocatore2.ToString();
                 player1PictureBox.Visible = false; player2PictureBox.Visible = true;
-                quantitàAssaltoDoppio.Text = Program.quantitàAssaltoDoppioGiocatore2.ToString();
+                quantitàAssaltoDoppio.Text = quantitàAssaltoDoppioGiocatore2.ToString();
                 mostraNavi(posizioneNaviGiocatore2);
                 selezioneAttacco1.Location = new Point(899, 221);
                 attacco1 = true; attacco2 = false;
                 confermaButton.Visible = true;
-                if (Program.quantitàAssaltoDoppioGiocatore2 == 0)
+                if (quantitàAssaltoDoppioGiocatore2 == 0)
                 {
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssaltoScalaGrigio;
                 }
@@ -284,27 +297,36 @@ namespace Hyper_Battleship
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
                 }
 
-                nTimerRadar2 = Convert.ToInt32(countdownRadar.Text); nTimerRadar2--; countdownRadar.Text = nTimerRadar2.ToString();
-                //countdownRadar.Text = (Convert.ToInt32(countdownRadar.Text) - nTurno + 1).ToString();
+                nTimerRadar2--; countdownRadar.Text = nTimerRadar2.ToString();
+                if (radarUsato2)
+                {
+                    radarPictureBox.Image = Properties.Resources.RadarScalaGrigio;
+                }
+                else if(radarUsato2 == false && nTimerRadar2 == 0)
+                {
+                    countdownRadar.Visible = false;
+                    radarPictureBox.Image = Properties.Resources.Radar;
+                }
                 selezioneAttacco1.BringToFront(); selezioneAttacco2.BringToFront();
                 selezioneAttacco2.Visible = false;
-                visibilitaPictureBoxDegliAttacchiNaveColpita
+                aspettoAttacchi(naviColpiteGiocatore1, naviMancateGiocatore1, posizioneAttacchiNaviColpitePictureBoxG1, posizioneAttacchiNaviMancatePictureBoxG1, false);
+                aspettoAttacchi(naviColpiteGiocatore2, naviMancateGiocatore2, posizioneAttacchiNaviColpitePictureBoxG2, posizioneAttacchiNaviMancatePictureBoxG2, true);
             }
         }
 
-        private void aspettoAttacchi(int nRipetiCiclo, string[] sorgentePosColpito, string[] sorgentePosMancato)
+        private void aspettoAttacchi(int nRipetiCicloColpito, int nRipetiCicloMancato, string[] sorgentePosColpito, string[] sorgentePosMancato, bool visibilita)
         {
-            for (int i = 0; i < nRipetiCiclo; i++)
+            for (int i = 0; i < nRipetiCicloColpito; i++)
             {
-                string[] posXYAttacco = sorgentePos[i].Split(',');
-
-                if (player1PictureBox.Visible)
-                {
-                    posizionePictureBoxDegliAttacchiNaveColpita(i, Convert.ToInt32(posXYAttacco[0]), Convert.ToInt32(posXYAttacco[1]));
-                    posizionePictureBoxDegliAttacchiNaveColpita(i, Convert.ToInt32(posXYAttacco[0]), Convert.ToInt32(posXYAttacco[1]));
-                    visibilitaPictureBoxDegliAttacchiNaveColpita(i, true);
-                }
-                
+                string[] posXYAttacco = sorgentePosColpito[i].Split(',');
+                posizionePictureBoxDegliAttacchiNaveColpita(i, Convert.ToInt32(posXYAttacco[0]), Convert.ToInt32(posXYAttacco[1]));
+                visibilitaPictureBoxDegliAttacchiNaveColpita(i, visibilita);
+            }
+            for (int i = 0; i < nRipetiCicloMancato; i++)
+            {
+                string[] posXYAttacco = sorgentePosMancato[i].Split(',');
+                posizionePictureBoxDegliAttacchiNaveMancata(i, Convert.ToInt32(posXYAttacco[0]), Convert.ToInt32(posXYAttacco[1]));
+                visibilitaPictureBoxDegliAttacchiNaveMancata(i, visibilita);
             }
         }
 
@@ -313,15 +335,17 @@ namespace Hyper_Battleship
             //mostra rispettivamente la quantità delle abilità di entrambi i giocatori
             if (player1PictureBox.Visible)
             {
-                if(Program.quantitàAssaltoDoppioGiocatore1 > 0)
+                if(quantitàAssaltoDoppioGiocatore1 > 0)
                 {
+                    quantitàAssaltoDoppioGiocatore1--;
                     doppioAssaltoEventi();
                 }
             }
             else
             {
-                if (Program.quantitàAssaltoDoppioGiocatore2 > 0)
+                if (quantitàAssaltoDoppioGiocatore2 > 0)
                 {
+                    quantitàAssaltoDoppioGiocatore2--;
                     doppioAssaltoEventi();
                 }
             }
@@ -343,11 +367,11 @@ namespace Hyper_Battleship
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssaltoScalaGrigio;
                     if (player1PictureBox.Visible)//diminuisce il quantitativo di doppio assalto disponibile al corrispondete giocatore che ha attivato l'abilità in quel turno
                     {
-                        quantitàAssaltoDoppio.Text = (Program.quantitàAssaltoDoppioGiocatore1 - 1).ToString();
+                        quantitàAssaltoDoppio.Text = (quantitàAssaltoDoppioGiocatore1).ToString();
                     }
                     else
-                    {
-                        quantitàAssaltoDoppio.Text = (Program.quantitàAssaltoDoppioGiocatore1 - 1).ToString();
+                    {                        
+                        quantitàAssaltoDoppio.Text = (quantitàAssaltoDoppioGiocatore2).ToString();
                     }
                 }
             }
@@ -356,20 +380,42 @@ namespace Hyper_Battleship
         bool radarAttivo = false, radarUsato1 = false, radarUsato2 = false;
         private void radarPcitureBox_Click(object sender, EventArgs e)//quando un giocatore vuole usare il radar
         {
-            if(Convert.ToInt32(countdownRadar.Text) == 0 && radarAttivo == false)
+            if(attacco1 == false && attacco2 == false)
             {
-                if (Program.modalità == false)//nel caso la partita sia in modalità veloce
+                if (player1PictureBox.Visible)
                 {
-                    radarGrigliaPictureBox.Width = 105; radarGrigliaPictureBox.Height = 105;
-                    radarGrigliaPictureBox.Location = new Point(945, 267);
+                    if (radarUsato1 == false)
+                    {
+                        funzioneClickRadar();
+                    }
                 }
-                radarGrigliaPictureBox.Location = new Point(899, 311);
-                radarGrigliaPictureBox.BringToFront();
-                radarAttivo = true;
-                radarPcitureBox.Image = Properties.Resources.RadarScalaGrigio;
-                annullaButton.Visible = true;
-                confermaButton.Visible = true;
+                else
+                {
+                    if (radarUsato2 == false)
+                    {
+                        funzioneClickRadar();
+                    }
+                }
             }
+        }
+
+        private void funzioneClickRadar()
+        {
+            if (Program.modalità == false)//nel caso la partita sia in modalità veloce
+            {
+                //radarGrigliaPictureBox.Width = 105; radarGrigliaPictureBox.Height = 105;
+                radarGrigliaPictureBox.Location = new Point(945, 267);
+            }
+            else
+            {
+                radarGrigliaPictureBox.Location = new Point(899, 311);
+            }
+            radarGrigliaPictureBox.BringToFront();
+            radarAttivo = true;
+            radarPictureBox.Image = Properties.Resources.RadarScalaGrigio;
+            annullaButton.Visible = true;
+            confermaButton.Visible = true;
+            radarGrigliaPictureBox.Visible = true;
         }
 
         #endregion
@@ -507,7 +553,7 @@ namespace Hyper_Battleship
                 movimentoNavi10x10();
             }
             
-            //quando tutte le navi di un giocatore sono pisizionate
+            //quando tutte le navi di un giocatore sono pisizionate e non è ancora stato mostrato il messaggio
             if (portaereiPosizionata && corazzataPosizionata && sottomarinoPosizionato1 && sottomarinoPosizionato2 && cacciatorpedinierePosizionato1 && cacciatorpedinierePosizionato2 && naveDassaltoPosizionata1 && naveDassaltoPosizionata2 && naveDassaltoPosizionata3 && messaggioGiaMostrato == false)
             {
                 passaTurnoButton.Visible = true;
@@ -516,159 +562,8 @@ namespace Hyper_Battleship
                 messaggioGiaMostrato = true;
                 MessageBox.Show("Hai dispiegato in campo tutte le navi\nClicca il pulsante 'Passa il turno'");
             }
-            //funzioni che si occupano dell'attacco delle navi nemiche
-            if (attacco1)
-            {
-                if (moveUp && selezioneAttacco1.Top > 85 && !confirmButtonPressed)
-                {
-                    selezioneAttacco1.Top -= 45;
-                }
-                if (moveDown && selezioneAttacco1.Top < 445 && !confirmButtonPressed)
-                {
-                    selezioneAttacco1.Top += 45;
-                }
-                if (moveRight && selezioneAttacco1.Right < 1168 && !confirmButtonPressed)
-                {
-                    selezioneAttacco1.Left += 45;
-                }
-                if (moveLeft && selezioneAttacco1.Left > 763 && !confirmButtonPressed)
-                {
-                    selezioneAttacco1.Left -= 45;
-                }
-                if (confirmButtonPressed)
-                {
-                    int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco1.Location.X, selezioneAttacco1.Location.Y);//trova la casella su cui è al momento la selezione dell'attacco del giocatore 1
-                    bool attaccoValido = controlloAttacco(ref coordinateAttacco);
-                    if (attaccoValido)
-                    {
-                        string[] confermaAttacco = StrutturaGriglia10[coordinateAttacco].Split(',');
-                        if (player1PictureBox.Visible)
-                        {
-                            confermaAttacco[2] = "G1_attacco";
-                        }
-                        else
-                        {
-                            confermaAttacco[3] = "G2_attacco";
-                        }
-                        StrutturaGriglia10[coordinateAttacco] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
-                        attacco1 = false;//permette l'eventuale secondo attacco
-                        confirmButtonPressed = false;
-                        annullaButton.Visible = false;
-                        confermaButton.Visible = false;
-                        passaTurnoButton.Visible = true;
-                        selezioneAttacco1.SendToBack();
-                        attaccoAlleNavi(confermaAttacco, selezioneAttacco1);
-                    }
-                    else
-                    {
-                        confirmButtonPressed = false;
-                        MessageBox.Show("Non puoi riattaccare in una posizione già attaccata");
-                    }
-                }
-            }
 
-            if (attacco2)//eventuale doppio assalto
-            {
-                if (moveUp && selezioneAttacco2.Top > 85 && !confirmButtonPressed)
-                {
-                    selezioneAttacco2.Top -= 45;
-                }
-                if (moveDown && selezioneAttacco2.Top < 445 && !confirmButtonPressed)
-                {
-                    selezioneAttacco2.Top += 45;
-                }
-                if (moveRight && selezioneAttacco2.Right < 1168 && !confirmButtonPressed)
-                {
-                    selezioneAttacco2.Left += 45;
-                }
-                if (moveLeft && selezioneAttacco2.Left > 763 && !confirmButtonPressed)
-                {
-                    selezioneAttacco2.Left -= 45;
-                }
-                if (confirmButtonPressed)
-                {
-                    int coordinateAttacco2 = assegnazionePosizioneAttacco(selezioneAttacco2.Location.X, selezioneAttacco2.Location.Y);
-                    bool attaccoValido = controlloAttacco(ref coordinateAttacco2);
-                    if (attaccoValido)
-                    {
-                        string[] confermaAttacco = StrutturaGriglia10[coordinateAttacco2].Split(',');
-                        if (player1PictureBox.Visible)
-                        {
-                            confermaAttacco[2] = "G1_attacco";
-                        }
-                        else
-                        {
-                            confermaAttacco[3] = "G2_attacco";
-                        }
-                        StrutturaGriglia10[coordinateAttacco2] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
-                        confermaButton.Visible = false;
-                        confirmButtonPressed = false;
-                        annullaButton.Visible = false;
-                        passaTurnoButton.Visible = true;
-                        selezioneAttacco2.SendToBack();
-                        attaccoAlleNavi(confermaAttacco, selezioneAttacco2);
-                        attacco2 = false;
-                    }
-                    else
-                    {
-                        confirmButtonPressed = false;
-                        MessageBox.Show("Non puoi riattaccare in una posizione già attaccata");
-                    }
-                }
-                if (exitOperation)
-                {
-                    selezioneAttacco2.Visible = false;
-                    attacco2 = false;
-                    exitOperation = false;
-                    annullaButton.Visible = false;
-                    confermaButton.Visible = false;
-                    quantitàAssaltoDoppio.Text = (Convert.ToInt32(quantitàAssaltoDoppio.Text) + 1).ToString();
-                    doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
-                }
-            }
-
-            radarDeiGiocatori();
-
-            if (radarAttivo)
-            {
-                if (moveUp && selezioneAttacco2.Top > 85 && !confirmButtonPressed)
-                {
-                    radarGrigliaPictureBox.Top -= 45;
-                }
-                if (moveDown && selezioneAttacco2.Top < 445 && !confirmButtonPressed)
-                {
-                    radarGrigliaPictureBox.Top += 45;
-                }
-                if (moveRight && selezioneAttacco2.Right < 1168 && !confirmButtonPressed)
-                {
-                    radarGrigliaPictureBox.Left += 45;
-                }
-                if (moveLeft && selezioneAttacco2.Left > 763 && !confirmButtonPressed)
-                {
-                    radarGrigliaPictureBox.Left -= 45;
-                }
-                if (confirmButtonPressed)
-                {
-
-                    radarGrigliaPictureBox.Visible = false;
-                    radarAttivo = false;
-                    annullaButton.Visible = false;
-                    confermaButton.Visible = false;
-                    countdownRadar.Text = "0";
-                    radarPcitureBox.Image = Properties.Resources.RadarScalaGrigio;
-                }
-                if (exitOperation)
-                {
-                    radarGrigliaPictureBox.Visible = false;
-                    radarAttivo = false;
-                    exitOperation = false;
-                    annullaButton.Visible = false;
-                    confermaButton.Visible = false;
-                    countdownRadar.Text = "1";
-                    radarPcitureBox.Image = Properties.Resources.Radar;
-                }
-            }
-
+            //controlla se la partità è finita
             switch (Program.modalità)
             {
                 case true:
@@ -688,29 +583,6 @@ namespace Hyper_Battleship
             }
         }
 
-        private void radarDeiGiocatori()//per far scendere il countdown dei timer dei timer dei giocatori
-        {
-            if(radarAttivo == false)
-            {
-                if (player1PictureBox.Visible && radarUsato1 == false)
-                {
-                    if (nTimerRadar1 == 0)
-                    {
-                        countdownRadar.Visible = false;
-                        radarPcitureBox.Image = Properties.Resources.Radar;
-                    }
-                }
-                else if(player2PictureBox.Visible && radarUsato2 == false)
-                {
-                    if (nTimerRadar2 == 0)
-                    {
-                        countdownRadar.Visible = false;
-                        radarPcitureBox.Image = Properties.Resources.Radar;
-                    }
-                }
-            }
-        }
-
         private void finePartita()
         {
             if (player1PictureBox.Visible)
@@ -727,6 +599,9 @@ namespace Hyper_Battleship
 
         private void conclusionePartita()
         {
+            SchermataFinale f6 = new SchermataFinale();
+            f6.Show();
+            this.Hide();
             while (!Program.partitaConclusa)
             {
                 Application.DoEvents();
@@ -1684,6 +1559,168 @@ namespace Hyper_Battleship
                     }
                     break;
             }
+            //funzioni che si occupano dell'attacco delle navi nemiche 10x10
+            if (attacco1)
+            {
+                if (moveUp && selezioneAttacco1.Top > 85 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Top -= 45;
+                }
+                if (moveDown && selezioneAttacco1.Top < 445 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Top += 45;
+                }
+                if (moveRight && selezioneAttacco1.Right < 1168 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Left += 45;
+                }
+                if (moveLeft && selezioneAttacco1.Left > 763 && !confirmButtonPressed)
+                {
+                    selezioneAttacco1.Left -= 45;
+                }
+                if (confirmButtonPressed)
+                {
+                    int coordinateAttacco = assegnazionePosizioneAttacco(selezioneAttacco1.Location.X, selezioneAttacco1.Location.Y);//trova la casella su cui è al momento la selezione dell'attacco del giocatore 1
+                    bool attaccoValido = controlloAttacco(ref coordinateAttacco);
+                    if (attaccoValido)
+                    {
+                        string[] confermaAttacco = StrutturaGriglia10[coordinateAttacco].Split(',');
+                        if (player1PictureBox.Visible)
+                        {
+                            confermaAttacco[2] = "G1_attacco";
+                        }
+                        else
+                        {
+                            confermaAttacco[3] = "G2_attacco";
+                        }
+                        StrutturaGriglia10[coordinateAttacco] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
+                        attacco1 = false;//permette l'eventuale secondo attacco
+                        confirmButtonPressed = false;
+                        annullaButton.Visible = false;
+                        confermaButton.Visible = false;
+                        passaTurnoButton.Visible = true;
+                        selezioneAttacco1.SendToBack();
+                        attaccoAlleNavi(confermaAttacco, selezioneAttacco1);
+                    }
+                    else
+                    {
+                        confirmButtonPressed = false;
+                        MessageBox.Show("Non puoi riattaccare in una posizione già attaccata");
+                    }
+                }
+            }
+
+            if (attacco2)//eventuale doppio assalto
+            {
+                if (moveUp && selezioneAttacco2.Top > 85 && !confirmButtonPressed)
+                {
+                    selezioneAttacco2.Top -= 45;
+                }
+                if (moveDown && selezioneAttacco2.Top < 445 && !confirmButtonPressed)
+                {
+                    selezioneAttacco2.Top += 45;
+                }
+                if (moveRight && selezioneAttacco2.Right < 1168 && !confirmButtonPressed)
+                {
+                    selezioneAttacco2.Left += 45;
+                }
+                if (moveLeft && selezioneAttacco2.Left > 763 && !confirmButtonPressed)
+                {
+                    selezioneAttacco2.Left -= 45;
+                }
+                if (confirmButtonPressed)
+                {
+                    int coordinateAttacco2 = assegnazionePosizioneAttacco(selezioneAttacco2.Location.X, selezioneAttacco2.Location.Y);
+                    bool attaccoValido = controlloAttacco(ref coordinateAttacco2);
+                    if (attaccoValido)
+                    {
+                        string[] confermaAttacco = StrutturaGriglia10[coordinateAttacco2].Split(',');
+                        if (player1PictureBox.Visible)
+                        {
+                            confermaAttacco[2] = "G1_attacco";
+                        }
+                        else
+                        {
+                            confermaAttacco[3] = "G2_attacco";
+                        }
+                        StrutturaGriglia10[coordinateAttacco2] = $"{confermaAttacco[0]},{confermaAttacco[1]},{confermaAttacco[2]},{confermaAttacco[3]}";
+                        confermaButton.Visible = false;
+                        confirmButtonPressed = false;
+                        annullaButton.Visible = false;
+                        passaTurnoButton.Visible = true;
+                        selezioneAttacco2.SendToBack();
+                        attaccoAlleNavi(confermaAttacco, selezioneAttacco2);
+                        attacco2 = false;
+                    }
+                    else
+                    {
+                        confirmButtonPressed = false;
+                        MessageBox.Show("Non puoi riattaccare in una posizione già attaccata");
+                    }
+                }
+                if (exitOperation)
+                {
+                    selezioneAttacco2.Visible = false;
+                    attacco2 = false;
+                    exitOperation = false;
+                    annullaButton.Visible = false;
+                    confermaButton.Visible = false;
+                    quantitàAssaltoDoppio.Text = (Convert.ToInt32(quantitàAssaltoDoppio.Text) + 1).ToString();
+                    doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
+                }
+            }
+
+            if (radarAttivo)
+            {
+                if (moveUp && selezioneAttacco2.Top > 85 && !confirmButtonPressed)
+                {
+                    radarGrigliaPictureBox.Top -= 45;
+                }
+                if (moveDown && selezioneAttacco2.Top < 445 && !confirmButtonPressed)
+                {
+                    radarGrigliaPictureBox.Top += 45;
+                }
+                if (moveRight && selezioneAttacco2.Right < 1168 && !confirmButtonPressed)
+                {
+                    radarGrigliaPictureBox.Left += 45;
+                }
+                if (moveLeft && selezioneAttacco2.Left > 763 && !confirmButtonPressed)
+                {
+                    radarGrigliaPictureBox.Left -= 45;
+                }
+                if (confirmButtonPressed)
+                {
+                    if (player1PictureBox.Visible)
+                    {
+                        radarUsato1 = true;
+                    }
+                    else
+                    {
+                        radarUsato2 = true;
+                    }
+                    radarGrigliaPictureBox.Visible = false;
+                    radarAttivo = false;
+                    annullaButton.Visible = false;
+                    confermaButton.Visible = false;
+                    countdownRadar.Text = "0";
+                    radarPictureBox.Image = Properties.Resources.RadarScalaGrigio;
+                }
+                if (exitOperation)
+                {
+                    radarGrigliaPictureBox.Visible = false;
+                    radarAttivo = false;
+                    exitOperation = false;
+                    annullaButton.Visible = false;
+                    confermaButton.Visible = false;
+                    countdownRadar.Text = "1";
+                    radarPictureBox.Image = Properties.Resources.Radar;
+                }
+            }
+        }
+
+        private void individuaNaviNemiche()
+        {
+
         }
 
         string[] posizioneAttacchiNaviColpitePictureBoxG1 = new string[22];

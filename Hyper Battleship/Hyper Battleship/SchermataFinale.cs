@@ -20,7 +20,8 @@ namespace Hyper_Battleship
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.partitaConclusa = true;
+            Schermata_Iniziale f1 = new Schermata_Iniziale();
+            f1.Show();
             this.Close();
         }
     }

@@ -132,7 +132,7 @@
             this.naveIndividuata_1 = new System.Windows.Forms.PictureBox();
             this.selezioneAttacco2 = new System.Windows.Forms.PictureBox();
             this.doppioAssaltoPictureBox = new System.Windows.Forms.PictureBox();
-            this.radarPcitureBox = new System.Windows.Forms.PictureBox();
+            this.radarPictureBox = new System.Windows.Forms.PictureBox();
             this.selezioneAttacco1 = new System.Windows.Forms.PictureBox();
             this.naveDassalto3Griglia10x10 = new System.Windows.Forms.PictureBox();
             this.naveDassalto2Griglia10x10 = new System.Windows.Forms.PictureBox();
@@ -287,7 +287,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.naveIndividuata_1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radarPictureBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto3Griglia10x10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto2Griglia10x10)).BeginInit();
@@ -1608,18 +1608,18 @@
             this.doppioAssaltoPictureBox.Visible = false;
             this.doppioAssaltoPictureBox.Click += new System.EventHandler(this.doppioAssaltoPictureBox_Click);
             // 
-            // radarPcitureBox
+            // radarPictureBox
             // 
-            this.radarPcitureBox.BackColor = System.Drawing.Color.White;
-            this.radarPcitureBox.Image = global::Hyper_Battleship.Properties.Resources.RadarLucchetto;
-            this.radarPcitureBox.Location = new System.Drawing.Point(1198, 40);
-            this.radarPcitureBox.Name = "radarPcitureBox";
-            this.radarPcitureBox.Size = new System.Drawing.Size(120, 120);
-            this.radarPcitureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.radarPcitureBox.TabIndex = 3;
-            this.radarPcitureBox.TabStop = false;
-            this.radarPcitureBox.Visible = false;
-            this.radarPcitureBox.Click += new System.EventHandler(this.radarPcitureBox_Click);
+            this.radarPictureBox.BackColor = System.Drawing.Color.White;
+            this.radarPictureBox.Image = global::Hyper_Battleship.Properties.Resources.RadarLucchetto;
+            this.radarPictureBox.Location = new System.Drawing.Point(1198, 40);
+            this.radarPictureBox.Name = "radarPictureBox";
+            this.radarPictureBox.Size = new System.Drawing.Size(120, 120);
+            this.radarPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.radarPictureBox.TabIndex = 3;
+            this.radarPictureBox.TabStop = false;
+            this.radarPictureBox.Visible = false;
+            this.radarPictureBox.Click += new System.EventHandler(this.radarPcitureBox_Click);
             // 
             // selezioneAttacco1
             // 
@@ -2917,7 +2917,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1370, 681);
+            this.ClientSize = new System.Drawing.Size(1784, 681);
             this.Controls.Add(this.naveMancata_88);
             this.Controls.Add(this.naveMancata_87);
             this.Controls.Add(this.naveMancata_86);
@@ -3056,7 +3056,7 @@
             this.Controls.Add(this.selezioneAttacco2);
             this.Controls.Add(this.countdownRadar);
             this.Controls.Add(this.doppioAssaltoPictureBox);
-            this.Controls.Add(this.radarPcitureBox);
+            this.Controls.Add(this.radarPictureBox);
             this.Controls.Add(this.selezioneAttacco1);
             this.Controls.Add(this.contatoreTurni);
             this.Controls.Add(this.turnoLabel);
@@ -3182,7 +3182,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.naveIndividuata_1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.doppioAssaltoPictureBox)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.radarPcitureBox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radarPictureBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.selezioneAttacco1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto3Griglia10x10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveDassalto2Griglia10x10)).EndInit();
@@ -3299,7 +3299,7 @@
 
         private System.Windows.Forms.PictureBox grigliaDiGiocoGrande;
         private System.Windows.Forms.PictureBox grigliaDiGiocoPiccola;
-        private System.Windows.Forms.PictureBox radarPcitureBox;
+        private System.Windows.Forms.PictureBox radarPictureBox;
         private System.Windows.Forms.PictureBox doppioAssaltoPictureBox;
         private System.Windows.Forms.Button confermaButton;
         private System.Windows.Forms.Button passaTurnoButton;
