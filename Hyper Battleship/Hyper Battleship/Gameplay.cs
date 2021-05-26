@@ -288,6 +288,23 @@ namespace Hyper_Battleship
                 //countdownRadar.Text = (Convert.ToInt32(countdownRadar.Text) - nTurno + 1).ToString();
                 selezioneAttacco1.BringToFront(); selezioneAttacco2.BringToFront();
                 selezioneAttacco2.Visible = false;
+                visibilitaPictureBoxDegliAttacchiNaveColpita
+            }
+        }
+
+        private void aspettoAttacchi(int nRipetiCiclo, string[] sorgentePosColpito, string[] sorgentePosMancato)
+        {
+            for (int i = 0; i < nRipetiCiclo; i++)
+            {
+                string[] posXYAttacco = sorgentePos[i].Split(',');
+
+                if (player1PictureBox.Visible)
+                {
+                    posizionePictureBoxDegliAttacchiNaveColpita(i, Convert.ToInt32(posXYAttacco[0]), Convert.ToInt32(posXYAttacco[1]));
+                    posizionePictureBoxDegliAttacchiNaveColpita(i, Convert.ToInt32(posXYAttacco[0]), Convert.ToInt32(posXYAttacco[1]));
+                    visibilitaPictureBoxDegliAttacchiNaveColpita(i, true);
+                }
+                
             }
         }
 
@@ -1669,7 +1686,10 @@ namespace Hyper_Battleship
             }
         }
 
-        int[] posiizoneAttacchiNaviColpitePictureBox = new int[22];
+        string[] posizioneAttacchiNaviColpitePictureBoxG1 = new string[22];
+        string[] posizioneAttacchiNaviMancatePictureBoxG1 = new string[88];
+        string[] posizioneAttacchiNaviColpitePictureBoxG2 = new string[22];
+        string[] posizioneAttacchiNaviMancatePictureBoxG2 = new string[88];
 
         private void attaccoAlleNavi(string[] nave, PictureBox attacco)//controlla se un giocatore colpisce o manca una nave
         {
@@ -1680,13 +1700,15 @@ namespace Hyper_Battleship
                 {
                     posizionePictureBoxDegliAttacchiNaveColpita(naviColpiteGiocatore1, attacco.Location.X, attacco.Location.Y);
                     visibilitaPictureBoxDegliAttacchiNaveColpita(naviColpiteGiocatore1, true);
+                    posizioneAttacchiNaviColpitePictureBoxG1[naviColpiteGiocatore1] = $"{attacco.Location.X},{attacco.Location.Y}";
                     naviColpiteGiocatore1++;
                     Program.scoreGiocatore1 += 100;
                 }
                 else
                 {
-
+                    posizionePictureBoxDegliAttacchiNaveMancata(naviMancateGiocatore1, attacco.Location.X, attacco.Location.Y);
                     visibilitaPictureBoxDegliAttacchiNaveMancata(naviMancateGiocatore1, true);
+                    posizioneAttacchiNaviMancatePictureBoxG1[naviMancateGiocatore1] = $"{attacco.Location.X},{attacco.Location.Y}";
                     naviMancateGiocatore1++;
                     Program.scoreGiocatore1 -= 5;
                 }
@@ -1696,15 +1718,17 @@ namespace Hyper_Battleship
             {
                 if (nave[0] != "acqua1")
                 {
-
+                    posizionePictureBoxDegliAttacchiNaveColpita(naviColpiteGiocatore2, attacco.Location.X, attacco.Location.Y);
                     visibilitaPictureBoxDegliAttacchiNaveColpita(naviColpiteGiocatore2, true);
+                    posizioneAttacchiNaviColpitePictureBoxG2[naviColpiteGiocatore2] = $"{attacco.Location.X},{attacco.Location.Y}";
                     naviColpiteGiocatore2++;
                     Program.scoreGiocatore2 += 100;
                 }
                 else
                 {
-
+                    posizionePictureBoxDegliAttacchiNaveMancata(naviMancateGiocatore2, attacco.Location.X, attacco.Location.Y);
                     visibilitaPictureBoxDegliAttacchiNaveMancata(naviMancateGiocatore2, true);
+                    posizioneAttacchiNaviMancatePictureBoxG2[naviMancateGiocatore2] = $"{attacco.Location.X},{attacco.Location.Y}";
                     naviMancateGiocatore2++;
                     Program.scoreGiocatore2 -= 5;
                 }

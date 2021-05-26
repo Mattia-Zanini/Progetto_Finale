@@ -86,3 +86,4 @@ C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battle
 C:\Users\Mattia\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.Istruzioni.resources
 C:\Users\Mattia\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.IstruzioniAttacco.resources
 C:\Users\Mattia\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.SchermataFinale.resources
+C:\Users\Studente\Documents\GitHub\Progetto_Finale\Hyper Battleship\Hyper Battleship\obj\Debug\Hyper_Battleship.SchermataFinale.resources
