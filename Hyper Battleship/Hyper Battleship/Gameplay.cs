@@ -1704,6 +1704,8 @@ namespace Hyper_Battleship
                     confermaButton.Visible = false;
                     countdownRadar.Text = "0";
                     radarPictureBox.Image = Properties.Resources.RadarScalaGrigio;
+                    int coordinateRadarSuGrigliaArray = identificazionePosizioneRadar(radarGrigliaPictureBox);
+                    individuaNaviNemiche(ref coordinateRadarSuGrigliaArray, radarGrigliaPictureBox);
                 }
                 if (exitOperation)
                 {
@@ -1718,15 +1720,268 @@ namespace Hyper_Battleship
             }
         }
 
-        private void individuaNaviNemiche()
+        private int identificazionePosizioneRadar(PictureBox RadarPic)//assegna un valore numerico secondo la posizione del radar nella griglia
         {
+            int PosXYRadar = 0;
+            if (Program.modalità)
+            {
+                radarAllocazione10x10(ref RadarPic, ref PosXYRadar);
+            }
+            else
+            {
+                radarAllocazione6x6(ref RadarPic, ref PosXYRadar);
+            }
 
+            return PosXYRadar;
+        }
+
+        private int radarAllocazione10x10(ref PictureBox RadarPic, ref int PosXYRadar)
+        {
+            switch (RadarPic.Location.Y)
+            {
+                case 41:
+                    PosXYRadar = -1; break; //casella A
+                case 86:
+                    PosXYRadar = 9; break; //casella B
+                case 131:
+                    PosXYRadar = 19; break; //casella C
+                case 176:
+                    PosXYRadar = 29; break; //casella D
+                case 221:
+                    PosXYRadar = 39; break; //casella E
+                case 266:
+                    PosXYRadar = 49; break; //casella F
+                case 311:
+                    PosXYRadar = 59; break; //casella G
+                case 356:
+                    PosXYRadar = 69; break; //casella H
+                case 401:
+                    PosXYRadar = 79; break; //casella I
+                case 446:
+                    PosXYRadar = 89; break; //casella L
+            }
+            switch (RadarPic.Location.X)
+            {
+                case 719:
+                    PosXYRadar += 1; break;
+                case 764:
+                    PosXYRadar += 2; break;
+                case 809:
+                    PosXYRadar += 3; break;
+                case 854:
+                    PosXYRadar += 4; break;
+                case 899:
+                    PosXYRadar += 5; break;
+                case 944:
+                    PosXYRadar += 6; break;
+                case 989:
+                    PosXYRadar += 7; break;
+                case 1034:
+                    PosXYRadar += 8; break;
+                case 1079:
+                    PosXYRadar += 9; break;
+                case 1124:
+                    PosXYRadar += 10; break;
+            }
+
+            return PosXYRadar;
+        }
+
+        private int radarAllocazione6x6(ref PictureBox RadarPic, ref int PosXYRadar)
+        {
+            switch (RadarPic.Location.X)
+            {
+
+            }
+            switch (RadarPic.Location.Y)
+            {
+
+            }
+
+            return PosXYRadar;
+        }
+
+        private void hahahahaha(ref int coordinateNaveSuGrigliaArray, ref int[] posizioniDaControllare, int indexToRemove, bool immagineGirata)//controlla che la nave non sia posizionte al limite a destra della griglia per evitare dei falsi check di navi vicine
+        {
+            int[] controlloLatoDestroNave = new int[] { 1, 11, 21, 31, 41 };
+            int[] controlloLatoSinistroNave = new int[] { -1, 9, 19, 29, 39 };
+            int[] latoSinistroGriglia = new int[] { 10, 20, 30, 40, 50, 60, 70, 80, 90 };
+            int[] latoDestroGriglia = new int[] { 9, 19, 29, 39, 49, 59, 69, 79, 89 };
+            for (int i = 0; i < 9; i++)//per rimuovere il controllo in eccesso, in quanto si trova agli estremi della griglia
+            {
+                if (coordinateNaveSuGrigliaArray == latoSinistroGriglia[i] || coordinateNaveSuGrigliaArray == 0)//parte sinistra della griglia
+                {
+                    if (!immagineGirata)//se l'iimagine non è girata
+                    {
+                        posizioniDaControllare = posizioniDaControllare.RemoveFromArray(-1);//rimuove il controllo alla poppa della nave
+                    }
+                    else
+                    {
+                        for (int j = 0; j < controlloLatoSinistroNave.Length; j++)
+                        {
+                            posizioniDaControllare = posizioniDaControllare.RemoveFromArray(controlloLatoSinistroNave[j]);//rimuove i controlli a lato della nave
+                        }
+                    }
+                    break;
+                }
+                if (coordinateNaveSuGrigliaArray == latoDestroGriglia[i] || coordinateNaveSuGrigliaArray == latoDestroGriglia[i] - (indexToRemove - 1))//parte di destra della griglia
+                {
+                    if (!immagineGirata)
+                    {
+                        posizioniDaControllare = posizioniDaControllare.RemoveFromArray(indexToRemove);
+                    }
+                    else if (immagineGirata && coordinateNaveSuGrigliaArray != latoDestroGriglia[i] - (indexToRemove - 1))
+                    {
+                        for (int j = 0; j < controlloLatoDestroNave.Length; j++)
+                        {
+                            posizioniDaControllare = posizioniDaControllare.RemoveFromArray(controlloLatoDestroNave[j]);
+                        }
+                    }
+                    break;
+                }
+            }
+        }
+
+        private void individuaNaviNemiche(ref int coordinateRadarSuGrigliaArray, PictureBox RadarPic)
+        {
+            int[] posCaselleDaControllare = new int[] { -40, -31, -30, -29, -22, -21, -20, -19, -18, -13, -12, -11, -10, -9, -8, -7, -4, -3, -2, -1, 0, 1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 18, 19, 20, 21, 22, 29, 30, 31, 40 };
+
+            #region Rimozione Delle caselle da controllare
+            int[] eventualiPosCaselleDaTogliereDalControlloModalitaVeloce = new int[] { -40, -31, -29, -22, -18, -13, -7, -4, 4, 7, 13, 18, 22, 29, 31, 40, -30, -21, -19, -12, -8, -3, 3, 8, 12, 19, 21, 30 };
+            //controlli da escludere se il radar si trova in prossimità del lato sinistro della griglia, con vari livelli di rimozione delle posizioni di controllo
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoSinistroV1 = new int[] { -4 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoSinistroV2 = new int[] { -4, -13, -3, 7 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoSinistroV3 = new int[] { -4, -13, -3, 7, -22, -12, -2, 8, 18 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoSinistroV4 = new int[] { -4, -13, -3, 7, -22, -12, -2, 8, 18, -31, -21, -11, -1, 9, 19, 29 };
+            //controlli da escludere se il radar si trova in prossimità del lato destro della griglia, con vari livelli di rimozione delle posizioni di controllo
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoDestroV1 = new int[] { 4 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoDestroV2 = new int[] { 4, -7, 3, 13 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoDestroV3 = new int[] { 4, -7, 3, 13, -18, -8, 2, 12, 22 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoDestroV4 = new int[] { 4, -7, 3, 13, -18, -8, 2, 12, 22, -29, -19, -9, 1, 11, 21, 31 };
+            //controlli da escludere se il radar si trova in prossimità del lato alto della griglia, con vari livelli di rimozione delle posizioni di controllo
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoAltoV1 = new int[] { -40 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoAltoV2 = new int[] { -40, -31, -30, -29 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoAltoV3 = new int[] { -40, -31, -30, -29, -22, -21, -20, -19, -18 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoAltoV4 = new int[] { -40, -31, -30, -29, -22, -21, -20, -19, -18, -13, -12, -11, -10, -9, -8, -7 };
+            //controlli da escludere se il radar si trova in prossimità del lato basso della griglia, con vari livelli di rimozione delle posizioni di controllo
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoBassoV1 = new int[] { 40 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoBassoV2 = new int[] { 40, 29, 30, 31 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoBassoV3 = new int[] { 40, 29, 30, 31, 18, 19, 20, 21, 22 };
+            int[] eventualiPosCaselleDaTogliereDalControlloLatoBassoV4 = new int[] { 40, 29, 30, 31, 18, 19, 20, 21, 22, 7, 8, 9, 10, 11, 12, 13 };
+
+
+            //controlli da escludere se il radar si trova in prossimità del lato sinistro della griglia, con vari livelli di rimozione delle posizioni di controllo, con griglia 6x6
+            int[] eventuali6x6PosCaselleDaTogliereDalControlloLatoSinistroV1 = new int[] { -2 };
+            int[] eventuali6x6PosCaselleDaTogliereDalControlloLatoSinistroV2 = new int[] { -2, -11, -1, 9 };
+            //controlli da escludere se il radar si trova in prossimità del lato destro della griglia, con vari livelli di rimozione delle posizioni di controllo, con griglia 6x6
+            int[] eventuali6x6PosCaselleDaTogliereDalControlloLatoDestroV1 = new int[] { 2 };
+            int[] eventuali6x6PosCaselleDaTogliereDalControlloLatoDestroV2 = new int[] { 2, -9, 1, 11 };
+            //controlli da escludere se il radar si trova in prossimità del lato alto della griglia, con vari livelli di rimozione delle posizioni di controllo, con griglia 6x6
+            int[] eventuali6x6PosCaselleDaTogliereDalControlloLatoAltoV1 = new int[] { -20 };
+            int[] eventuali6x6PosCaselleDaTogliereDalControlloLatoAltoV2 = new int[] { -20, -11, -10, -9 };
+            //controlli da escludere se il radar si trova in prossimità del lato basso della griglia, con vari livelli di rimozione delle posizioni di controllo, con griglia 6x6
+            int[] eventuali6x6PosCaselleDaTogliereDalControlloLatoBassoV1 = new int[] { 20 };
+            int[] eventuali6x6PosCaselleDaTogliereDalControlloLatoBassoV2 = new int[] { 20, 9, 10, 11 };
+
+            if (Program.modalità == false)
+            {
+                for(int i = 0; i < eventualiPosCaselleDaTogliereDalControlloModalitaVeloce.Length; i++)
+                {
+                    posCaselleDaControllare.RemoveFromArray(eventualiPosCaselleDaTogliereDalControlloModalitaVeloce[i]);
+                }
+            }
+
+            switch (RadarPic.Location.Y)
+            {
+                case 41:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoAltoV4, ref posCaselleDaControllare); break; //casella A
+                case 86:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoAltoV3, ref posCaselleDaControllare); break; //casella B
+                case 131:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoAltoV2, ref posCaselleDaControllare); break; //casella C
+                case 176:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoAltoV1, ref posCaselleDaControllare); break; //casella D
+                case 221:
+                    break; //casella E
+                case 266:
+                    break; //casella F
+                case 311:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoBassoV1, ref posCaselleDaControllare); break; //casella G
+                case 356:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoBassoV2, ref posCaselleDaControllare); break; //casella H
+                case 401:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoBassoV3, ref posCaselleDaControllare); break; //casella I
+                case 446:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoBassoV4, ref posCaselleDaControllare); break; //casella L
+            }
+            switch (RadarPic.Location.X)
+            {
+                case 719:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoSinistroV4, ref posCaselleDaControllare); break; //casella 1
+                case 764:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoSinistroV3, ref posCaselleDaControllare); break; //casella 2
+                case 809:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoSinistroV2, ref posCaselleDaControllare); break; //casella 3
+                case 854:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoSinistroV1, ref posCaselleDaControllare); break; //casella 4
+                case 899:
+                    break; //casella 5
+                case 944:
+                    break; //casella 6
+                case 989:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoDestroV1, ref posCaselleDaControllare); break; //casella 7
+                case 1034:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoDestroV2, ref posCaselleDaControllare); break; //casella 8
+                case 1079:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoDestroV3, ref posCaselleDaControllare); break; //casella 9
+                case 1124:
+                    funzioneCheRimuoveLeCaselleDaControllare(eventualiPosCaselleDaTogliereDalControlloLatoDestroV4, ref posCaselleDaControllare); break; //casella 10
+            }
+            #endregion
+
+            for(int i = 0; i < posCaselleDaControllare.Length; i++)
+            {
+                if(Program.modalità == true)//partita normale
+                {
+                    string[] elementiCasella = StrutturaGriglia10[posCaselleDaControllare[i]].Split(',');
+                    if (player1PictureBox.Visible)
+                    {
+                        individuazioneDelleImbarcazioniNemiche(elementiCasella[1], "acqua2");
+                    }
+                    else
+                    {
+                        individuazioneDelleImbarcazioniNemiche(elementiCasella[0], "acqua1");
+                    }
+                }
+                else
+                {
+
+                }
+            }
+        }
+
+        private void funzioneCheRimuoveLeCaselleDaControllare(int[] caselleDaTogliereDalControllo, ref int[] posCaselleDaControllare)
+        {
+            for(int i = 0; i < caselleDaTogliereDalControllo.Length; i++)
+            {
+                posCaselleDaControllare.RemoveFromArray(caselleDaTogliereDalControllo[i]);
+            }
+        }
+
+        private void individuazioneDelleImbarcazioniNemiche(string elementiCasella, string controllo)
+        {
+            if (elementiCasella != controllo)
+            {
+
+            }
         }
 
         string[] posizioneAttacchiNaviColpitePictureBoxG1 = new string[22];
         string[] posizioneAttacchiNaviMancatePictureBoxG1 = new string[88];
         string[] posizioneAttacchiNaviColpitePictureBoxG2 = new string[22];
         string[] posizioneAttacchiNaviMancatePictureBoxG2 = new string[88];
+        string[] posizioneNaviIndividuatePictureBoxG1 = new string[22];
+        string[] posizioneNaviIndividuatePictureBoxG2 = new string[22];
 
         private void attaccoAlleNavi(string[] nave, PictureBox attacco)//controlla se un giocatore colpisce o manca una nave
         {

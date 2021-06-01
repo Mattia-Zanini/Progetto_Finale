@@ -240,6 +240,7 @@
             this.naveMancata_69 = new System.Windows.Forms.PictureBox();
             this.naveMancata_68 = new System.Windows.Forms.PictureBox();
             this.naveMancata_67 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.naveColpita_22)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveColpita_21)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveColpita_20)).BeginInit();
@@ -395,6 +396,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.naveMancata_69)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveMancata_68)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveMancata_67)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // confermaButton
@@ -2912,12 +2914,25 @@
             this.naveMancata_67.TabStop = false;
             this.naveMancata_67.Visible = false;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Box10x10;
+            this.pictureBox1.ImageLocation = "";
+            this.pictureBox1.Location = new System.Drawing.Point(233, 354);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 223;
+            this.pictureBox1.TabStop = false;
+            // 
             // Gameplay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1784, 681);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.naveMancata_88);
             this.Controls.Add(this.naveMancata_87);
             this.Controls.Add(this.naveMancata_86);
@@ -3290,6 +3305,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.naveMancata_69)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveMancata_68)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.naveMancata_67)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3507,5 +3523,6 @@
         private System.Windows.Forms.PictureBox naveMancata_69;
         private System.Windows.Forms.PictureBox naveMancata_68;
         private System.Windows.Forms.PictureBox naveMancata_67;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
