@@ -2917,14 +2917,15 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::Hyper_Battleship.Properties.Resources.Nave_D_Assalto_Box10x10;
+            this.pictureBox1.Image = global::Hyper_Battleship.Properties.Resources.Radar;
             this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(233, 354);
+            this.pictureBox1.Location = new System.Drawing.Point(719, 41);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 63);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.Size = new System.Drawing.Size(45, 45);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 223;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // Gameplay
             // 
@@ -2932,7 +2933,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1784, 681);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.naveMancata_88);
             this.Controls.Add(this.naveMancata_87);
             this.Controls.Add(this.naveMancata_86);
@@ -3043,6 +3043,7 @@
             this.Controls.Add(this.naveColpita_3);
             this.Controls.Add(this.naveColpita_2);
             this.Controls.Add(this.naveColpita_1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.naveIndividuata_22);
             this.Controls.Add(this.naveIndividuata_21);
             this.Controls.Add(this.naveIndividuata_20);

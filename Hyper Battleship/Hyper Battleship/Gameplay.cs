@@ -169,6 +169,7 @@ namespace Hyper_Battleship
         //picturebox che servono per indicare ai giocatori se colpiscono o meno le navi nemiche
         int naviColpiteGiocatore1 = 0, naviColpiteGiocatore2 = 0;
         int naviMancateGiocatore1 = 0, naviMancateGiocatore2 = 0;
+        int naviIndividuateGiocatore1 = 0; int naviIndividuateGiocatore2 = 0;
 
         #region Variabili Per il Fuzionamento dell Programma + Tasto "Conferma", "Annulla" e "Passa Turno"
         int quantitàAssaltoDoppioGiocatore1 = 2, quantitàAssaltoDoppioGiocatore2 = 2;
@@ -276,6 +277,8 @@ namespace Hyper_Battleship
                 }
                 selezioneAttacco1.BringToFront(); selezioneAttacco2.BringToFront();
                 selezioneAttacco2.Visible = false;
+                aspettoIndividuazione(naviIndividuateGiocatore2, posizioneNaviIndividuatePictureBoxG2, false);
+                aspettoIndividuazione(naviIndividuateGiocatore1, posizioneNaviIndividuatePictureBoxG1, true);
                 aspettoAttacchi(naviColpiteGiocatore2, naviMancateGiocatore2, posizioneAttacchiNaviColpitePictureBoxG2, posizioneAttacchiNaviMancatePictureBoxG2, false);
                 aspettoAttacchi(naviColpiteGiocatore1, naviMancateGiocatore1, posizioneAttacchiNaviColpitePictureBoxG1, posizioneAttacchiNaviMancatePictureBoxG1, true);
             }
@@ -309,6 +312,8 @@ namespace Hyper_Battleship
                 }
                 selezioneAttacco1.BringToFront(); selezioneAttacco2.BringToFront();
                 selezioneAttacco2.Visible = false;
+                aspettoIndividuazione(naviIndividuateGiocatore1, posizioneNaviIndividuatePictureBoxG1, false);
+                aspettoIndividuazione(naviIndividuateGiocatore2, posizioneNaviIndividuatePictureBoxG2, true);
                 aspettoAttacchi(naviColpiteGiocatore1, naviMancateGiocatore1, posizioneAttacchiNaviColpitePictureBoxG1, posizioneAttacchiNaviMancatePictureBoxG1, false);
                 aspettoAttacchi(naviColpiteGiocatore2, naviMancateGiocatore2, posizioneAttacchiNaviColpitePictureBoxG2, posizioneAttacchiNaviMancatePictureBoxG2, true);
             }
@@ -327,6 +332,16 @@ namespace Hyper_Battleship
                 string[] posXYAttacco = sorgentePosMancato[i].Split(',');
                 posizionePictureBoxDegliAttacchiNaveMancata(i, Convert.ToInt32(posXYAttacco[0]), Convert.ToInt32(posXYAttacco[1]));
                 visibilitaPictureBoxDegliAttacchiNaveMancata(i, visibilita);
+            }
+        }
+
+        private void aspettoIndividuazione(int nRipetiCicloIndividuato, string[] sorgentePosIndividuato, bool visibilitaIndividuazione)
+        {
+            for (int i = 0; i < nRipetiCicloIndividuato; i++)//giocatore1
+            {
+                string[] posXYIndividuazione = sorgentePosIndividuato[i].Split(',');
+                posizionePictureBoxNaveIndividuata(i, Convert.ToInt32(posXYIndividuazione[0]), Convert.ToInt32(posXYIndividuazione[1]));
+                visibilitaPictureBoxDelleNaviIndividuate(i, visibilitaIndividuazione);
             }
         }
 
@@ -380,20 +395,24 @@ namespace Hyper_Battleship
         bool radarAttivo = false, radarUsato1 = false, radarUsato2 = false;
         private void radarPcitureBox_Click(object sender, EventArgs e)//quando un giocatore vuole usare il radar
         {
-            if(attacco1 == false && attacco2 == false)
+            if (nTurno > 25)
             {
-                if (player1PictureBox.Visible)
+
+                if (attacco1 == false && attacco2 == false)
                 {
-                    if (radarUsato1 == false)
+                    if (player1PictureBox.Visible)
                     {
-                        funzioneClickRadar();
+                        if (radarUsato1 == false)
+                        {
+                            funzioneClickRadar();
+                        }
                     }
-                }
-                else
-                {
-                    if (radarUsato2 == false)
+                    else
                     {
-                        funzioneClickRadar();
+                        if (radarUsato2 == false)
+                        {
+                            funzioneClickRadar();
+                        }
                     }
                 }
             }
@@ -1943,14 +1962,14 @@ namespace Hyper_Battleship
             {
                 if(Program.modalità == true)//partita normale
                 {
-                    string[] elementiCasella = StrutturaGriglia10[posCaselleDaControllare[i]].Split(',');
+                    string[] elementiCasella = StrutturaGriglia10[coordinateRadarSuGrigliaArray + posCaselleDaControllare[i]].Split(',');
                     if (player1PictureBox.Visible)
                     {
-                        individuazioneDelleImbarcazioniNemiche(elementiCasella[1], "acqua2");
+                        posizioneNaviIndividuatePictureBoxG1[i] = individuazioneDelleImbarcazioniNemiche(elementiCasella[1], "acqua2", posCaselleDaControllare[i] + coordinateRadarSuGrigliaArray);
                     }
                     else
                     {
-                        individuazioneDelleImbarcazioniNemiche(elementiCasella[0], "acqua1");
+                        posizioneNaviIndividuatePictureBoxG2[i] = individuazioneDelleImbarcazioniNemiche(elementiCasella[0], "acqua1", posCaselleDaControllare[i] + coordinateRadarSuGrigliaArray);
                     }
                 }
                 else
@@ -1958,30 +1977,169 @@ namespace Hyper_Battleship
 
                 }
             }
+
+            if (player1PictureBox.Visible)//rimuove gli elementi in eccesso dagli array delle navi individuate
+            {
+                var naviIndividuateList = posizioneNaviIndividuatePictureBoxG1.ToList();
+                for (int i = 0; i < posizioneNaviIndividuatePictureBoxG1.Length; i++)
+                {
+                    naviIndividuateList.Remove("");
+                    naviIndividuateList.Remove(null);
+                }
+                posizioneNaviIndividuatePictureBoxG1 = naviIndividuateList.ToArray();
+                aspettoIndividuazione(naviIndividuateGiocatore1, posizioneNaviIndividuatePictureBoxG1, true);
+            }
+            else
+            {
+                var naviIndividuateList = posizioneNaviIndividuatePictureBoxG2.ToList();
+                for (int i = 0; i < posizioneNaviIndividuatePictureBoxG2.Length; i++)
+                {
+                    naviIndividuateList.Remove("");
+                }
+                posizioneNaviIndividuatePictureBoxG2 = naviIndividuateList.ToArray();
+                aspettoIndividuazione(naviIndividuateGiocatore2, posizioneNaviIndividuatePictureBoxG2, true);
+            }
         }
 
-        private void funzioneCheRimuoveLeCaselleDaControllare(int[] caselleDaTogliereDalControllo, ref int[] posCaselleDaControllare)
+        private void funzioneCheRimuoveLeCaselleDaControllare(int[] caselleDaTogliereDalControllo, ref int[] posCaselleDaControllare)//fa la scrematura dei controlli
         {
+            var numbersList = posCaselleDaControllare.ToList();
             for(int i = 0; i < caselleDaTogliereDalControllo.Length; i++)
             {
-                posCaselleDaControllare.RemoveFromArray(caselleDaTogliereDalControllo[i]);
+                numbersList.Remove(caselleDaTogliereDalControllo[i]);
             }
+            posCaselleDaControllare = numbersList.ToArray();
         }
 
-        private void individuazioneDelleImbarcazioniNemiche(string elementiCasella, string controllo)
+        private string individuazioneDelleImbarcazioniNemiche(string elementiCasella, string controllo, int CasellaDaControllare)//scrive le coordinate dell'individuazione della nave nemica
         {
+            string posIndividuazione = "";
             if (elementiCasella != controllo)
+            {
+                int posX = 0; int posY = 0;
+                conversioneDaNumeroArrayACoordinateGriglia(CasellaDaControllare, ref posX, ref posY);
+                posIndividuazione = $"{posX},{posY}";
+                if (player1PictureBox.Visible)
+                {
+                    naviIndividuateGiocatore1++;
+                }
+                else
+                {
+                    naviIndividuateGiocatore2++;
+                }
+            }
+
+            return posIndividuazione;
+        }
+
+        private void conversioneDaNumeroArrayACoordinateGriglia(int numeroGriglia, ref int posX, ref int posY)//assegna, dato il numero della casella, all'eventuale individuazione una coordinata X e Y sulla griglia
+        {
+            if(Program.modalità == true)//partita normale
+            {
+                if(numeroGriglia <= 9)//fila A
+                {
+                    numeroGriglia += 1;
+                    posY = 41;
+                    posX = assegnazioneLocazioneXControlloRadarGriglia10x10(ref numeroGriglia);
+                }
+                else if(numeroGriglia > 9 && numeroGriglia <= 19)//fila B
+                {
+                    numeroGriglia -= 9;
+                    posY = 86;
+                    posX = assegnazioneLocazioneXControlloRadarGriglia10x10(ref numeroGriglia);
+                }
+                else if (numeroGriglia > 19 && numeroGriglia <= 29)//fila C
+                {
+                    numeroGriglia -= 19;
+                    posY = 131;
+                    posX = assegnazioneLocazioneXControlloRadarGriglia10x10(ref numeroGriglia);
+                }
+                else if (numeroGriglia > 29 && numeroGriglia <= 39)//fila D
+                {
+                    numeroGriglia -= 29;
+                    posY = 176;
+                    posX = assegnazioneLocazioneXControlloRadarGriglia10x10(ref numeroGriglia);
+                }
+                else if (numeroGriglia > 39 && numeroGriglia <= 49)//fila E
+                {
+                    numeroGriglia -= 39;
+                    posY = 221;
+                    posX = assegnazioneLocazioneXControlloRadarGriglia10x10(ref numeroGriglia);
+                }
+                else if (numeroGriglia > 49 && numeroGriglia <= 59)//fila F
+                {
+                    numeroGriglia -= 49;
+                    posY = 266;
+                    posX = assegnazioneLocazioneXControlloRadarGriglia10x10(ref numeroGriglia);
+                }
+                else if (numeroGriglia > 59 && numeroGriglia <= 69)//fila G
+                {
+                    numeroGriglia -= 59;
+                    posY = 311;
+                    posX = assegnazioneLocazioneXControlloRadarGriglia10x10(ref numeroGriglia);
+                }
+                else if (numeroGriglia > 69 && numeroGriglia <= 79)//fila H
+                {
+                    numeroGriglia -= 69;
+                    posY = 356;
+                    posX = assegnazioneLocazioneXControlloRadarGriglia10x10(ref numeroGriglia);
+                }
+                else if (numeroGriglia > 79 && numeroGriglia <= 89)//fila I
+                {
+                    numeroGriglia -= 79;
+                    posY = 401;
+                    posX = assegnazioneLocazioneXControlloRadarGriglia10x10(ref numeroGriglia);
+                }
+                else if (numeroGriglia > 89)//fila L
+                {
+                    numeroGriglia -= 89;
+                    posY = 446;
+                    posX = assegnazioneLocazioneXControlloRadarGriglia10x10(ref numeroGriglia);
+                }
+            }
+            else
             {
 
             }
+        }
+
+        private int assegnazioneLocazioneXControlloRadarGriglia10x10(ref int numeroGriglia)
+        {
+            int posControlloRadarX = 0;
+
+            switch (numeroGriglia)
+            {
+                case 1:
+                    posControlloRadarX = 719; break;
+                case 2:
+                    posControlloRadarX = 764; break;
+                case 3:
+                    posControlloRadarX = 809; break;
+                case 4:
+                    posControlloRadarX = 854; break;
+                case 5:
+                    posControlloRadarX = 899; break;
+                case 6:
+                    posControlloRadarX = 944; break;
+                case 7:
+                    posControlloRadarX = 989; break;
+                case 8:
+                    posControlloRadarX = 1034; break;
+                case 9:
+                    posControlloRadarX = 1079; break;
+                case 10:
+                    posControlloRadarX = 1124; break;
+            }
+
+            return posControlloRadarX;
         }
 
         string[] posizioneAttacchiNaviColpitePictureBoxG1 = new string[22];
         string[] posizioneAttacchiNaviMancatePictureBoxG1 = new string[88];
         string[] posizioneAttacchiNaviColpitePictureBoxG2 = new string[22];
         string[] posizioneAttacchiNaviMancatePictureBoxG2 = new string[88];
-        string[] posizioneNaviIndividuatePictureBoxG1 = new string[22];
-        string[] posizioneNaviIndividuatePictureBoxG2 = new string[22];
+        string[] posizioneNaviIndividuatePictureBoxG1 = new string[41];
+        string[] posizioneNaviIndividuatePictureBoxG2 = new string[41];
 
         private void attaccoAlleNavi(string[] nave, PictureBox attacco)//controlla se un giocatore colpisce o manca una nave
         {
@@ -2368,6 +2526,79 @@ namespace Hyper_Battleship
                     break;
                 case 87:
                     naveMancata_88.Visible = visibilita;
+                    break;
+            }
+        }
+
+        private void visibilitaPictureBoxDelleNaviIndividuate(int numeroNaveTrovata, bool visibilita)//mostra o nasconde le naviColpite
+        {
+            switch (numeroNaveTrovata)
+            {
+                case 0:
+                    naveIndividuata_1.Visible = visibilita;
+                    break;
+                case 1:
+                    naveIndividuata_2.Visible = visibilita;
+                    break;
+                case 2:
+                    naveIndividuata_3.Visible = visibilita;
+                    break;
+                case 3:
+                    naveIndividuata_4.Visible = visibilita;
+                    break;
+                case 4:
+                    naveIndividuata_5.Visible = visibilita;
+                    break;
+                case 5:
+                    naveIndividuata_6.Visible = visibilita;
+                    break;
+                case 6:
+                    naveIndividuata_7.Visible = visibilita;
+                    break;
+                case 7:
+                    naveIndividuata_8.Visible = visibilita;
+                    break;
+                case 8:
+                    naveIndividuata_9.Visible = visibilita;
+                    break;
+                case 9:
+                    naveIndividuata_10.Visible = visibilita;
+                    break;
+                case 10:
+                    naveIndividuata_11.Visible = visibilita;
+                    break;
+                case 11:
+                    naveIndividuata_12.Visible = visibilita;
+                    break;
+                case 12:
+                    naveIndividuata_13.Visible = visibilita;
+                    break;
+                case 13:
+                    naveIndividuata_14.Visible = visibilita;
+                    break;
+                case 14:
+                    naveIndividuata_15.Visible = visibilita;
+                    break;
+                case 15:
+                    naveIndividuata_16.Visible = visibilita;
+                    break;
+                case 16:
+                    naveIndividuata_17.Visible = visibilita;
+                    break;
+                case 17:
+                    naveIndividuata_18.Visible = visibilita;
+                    break;
+                case 18:
+                    naveIndividuata_19.Visible = visibilita;
+                    break;
+                case 19:
+                    naveIndividuata_20.Visible = visibilita;
+                    break;
+                case 20:
+                    naveIndividuata_21.Visible = visibilita;
+                    break;
+                case 21:
+                    naveIndividuata_22.Visible = visibilita;
                     break;
             }
         }
