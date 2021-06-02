@@ -14,148 +14,54 @@ namespace Hyper_Battleship
 {
     public partial class LoginForm : Form
     {
-        //percorso dove creare i file con all'interno i nomi utenti e password degli account
-        public static string playerStats = @"statisticheGiocatori.txt";
-        public static string playerStatsFile = AppDomain.CurrentDomain.BaseDirectory + playerStats;
         public LoginForm()
         {
             InitializeComponent();
-
-            if (!File.Exists(playerStatsFile)) { using (StreamWriter sw = File.CreateText(playerStatsFile)) { } }//cotrnolla se c'è il file nel percorso prestabilito
-        }
-
-        /// <summary>
-        /// Pulsanti
-        /// </summary>
-        private void showPassword_CheckedChanged(object sender, EventArgs e)//serve per mostrare il contenuto della texture box (dove si inserisce la password)
-        {
-            if (showPassword.Checked)
-            {
-                passwordTextBox.PasswordChar = '\0';//per mostrare quello che vi è scritto nella textbox
-            }
-            else
-            {
-                passwordTextBox.PasswordChar = '*';//sostituisce i caratteri all'interno della texturebox con questo simbolo
-            }
-        }
-
-        public bool playeresistente = false;
-        private void playerLabel_Click(object sender, EventArgs e)
-        {
-            playeresistente = true;
             showLoginLayout();
+            controlloPresenzaFileSalvataggioClassiica();
+
+            /*
+            // TAPPA BUCHI MOMENTANEO PER PERMETTERE DI UTILIZZARE IL GIOCO
+            //comincia la partita
+            Gameplay f3 = new Gameplay();
+            Istruzioni f4 = new Istruzioni();
+            f3.Show();
+            f4.Show();//per mostrare come muovere le navi da posizionare
+            this.Hide();
+            */
         }
 
-        //sono tutte funzioni che servono a mostrare cosa fanno le 3 opzioni per il login nella finsetra, con il semplice muovere del mouse
-        private void playerLabel_MouseEnter(object sender, EventArgs e)
+        private void showLoginLayout()
         {
-            playerLabel2.Visible = true; playerLabel3.Visible = true;           
-        }
-        private void playerLabel_MouseLeave(object sender, EventArgs e)
-        {
-            playerLabel2.Visible = false; playerLabel3.Visible = false;           
-        }
-
-        private void newPlayerLabel_Click(object sender, EventArgs e)
-        {
-            showLoginLayout();
-        }
-        private void newPlayerLabel_MouseEnter(object sender, EventArgs e)
-        {
-            newPlayerLabel2.Visible = true;
-        }
-        private void newPlayerLabel_MouseLeave(object sender, EventArgs e)
-        {
-            newPlayerLabel2.Visible = false;
+            player1.Visible = true;
+            usernameLabel.Visible = true; usernameTextBox.Visible = true;
+            loginButton.Visible = true;
+            loginAccountLabel.Visible = true;
+            avvisoNumeroMinimoCaratteriDaInserire.Visible = true;
         }
 
-        //per i giocatori a cui non si vuole salvare i progessi
-        public bool pWOS = false; //playerWithOutScore
-        private void playerWithOutScore_Click(object sender, EventArgs e)
+        static string nomeFileClassifica = @"ClassificaGiocatori.txt";
+        static string percorsoSalvataggioClassificaGiocatori = AppDomain.CurrentDomain.BaseDirectory + nomeFileClassifica;
+        private void controlloPresenzaFileSalvataggioClassiica()//cotrnolla se c'è il file nel percorso prestabilito, nel caso non ci sia, il programma lo crea
         {
-            pWOS = true;
-            showLoginLayout();
-            passwordLabel.Visible = false; passwordTextBox.Visible = false; showPassword.Visible = false;           
-        }
-        private void playerWithOutScore_MouseEnter(object sender, EventArgs e)
-        {
-            playerWithOutScoreLabel.Visible = true;
-        }
-        private void playerWithOutScore_MouseLeave(object sender, EventArgs e)
-        {
-            playerWithOutScoreLabel.Visible = false;
+            if (!File.Exists(percorsoSalvataggioClassificaGiocatori)) { using (StreamWriter sw = File.CreateText(percorsoSalvataggioClassificaGiocatori)) { } }
         }
 
         //per tornare indietro nelle schermate
         private void backLabel_Click(object sender, EventArgs e)
         {
-            pWOS = false;
-            player1.Visible = false; player2.Visible = false;           
-            usernameLabel.Visible = false; usernameTextBox.Visible = false;           
-            passwordLabel.Visible = false; passwordTextBox.Visible = false;
-            showPassword.Visible = false;
-            loginButton.Visible = false; loginAccountLabel.Visible = false;
-            backLabel.Visible = false;
-            alertLoginAccount.Visible = false;
-            playerLabel.Visible = true; newPlayerLabel.Visible = true; playerWithOutScore.Visible = true; exitLoginButton.Visible = true;            
-            if(giocatore >= 1)
+            if(Giocatore1 == "" && Giocatore2 == "")
             {
-                giocatore--;
+                Schermata_Iniziale f1 = new Schermata_Iniziale();
+                f1.Show();
+                this.Close();
             }
-        }
-        private void exitLoginButton_Click(object sender, EventArgs e)//torna al primo form (schermata iniziale)
-        {
-            Schermata_Iniziale f1 = new Schermata_Iniziale();
-            f1.Show();
-            this.Close();//chiude il form, non lo nasconde
-        }
-
-        private void loginButton_Click(object sender, EventArgs e)//quando viene cliccato il pulsante login
-        {
-            if (!pWOS)
+            else if(Giocatore1 != "" && Giocatore2 == "")
             {
-                accountChecker();//funzione che controlla "nel file" se l'utente esiste, se sono corrette le credenziali, se non ha inserito nulla nelle texturebox, ecc....
-            }
-            else if(pWOS && giocatore == 0)
-            {
-                if(usernameTextBox.Text != "")
-                {
-                    giocatore++;
-                    Giocatore1 = usernameTextBox.Text;
-                    usernameTextBox.Clear();
-                    player1.Visible = false; player2.Visible = true;
-                }
-                else
-                {
-                    alertLoginAccount.Text = "Inserisci un nome utente";
-                }
-            }
-            else if(pWOS && giocatore == 1) //nel caso tutti e due i giocatori sono pronti
-            {
-                if (usernameTextBox.Text == "")
-                {
-                    alertLoginAccount.Text = "Inserisci un nome utente";
-                }
-                else
-                {
-                    Giocatore2 = usernameTextBox.Text;
-                    if (Giocatore1 != Giocatore2)
-                    {
-                        Program.nomeGiocatore1 = Giocatore1;
-                        Program.nomeGiocatore2 = Giocatore2;
-                        prePartita();
-                    }
-                    else
-                    {
-                        //nel caso i 2 giocatori inseriscono lo stesso nome
-                        alertLoginAccount.Visible = true;
-                        alertLoginAccount.Text = "Non è possibile giocare con 2 player";
-                        alertLoginAccount.Text += Environment.NewLine;
-                        alertLoginAccount.Text += "con lo stesso nome";
-                        alertLoginAccount.Text += Environment.NewLine;
-                        alertLoginAccount.Text += "Cambia username";
-                    }
-                }
+                Giocatore1 = "";
+                nomePlayerGiausato = "";
+                player2.Visible = false;
+                player1.Visible = true;
             }
         }
 
@@ -176,145 +82,83 @@ namespace Hyper_Battleship
             noStartMatch.Visible = false;
             startMatchLabel.Visible = false;
             MessageBox.Show("Dovrai riaccedere agli account");
-            this.Height = 400; this.CenterToScreen(); giocatore = 0; Giocatore1 = ""; Giocatore2 = "";
-            exitLoginButton.Visible = true; playerLabel.Visible = true; newPlayerLabel.Visible = true;
-            playerWithOutScore.Visible = true;
+            this.Height = 400; this.CenterToScreen(); Giocatore1 = ""; Giocatore2 = "";
         }
 
-        /// <summary>
-        /// Funzioni
-        /// </summary>
-        public void showLoginLayout()
-        {
-            player1.Visible = true;
-            usernameLabel.Visible = true; usernameTextBox.Visible = true;
-            passwordLabel.Visible = true; passwordTextBox.Visible = true;
-            showPassword.Visible = true; loginButton.Visible = true; backLabel.Visible = true;
-            loginAccountLabel.Visible = true;
-            playerLabel.Visible = false;
-            newPlayerLabel.Visible = false; playerWithOutScore.Visible = false; exitLoginButton.Visible = false;
-        }
-
-        public string Giocatore1, Giocatore2;
-        public byte giocatore = 0;
-        public void accountChecker()
-        {
-            //variabili che permettono il controllo delle credenziali
-            bool correctPlayerName = false, correctPlayerPassword = false;
-            string nomePlayerGiausato = "";
-            alertLoginAccount.ForeColor = Color.Red;
-            controlloGiocatore(ref correctPlayerName, ref correctPlayerPassword, ref nomePlayerGiausato);
-            if (playeresistente == true)//nel caso esista già l'account a cui si sta provando ad accedere
-            {
-                if (usernameTextBox.Text == "")//texbox username vuota
-                {
-                    alertLoginAccount.Visible = true;
-                    alertLoginAccount.Text = "Inserire una nome utente valido";
-                }
-                else if (passwordTextBox.Text == "")//texbox della password vuota
-                {
-                    alertLoginAccount.Visible = true;
-                    alertLoginAccount.Text = "Inserire delle credenziali valide";
-                }
-                else if (correctPlayerName == true && correctPlayerPassword == false)//utente corretto, esistente, ma password errata
-                {
-                    alertLoginAccount.Visible = true;
-                    alertLoginAccount.Text = "Password Errata";
-                    passwordTextBox.Clear();
-                }
-                else if (nomePlayerGiausato == usernameTextBox.Text)//nome utente uguale a quello già registrato nell'istanza della pre-lobby
-                {
-                    alertLoginAccount.Visible = true;
-                    alertLoginAccount.Text = "Sei già entrato con questo utente";
-                    usernameTextBox.Clear();
-                    passwordTextBox.Clear();
-                }
-                else if (correctPlayerName == true && correctPlayerPassword == true)//nome utente e password corretti e non già loggati
-                {
-                    alertLoginAccount.Visible = true;
-                    alertLoginAccount.ForeColor = Color.Lime;
-                    alertLoginAccount.Text = "Utente trovato";
-                    if (giocatore == 0)//per evitare l'accesso a più untenti della stessa pre-lobby
-                    {
-                        nomePlayerGiausato = usernameTextBox.Text;
-                        usernameTextBox.Clear(); passwordTextBox.Clear();
-                        player1.Visible = false; player2.Visible = true;                       
-                        giocatore++;
-                    }
-                }
-                else//utente non registrato
-                {
-                    alertLoginAccount.Visible = true;
-                    alertLoginAccount.Text = "Utente inesistente";
-                    usernameTextBox.Clear(); passwordTextBox.Clear();                   
-                }
-            }
-        }
-        public void controlloGiocatore(ref bool correctPlayerName, ref bool correctPlayerPassword, ref string nomePlayerGiausato)
-        {
-            correctPlayerName = false;
-            correctPlayerPassword = false;
-            var giocatoriPresenti = File.ReadLines(playerStatsFile);//legge le credenziali slavate nel file .txt nel percorso prestabilito
-            for (int i = 0; i < giocatoriPresenti.ToArray().Length; i++)//separa rispettivamente i nomi utente e le loro password
-            {
-                string[] elemento = giocatoriPresenti.ToArray()[i].Split(',');
-
-                if (usernameTextBox.Text == elemento[0])
-                {
-                    correctPlayerName = true;
-                }
-                if (usernameTextBox.Text == elemento[1])
-                {
-                    correctPlayerPassword = true;
-                }
-            }
-            if (correctPlayerName == true && playeresistente == false)//controlla se è già registrato un determinato utente
-            {
-                alertLoginAccount.Visible = true;
-                alertLoginAccount.ForeColor = Color.Red;
-                alertLoginAccount.Text = "Utente già esistente";
-                usernameTextBox.Clear(); passwordTextBox.Clear();               
-            }
-            else if (usernameTextBox.Text == "" && playeresistente == false)//controlla se la texturebox è vuota
-            {
-                alertLoginAccount.Visible = true;
-                alertLoginAccount.Text = "Inserire una nome utente valido";
-            }
-            else if (passwordTextBox.Text == "" && playeresistente == false)
-            {
-                alertLoginAccount.Visible = true;
-                alertLoginAccount.Text = "Inserire delle credenziali valide";
-            }
-            else if (playeresistente == false)//nel caso non eista già un determinato utente, quindi è "nuovo"
-            {
-                string[] giocatoriFile = new string[giocatoriPresenti.ToArray().Length + 1];
-                Array.Copy(giocatoriPresenti.ToArray(), giocatoriFile, giocatoriPresenti.ToArray().Length);
-                giocatoriFile[giocatoriFile.Length - 1] = $"{usernameTextBox.Text},{passwordTextBox.Text}";
-                File.WriteAllLines(playerStatsFile, giocatoriFile);
-                alertLoginAccount.Visible = true;
-                alertLoginAccount.ForeColor = Color.Green;
-                alertLoginAccount.Text = "Nuovo utente registrato";
-                usernameTextBox.Clear(); passwordTextBox.Clear();               
-                if (giocatore == 0)//per evitare di accedere allo stesso account da parte di più utenti nella stessa pre-lobby
-                {
-                    nomePlayerGiausato = usernameTextBox.Text;
-                    usernameTextBox.Clear(); passwordTextBox.Clear();                   
-                    player1.Visible = false; player2.Visible = true;                   
-                    giocatore++;
-                }
-            }
-        }
-
-        public void prePartita() //riduce il form ad una grandezza minimale mostrando ai giocatori una scelta
+        private void prePartita()//modifica il layout della schermata, quando entrambi i giocaotir hanno scritto uno username
         {
             this.Height = 250; this.CenterToScreen();           
             startMatchLabel.Visible = true; yesStartMatch.Visible = true; noStartMatch.Visible = true;           
             backLabel.Visible = false;
             player2.Visible = false;
+            avvisoNumeroMinimoCaratteriDaInserire.Visible = false;
             usernameLabel.Visible = false; usernameTextBox.Visible = false;           
-            passwordLabel.Visible = false; passwordTextBox.Visible = false;
-            loginAccountLabel.Visible = false; loginButton.Visible = false;           
-            showPassword.Visible = false;
+            loginAccountLabel.Visible = false; loginButton.Visible = false;
+        }
+
+        string Giocatore1 = "", Giocatore2 = "";
+        string nomePlayerGiausato = "";
+        bool giocatoreTrovatoInPrecedenza = false;//serve nel caso abbiama già trovato il giocatore, me il suo punteggio è minore del record che quel giocatore aveva fatto in precedenza
+        private void loginButton_Click(object sender, EventArgs e)//quando viene cliccato il pulsante login
+        {
+            if (player1.Visible)
+            {
+                nomePlayerGiausato = usernameTextBox.Text;
+                controlloGiocatoreNellaClassifica(usernameTextBox.Text);
+            }
+            else
+            {
+                if (usernameTextBox.Text != nomePlayerGiausato)
+                {
+                    controlloGiocatoreNellaClassifica(usernameTextBox.Text);
+                }
+                else
+                {
+                    MessageBox.Show("É già entrato un utente con questo identico nome, cambialo");
+                }
+            }
+        }
+
+        private void controlloGiocatoreNellaClassifica(string nomeGiocatore)
+        {
+            if (nomeGiocatore != "" && nomeGiocatore.Length > 3)//controlla se l'utente ha inserito almeno 1 carattere all'interno del nome
+            {
+                var classifica = File.ReadAllLines(percorsoSalvataggioClassificaGiocatori);
+                if (classifica.ToArray().Length != 0)
+                {
+                    for (int i = 0; i < classifica.ToArray().Length; i++)
+                    {
+                        string[] dettagligiocatore = classifica[i].Split(',');
+                        if (nomeGiocatore == dettagligiocatore[0])
+                        {
+                            giocatoreTrovatoInPrecedenza = true;
+                        }
+                        else
+                        {
+                            if (i == classifica.ToArray().Length - 1 && giocatoreTrovatoInPrecedenza == false)
+                            {
+                                //nuovoGiocatore(classifica.ToArray());
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    nuovoGiocatore();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Devi inserire un nome, non lasciare un spazio bianco .-.\nOppure devi inserire un nome di almeno 4 caratteri");
+            }
+        }
+
+        private void nuovoGiocatore(ref string nomeGiocatore)
+        {
+            //Array.Resize(ref punteggi, punteggi.Length + 1);
+            //punteggi[punteggi.Length - 1] = $"{nomeGiocatore},{score}";
+            //File.WriteAllLines(percorsoFileRisultatiPartita, punteggi);
+            //Controllonickname.Visible = false;
         }
     }
 }

@@ -17,6 +17,11 @@ namespace Hyper_Battleship
                                                    //true = multigiocatore
         public static bool modalità = false; //false = partita veloce
                                              //true = partita normale
+
+        //per decidere se una vota conclusa la partita, salvare o meno i dati dei corrispettivi giocatori
+        public static bool salvataggioDatiGiocatore1 = false;
+        public static bool salvataggioDatiGiocatore2 = false;
+
         /// <summary>
         /// Punto di ingresso principale dell'applicazione.
         /// </summary>

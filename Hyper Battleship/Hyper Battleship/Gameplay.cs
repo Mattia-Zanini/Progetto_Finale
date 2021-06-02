@@ -7,8 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+
 //dimensioni originali 1374; 720
-//naveMancata_8
 namespace Hyper_Battleship
 {
     public partial class Gameplay : Form
