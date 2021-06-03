@@ -664,7 +664,6 @@ namespace Hyper_Battleship
             this.Close();
         }
 
-        bool giocatoregiaTrovato = false;//serve nel caso abbiama già trovato il giocatore, me il suo punteggio è minore del record che quel giocatore aveva fatto in precedenza
         private void classifica()
         {
             controlloClassifica(Program.nomeGiocatore1, Program.scoreGiocatore1);
@@ -676,6 +675,7 @@ namespace Hyper_Battleship
 
         private void controlloClassifica(string nomeGiocatore, int score)
         {
+            bool giocatoregiaTrovato = false;//serve nel caso abbiama già trovato il giocatore, me il suo punteggio è minore del record che quel giocatore aveva fatto in precedenza
             var classifica = File.ReadAllLines(percorsoSalvataggioClassificaGiocatori);//prende tutti le righe de file
             if (classifica.ToArray().Length != 0)//controlla che il file non sia vuoto
             {
