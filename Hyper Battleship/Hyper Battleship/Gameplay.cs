@@ -612,21 +612,45 @@ namespace Hyper_Battleship
             }
         }
 
+        bool vittoriaBot = false;
         private void finePartita()
         {
             if (player1PictureBox.Visible)
             {
-                Program.nomeVincitore = Program.nomeGiocatore1;
+                if(Program.multigiocatore == true)
+                {
+                    Program.nomeVincitore = Program.nomeGiocatore1;
+                }
+                else
+                {
+                    if(vittoriaBot == false)//nel caso il gioco sia in singleplayer
+                    {
+                        Program.nomeVincitore = Program.nomeGiocatore1;
+                    }
+                    else
+                    {
+                        if (Program.nomeGiocatore1 != "BOT")
+                        {
+                            Program.nomeVincitore = "BOT";
+                        }
+                        else
+                        {
+                            Program.nomeVincitore = "Ha vinto il bot";//per evitare che qualche simpaticone si mette come nome "BOT"
+                        }
+                    }
+                }
+                classifica();
                 conclusionePartita();
             }
             else
             {
                 Program.nomeVincitore = Program.nomeGiocatore2;
+                classifica();
                 conclusionePartita();
             }
         }
 
-        private void conclusionePartita()
+        private void conclusionePartita()//mostra la schermata finale, dove vi è il nome del giocatore che ha vinto la partita
         {
             SchermataFinale f6 = new SchermataFinale();
             f6.Show();
@@ -638,6 +662,59 @@ namespace Hyper_Battleship
             Schermata_Iniziale f1 = new Schermata_Iniziale();
             f1.Show();
             this.Close();
+        }
+
+        bool giocatoregiaTrovato = false;//serve nel caso abbiama già trovato il giocatore, me il suo punteggio è minore del record che quel giocatore aveva fatto in precedenza
+        private void classifica()
+        {
+            controlloClassifica(Program.nomeGiocatore1, Program.scoreGiocatore1);
+            if(Program.multigiocatore == true)//nel caso il gioco sia multiplayer si salvano i progressi del secondo giocatore
+            {
+                controlloClassifica(Program.nomeGiocatore2, Program.scoreGiocatore2);
+            }
+        }
+
+        private void controlloClassifica(string nomeGiocatore, int score)
+        {
+            var classifica = File.ReadAllLines(percorsoSalvataggioClassificaGiocatori);//prende tutti le righe de file
+            if (classifica.ToArray().Length != 0)//controlla che il file non sia vuoto
+            {
+                for (int i = 0; i < classifica.ToArray().Length; i++)//ripete per il numero di righe del file
+                {
+                    string[] dettagligiocatore = classifica[i].Split(',');
+                    if (nomeGiocatore == dettagligiocatore[0])//se il nome del giocatore corrisponde ad un nome già presente nel file
+                    {
+                        if (score > Convert.ToInt32(dettagligiocatore[1]))//controlla se il punteggio che il giocatore ha ottenuto nell'ultima partita sia maggiore del record che quel giocatore aveva fatto in precedenza
+                        {
+                            dettagligiocatore[1] = score.ToString();
+                            classifica[i] = $"{dettagligiocatore[0]},{dettagligiocatore[1]}";
+                            File.WriteAllLines(percorsoSalvataggioClassificaGiocatori, classifica);
+                        }
+                        else
+                        {
+                            giocatoregiaTrovato = true;//se il giocatore è già stato trovato nel file, ma il suo punteggio era minore rispetto al record personale
+                        }
+                    }
+                    else
+                    {
+                        if (i == classifica.ToArray().Length - 1 && giocatoregiaTrovato == false)//quando si sono controllate tutte le righe del file e il giocatore non è stato individuato al suo interno
+                        {
+                            nuovoGiocatore(classifica.ToArray(), ref nomeGiocatore, ref score);
+                        }
+                    }
+                }
+            }
+            else//nel caso il file sia vuoto viene creata la prima riga
+            {
+                nuovoGiocatore(classifica.ToArray(), ref nomeGiocatore, ref score);
+            }
+        }
+
+        private void nuovoGiocatore(string[] classifica, ref string nomeGiocatore, ref int score)//crea un nuovo giocatore
+        {
+            Array.Resize(ref classifica, classifica.Length + 1);
+            classifica[classifica.Length - 1] = $"{nomeGiocatore},{score}";
+            File.WriteAllLines(percorsoSalvataggioClassificaGiocatori, classifica);
         }
 
         private void movimentoNavi6x6()//partita veloce
