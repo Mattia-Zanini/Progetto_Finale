@@ -83,6 +83,15 @@ namespace Hyper_Battleship
                 selezioneAttacco1.Image = Properties.Resources.selezione_Attacco_Griglia10x10;
                 selezioneAttacco2.Image = Properties.Resources.selezione_Attacco2_Griglia10x10;
             }
+
+            controlloPresenzaFileSalvataggioClassiica();
+        }
+
+        static string nomeFileClassifica = @"ClassificaGiocatori.txt";
+        static string percorsoSalvataggioClassificaGiocatori = AppDomain.CurrentDomain.BaseDirectory + nomeFileClassifica;
+        private void controlloPresenzaFileSalvataggioClassiica()//cotrnolla se c'è il file nel percorso prestabilito, nel caso non ci sia, il programma lo crea
+        {
+            if (!File.Exists(percorsoSalvataggioClassificaGiocatori)) { using (StreamWriter sw = File.CreateText(percorsoSalvataggioClassificaGiocatori)) { } }
         }
 
         private void naveIndividuataPictureBoxResize()

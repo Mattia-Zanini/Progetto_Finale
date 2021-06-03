@@ -111,7 +111,7 @@
             this.startMatchLabel.AutoSize = true;
             this.startMatchLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.startMatchLabel.ForeColor = System.Drawing.Color.Gray;
-            this.startMatchLabel.Location = new System.Drawing.Point(43, 26);
+            this.startMatchLabel.Location = new System.Drawing.Point(43, 56);
             this.startMatchLabel.Name = "startMatchLabel";
             this.startMatchLabel.Size = new System.Drawing.Size(287, 31);
             this.startMatchLabel.TabIndex = 19;
@@ -123,7 +123,7 @@
             this.yesStartMatch.AutoSize = true;
             this.yesStartMatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.yesStartMatch.ForeColor = System.Drawing.Color.Gray;
-            this.yesStartMatch.Location = new System.Drawing.Point(25, 160);
+            this.yesStartMatch.Location = new System.Drawing.Point(29, 193);
             this.yesStartMatch.Name = "yesStartMatch";
             this.yesStartMatch.Size = new System.Drawing.Size(38, 31);
             this.yesStartMatch.TabIndex = 20;
@@ -136,7 +136,7 @@
             this.noStartMatch.AutoSize = true;
             this.noStartMatch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.noStartMatch.ForeColor = System.Drawing.Color.Gray;
-            this.noStartMatch.Location = new System.Drawing.Point(284, 160);
+            this.noStartMatch.Location = new System.Drawing.Point(281, 193);
             this.noStartMatch.Name = "noStartMatch";
             this.noStartMatch.Size = new System.Drawing.Size(49, 31);
             this.noStartMatch.TabIndex = 21;
@@ -180,7 +180,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(350, 291);
+            this.ClientSize = new System.Drawing.Size(350, 290);
             this.Controls.Add(this.avvisoNumeroMinimoCaratteriDaInserire);
             this.Controls.Add(this.noStartMatch);
             this.Controls.Add(this.yesStartMatch);
