@@ -42,7 +42,7 @@ namespace Hyper_Battleship
             normalMatchButton.Visible = true;
             schermataPreLobby.Location = new Point(880, schermataPreLobby.Location.Y);
             startText.Visible = false;
-            settingsText.Visible = false;
+            classificaLabel.Visible = false;
             quitText.Visible = false;
         }
 
@@ -57,7 +57,7 @@ namespace Hyper_Battleship
                 normalMatchButton.Visible = false;
                 schermataPreLobby.Location = new Point(1265, schermataPreLobby.Location.Y);
                 startText.Visible = true;
-                settingsText.Visible = true;
+                classificaLabel.Visible = true;
                 quitText.Visible = true;
             }
             else
@@ -115,6 +115,11 @@ namespace Hyper_Battleship
             LoginForm f2 = new LoginForm();//crea un oggetto del secondo form
             f2.Show();//mostra il secondo form
             this.Hide();//nasconde il form
+        }
+
+        private void classificaLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

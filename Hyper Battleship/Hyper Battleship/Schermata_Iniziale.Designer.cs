@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Schermata_Iniziale));
             this.titoloGioco2 = new System.Windows.Forms.Label();
             this.startText = new System.Windows.Forms.Label();
-            this.settingsText = new System.Windows.Forms.Label();
+            this.classificaLabel = new System.Windows.Forms.Label();
             this.quitText = new System.Windows.Forms.Label();
             this.schermataPreLobby = new System.Windows.Forms.PictureBox();
             this.backButton = new System.Windows.Forms.Label();
@@ -69,16 +69,17 @@
             this.startText.Text = "INIZIO";
             this.startText.MouseClick += new System.Windows.Forms.MouseEventHandler(this.startText_MouseClick);
             // 
-            // settingsText
+            // classificaLabel
             // 
-            this.settingsText.AutoSize = true;
-            this.settingsText.BackColor = System.Drawing.Color.Transparent;
-            this.settingsText.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.settingsText.Location = new System.Drawing.Point(377, 414);
-            this.settingsText.Name = "settingsText";
-            this.settingsText.Size = new System.Drawing.Size(252, 46);
-            this.settingsText.TabIndex = 5;
-            this.settingsText.Text = "CLASSIFICA";
+            this.classificaLabel.AutoSize = true;
+            this.classificaLabel.BackColor = System.Drawing.Color.Transparent;
+            this.classificaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.classificaLabel.Location = new System.Drawing.Point(377, 414);
+            this.classificaLabel.Name = "classificaLabel";
+            this.classificaLabel.Size = new System.Drawing.Size(252, 46);
+            this.classificaLabel.TabIndex = 5;
+            this.classificaLabel.Text = "CLASSIFICA";
+            this.classificaLabel.Click += new System.EventHandler(this.classificaLabel_Click);
             // 
             // quitText
             // 
@@ -197,7 +198,7 @@
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.schermataPreLobby);
             this.Controls.Add(this.quitText);
-            this.Controls.Add(this.settingsText);
+            this.Controls.Add(this.classificaLabel);
             this.Controls.Add(this.startText);
             this.Controls.Add(this.titoloGioco2);
             this.Controls.Add(this.titoloGioco1);
@@ -217,7 +218,7 @@
         #endregion
         private System.Windows.Forms.Label titoloGioco2;
         private System.Windows.Forms.Label startText;
-        private System.Windows.Forms.Label settingsText;
+        private System.Windows.Forms.Label classificaLabel;
         private System.Windows.Forms.Label quitText;
         private System.Windows.Forms.PictureBox schermataPreLobby;
         private System.Windows.Forms.Label backButton;
