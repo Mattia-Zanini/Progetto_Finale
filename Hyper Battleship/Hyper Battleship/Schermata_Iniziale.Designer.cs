@@ -40,7 +40,9 @@
             this.titoloGioco1 = new System.Windows.Forms.Label();
             this.singlePlayerButton = new System.Windows.Forms.Label();
             this.multiplayerButton = new System.Windows.Forms.Label();
+            this.classificaGridView = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.schermataPreLobby)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classificaGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // titoloGioco2
@@ -185,12 +187,23 @@
             this.multiplayerButton.Visible = false;
             this.multiplayerButton.Click += new System.EventHandler(this.multiplayerButton_Click);
             // 
+            // classificaGridView
+            // 
+            this.classificaGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.classificaGridView.Location = new System.Drawing.Point(882, 384);
+            this.classificaGridView.Name = "classificaGridView";
+            this.classificaGridView.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.classificaGridView.Size = new System.Drawing.Size(260, 95);
+            this.classificaGridView.TabIndex = 14;
+            this.classificaGridView.Visible = false;
+            // 
             // Schermata_Iniziale
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.classificaGridView);
             this.Controls.Add(this.multiplayerButton);
             this.Controls.Add(this.singlePlayerButton);
             this.Controls.Add(this.normalMatchButton);
@@ -210,6 +223,7 @@
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Schermata_Iniziale_FormClosed);
             this.Load += new System.EventHandler(this.Schermata_Iniziale_Load);
             ((System.ComponentModel.ISupportInitialize)(this.schermataPreLobby)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.classificaGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,5 +241,6 @@
         private System.Windows.Forms.Label titoloGioco1;
         private System.Windows.Forms.Label singlePlayerButton;
         private System.Windows.Forms.Label multiplayerButton;
+        private System.Windows.Forms.DataGridView classificaGridView;
     }
 }
