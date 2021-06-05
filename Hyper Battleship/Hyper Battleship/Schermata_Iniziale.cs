@@ -37,65 +37,15 @@ namespace Hyper_Battleship
 
         private void startText_MouseClick(object sender, MouseEventArgs e)//mostra il pannello nero a destra della finestra per selezionare le opzioni per settare la partita
         {
-            backButton.Visible = true;
-            fastMatchButton.Visible = true;
-            normalMatchButton.Visible = true;
-            schermataPreLobby.Location = new Point(880, schermataPreLobby.Location.Y);
             startText.Visible = false;
             classificaLabel.Visible = false;
             quitText.Visible = false;
-        }
 
-        public bool sezione = false; //true = seconda sezione, ovvero schermata di scelta tra singleplayer e multiplayer
-                                     //false = prima sezione, ovvero schermata di scelta delle modalità di gioco
-        private void backButton_Click(object sender, EventArgs e)//per tornare indietro con le opzioni o a tornare alla schermata iniziale
-        {
-            if(sezione == false)
+            for (int i = 0; i < classificaGridView.RowCount - 1; i++)//per cancellare la tabella
             {
-                backButton.Visible = false;
-                fastMatchButton.Visible = false;
-                normalMatchButton.Visible = false;
-                schermataPreLobby.Location = new Point(1265, schermataPreLobby.Location.Y);
-                startText.Visible = true;
-                classificaLabel.Visible = true;
-                quitText.Visible = true;
+                classificaGridView.Rows.RemoveAt(i);
             }
-            else
-            {
-                fastMatchButton.Visible = true;
-                normalMatchButton.Visible = true;
-                singlePlayerButton.Visible = false;
-                multiplayerButton.Visible = false;
-                sezione = false;
-            }
-        }
-        private void fastMatchButton_Click(object sender, EventArgs e)//per impostare la partita veloce
-        {
-            sezione = true;
-            fastMatchButton.Visible = false;
-            normalMatchButton.Visible = false;
-            singlePlayerButton.Visible = true;
-            multiplayerButton.Visible = true;
-        }
-
-        private void normalMatchButton_Click(object sender, EventArgs e)//per impostare la partita normale
-        {
-            sezione = true;
-            fastMatchButton.Visible = false;
-            normalMatchButton.Visible = false;
-            singlePlayerButton.Visible = true;
-            multiplayerButton.Visible = true;
-            Program.modalità = true;
-        }
-
-        private void singlePlayerButton_Click(object sender, EventArgs e)
-        {
-            schermataSuccessiva();
-        }
-
-        private void multiplayerButton_Click(object sender, EventArgs e)//imposta la partita multigiocatore
-        {
-            Program.multigiocatore = true;
+            classificaGridView.Visible = false;
             schermataSuccessiva();
         }
 
@@ -104,13 +54,6 @@ namespace Hyper_Battleship
             //reinizializza alcune picturebox e variabili
             titoloGioco1.Visible = false;
             titoloGioco2.Visible = false;
-            backButton.Visible = false;
-            fastMatchButton.Visible = false;
-            normalMatchButton.Visible = false;
-            singlePlayerButton.Visible = false;
-            multiplayerButton.Visible = false;
-            sezione = false;
-            schermataPreLobby.Location = new Point(1265, schermataPreLobby.Location.Y);
 
             LoginForm f2 = new LoginForm();//crea un oggetto del secondo form
             f2.Show();//mostra il secondo form

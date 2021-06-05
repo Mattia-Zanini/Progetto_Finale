@@ -52,14 +52,7 @@ namespace Hyper_Battleship
         {
             //assegna i nomi dei due giocatori
             Program.nomeGiocatore1 = Giocatore1;
-            if (Program.multigiocatore == true)
-            {
-                Program.nomeGiocatore2 = Giocatore2;
-            }
-            else
-            {
-                Program.nomeGiocatore2 = "BOT";
-            }
+            Program.nomeGiocatore2 = Giocatore2;
 
             //comincia la partita
             Gameplay f3 = new Gameplay();
@@ -102,16 +95,8 @@ namespace Hyper_Battleship
                     nomePlayerGiausato = usernameTextBox.Text;
                     Giocatore1 = usernameTextBox.Text;
                     usernameTextBox.Clear();
-                    if(Program.multigiocatore == true)
-                    {
-                        player1.Visible = false;
-                        player2.Visible = true;
-                    }
-                    else
-                    {
-                        player1.Visible = false;
-                        prePartita();
-                    }
+                    player1.Visible = false;
+                    player2.Visible = true;
                 }
                 else
                 {

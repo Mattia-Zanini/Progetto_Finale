@@ -13,10 +13,6 @@ namespace Hyper_Battleship
         public static bool partitaConclusa = false;
         public static int scoreGiocatore1 = 0, scoreGiocatore2 = 0;
         public static bool finePartita = false;
-        public static bool multigiocatore = false; //false = giocatore singolo
-                                                   //true = multigiocatore
-        public static bool modalità = false; //false = partita veloce
-                                             //true = partita normale
 
         //per decidere se una vota conclusa la partita, salvare o meno i dati dei corrispettivi giocatori
         public static bool salvataggioDatiGiocatore1 = false;

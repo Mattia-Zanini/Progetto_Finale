@@ -309,5 +309,8 @@
   <ItemGroup>
     <None Include="Sprites\naveIndividuata10x10.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Sprites\selezione_Attacco_Griglia6x6.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
