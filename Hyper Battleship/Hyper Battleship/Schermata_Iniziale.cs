@@ -16,19 +16,7 @@ namespace Hyper_Battleship
         public Schermata_Iniziale()
         {
             InitializeComponent();
-        }
-        
-        public bool chiusuraApplicazioneInavveritaF1 = true;
-        private void Schermata_Iniziale_Load(object sender, EventArgs e)
-        {
-        }
-        private void Schermata_Iniziale_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            if(chiusuraApplicazioneInavveritaF1 == true)
-            {
-                Application.Exit();
-            }
-        }
+        }        
 
         private void quitText_MouseClick(object sender, MouseEventArgs e)
         {

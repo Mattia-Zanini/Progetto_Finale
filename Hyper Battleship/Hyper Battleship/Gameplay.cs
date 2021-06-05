@@ -233,7 +233,6 @@ namespace Hyper_Battleship
             {
                 if(quantitàAssaltoDoppioGiocatore1 > 0)
                 {
-                    quantitàAssaltoDoppioGiocatore1--;
                     doppioAssaltoEventi();
                 }
             }
@@ -241,7 +240,6 @@ namespace Hyper_Battleship
             {
                 if (quantitàAssaltoDoppioGiocatore2 > 0)
                 {
-                    quantitàAssaltoDoppioGiocatore2--;
                     doppioAssaltoEventi();
                 }
             }
@@ -263,10 +261,12 @@ namespace Hyper_Battleship
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssaltoScalaGrigio;
                     if (player1PictureBox.Visible)//diminuisce il quantitativo di doppio assalto disponibile al corrispondete giocatore che ha attivato l'abilità in quel turno
                     {
+                        quantitàAssaltoDoppioGiocatore1--;
                         quantitàAssaltoDoppio.Text = (quantitàAssaltoDoppioGiocatore1).ToString();
                     }
                     else
-                    {                        
+                    {
+                        quantitàAssaltoDoppioGiocatore2--;
                         quantitàAssaltoDoppio.Text = (quantitàAssaltoDoppioGiocatore2).ToString();
                     }
                 }
@@ -278,7 +278,6 @@ namespace Hyper_Battleship
         {
             if (nTurno > 25)
             {
-
                 if (attacco1 == false && attacco2 == false)
                 {
                     if (player1PictureBox.Visible)
@@ -1188,6 +1187,14 @@ namespace Hyper_Battleship
                     annullaButton.Visible = false;
                     confermaButton.Visible = false;
                     quantitàAssaltoDoppio.Text = (Convert.ToInt32(quantitàAssaltoDoppio.Text) + 1).ToString();
+                    if (player1PictureBox.Visible)
+                    {
+                        quantitàAssaltoDoppioGiocatore1++;
+                    }
+                    else
+                    {
+                        quantitàAssaltoDoppioGiocatore2++;
+                    }
                     doppioAssaltoPictureBox.Image = Properties.Resources.doppioAssalto;
                 }
             }
@@ -1307,7 +1314,6 @@ namespace Hyper_Battleship
             int[] posCaselleDaControllare = new int[] { -40, -31, -30, -29, -22, -21, -20, -19, -18, -13, -12, -11, -10, -9, -8, -7, -4, -3, -2, -1, 0, 1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 18, 19, 20, 21, 22, 29, 30, 31, 40 };
 
             #region Rimozione Delle caselle da controllare
-            int[] eventualiPosCaselleDaTogliereDalControlloModalitaVeloce = new int[] { -40, -31, -29, -22, -18, -13, -7, -4, 4, 7, 13, 18, 22, 29, 31, 40, -30, -21, -19, -12, -8, -3, 3, 8, 12, 19, 21, 30 };
             //controlli da escludere se il radar si trova in prossimità del lato sinistro della griglia, con vari livelli di rimozione delle posizioni di controllo
             int[] eventualiPosCaselleDaTogliereDalControlloLatoSinistroV1 = new int[] { -4 };
             int[] eventualiPosCaselleDaTogliereDalControlloLatoSinistroV2 = new int[] { -4, -13, -3, 7 };
