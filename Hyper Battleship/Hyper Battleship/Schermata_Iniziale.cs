@@ -130,5 +130,10 @@ namespace Hyper_Battleship
                 }
             }
         }
+
+        private void Schermata_Iniziale_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
